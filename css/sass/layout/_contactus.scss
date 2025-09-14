@@ -1,0 +1,160 @@
+.contactus {
+    @include section;
+    background: #fef8f8;
+    overflow: hidden;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -50px;
+        width: $fullwidth;
+        height: $fullwidth;
+        background: url(../images/c-1.png) left top no-repeat;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: $zero;
+        width: $fullwidth;
+        height: $fullwidth;
+        background: url(../images/c-2.png) right bottom no-repeat;
+    }
+    .title {
+        justify-content: center;
+    }
+    .itemform {
+        margin: $com-spacing-6 $auto $zero $auto;
+        max-width: 70%;
+        @media (max-width: 999px) {
+            max-width: $fullwidth;
+        }
+        .field {}
+        .bottom {
+            height: 50px;
+            min-width: 120px;
+            max-width: 120px;
+        }
+    }
+}
+
+.contactinfo {
+    @include section;
+    background: $white url(../images/testimonial-bg-1.png) no-repeat center center/cover;
+    .title {
+        justify-content: center;
+    }
+    .item {
+        margin-top: $com-spacing-8;
+        @media (max-width: 999px) {
+            max-width: $fullwidth;
+            flex: $fullwidth;
+            margin-top: $com-spacing-6;
+        }
+        .contactus {
+            padding: $com-spacing-8;
+            @media (max-width: 999px) {
+                padding: $com-spacing-6;
+            }
+            form,
+            .title {
+                position: relative;
+                z-index: 10;
+            }
+            .field {
+                margin: $zero;
+                margin-bottom: $com-spacing-6;
+                &:last-child {
+                    margin: $zero;
+                }
+            }
+        }
+        .photo {
+            position: relative;
+            width: $fullwidth;
+            height: 190px;
+            overflow: hidden;
+            background: $dark;
+            img {
+                width: $fullwidth;
+                height: $fullwidth;
+                object-fit: cover;
+            }
+        }
+        .text {
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: $com-spacing-6;
+            @media (max-width: 999px) {
+                font-size: 16px;
+            }
+        }
+        .map-text {
+            display: flex;
+            align-items: center;
+            width: 80%;
+            margin-top: $com-spacing-6;
+            border-bottom: 1px solid #c8ced5;
+            padding-bottom: $com-spacing-6;
+            @media (max-width: 999px) {
+                width: $fullwidth;
+            }
+            &:last-child {
+                border: $zero;
+                padding: $zero;
+            }
+            .title {
+                justify-content: flex-start;
+                font-size: 18px;
+                font-weight: 600;
+            }
+            .icon {
+                @include flex;
+                min-width: 56px;
+                max-width: 56px;
+                height: 56px;
+                background: $red;
+                margin-right: $com-spacing-3;
+                @include border-radius(60px);
+                svg {
+                    fill: $white;
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+            p,
+            a {
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+            }
+            a {
+                display: block;
+                margin: $zero;
+                @include transition(all 0.5s ease-in-out 0s);
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+    }
+    .alert {
+        margin: $zero;
+        margin-top: $com-spacing-6;
+    }
+}
+
+.mapiframe {
+    width: $fullwidth;
+    height: 400px;
+    background: #fef8f8;
+    @media (max-width: 999px) {
+        height: 300px;
+    }
+    iframe {
+        display: block;
+        border: $zero;
+        width: $fullwidth;
+        height: $fullwidth
+    }
+}

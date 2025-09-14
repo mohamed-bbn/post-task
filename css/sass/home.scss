@@ -1,0 +1,241 @@
+@import 'helpers/mixins';
+@import 'helpers/variables';
+@import 'layout/header';
+@import 'layout/slider';
+@import 'layout/aboutus';
+@import 'layout/min';
+@import 'layout/contactus';
+@import 'layout/signup';
+@import 'layout/profile';
+@import 'layout/footer';
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+li,
+hr,
+strong,
+b,
+input,
+select,
+textarea,
+.highcharts-title,
+.highcharts-axis-labels,
+.highcharts-yaxis-title {
+    @include reset;
+}
+
+body {
+    direction: $direction;
+    overflow-x: hidden;
+    // background: $ofwhite;
+    &.active {
+        overflow: hidden;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: $white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $red;
+    cursor: pointer;
+}
+
+.title {
+    @include title;
+}
+
+.bottom {
+    @include bottom;
+}
+
+.form-control {
+    @include input
+}
+
+select.form-control {
+    // -webkit-appearance: none;
+    // background: $white url(../images/arrow.svg) no-repeat !important;
+    // background-position: 12px 20px;
+}
+
+select.form-control {
+    -webkit-appearance: none;
+    background: $none !important;
+    background: $white url(../images/arrow.svg) 98% center no-repeat !important;
+}
+
+textarea.form-control {
+    height: 160px;
+    resize: $none;
+}
+
+.container {
+    z-index: 10;
+}
+
+.social {
+    @include social;
+}
+
+.section {
+    @include section;
+}
+
+.che-box {
+    @include check-box;
+}
+
+.map-back {
+    @include map-back;
+}
+
+.hidden {
+    @media (max-width: 999px) {
+        display: none;
+    }
+}
+
+.alert {
+    display: flex;
+    align-items: center;
+    border: $zero;
+    margin: $zero;
+    margin-top: $com-spacing-4;
+    padding: $com-spacing-4;
+    border-radius: 4px;
+    height: 60px;
+    strong {
+        margin-left: $com-spacing-2;
+        color: #856404;
+    }
+    a {
+        text-decoration: underline;
+        color: $white;
+        font-weight: 400;
+        &:hover {
+            text-decoration: $none;
+        }
+    }
+    .text-mass {
+        margin: $zero !important;
+        margin-left: $com-spacing-3 !important;
+    }
+    p {
+        color: $white;
+        margin: $zero !important;
+    }
+    &.alert-success {
+        background: linear-gradient(303.91deg, #1F7A66 7.57%, #60B3A7 94.39%);
+    }
+    &.alert-danger {
+        background: linear-gradient(303.91deg, #C24848 7.57%, #D34A4A 94.39%);
+    }
+}
+
+.maplink {
+    @include maplink;
+}
+
+.towmap {
+    height: 350px;
+    @media (max-width: 999px) {
+        height: 250px;
+    }
+    @media (max-width: 767px) {
+        height: 200px;
+    }
+    &::after {
+        display: none;
+    }
+}
+
+.formsearch {
+    margin: $com-spacing-6 $auto $zero $auto;
+    max-width: 660px;
+    position: relative;
+    overflow: hidden;
+    .form-control {
+        padding: $zero;
+        border: $zero !important;
+        background: none !important;
+        padding: $zero;
+        border-bottom: 1px solid #ffffff40 !important;
+        border-radius: $zero !important;
+        color: $white;
+        &::placeholder {
+            color: $white;
+            opacity: 1;
+            /* Firefox */
+        }
+        &::-ms-input-placeholder {
+            /* Edge 12 -18 */
+            color: $white;
+        }
+    }
+}
+
+.pagination {
+    width: $fullwidth;
+    margin-top: $com-spacing-6;
+    justify-content: center;
+    @media (max-width: 999px) {
+        //margin-top: $com-spacing-6;
+    }
+    li {
+        display: $inline;
+        margin: $zero $com-spacing-1;
+        a,
+        span {
+            @include flex;
+            @include border-radius(5px !important);
+            width: 36px;
+            height: 36px;
+            background: $white;
+            color: $blak;
+            font-weight: 500;
+            border: 1px solid #e8e9ee;
+            @include transition(all 0.5s ease-in-out 0s);
+        }
+        svg {
+            width: 12px;
+            height: 12px;
+        }
+        &:last-child {
+            svg {
+                transform: rotate(-90deg);
+            }
+        }
+        &:first-child {
+            svg {
+                transform: rotate(90deg);
+            }
+        }
+    }
+    .page-link.active,
+    .page-link:hover {
+        background: $red !important;
+        border: 1px solid $red;
+        color: $white !important;
+        svg {
+            fill: $white;
+        }
+    }
+}
+
+///* End Pagination

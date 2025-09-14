@@ -1,0 +1,235 @@
+.loginpage,
+.forgot {
+    @include section;
+    @include flex;
+    background: $ofwhite;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $fullwidth;
+        height: $fullwidth;
+        background: url(../images/bg1.png) right top no-repeat;
+        background-size: 100%;
+        opacity: .4;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: $fullwidth;
+        height: $fullwidth;
+        background: url(../images/bg2.png) right bottom no-repeat;
+        background-size: 100%;
+        opacity: .4;
+    }
+    .worries {
+        text-align: center;
+        font-size: 14px !important;
+        margin-top: $com-spacing-2 !important;
+    }
+    .inner {
+        position: relative;
+        margin: $zero $auto;
+        width: 580px;
+        background: $white;
+        padding: $com-spacing-8;
+        border-radius: 8px;
+        z-index: 10;
+        box-shadow: 4px 4px 60px #0000000d;
+        @media (max-width: 999px) {
+            padding: $com-spacing-6;
+        }
+        @media (max-width:600px) {
+            width: $fullwidth;
+        }
+        .forgetlink,
+        .back {
+            @include flex;
+            color: $blak;
+            font-size: 18px;
+            font-weight: 600;
+            @include transition(all 0.5s ease-in-out 0s);
+            &:hover {
+                color: $red;
+            }
+            svg {
+                fill: $blak;
+                margin-right: $com-spacing-1;
+            }
+        }
+        .title {
+            justify-content: center;
+        }
+        p {
+            text-align: center;
+            font-weight: 500;
+            color: $blak;
+            margin-top: $com-spacing-4;
+            text-transform: capitalize;
+            a {
+                color: $red;
+                font-weight: 500;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.field {
+    position: relative;
+    margin-top: $com-spacing-6;
+    @media (max-width: 999px) {
+        margin-top: $com-spacing-4;
+    }
+    label {
+        display: block;
+        color: $blak;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+    .bottom {
+        width: $fullwidth;
+        height: 50px;
+    }
+    .flexbox {
+        .che-box {
+            display: inline-block;
+            margin-right: $com-spacing-8;
+            &:last-child {
+                margin: $zero;
+            }
+        }
+    }
+    input[type="file"] {
+        position: relative;
+        padding-left: 6px;
+        padding-top: 5px;
+    }
+    input[type="file"]::file-selector-button {
+        width: 105px;
+        color: transparent;
+    }
+    input[type="file"]::before {
+        position: absolute;
+        pointer-events: none;
+        top: 15px;
+        left: 10px;
+        height: 20px;
+        width: 20px;
+        content: "";
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230964B0'%3E%3Cpath d='M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2zM7 9l1.41 1.41L11 7.83V16h2V7.83l2.59 2.58L17 9l-5-5-5 5z'/%3E%3C/svg%3E");
+    }
+    input[type="file"]::after {
+        position: absolute;
+        pointer-events: none;
+        top: 15px;
+        left: 34px;
+        color: $dark;
+        content: "Download";
+    }
+    input[type="file"]::file-selector-button {
+        border-radius: 4px;
+        padding: 0 16px;
+        height: 44px;
+        cursor: pointer;
+        background-color: $ofwhite;
+        border: 1px solid #dcdcdc;
+        transition: background-color 200ms;
+    }
+    /* file upload button hover state */
+}
+
+.icon-pass {
+    position: absolute;
+    bottom: 15px;
+    right: 24px;
+    z-index: 10;
+    cursor: pointer;
+    @include transition(all 0.5s ease-in-out 0s);
+    svg {
+        width: 24px;
+        fill: $blak;
+    }
+}
+
+.icon-pass.eye-slash.icon-pass {
+    display: none;
+    svg {
+        stroke: $red;
+        fill: $none
+    }
+}
+
+.signup {
+    @include section;
+    background: $ofwhite;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $fullwidth;
+        height: $fullwidth;
+        background: url(../images/bg1.png) right top no-repeat;
+        background-size: 100%;
+        opacity: .4;
+    }
+    .photo {
+        position: absolute;
+        right: $zero;
+        top: $zero;
+        width: 50%;
+        height: $fullwidth;
+        background: $dark;
+        overflow: hidden;
+        @media (max-width: 999px) {
+            display: none;
+        }
+        img {
+            width: $fullwidth;
+            height: $fullwidth;
+            object-fit: cover;
+            opacity: 0.5;
+        }
+    }
+    .item {
+        padding-right: $com-spacing-8;
+        @media (max-width: 999px) {
+            max-width: $fullwidth;
+            flex: $fullwidth;
+            padding: $zero $com-spacing-3;
+        }
+    }
+    p {
+        text-align: center;
+        font-weight: 500;
+        color: $blak;
+        margin-top: $com-spacing-4;
+        text-transform: capitalize;
+        a {
+            color: $red;
+            font-weight: 500;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .bold {
+        font-size: 20px;
+        font-weight: 600;
+        a {
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+}
+
+//  End signup & login & forget

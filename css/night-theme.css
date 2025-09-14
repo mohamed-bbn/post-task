@@ -1,0 +1,604 @@
+body,
+.discover .discoverteam .slick-slide,
+.proficiency .nav-tabs li a,
+.proficiency .item .inner,
+.loginpage .inner,
+.forgot .inner,
+.easysteps .item .in-item .icon,
+.tasklink .item .inner .icon,
+.profile .subitem .inneritem,
+.profile .item .inner,
+.modal .modal-content,
+.contactus .form-control,
+.select2-container--bootstrap .select2-search--dropdown .select2-search__field,
+.signup .form-control,
+.discoverteam .slick-slide,
+.blogdetails .item .min-search .form-control,
+.blogdetails .item .subitem .listtags a,
+.successstories .item .inner,
+.guide-documentation .item .inner,
+.guide-documentation .inneritem,
+.privatepolicy,
+.privatepolicy .item .inner,
+.page-content .innerpage .subitem .inneritem,
+.page-content .innerpage .item .inner,
+.bg-details,
+.itemdetails .innerdetails,
+.itemmeet .inner {
+    background-color: #141718 !important;
+}
+
+.guide-documentation .item .inner::before {
+    opacity: .2;
+}
+
+.modal .subinner,
+.profilejob .discoverteam .slick-slide .listskills li,
+.blogdetails .item .subitem,
+.blogdetails .item .min-search,
+.successstories,
+.page-content .innerpage .subitem .inneritem .subinner .list a,
+.page-content .innerpage .subitem .inneritem .favorite .innerfavorite,
+.itemdetails .innerdetails .infodetails .workexperience li,
+.itemdetails .innerdetails .infodetails .allskills li,
+.itemdetails .innerdetails .infodetails .information li .icon {
+    background: #202020;
+}
+
+.logo .wight-logo,
+.header .navbar .logo .wight-logo {
+    display: none;
+}
+
+.header .itemlogomenu .logo .night-logo,
+.modal .subinner .logo .night-logo {
+    display: block;
+}
+
+.header .menu-link,
+.header .bottoms .login,
+.header .bottoms .language,
+.header .submenu .title,
+.header .bottoms .dropdown .dropdown-toggle p,
+.header .bottoms .dropdown .dropdown-menu.show a,
+.title,
+.slider .item .bottoms .login,
+.proficiency .nav-tabs li a,
+.proficiency .item .inner .bottom,
+.profile .subitem .inneritem .subinner .list a,
+.field label,
+.loginpage .inner .forgetlink,
+.loginpage .inner .back,
+.forgot .inner .forgetlink,
+.forgot .inner .back,
+.signup p,
+.select2-container--bootstrap .select2-selection--multiple .select2-selection__choice__remove,
+.select2-container--bootstrap .select2-results__option,
+.packages .btnitem .bottom:hover,
+.header .submenu a:hover,
+.modal .modal-content .st-add,
+.faqs .accordion .option .click-title a,
+.contactinfo .item .contact-block .block-info p,
+.contactinfo .item .contact-block .block-info a,
+.interact .item .inner p,
+.select2-container--bootstrap .select2-selection--single .select2-selection__rendered,
+.select2-container--bootstrap .select2-search--dropdown .select2-search__field,
+.modal .subinner .text,
+.modal .nao-month .month-head div,
+.modal .nao-month th,
+.profilejob .discoverteam .slick-slide .listskills li,
+.profilejob .discoverteam .slick-slide .bottom,
+.blogdetails .item .subitem .listtags a,
+.blogdetails .item .itemshear p,
+.chatall .chat-text .userchat .padcht .text,
+.chatall .formchat textarea,
+.guide-documentation .inneritem .subinner .list a,
+.privatepolicy .item .inner .listmenu a,
+.page-content .innerpage .item .inner .value,
+.bg-details .action .dropdown .dropdown-menu.show .dropdown-item,
+.itemdetails .innerdetails .infodetails .information li p,
+.itemdetails .innerdetails .infodetails .information li a,
+.itemdetails .innerdetails .infodetails .allskills li {
+    color: #fff !important;
+}
+
+.header .submenu a,
+.slider .item p,
+.aboutus .item .text,
+.discover .discoverteam .slick-slide p,
+.tasklink .item .inner p,
+.proficiency .item .inner .list li,
+.stories .item .inner p,
+.stories ol.carousel-indicators li p,
+.profile .listjob .iteminner .info .time,
+.profile .listjob .iteminner .info .map,
+.jobs-slider .iteminner a .info .time,
+.jobs-slider .iteminner a .info .map,
+.profile .subitem .inneritem .subinner .application a .time,
+.profile .subitem .inneritem .subinner .application a .map,
+.profile .subitem .inneritem .subinner .action a .time,
+.profile .subitem .inneritem .subinner .action a .map,
+.profile .subitem .inneritem .subinner .meeting a .time,
+.profile .subitem .inneritem .subinner .meeting a .manth p span,
+.profile .subitem .inneritem .subinner .meeting a .manth .date,
+.loginpage .inner p,
+.forgot .inner p,
+.profile .nav-tabs li a,
+p.text-center,
+.packages .priceitem .subitem .inneritem .info p,
+.packages .priceitem .subitem .inneritem .listtext ul li,
+.packages .priceitem .subitem .inneritem .pricenumber,
+.easysteps .item .in-item p,
+.blogs .bordertop .sliderblogs .slick-slide .date,
+.faqs .accordion .option .text,
+.contactinfo .item .text,
+.contactinfo .item .map-text p,
+.contactinfo .item .map-text a,
+.modal .subinner .time,
+.modal .subinner .conferencing,
+.modal .nao-month th,
+.modal .nao-month td,
+.profilejob .discoverteam .slick-slide .listevaluation li p,
+.profilejob .discoverteam .slick-slide .listevaluation li span,
+.blogdetails .item p,
+.transforming .itemrow .item p,
+.conditions .item p,
+.chatall .chat-text .userchat .padcht .time span,
+.guide-documentation p,
+.privatepolicy p,
+.page-content .innerpage .item .inner .label,
+.page-content .innerpage .subitem .inneritem .subinner .allemploy .info .map,
+.page-content .innerpage .subitem .inneritem .subinner .allemploy .info .time,
+.page-content .innerpage .subitem .inneritem .subinner .meeting a .manth p span,
+.page-content .innerpage .subitem .inneritem .subinner .meeting a .manth .date,
+.page-content .innerpage .subitem .inneritem .subinner .meeting a .time,
+.page-content .innerpage .subitem .inneritem .subinner .application a .time,
+.page-content .innerpage .subitem .inneritem .subinner .application a .map,
+.page-content .innerpage .subitem .inneritem .subinner .action a .time,
+.page-content .innerpage .subitem .inneritem .subinner .action a .map,
+#removal p,
+.bg-details .inner .time,
+.bg-details .inner .job,
+.bg-details .inner .email,
+.bg-details .inner .prog p,
+.bg-details .inner .pr-skill-bar .progress-value,
+.itemdetails .innerdetails .infodetails p,
+.itemdetails .innerdetails .infodetails .listpersonal li,
+.itemdetails .innerdetails .infodetails .information li span,
+.itemdetails .innerdetails .infodetails .workexperience li .time,
+.itemdetails .innerdetails .infodetails .workexperience li .company,
+.itemdetails .innerdetails .infodetails .workexperience li .map,
+.itemmeet .inner .time,
+.itemmeet .inner .manth .date,
+.itemmeet .inner .manth p span {
+    color: #c1c1c1;
+}
+
+.proficiency .item .inner .list li svg,
+.profile .listjob .iteminner .info .time svg,
+.profile .listjob .iteminner .info .map svg,
+.jobs-slider .iteminner a .info .time svg,
+.jobs-slider .iteminner a .info .map svg,
+.profile .subitem .inneritem .subinner .application a .time svg,
+.profile .subitem .inneritem .subinner .application a .map svg,
+.profile .subitem .inneritem .subinner .action a .time svg,
+.profile .subitem .inneritem .subinner .action a .map svg,
+.jobs-slider .slick-prev svg,
+.jobs-slider .slick-next svg,
+.packages .priceitem .subitem .inneritem .listtext ul li .check svg,
+.easysteps .item .in-item .icon svg,
+.modal .subinner .time svg,
+.modal .subinner .conferencing svg,
+.page-content .innerpage .subitem .inneritem .subinner .allemploy .info .map svg,
+.page-content .innerpage .subitem .inneritem .subinner .allemploy .info .time svg,
+.page-content .innerpage .subitem .inneritem .subinner .application a .time svg,
+.page-content .innerpage .subitem .inneritem .subinner .application a .map svg,
+.page-content .innerpage .subitem .inneritem .subinner .action a .time svg,
+.page-content .innerpage .subitem .inneritem .subinner .action a .map svg,
+.bg-details .inner .time svg,
+.bg-details .inner .job svg,
+.bg-details .inner .email svg,
+.dropdown-toggle svg,
+.itemdetails .innerdetails .infodetails .workexperience li .time svg,
+.itemdetails .innerdetails .infodetails .workexperience li .company svg,
+.itemdetails .innerdetails .infodetails .workexperience li .map svg {
+    fill: #c1c1c1;
+}
+
+.jobs-slider .slick-prev,
+.jobs-slider .slick-next {
+    border: 1px solid #c1c1c1;
+}
+
+.header .menu-link svg,
+.header .bottoms .language svg,
+.header .bottoms .color li.active svg,
+.header .bottoms .dropdown .dropdown-toggle svg,
+.profile .subitem .inneritem .minhead .filter svg,
+.pagination li svg,
+.loginpage .inner .forgetlink svg,
+.loginpage .inner .back svg,
+.forgot .inner .forgetlink svg,
+.forgot .inner .back svg,
+.icon-pass svg,
+.modal .close svg path,
+.modal .select svg,
+.profile .itemmenu svg,
+.guide-documentation .itemmenu svg,
+.privatepolicy .itemmenu svg,
+.itemdetails .innerdetails .infodetails .information li .icon svg {
+    fill: #fff;
+}
+
+.bottom:hover,
+.header .bottoms .login:hover,
+.slider .item .bottoms .login:hover,
+.profilejob .discoverteam .slick-slide .bottom:hover {
+    background: #fff;
+    border: 1px solid #fff;
+    color: #d9000d !important;
+}
+
+.header.sticky,
+.brands,
+.discover,
+.proficiency,
+.proficiency .item .inner .icon,
+.proficiency .item .inner .bottom,
+.contactus,
+.towstyle,
+.loginpage,
+.forgot,
+.recentlyjob .allemployees .slick-slide,
+.packages .priceitem,
+.easysteps,
+.allskills li,
+.allskills li:nth-child(even),
+.started,
+.faqs .accordion .option,
+.contactinfo .item .contact-block,
+.profilejob,
+.page-content {
+    background-color: #202020;
+}
+
+.header .submenu,
+.header .bottoms .dropdown .dropdown-menu.show,
+.signup,
+.guide-documentation {
+    background: #1e1e1e;
+}
+
+.bg-details .action .dropdown .dropdown-menu.show {
+    background: #2a2a2a;
+}
+
+.proficiency .item .inner .list,
+.stories ol.carousel-indicators {
+    border-top: 1px solid #2b2b2b;
+}
+
+.proficiency .item .inner .bottom,
+.stories .item .inner,
+.faqs .accordion .option,
+.proficiency .item .inner,
+.blogdetails .item .subitem .listtags a,
+.successstories .item .inner,
+.chatall .chat-text .userchat.tow .padcht .text,
+.chatall .chat-text .userchat .padcht .text,
+.chatall .formchat {
+    border: 1px solid #2b2b2b;
+}
+
+.blogdetails .item .itemshear {
+    border-top: 1px solid #2b2b2b;
+    border-bottom: 1px solid #2b2b2b;
+}
+
+.screened,
+.stories {
+    background: none;
+}
+
+.screened:before {
+    opacity: 0.1;
+}
+
+.header .bottoms .dropdown .dropdown-menu.show .dropdown-item:active,
+.header .bottoms .dropdown .dropdown-menu.show .dropdown-item:hover,
+.bg-details .action .dropdown .dropdown-menu.show .dropdown-item:active,
+.bg-details .action .dropdown .dropdown-menu.show .dropdown-item:hover {
+    color: #ffffff;
+    background: #f7f8fa1f !important;
+}
+
+.header .itemlogomenu .burger-line,
+.page-content .header .burger-line {
+    background: #fff;
+}
+
+.slider {
+    background: url(../images/night-slider.png) no-repeat top right/cover;
+}
+
+.towslider {
+    background: url(../images/slider3.png) no-repeat top right/cover;
+}
+
+.slider .photo {
+    border: 30px solid #2c2c2c;
+    background: #3a3a3a;
+}
+
+.slider .photo::after {
+    border: 30px dashed #3a3a3a;
+    background: #1c1c1c;
+}
+
+.discover .discoverteam .slick-slide .text img {
+    filter: grayscale(1);
+}
+
+.discover::after,
+.loginpage:after,
+.forgot:after,
+.started:before {
+    background: url(../images/bgn1.png) right top no-repeat;
+    background-size: 100%;
+    opacity: 1;
+}
+
+.signup:before {
+    background: url(../images/bgn1.png) left top no-repeat;
+    background-size: 100%;
+    opacity: 1;
+}
+
+.discover::before,
+.loginpage:before,
+.forgot:before {
+    background: url(../images/bgn2.png) right bottom no-repeat;
+    background-size: 100%;
+    opacity: 1;
+}
+
+.tasklink .item .inner,
+.interact .item .inner,
+.profilejob .discoverteam .slick-slide .bottom {
+    background: #202020;
+    border: 1px solid #2b2b2b;
+}
+
+.profile .subitem .inneritem,
+.profile .item .inner,
+.guide-documentation .inneritem,
+.bg-details,
+.itemdetails .innerdetails,
+.itemmeet .inner {
+    border: 0px;
+}
+
+.profile .subitem .inneritem .minhead,
+.packages .priceitem .subitem .inneritem .info,
+.guide-documentation .inneritem .minhead,
+.privatepolicy .item .inner .listmenu a,
+.page-content .innerpage .subitem .inneritem .minhead,
+.itemdetails .innerdetails .infodetails {
+    border-bottom: 1px solid #2b2b2b;
+}
+
+.contactus:before,
+.easysteps:before,
+.profilejob:before {
+    filter: grayscale(1);
+    opacity: 0.6;
+}
+
+.contactus:after,
+.easysteps:after,
+.profilejob:after {
+    filter: opacity(0.1);
+}
+
+.form-control {
+    background: #202020;
+    border: 1px solid #141718;
+    color: #fff;
+}
+
+select.form-control {
+    background: #202020 url(../images/arrow2.svg) 98% center no-repeat !important;
+}
+
+.modal .select .form-control {
+    background: #141718 url(../images/arrow2.svg) 98% center no-repeat !important;
+}
+
+.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
+    background: url(../images/arrow2.svg) no-repeat !important;
+}
+
+.modal .nao-month .month-head .arowleft,
+.modal .nao-month .month-head .arowright {
+    background: #141718 url(../images/arrow2.svg) center center no-repeat;
+}
+
+.form-control:focus,
+.form-control:hover {
+    background: #202020;
+    border: 1px solid #d9000d !important;
+    color: #fff;
+}
+
+.profile .item .inner .listmenu a,
+.profile .listjob .iteminner,
+.pagination li span,
+.jobs-slider .iteminner a,
+.profile .subitem .inneritem .subinner .list a,
+.profile .subitem .inneritem .favorite .innerfavorite,
+.select2-container--bootstrap .select2-results__option--highlighted[aria-selected],
+.pagination li a,
+.chatall .chat-text .userchat .padcht .text,
+.guide-documentation .inneritem .subinner .list a,
+.guide-documentation .innerholders {
+    background: #ffffff08 !important;
+}
+
+.pagination li a,
+.pagination li span {
+    color: #fff;
+    border: 1px solid #ffffff08;
+}
+
+.profile .listjob .iteminner .photo,
+.profile .subitem .inneritem .subinner .application a .imgitle .photo,
+.profile .subitem .inneritem .subinner .meeting a .manth,
+.packages .priceitem .subitem .inneritem .listtext ul li .check,
+.jobs-slider .iteminner a .photo,
+.chatall .formchat,
+.page-content .innerpage .subitem .inneritem .subinner .meeting a .manth,
+.page-content .innerpage .subitem .inneritem .subinner .application a .imgitle .photo,
+.itemmeet .inner .manth {
+    background: #ffffff0d;
+}
+
+.chatall .formchat textarea {
+    background: #202324;
+}
+
+.profile .listjob .iteminner:hover,
+.jobs-slider .iteminner a:hover,
+.profile .subitem .inneritem .subinner .list a:hover,
+.profile .subitem .inneritem .favorite .innerfavorite:hover,
+.guide-documentation .inneritem .subinner .list a:hover,
+.page-content .innerpage .subitem .inneritem .subinner .list a:hover,
+.page-content .innerpage .subitem .inneritem .favorite .innerfavorite:hover {
+    background: #ffffff26 !important;
+}
+
+.che-box input[type="checkbox"]+.label-text:before,
+.che-box input[type="radio"]+.label-text:before,
+.select2-container--bootstrap .select2-selection--single,
+.select2-container--bootstrap .select2-selection--multiple,
+.select2-container--bootstrap .select2-dropdown,
+.guide-documentation .subphoto {
+    background: #202020 !important;
+    border: 1px solid #202020 !important;
+}
+
+.signup .photo,
+.packages .priceitem .subitem:nth-child(2) .inneritem,
+.sidebar,
+.page-content .header {
+    background: #000;
+}
+
+.profile .nav-tabs li a {
+    background: url(../images/icon-night.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.select2-container--bootstrap .select2-selection--multiple .select2-selection__choice {
+    color: #ffffff !important;
+    background: #ffffff33 !important;
+    border: 1px solid #ffffff00 !important;
+}
+
+.footer {
+    background: linear-gradient(90deg, #0c0e0e 0%, #141718 15.03%, #141718 84.79%, #0c0e0e 100%);
+}
+
+.header .menu .activelink .menu-link,
+.header .menu .menu-item:hover .menu-link {
+    color: #d9000d !important;
+}
+
+.slick-dots li button,
+.easysteps .item .box-loader span::after {
+    background: #fff !important;
+}
+
+.easysteps .item .in-item .num {
+    background: #d9000d !important;
+}
+
+.blogdetails .item .subitem .listtags a:hover {
+    background: #d9000d !important;
+    border: 1px solid #d9000d !important;
+}
+
+.easysteps .item .box-loader span::before {
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.brandlogos .slick-slide a img {
+    filter: contrast(0.5);
+}
+
+.bordertop {
+    border-top: 1px solid #2b2b2b;
+}
+
+.modal .subinner .col {
+    border-right: 1px solid #2b2b2b;
+}
+
+.modal .subinner .col:last-child,
+.page-content .innerpage .subitem .inneritem {
+    border: 0px;
+}
+
+.faqs .collapsible-link::before {
+    background: #2b2b2b url(../images/arrow2.svg) no-repeat center center;
+}
+
+.contactinfo {
+    background: #2b2b2b url(../images/testimonial-bg-1.png) no-repeat center center/cover;
+}
+
+.bg {
+    background: url(../images/price2.png) no-repeat top left;
+}
+
+.select2-container--bootstrap .select2-search--dropdown .select2-search__field {
+    border: 0px !important;
+}
+
+.contactinfo .item .map-text {
+    border-bottom: 1px solid #3e3e3e;
+}
+
+.map-back::after {
+    opacity: 0.6;
+}
+
+.formsearch .form-control {
+    border: 0px !important;
+    border-bottom: 1px solid #ffffff40 !important;
+}
+
+.forstyle {
+    background: url(../images/forstyle2.png) no-repeat top right/cover;
+}
+
+.page-content .innerpage .item:after {
+    background: #262525;
+}
+
+.bg-details .inner .pr-skill-bar .progress {
+    background: #efefef26;
+}
+
+@media screen and (max-width: 999px) {
+    .header .navbar,
+    .header {
+        background: #222222;
+    }
+    .slider .photo {
+        border: 20px solid #2c2c2c;
+    }
+    .slider .photo::after {
+        border: 20px dashed #3a3a3a;
+    }
+}

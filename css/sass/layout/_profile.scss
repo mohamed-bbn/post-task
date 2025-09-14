@@ -1,0 +1,1992 @@
+.profile {
+    // @include section;
+    // background: $ofwhite;
+    // .container {
+    //     z-index: inherit;
+    // }
+    .item {
+        @media (max-width: 1199px) {
+            max-width: $fullwidth;
+            flex: $fullwidth;
+        }
+        .inner {
+            position: sticky;
+            top: 120px;
+            width: $fullwidth;
+            padding: $com-spacing-7 $com-spacing-6 $com-spacing-6 $com-spacing-6;
+            border-radius: 12px;
+            background: $dark;
+            overflow: hidden;
+            &:before {
+                content: "";
+                position: absolute;
+                top: -52px;
+                left: -20px;
+                width: $fullwidth;
+                height: $fullwidth;
+                background: url(../images/in-bg.png) left top no-repeat;
+                background-size: 100%;
+                opacity: .4;
+            }
+            @media (max-width: 1199px) {
+                border-radius: $zero;
+                position: relative;
+                top: auto;
+            }
+            .title {
+                justify-content: center;
+                text-align: center;
+                font-size: 24px;
+                font-weight: 600;
+                color: $white;
+                margin-top: $com-spacing-7;
+            }
+            .job {
+                text-align: center;
+                font-size: 18px;
+                font-weight: 500;
+                color: $white;
+                margin-top: $com-spacing-2;
+                text-transform: capitalize;
+            }
+            .listmenu {
+                margin-top: $com-spacing-6;
+                a {
+                    position: relative;
+                    display: flex;
+                    background: #ffffff1f;
+                    margin-top: $com-spacing-3;
+                    color: $white;
+                    border-radius: 12px;
+                    font-weight: 500;
+                    padding: $com-spacing-2 $com-spacing-3;
+                    overflow: hidden;
+                    &:hover,
+                    &.active {
+                        &::after {
+                            width: $fullwidth;
+                        }
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: $zero;
+                        top: $zero;
+                        background: $red;
+                        width: $zero;
+                        height: $fullwidth;
+                        @include transition(all 0.5s ease-in-out 0s);
+                    }
+                    span {
+                        display: flex;
+                        align-items: center;
+                        width: $fullwidth;
+                        position: relative;
+                        z-index: 1;
+                        svg,
+                        img {
+                            min-width: 18px;
+                            max-width: 18px;
+                            height: 18px;
+                            margin-right: $com-spacing-1;
+                            fill: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .itemmenu {
+        display: none;
+        @media (max-width: 1199px) {
+            display: block;
+        }
+        svg {
+            width: 30px;
+            height: 30px;
+            margin-right: $com-spacing-2;
+            @media (max-width: 999px) {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    .hideitem {
+        .cancel {
+            display: none;
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            z-index: 10;
+            @media (max-width: 1199px) {
+                display: block;
+            }
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+        @media (max-width: 1199px) {
+            position: fixed;
+            left: -100%;
+            top: $zero;
+            width: 280px;
+            height: $fullwidth;
+            overflow-y: scroll;
+            padding: $zero;
+            @include transition(all 0.5s ease-in-out 0s);
+            z-index: 1005;
+            &::-webkit-scrollbar {
+                width: 2px;
+            }
+            &.active {
+                left: $zero;
+            }
+        }
+    }
+    .subitem {
+        margin-top: $com-spacing-6;
+        @media (max-width: 999px) {
+            max-width: $fullwidth;
+            flex: $fullwidth;
+        }
+        .inneritem {
+            position: relative;
+            width: $fullwidth;
+            background: $white;
+            border: 1px solid #e8e9ee;
+            border-radius: 12px;
+            .minhead {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: $com-spacing-4;
+                border-bottom: 1px solid #e8e9ee;
+                .title {
+                    font-size: 22px;
+                    font-weight: 600;
+                }
+                .more {
+                    color: $red;
+                    font-weight: 500;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                .filter {
+                    position: relative;
+                    width: 120px;
+                    svg {
+                        position: absolute;
+                        left: $com-spacing-3;
+                        top: 14px;
+                        width: 15px;
+                        height: 15px;
+                    }
+                    .form-control {
+                        height: 40px;
+                        padding-left: 30px;
+                    }
+                }
+            }
+            .subinner {
+                padding: $com-spacing-4;
+                .list {
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        background: $ofwhite;
+                        border-radius: 12px;
+                        padding: $com-spacing-3;
+                        margin-bottom: $com-spacing-4;
+                        color: $blak;
+                        font-weight: 500;
+                        @include transition(all 0.5s ease-in-out 0s);
+                        &:last-child {
+                            margin: $zero;
+                        }
+                        &:hover {
+                            background: #e3e3e3;
+                            // color: $white; 
+                        }
+                        svg {
+                            min-width: 24px;
+                            max-width: 24px;
+                            height: 24px;
+                            margin: 3px $zero;
+                        }
+                        .cls-1 {
+                            fill: $green;
+                            fill-rule: evenodd;
+                        }
+                        .cls-2 {
+                            fill: $white;
+                        }
+                    }
+                }
+                .meeting {
+                    a {
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        .manth {
+                            min-width: 53px;
+                            max-width: 53px;
+                            height: 53px;
+                            border-radius: 12px;
+                            background: $white;
+                            padding: $com-spacing-1 $zero;
+                            margin-right: $com-spacing-2;
+                            text-align: center;
+                            overflow: hidden;
+                            p {
+                                color: $red;
+                                font-size: 20px;
+                                font-weight: 700;
+                                text-align: center;
+                                span {
+                                    color: $blak;
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                }
+                            }
+                            .date {
+                                display: block;
+                                line-height: 8px;
+                                color: $gray;
+                                font-size: 14px;
+                                font-weight: 500;
+                                text-transform: uppercase;
+                            }
+                        }
+                        .time {
+                            color: $gray;
+                            font-size: 14px;
+                            font-weight: 500;
+                        }
+                        .title {
+                            font-size: 16px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+                .action {
+                    a {
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        .photo {
+                            min-width: 53px;
+                            max-width: 53px;
+                            height: 53px;
+                            border-radius: 12px;
+                            background: $white;
+                            overflow: hidden;
+                            margin-right: $com-spacing-2;
+                            img {
+                                width: $fullwidth;
+                                height: $fullwidth;
+                                object-fit: cover;
+                            }
+                        }
+                        .info {
+                            display: flex;
+                        }
+                        .time,
+                        .map {
+                            display: flex;
+                            align-items: center;
+                            color: $gray;
+                            font-size: 14px;
+                            font-weight: 500;
+                            svg {
+                                min-width: 12px;
+                                max-width: 12px;
+                                height: 12px;
+                                fill: $gray;
+                                margin: $zero;
+                                margin-right: $com-spacing-1;
+                            }
+                        }
+                        .map {
+                            margin-right: $com-spacing-4;
+                        }
+                        .title {
+                            font-size: 16px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+                .application {
+                    a {
+                        flex-wrap: wrap;
+                        .imgitle {
+                            display: flex;
+                            align-items: center;
+                            .photo {
+                                @include flex;
+                                min-width: 53px;
+                                max-width: 53px;
+                                height: 53px;
+                                border-radius: 12px;
+                                background: $white;
+                                overflow: hidden;
+                                padding: $com-spacing-2;
+                                margin-right: $com-spacing-2;
+                                img {
+                                    max-width: $fullwidth;
+                                    max-height: $fullwidth;
+                                }
+                            }
+                            .title {
+                                font-size: 16px;
+                                font-weight: 500;
+                                min-width: 150px;
+                                max-width: 150px;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                            }
+                        }
+                        .info {
+                            display: flex;
+                            flex-wrap: wrap;
+                        }
+                        .time,
+                        .map {
+                            display: flex;
+                            align-items: center;
+                            color: $gray;
+                            font-size: 14px;
+                            font-weight: 500;
+                            svg {
+                                min-width: 12px;
+                                max-width: 12px;
+                                height: 12px;
+                                fill: $gray;
+                                margin: $zero;
+                                margin-right: $com-spacing-1;
+                            }
+                        }
+                        .map {
+                            margin-right: $com-spacing-4;
+                        }
+                        .waiting,
+                        .approval {
+                            @include flex;
+                            padding: $zero $com-spacing-3;
+                            border-radius: 12px;
+                            color: $yellow;
+                            border: 1px solid $yellow;
+                            text-transform: capitalize;
+                            min-width: 100px;
+                            max-width: 100px;
+                        }
+                        .approval {
+                            color: $green;
+                            border: 1px solid $green;
+                        }
+                    }
+                }
+                .allemploy {
+                    .imgitle {
+                        .photo {
+                            border-radius: 50% !important;
+                            padding: $zero !important;
+                            img {
+                                width: $fullwidth;
+                                height: $fullwidth;
+                                object-fit: cover;
+                            }
+                        }
+                        .title {
+                            font-size: 20px !important;
+                        }
+                    }
+                    .info {
+                        .map,
+                        .time {
+                            font-size: 16px;
+                            svg {
+                                min-width: 14px;
+                                max-width: 14px;
+                                height: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+            .favorite {
+                max-width: 50%;
+                flex: 50%;
+                padding: $zero $com-spacing-2;
+                margin-top: $com-spacing-4;
+                .innerfavorite {
+                    @include flex;
+                    position: relative;
+                    width: $fullwidth;
+                    height: 124px;
+                    padding: $com-spacing-3;
+                    background: $ofwhite;
+                    border-radius: 12px;
+                    text-align: center;
+                    overflow: hidden;
+                    @include transition(all 0.5s ease-in-out 0s);
+                    &:hover {
+                        background: #e3e3e3;
+                        // color: $white; 
+                    }
+                    .photo {
+                        @include flex;
+                        width: $fullwidth;
+                        height: 40px;
+                        overflow: hidden;
+                        img {
+                            max-width: $fullwidth;
+                            max-height: $fullwidth;
+                        }
+                    }
+                    .title {
+                        font-size: 16px;
+                        font-weight: 500;
+                        margin-top: $com-spacing-2;
+                        justify-content: center;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    .n-pad {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    .complete {
+        padding: $zero $com-spacing-1;
+        @media (max-width: 575px) {
+            margin-bottom: $com-spacing-4;
+            &:last-child {
+                margin: $zero;
+            }
+        }
+        .title {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .progress {
+            margin-top: $com-spacing-3;
+            height: 12px;
+            .progress-bar {
+                height: 12px;
+                background: $green;
+                &.red {
+                    background: $red;
+                }
+            }
+        }
+    }
+    .listjob {
+        padding: $zero $com-spacing-2;
+        margin-top: $com-spacing-4;
+        @media (max-width: 999px) {
+            max-width: 33.333%;
+            flex: 33.333%;
+        }
+        @media (max-width: 767px) {
+            max-width: 50%;
+            flex: 50%;
+        }
+        @media (max-width: 500px) {
+            max-width: $fullwidth;
+            flex: $fullwidth;
+        }
+        .iteminner {
+            display: block;
+            width: $fullwidth;
+            padding: $com-spacing-6;
+            background: $ofwhite;
+            border-radius: 10px;
+            text-align: center;
+            @include transition(all 0.5s ease-in-out 0s);
+            &:hover {
+                background: #e3e3e3;
+            }
+            .photo {
+                @include flex;
+                width: 53px;
+                height: 53px;
+                border-radius: 12px;
+                background: $white;
+                overflow: hidden;
+                padding: $com-spacing-2;
+                margin: $zero $auto;
+                img {
+                    max-width: $fullwidth;
+                    max-height: $fullwidth;
+                }
+            }
+            .title {
+                font-size: 16px;
+                font-weight: 500;
+                justify-content: center;
+                margin-top: $com-spacing-4;
+                text-align: center;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            .info {
+                @include flex;
+                margin-top: $com-spacing-1;
+                .time,
+                .map {
+                    display: flex;
+                    align-items: center;
+                    color: $gray;
+                    font-size: 14px;
+                    font-weight: 500;
+                    svg {
+                        min-width: 12px;
+                        max-width: 12px;
+                        height: 12px;
+                        fill: $gray;
+                        margin: $zero;
+                        margin-right: $com-spacing-1;
+                    }
+                }
+                .map {
+                    margin-right: $com-spacing-4;
+                }
+            }
+        }
+    }
+    .nav-tabs {
+        border: $zero;
+        li {
+            width: calc(100% / 9);
+            height: 39px;
+            margin: $zero;
+            @media (max-width: 999px) {
+                width: auto;
+                margin-bottom: 2px;
+            }
+            a {
+                display: flex;
+                align-items: center;
+                position: relative;
+                height: 39px;
+                padding: $zero;
+                background: url(../images/icon.png) no-repeat;
+                background-size: $fullwidth $fullwidth;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 13px;
+                padding-left: $com-spacing-5;
+                border: $zero !important;
+                border-radius: $zero !important;
+                color: $blak;
+                @include transition(all 0.5s ease-in-out 0s);
+                @media (max-width: 999px) {
+                    padding-right: $com-spacing-3;
+                }
+                &.active {
+                    background: url(../images/icon-hover.png) no-repeat;
+                    background-size: $fullwidth $fullwidth;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .field {
+        .bottom {
+            width: $auto;
+            min-width: 140px;
+        }
+    }
+}
+
+.imgcent {
+    margin: $zero $auto;
+    text-align: center;
+    width: 180px;
+    height: 180px;
+    @include border-radius(50%);
+    position: relative;
+    margin-bottom: $com-spacing-5;
+    @include prefixer (box-shadow, 4px 4px 60px #0000000d, webkit moz o ms);
+    .img_prev {
+        width: $fullwidth;
+        height: 180px;
+        min-height: $fullwidth;
+        background: $ofwhite;
+        @include border-radius(50%);
+        position: relative;
+        z-index: 2;
+        object-fit: cover;
+    }
+    .file-bro {
+        @include position(absolute, $bottom: -16px, $right: 0px, $left: 0px, );
+        margin: $zero $auto;
+        width: 40px;
+        height: 40px;
+        background: $red;
+        @include flex;
+        cursor: pointer;
+        @include border-radius(50%);
+        @include prefixer (box-shadow, 0 0 10px 0 rgba(0, 24, 128, 0.1), webkit moz o ms);
+        @include transition(all 0.5s ease-in-out 0s);
+        z-index: 3;
+        svg {
+            z-index: 10;
+            min-width: 16px;
+            @include transition(all 0.5s ease-in-out 0s);
+            path {
+                fill: $white;
+            }
+        }
+        &:hover {
+            background: $white;
+            svg {
+                path {
+                    fill: $red;
+                }
+            }
+        }
+    }
+}
+
+.overlaybox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1005;
+    visibility: hidden;
+    @include transition(all 0.5s ease-in-out 0s);
+    background-color: rgba(0, 0, 0, 0.65);
+    @media (max-width: 1199px) {
+        &.active {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.overlayinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1005;
+    visibility: hidden;
+    @include transition(all 0.5s ease-in-out 0s);
+    background-color: rgba(0, 0, 0, 0.65);
+    @media (max-width: 999px) {
+        &.active {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.jobs-slider {
+    @include styleslider;
+    .iteminner {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        margin: $zero $com-spacing-2;
+        overflow: hidden;
+        a {
+            display: block;
+            width: $fullwidth;
+            padding: $com-spacing-6;
+            background: $ofwhite;
+            border-radius: 10px;
+            text-align: center;
+            @include transition(all 0.5s ease-in-out 0s);
+            &:hover {
+                background: #e3e3e3;
+            }
+            .photo {
+                @include flex;
+                width: 53px;
+                height: 53px;
+                border-radius: 12px;
+                background: $white;
+                overflow: hidden;
+                padding: $com-spacing-2;
+                margin: $zero $auto;
+                img {
+                    max-width: $fullwidth;
+                    max-height: $fullwidth;
+                }
+            }
+            .title {
+                font-size: 16px;
+                font-weight: 500;
+                justify-content: center;
+                margin-top: $com-spacing-4;
+                text-align: center;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            .info {
+                @include flex;
+                margin-top: $com-spacing-1;
+                .time,
+                .map {
+                    display: flex;
+                    align-items: center;
+                    color: $gray;
+                    font-size: 14px;
+                    font-weight: 500;
+                    svg {
+                        min-width: 12px;
+                        max-width: 12px;
+                        height: 12px;
+                        fill: $gray;
+                        margin: $zero;
+                        margin-right: $com-spacing-1;
+                    }
+                }
+                .map {
+                    margin-right: $com-spacing-4;
+                }
+            }
+        }
+    }
+    .slick-dots {
+        display: none !important;
+    }
+}
+
+.progressbar {
+    position: relative;
+    padding: $com-spacing-3 $com-spacing-4;
+    .textprofile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p {
+            font-weight: 500;
+            color: $white;
+            text-transform: capitalize;
+        }
+        .editicon {
+            svg {
+                width: 20px;
+                height: 20px;
+                fill: $white;
+            }
+        }
+    }
+    .progress {
+        margin-top: $com-spacing-1;
+        height: 8px;
+        .progress-bar {
+            height: 8px;
+            background: $green;
+        }
+    }
+}
+
+.sidebar {
+    @include position(fixed, $top: 0, $left: 0px);
+    width: 280px;
+    height: $fullwidth;
+    overflow: auto;
+    background: $dark;
+    z-index: 1008;
+    overflow: hidden;
+    @include transition(all 0.5s ease-in-out 0s);
+    overflow-y: scroll;
+    // scrollbar-width: thin;
+    // scroll-behavior: smooth;
+    @media (max-width: 999px) {
+        left: -280px;
+    }
+    .cancel {
+        display: none;
+        position: absolute;
+        top: $com-spacing-6;
+        right: $com-spacing-4;
+        z-index: 10;
+        @media (max-width: 999px) {
+            display: block;
+        }
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
+    &.active {
+        width: 70px;
+        @media (max-width: 999px) {
+            left: $zero;
+            width: 280px;
+        }
+        .title,
+        .email,
+        .listmenu a span,
+        .imglogo,
+        .job,
+        .progressbar {
+            display: none;
+            @media (max-width: 999px) {
+                display: block;
+            }
+        }
+        .favicon {
+            display: block;
+            @media (max-width: 999px) {
+                display: none;
+            }
+        }
+        .imgcent {
+            width: 50px;
+            height: 50px;
+            @media (max-width: 999px) {
+                width: 100px;
+                height: 100px;
+            }
+            .img_prev {
+                height: 50px;
+                @media (max-width: 999px) {
+                    height: 100px;
+                }
+            }
+        }
+    }
+    &:hover {
+        width: 280px;
+        .title,
+        .email,
+        .listmenu a span,
+        .imglogo,
+        .job,
+        .progressbar {
+            display: block;
+        }
+        .favicon {
+            display: none;
+        }
+        .imgcent {
+            width: 100px;
+            height: 100px;
+            .img_prev {
+                height: 100px;
+            }
+        }
+    }
+    &::-webkit-scrollbar {
+        width: $zero;
+    }
+    .logo {
+        @include flex;
+        width: $fullwidth;
+        height: 82px;
+        background: #ffffff0d;
+        padding: $zero $com-spacing-4;
+        @media (max-width: 999px) {
+            justify-content: flex-start;
+        }
+        img {
+            max-width: 158px !important;
+            @media (max-width: 1120px) {
+                // max-width: 138px;
+            }
+        }
+    }
+    .favicon {
+        display: none;
+    }
+    .imgcent {
+        width: 100px;
+        height: 100px;
+        margin: $com-spacing-5 $auto $zero $auto;
+        &:hover {
+            .file-bro {
+                opacity: 1;
+            }
+        }
+        .img_prev {
+            height: 100px;
+        }
+        .file-bro {
+            bottom: $zero;
+            width: $fullwidth;
+            height: $fullwidth;
+            background: #00000082;
+            opacity: 0;
+            svg {
+                path {
+                    fill: $white;
+                }
+            }
+        }
+    }
+    .title {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        justify-content: center;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+        color: $white;
+        margin-top: $com-spacing-4;
+    }
+    .email,
+    .job {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-align: center;
+        font-weight: 400;
+        color: #cdcdcd;
+        margin-top: $com-spacing-1;
+        text-transform: capitalize;
+    }
+    .listmenu {
+        padding: $com-spacing-4;
+        @include transition(all 0.5s ease-in-out 0s);
+        a {
+            display: flex;
+            align-items: center;
+            margin-bottom: $com-spacing-4;
+            @include transition(all 0.5s ease-in-out 0s);
+            &:last-child {
+                margin: $zero;
+            }
+            &:hover,
+            &.active {
+                span {
+                    color: $red
+                }
+                .icon {
+                    background: $white;
+                    svg {
+                        fill: $red
+                    }
+                }
+            }
+            .icon {
+                @include flex;
+                min-width: 38px;
+                max-width: 38px;
+                height: 38px;
+                border-radius: 8px;
+                background: #ffffff0d;
+                font-style: normal;
+                margin-right: $com-spacing-2;
+                @include transition(all 0.5s ease-in-out 0s);
+                svg,
+                img {
+                    fill: $white;
+                    width: 17px !important;
+                    height: 17px !important;
+                    @include transition(all 0.5s ease-in-out 0s);
+                }
+            }
+            span {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                color: $white;
+                text-transform: capitalize;
+                font-weight: 500;
+                @include transition(all 0.5s ease-in-out 0s);
+            }
+        }
+    }
+}
+
+.page-content {
+    position: relative;
+    width: $fullwidth;
+    min-height: 100vh;
+    background: $ofwhite;
+    padding-left: 280px;
+    @include transition(all 0.5s ease-in-out 0s);
+    @media (max-width: 999px) {
+        padding-left: $zero;
+    }
+    &.active {
+        padding-left: 70px;
+        @media (max-width: 999px) {
+            padding-left: $zero;
+        }
+        .header {
+            width: calc(100% - 70px);
+            @media (max-width: 999px) {
+                width: $fullwidth;
+            }
+        }
+    }
+    .header {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: $zero $com-spacing-6;
+        width: calc(100% - 280px);
+        left: auto !important;
+        right: $zero !important;
+        height: 82px;
+        @media (max-width: 999px) {
+            width: $fullwidth;
+            padding: $zero $com-spacing-3;
+            // height: 66px;
+        }
+        .burger {
+            position: relative;
+            cursor: pointer;
+            user-select: none;
+            width: 24px;
+            height: 1rem;
+            &-line {
+                position: absolute;
+                display: block;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                opacity: 1;
+                border: none;
+                outline: none;
+                background: $blak;
+                &:nth-child(1) {
+                    top: 0px;
+                }
+                &:nth-child(2) {
+                    top: 0.5rem;
+                    width: 80%;
+                }
+                &:nth-child(3) {
+                    top: 1rem;
+                    width: 60%;
+                }
+            }
+        }
+        .bottoms {
+            @media (max-width: 1120px) {
+                display: flex;
+            }
+            .dropdown .dropdown-menu.show {
+                top: 55px !important;
+                // @media (max-width: 999px) {
+                //     top: 47px !important;
+                // }
+            }
+        }
+    }
+    .innerpage {
+        position: relative;
+        width: $fullwidth;
+        padding: $com-spacing-6;
+        padding-top: 112px;
+        @media (max-width: 999px) {
+            width: $fullwidth;
+            padding: 112px $com-spacing-3 $com-spacing-3 $com-spacing-3;
+            // height: 66px;
+        }
+        .item {
+            margin-top: $com-spacing-6;
+            @media (max-width: 1199px) {
+                max-width: 50%;
+                flex: 50%;
+            }
+            @media (max-width:450px) {
+                max-width: $fullwidth;
+                flex: $fullwidth;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                border-radius: 12px;
+                bottom: -16px;
+                background: $white;
+                @include prefixer (box-shadow, 2px 2px 30px #0000000d, webkit moz o ms);
+                z-index: 0;
+                margin: $zero $com-spacing-7;
+            }
+            .inner {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                width: $fullwidth;
+                background: $white;
+                padding: $com-spacing-6;
+                border-radius: 12px;
+                z-index: 1;
+                @include transition(all 0.5s ease-in-out 0s);
+                @include prefixer (box-shadow, 2px 2px 30px #0000000d, webkit moz o ms);
+                .icon {
+                    @include flex;
+                    width: 58px;
+                    height: 58px;
+                    @include border-radius(50%);
+                    img,
+                    svg {
+                        width: 35px;
+                        height: 35px;
+                        fill: $white;
+                    }
+                }
+                .label {
+                    font-weight: 500;
+                    margin-top: 2px;
+                }
+                .value {
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: $blak;
+                }
+            }
+            &:nth-last-child(4) {
+                .inner {
+                    .icon {
+                        background: $red;
+                    }
+                }
+            }
+            &:nth-last-child(3) {
+                .inner {
+                    .icon {
+                        background: $dark;
+                    }
+                }
+            }
+            &:nth-last-child(2) {
+                .inner {
+                    .icon {
+                        background: $yellow;
+                    }
+                }
+            }
+            &:nth-last-child(1) {
+                .inner {
+                    .icon {
+                        background: $green;
+                    }
+                }
+            }
+        }
+        .subitem {
+            margin-top: $com-spacing-6;
+            @media (max-width: 999px) {
+                max-width: $fullwidth;
+                flex: $fullwidth;
+            }
+            .inneritem {
+                position: relative;
+                width: $fullwidth;
+                background: $white;
+                border: 1px solid #e8e9ee;
+                border-radius: 12px;
+                .minhead {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: $com-spacing-4;
+                    border-bottom: 1px solid #e8e9ee;
+                    .title {
+                        font-size: 22px;
+                        font-weight: 600;
+                    }
+                    .more {
+                        color: $red;
+                        font-weight: 500;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    .filter {
+                        position: relative;
+                        width: 120px;
+                        svg {
+                            position: absolute;
+                            left: $com-spacing-3;
+                            top: 14px;
+                            width: 15px;
+                            height: 15px;
+                        }
+                        .form-control {
+                            height: 40px;
+                            padding-left: 30px;
+                        }
+                    }
+                }
+                .subinner {
+                    padding: $com-spacing-4;
+                    .list {
+                        a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            background: $ofwhite;
+                            border-radius: 12px;
+                            padding: $com-spacing-3;
+                            margin-bottom: $com-spacing-4;
+                            color: $blak;
+                            font-weight: 500;
+                            @include transition(all 0.5s ease-in-out 0s);
+                            &:last-child {
+                                margin: $zero;
+                            }
+                            &:hover {
+                                background: #e3e3e3;
+                                // color: $white; 
+                            }
+                            svg {
+                                min-width: 24px;
+                                max-width: 24px;
+                                height: 24px;
+                                margin: 3px $zero;
+                            }
+                            .cls-1 {
+                                fill: $green;
+                                fill-rule: evenodd;
+                            }
+                            .cls-2 {
+                                fill: $white;
+                            }
+                        }
+                    }
+                    .meeting {
+                        a {
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            .manth {
+                                min-width: 53px;
+                                max-width: 53px;
+                                height: 53px;
+                                border-radius: 12px;
+                                background: $white;
+                                padding: $com-spacing-1 $zero;
+                                margin-right: $com-spacing-2;
+                                text-align: center;
+                                overflow: hidden;
+                                p {
+                                    color: $red;
+                                    font-size: 20px;
+                                    font-weight: 700;
+                                    text-align: center;
+                                    span {
+                                        color: $blak;
+                                        font-size: 14px;
+                                        font-weight: 500;
+                                    }
+                                }
+                                .date {
+                                    display: block;
+                                    line-height: 8px;
+                                    color: $gray;
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    text-transform: uppercase;
+                                }
+                            }
+                            .time {
+                                color: $gray;
+                                font-size: 14px;
+                                font-weight: 500;
+                            }
+                            .title {
+                                font-size: 16px;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                    .action {
+                        a {
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            .photo {
+                                min-width: 53px;
+                                max-width: 53px;
+                                height: 53px;
+                                border-radius: 12px;
+                                background: $white;
+                                overflow: hidden;
+                                margin-right: $com-spacing-2;
+                                img {
+                                    width: $fullwidth;
+                                    height: $fullwidth;
+                                    object-fit: cover;
+                                }
+                            }
+                            .info {
+                                display: flex;
+                            }
+                            .time,
+                            .map {
+                                display: flex;
+                                align-items: center;
+                                color: $gray;
+                                font-size: 14px;
+                                font-weight: 500;
+                                svg {
+                                    min-width: 12px;
+                                    max-width: 12px;
+                                    height: 12px;
+                                    fill: $gray;
+                                    margin: $zero;
+                                    margin-right: $com-spacing-1;
+                                }
+                            }
+                            .map {
+                                margin-right: $com-spacing-4;
+                            }
+                            .title {
+                                font-size: 16px;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                    .application {
+                        a {
+                            flex-wrap: wrap;
+                            .imgitle {
+                                display: flex;
+                                align-items: center;
+                                .photo {
+                                    @include flex;
+                                    min-width: 53px;
+                                    max-width: 53px;
+                                    height: 53px;
+                                    border-radius: 12px;
+                                    background: $white;
+                                    overflow: hidden;
+                                    padding: $com-spacing-2;
+                                    margin-right: $com-spacing-2;
+                                    img {
+                                        max-width: $fullwidth;
+                                        max-height: $fullwidth;
+                                    }
+                                }
+                                .title {
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    min-width: 150px;
+                                    max-width: 150px;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                    overflow: hidden;
+                                }
+                            }
+                            .info {
+                                display: flex;
+                                flex-wrap: wrap;
+                            }
+                            .time,
+                            .map {
+                                display: flex;
+                                align-items: center;
+                                color: $gray;
+                                font-size: 14px;
+                                font-weight: 500;
+                                svg {
+                                    min-width: 12px;
+                                    max-width: 12px;
+                                    height: 12px;
+                                    fill: $gray;
+                                    margin: $zero;
+                                    margin-right: $com-spacing-1;
+                                }
+                            }
+                            .map {
+                                margin-right: $com-spacing-4;
+                            }
+                            .waiting,
+                            .approval {
+                                @include flex;
+                                padding: $zero $com-spacing-3;
+                                border-radius: 12px;
+                                color: $yellow;
+                                border: 1px solid $yellow;
+                                text-transform: capitalize;
+                                min-width: 100px;
+                                max-width: 100px;
+                            }
+                            .approval {
+                                color: $green;
+                                border: 1px solid $green;
+                            }
+                        }
+                    }
+                    .allemploy {
+                        .imgitle {
+                            .photo {
+                                border-radius: 50% !important;
+                                padding: $zero !important;
+                                img {
+                                    width: $fullwidth;
+                                    height: $fullwidth;
+                                    object-fit: cover;
+                                }
+                            }
+                            .title {
+                                font-size: 20px !important;
+                            }
+                        }
+                        .info {
+                            .map,
+                            .time {
+                                font-size: 16px;
+                                svg {
+                                    min-width: 14px;
+                                    max-width: 14px;
+                                    height: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .favorite {
+                    max-width: 50%;
+                    flex: 50%;
+                    padding: $zero $com-spacing-2;
+                    margin-top: $com-spacing-4;
+                    .innerfavorite {
+                        @include flex;
+                        position: relative;
+                        width: $fullwidth;
+                        height: 124px;
+                        padding: $com-spacing-3;
+                        background: $ofwhite;
+                        border-radius: 12px;
+                        text-align: center;
+                        overflow: hidden;
+                        @include transition(all 0.5s ease-in-out 0s);
+                        &:hover {
+                            background: #e3e3e3;
+                            // color: $white; 
+                        }
+                        .photo {
+                            @include flex;
+                            width: $fullwidth;
+                            height: 40px;
+                            overflow: hidden;
+                            img {
+                                max-width: $fullwidth;
+                                max-height: $fullwidth;
+                            }
+                        }
+                        .title {
+                            font-size: 16px;
+                            font-weight: 500;
+                            margin-top: $com-spacing-2;
+                            justify-content: center;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .field {
+        .bottom {
+            width: $auto;
+            min-width: 140px;
+        }
+    }
+}
+
+.bg-details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    width: $fullwidth;
+    background: $white;
+    border: 1px solid #e8e9ee;
+    border-radius: 12px;
+    padding: $com-spacing-4;
+    margin-top: $com-spacing-6;
+    @media (max-width: 767px) {
+        display: block;
+    }
+    .inner {
+        display: flex;
+        align-items: center;
+        @media (max-width: 767px) {
+            display: block;
+        }
+        .photo {
+            min-width: 160px;
+            max-width: 160px;
+            height: 160px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-right: $com-spacing-3;
+            @media (max-width: 767px) {
+                min-width: 120px;
+                max-width: 120px;
+                height: 120px;
+                margin: $zero $auto;
+            }
+            img {
+                width: $fullwidth;
+                height: $fullwidth;
+                object-fit: cover;
+            }
+        }
+        .title {
+            font-size: 28px;
+            font-weight: 600;
+            @media (max-width: 767px) {
+                font-size: 24px;
+                justify-content: center;
+                margin-top: $com-spacing-5;
+            }
+        }
+        .info {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: $com-spacing-1;
+            @media (max-width: 767px) {
+                justify-content: center;
+            }
+        }
+        .time,
+        .job,
+        .email {
+            display: flex;
+            align-items: center;
+            color: $gray;
+            font-weight: 500;
+            margin: $com-spacing-2 $com-spacing-4 $zero $zero;
+            &:last-child {
+                margin-right: $zero;
+            }
+            svg {
+                min-width: 15px;
+                max-width: 15px;
+                height: 15px;
+                fill: $gray;
+                margin: $zero;
+                margin-right: $com-spacing-1;
+            }
+        }
+        .prog {
+            display: flex;
+            align-items: center;
+            margin-top: $com-spacing-3;
+            @media (max-width: 767px) {
+                display: block;
+                margin-top: $com-spacing-5;
+            }
+            p {
+                font-weight: 500;
+                margin-top: -7px;
+                color: $blak;
+            }
+        }
+        .pr-skill-bar {
+            display: flex;
+            align-items: center;
+            position: relative;
+            min-width: $fullwidth;
+            margin-left: $com-spacing-4;
+            @media (max-width: 767px) {
+                margin: $zero;
+            }
+            .progress {
+                min-width: $fullwidth;
+                height: 6px;
+                background: #EFEFEF;
+                overflow: visible;
+                @include border-radius(34px);
+                .progress-bar {
+                    box-shadow: $none;
+                    position: relative;
+                    width: $fullwidth;
+                    -webkit-animation: animate-positive 2s;
+                    animation: animate-positive 2s;
+                    background: $dark;
+                    @include border-radius(34px);
+                }
+            }
+            .progress-value {
+                color: $blak;
+                font-weight: 500;
+                margin-left: $com-spacing-4;
+                @media (max-width: 767px) {
+                    position: absolute;
+                    right: 0;
+                    top: -28px;
+                }
+            }
+            @-webkit-keyframes animate-positive {
+                0% {
+                    width: 0;
+                }
+            }
+            @keyframes animate-positive {
+                0% {
+                    width: 0;
+                }
+            }
+        }
+    }
+    .action {
+        display: flex;
+        align-items: center;
+        @media (max-width: 767px) {
+            justify-content: center;
+            margin-top: $com-spacing-5;
+        }
+        .waiting,
+        .approval {
+            @include flex;
+            padding: $zero $com-spacing-3;
+            border-radius: 12px;
+            color: $yellow;
+            border: 1px solid $yellow;
+            text-transform: capitalize;
+            min-width: 100px;
+            max-width: 100px;
+            font-weight: 500;
+            margin-left: $com-spacing-4;
+        }
+        .approval {
+            color: $green;
+            border: 1px solid $green;
+        }
+        .dropdown {
+            .dropdown-toggle {
+                &::after {
+                    display: none;
+                }
+            }
+            .dropdown-menu.show {
+                margin-top: $zero;
+                right: $auto !important;
+                left: $zero !important;
+                top: 38px !important;
+                min-width: inherit;
+                box-shadow: 0px 4px 24px 0px #0000000D;
+                border-radius: $zero;
+                width: 148px;
+                padding: $com-spacing-3 $zero;
+                transform: $none !important;
+                border: $zero;
+                z-index: 2;
+                @include transition(all 0.5s ease-in-out 0s);
+                &:before {
+                    display: $none;
+                }
+                .dropdown-item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    line-height: 18px;
+                    height: auto;
+                    border: $zero;
+                    margin: $zero;
+                    padding: $com-spacing-2 $com-spacing-3 !important;
+                    @include transition(all 0.5s ease-in-out 0s);
+                    border: $zero !important;
+                    background: $none !important;
+                    font-size: 15px;
+                    text-transform: capitalize;
+                    &:active,
+                    &:hover {
+                        color: $red;
+                        background: $ofwhite !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#removal {
+    .modal-dialog {
+        max-width: 580px;
+    }
+    .modal-content {
+        padding: $com-spacing-6;
+        text-align: center;
+    }
+    .warning {
+        margin-bottom: $com-spacing-4;
+        svg {
+            min-width: 100px;
+            max-width: 100px;
+            fill: $red;
+        }
+    }
+    p {
+        margin: $com-spacing-2 $zero $com-spacing-4 $zero;
+        text-align: center;
+        font-weight: 500;
+    }
+    .title {
+        font-size: 24px;
+        text-align: center;
+    }
+    .bottom {
+        height: 50px;
+    }
+}
+
+.itemdetails {
+    margin-top: $com-spacing-6;
+    @media (max-width: 1199px) {
+        max-width: $fullwidth;
+        flex: $fullwidth;
+    }
+    .innerdetails {
+        position: relative;
+        width: $fullwidth;
+        background: $white;
+        border: 1px solid #e8e9ee;
+        border-radius: 12px;
+        padding: $com-spacing-4;
+        &.scroll {
+            position: sticky;
+            top: 100px;
+        }
+        .infodetails {
+            position: relative;
+            width: $fullwidth;
+            margin-bottom: $com-spacing-4;
+            padding-bottom: $com-spacing-4;
+            border-bottom: 1px solid #e8e9ee;
+            &:last-child {
+                padding: $zero;
+                border: $zero;
+                margin: $zero;
+            }
+            .title {
+                font-size: 22px;
+                font-weight: 600;
+            }
+            p {
+                margin-top: $com-spacing-2;
+                font-weight: 500;
+            }
+            .listpersonal {
+                padding-left: $com-spacing-5;
+                margin-top: $com-spacing-3;
+                li {
+                    margin-top: 10px;
+                    font-weight: 500;
+                    list-style: decimal;
+                }
+            }
+            .allskills {
+                padding: $zero;
+                justify-content: flex-start;
+                margin-top: $com-spacing-3;
+                li {
+                    margin: $zero;
+                    background: $ofwhite;
+                    margin: $com-spacing-2 $com-spacing-2 $zero $zero;
+                    color: $blak;
+                    padding: $com-spacing-1 $com-spacing-4;
+                    border-radius: 60px;
+                    min-width: inherit;
+                }
+            }
+            .workexperience {
+                li {
+                    width: $fullwidth;
+                    // white-space: nowrap;
+                    // text-overflow: ellipsis;
+                    overflow: hidden;
+                    background: $ofwhite;
+                    border-radius: 12px;
+                    padding: $com-spacing-4;
+                    margin-top: $com-spacing-4;
+                    .title {
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+                    .info {
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-top: $com-spacing-2;
+                    }
+                    .time,
+                    .company,
+                    .map {
+                        display: flex;
+                        align-items: center;
+                        color: $gray;
+                        font-size: 15px;
+                        font-weight: 500;
+                        margin-right: $com-spacing-4;
+                        &:last-child {
+                            margin: $zero;
+                        }
+                        svg {
+                            min-width: 12px;
+                            max-width: 12px;
+                            height: 12px;
+                            fill: $gray;
+                            margin: $zero;
+                            margin-right: $com-spacing-1;
+                        }
+                    }
+                }
+            }
+            .information {
+                margin-top: $com-spacing-4;
+                li {
+                    display: flex;
+                    align-items: center;
+                    margin-top: $com-spacing-4;
+                    .icon {
+                        @include flex;
+                        min-width: 30px;
+                        max-width: 30px;
+                        height: 30px;
+                        background: $ofwhite;
+                        border-radius: 60px;
+                        margin-right: $com-spacing-2;
+                        svg {
+                            width: 14px;
+                            height: 14px;
+                        }
+                    }
+                    span {
+                        display: block;
+                        min-width: 106px;
+                        max-width: 106px;
+                        height: 28px;
+                        font-size: 15px;
+                        font-weight: 500;
+                        margin-right: $com-spacing-2;
+                        text-transform: capitalize;
+                        color: $colortext;
+                        overflow: hidden;
+                    }
+                    p,
+                    a {
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: $blak;
+                        margin: $zero;
+                    }
+                    a {
+                        text-decoration: underline;
+                        @include transition(all 0.5s ease-in-out 0s);
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                    p {
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.itemmeet {
+    margin-top: $com-spacing-6;
+    @media (max-width: 1199px) {
+        max-width: 50%;
+        flex: 50%;
+    }
+    @media (max-width: 767px) {
+        max-width: $fullwidth;
+        flex: $fullwidth;
+    }
+    .inner {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: $fullwidth;
+        background: $white;
+        border: 1px solid #e8e9ee;
+        border-radius: 12px;
+        padding: $com-spacing-4;
+        overflow: hidden;
+        .manth {
+            min-width: 64px;
+            max-width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            background: $ofwhite;
+            padding: $com-spacing-2 $zero;
+            margin-right: $com-spacing-2;
+            text-align: center;
+            overflow: hidden;
+            p {
+                color: $red;
+                font-size: 24px;
+                font-weight: 700;
+                text-align: center;
+                span {
+                    color: $blak;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+            .date {
+                display: block;
+                line-height: 8px;
+                color: $gray;
+                font-size: 14px;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+        }
+        .time {
+            color: $gray;
+            font-weight: 500;
+        }
+        .title {
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .map {
+            display: flex;
+            align-items: center;
+            color: $gray;
+            font-weight: 500;
+            svg {
+                min-width: 16px;
+                max-width: 16px;
+                height: 12px;
+                fill: $gray;
+                margin: $zero;
+                margin-top: $com-spacing-1;
+            }
+        }
+        iframe {
+            display: block;
+            width: $fullwidth;
+            height: 66vh;
+            border: $zero;
+        }
+        .chatall {
+            padding: $zero !important;
+            .chat-text {
+                height: 46vh;
+                @media (min-width: 1600px) {
+                    height: 50vh;
+                }
+            }
+        }
+    }
+}
