@@ -209,12 +209,13 @@
 .step-wizard {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between;   */
 }
 
 .step-wizard .step {
     position: relative;
-    min-width: 33.333%;
+    width: 100%;
+    /* min-width: 33.333%; */
 }
 
 .step-wizard .step:before {
@@ -291,7 +292,9 @@
 }
 
 .tabwizard .field .form-control,
-.tabwizard .field .select2-container--bootstrap .select2-selection--multiple {
+.tabwizard .field .select2-container--bootstrap .select2-selection--multiple,
+.tabwizard .select2-container--bootstrap .select2-selection--single,
+.tabwizard .nots {
     background: #FBFCF0;
     border: 1px solid #E5E5E5;
 }
@@ -300,7 +303,7 @@
     border: 1px solid #C5D92D;
 }
 
-.tabwizard .field p.text {
+.tabwizard p.text {
     margin-top: 12px;
     font-weight: 400;
     color: #12121280;
@@ -323,6 +326,14 @@
     padding: 0px 8px;
     font-weight: 500;
     border-radius: 0px .25rem .25rem 0px;
+}
+
+.tabwizard .nots {
+    border-radius: .25rem;
+    padding: 12px;
+    color: #12121280;
+    font-weight: 400;
+    margin-top: 24px;
 }
 
 .tabwizard .field .itemselect select:focus-visible {
@@ -410,4 +421,108 @@
 
 .tabwizard .textlistjob li a:hover svg {
     fill: #fff;
+}
+
+.subchek {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.chooseinvite {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.subchek .che-box .text-chek {
+    padding: 20px;
+    cursor: pointer;
+    white-space: normal;
+}
+
+.subchek .che-box {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0px;
+    border: 0px;
+    padding: 0;
+    margin-top: 12px;
+}
+
+.subchek .che-box input[type="checkbox"]+.label-text:before,
+.subchek .che-box input[type="radio"]+.label-text:before {
+    top: 20px;
+    left: 20px;
+}
+
+.subchek .label-text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ced4da;
+    animation: effect 250ms ease-in;
+    border-radius: 8px;
+}
+
+.subchek .che-box input[type="radio"]:checked+.label-text:after {
+    border: 1px solid #C5D92D;
+    background: #fbfcf0;
+}
+
+.subchek .che-box input[type="checkbox"]:checked+.label-text:before,
+.subchek .che-box input[type="radio"]:checked+.label-text:before,
+.tabwizard .flexbox .che-box input[type="checkbox"]:checked+.label-text:before,
+.tabwizard .flexbox .che-box input[type="radio"]:checked+.label-text:before {
+    background: #C5D92D !important;
+}
+
+.subchek .text-chek .title {
+    font-size: 16px;
+}
+
+.subchek .text-chek h4.title {
+    padding-left: 24px;
+}
+
+.subchek .text-chek p {
+    position: relative;
+    margin-top: 8px;
+    color: #64666C;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.tabwizard .flexbox {
+    margin-top: 12px;
+}
+
+.tabwizard .flexbox label {
+    color: #12121280;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.tabwizard .select2-container--bootstrap .select2-selection--multiple {
+    background: #fbfcf0 url(../images/arrow.svg) no-repeat right 12px center !important;
+    background-size: 12px 12px !important;
+    padding-right: 20px;
+}
+
+@media (max-width:999px) {
+    .step-wizard .step .title {
+        font-size: 14px;
+    }
+    .subchek {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .step-wizard .step {
+        overflow: hidden;
+    }
+}
+
+.hidefield {
+    display: none;
 }
