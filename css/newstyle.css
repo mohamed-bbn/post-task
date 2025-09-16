@@ -511,8 +511,123 @@
     padding-right: 20px;
 }
 
+.hidefield {
+    display: none;
+}
+
+.homeitem {
+    display: flex;
+    align-items: center;
+}
+
+.homeitem .iconhome,
+.header.towstyle .bottoms .language {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.14px solid #E5E3FF;
+    border-radius: 14px;
+    margin-left: 16px;
+    width: 40px;
+    height: 40px;
+}
+
+.homeitem .iconhome svg {
+    width: 22px;
+    height: 18px;
+    margin: 0;
+}
+
+.header.towstyle .bottoms .language svg {
+    min-width: 18px;
+    max-width: 18px;
+    height: 18px;
+    margin: 0;
+}
+
+.header.towstyle .bottoms .language {
+    margin: 0;
+}
+
+.itemdeposit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #F9FBEA80;
+    border-radius: 10px 10px 0px 0px;
+    padding: 12px;
+}
+
+.itemdeposit .title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.itemdeposit p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #464646;
+}
+
+.itemdeposit .balance {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 228px;
+    height: 48px;
+    border-radius: 13px;
+    padding: 10px;
+    color: #000;
+    background: #C5D92D;
+    font-weight: 500;
+}
+
+.listdeposit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #E4E4E4;
+    border-bottom: 0px;
+}
+
+.listdeposit a {
+    min-width: 33.333%;
+    max-width: 33.333%;
+    border-bottom: 3px solid #E4E4E4;
+    text-align: center;
+    padding: 14px;
+}
+
+.listdeposit a svg {
+    width: 50px;
+    height: 50px;
+    fill: #E4E4E4;
+}
+
+.listdeposit a span {
+    display: block;
+    color: #E4E4E4;
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.listdeposit a.active {
+    border-bottom: 3px solid #C5D92D;
+}
+
+.listdeposit a.active svg {
+    fill: #C5D92D;
+}
+
+.listdeposit a.active span {
+    color: #1A1A32;
+}
+
 @media (max-width:999px) {
-    .step-wizard .step .title {
+    .step-wizard .step .title,
+    .itemdeposit p {
         font-size: 14px;
     }
     .subchek {
@@ -521,8 +636,7 @@
     .step-wizard .step {
         overflow: hidden;
     }
-}
-
-.hidefield {
-    display: none;
+    .itemdeposit .title {
+        font-size: 20px;
+    }
 }
