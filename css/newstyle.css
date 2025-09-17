@@ -80,7 +80,8 @@
 
 .cusstyle .listmenu a.active,
 .cuspageitem .listtask li .bottom:hover,
-.cuspageitem .buttons button:hover {
+.cuspageitem .buttons button:hover,
+.formstyle .bottom:hover {
     background: #6568F4;
 }
 
@@ -123,7 +124,7 @@
 
 
 /* ::-webkit-scrollbar-thumb {
-    background-color: #C5D92D;
+background-color: #C5D92D;
 } */
 
 .cuspageitem .header .bottoms .dropdown .dropdown-menu.show .dropdown-item:active,
@@ -294,12 +295,16 @@
 .tabwizard .field .form-control,
 .tabwizard .field .select2-container--bootstrap .select2-selection--multiple,
 .tabwizard .select2-container--bootstrap .select2-selection--single,
-.tabwizard .nots {
+.tabwizard .nots,
+.formstyle .field .form-control,
+.formstyle .field .select2-container--bootstrap .select2-selection--multiple,
+.formstyle .select2-container--bootstrap .select2-selection--single {
     background: #FBFCF0;
     border: 1px solid #E5E5E5;
 }
 
-.tabwizard .field .form-control:focus {
+.tabwizard .field .form-control:focus,
+.formstyle .field .form-control:focus {
     border: 1px solid #C5D92D;
 }
 
@@ -347,11 +352,16 @@
     margin-top: 24px;
 }
 
-.cuspageitem .buttons button {
+.cuspageitem .buttons button,
+.formstyle .bottom {
     min-width: 144px;
     height: 46px;
     border: 0px;
     background: #C5D92D;
+}
+
+.formstyle .bottom {
+    min-width: 100% !important;
 }
 
 .cuspageitem .buttons button:disabled {
@@ -570,17 +580,28 @@
     color: #464646;
 }
 
-.itemdeposit .balance {
+.itemdeposit .balance,
+.btn-download,
+.statuscompleted {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 228px;
-    height: 48px;
+    height: 42px;
     border-radius: 13px;
-    padding: 10px;
+    padding: 10px 16px;
     color: #000;
     background: #C5D92D;
     font-weight: 500;
+}
+
+.btn-download {
+    margin-top: 16px;
+}
+
+span.statuscompleted {
+    padding: 10px;
+    height: 32px;
+    max-width: 110px;
 }
 
 .listdeposit {
@@ -625,9 +646,142 @@
     color: #1A1A32;
 }
 
+.categoryfilters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-right: 1px solid #E4E4E4;
+    border-left: 1px solid #E4E4E4;
+    padding: 16px;
+    padding-top: 0;
+}
+
+.addmoney {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #E4E4E4;
+    padding: 16px;
+    font-weight: 500;
+}
+
+.addmoney svg {
+    margin-right: 4px;
+}
+
+.flexinput {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filterinput {
+    position: relative;
+    margin: 16px 12px 0px 0px;
+}
+
+.flexinput .form-control {
+    min-width: 130px;
+    max-width: 130px;
+    height: 42px;
+    margin-right: 12px;
+    border-radius: 10px;
+    margin-top: 16px;
+}
+
+.flexinput select.form-control:focus,
+.flexinput select.form-control:hover {
+    border: 1px solid #C5D92D;
+}
+
+.filterinput .form-control {
+    min-width: 300px;
+    max-width: 300px;
+    height: 42px;
+    background: #EFF0F0;
+    border-radius: 24px;
+    border: 0px;
+    margin: 0px;
+    padding-right: 44px;
+}
+
+.filterinput svg {
+    position: absolute;
+    right: 12px;
+    top: 11px;
+}
+
+.table-container {
+    background: #fff;
+    border: 1px solid #E4E4E4;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.table-container .che-box {
+    width: 19px;
+    height: 19px;
+}
+
+.table-container .che-box input[type="checkbox"]+.label-text:before {
+    border-radius: 4px;
+}
+
+.table-container .che-box input[type="checkbox"]:checked+.label-text:before {
+    background: #C5D92D url(../images/tick.svg) no-repeat center center !important;
+    border: 1px solid #C5D92D;
+    box-shadow: none;
+}
+
+.table-container .subflex {
+    display: flex;
+    align-items: center;
+}
+
+.table-container .red {
+    color: #EB5757;
+}
+
+.table-container .subflex i.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    max-width: 40px;
+    height: 40px;
+    background: #c5d92d;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.table-container .subflex p {
+    font-weight: 500;
+    color: #242E2C;
+}
+
+.table-container .subflex span {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #6B7271;
+    line-height: 1;
+}
+
+.table-container .btnbottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.table-container .bottom select:focus-visible {
+    outline: 0;
+}
+
 @media (max-width:999px) {
     .step-wizard .step .title,
-    .itemdeposit p {
+    .itemdeposit p,
+    .listdeposit a span {
         font-size: 14px;
     }
     .subchek {
@@ -639,4 +793,510 @@
     .itemdeposit .title {
         font-size: 20px;
     }
+    .filterinput .form-control {
+        min-width: 264px;
+        max-width: 264px;
+    }
+    table.dataTable tbody th,
+    table.dataTable tbody td {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .dataTables_wrapper {
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+    .dataTables_wrapper::-webkit-scrollbar-thumb {
+        background-color: #C5D92D;
+    }
+    .dataTables_wrapper::-webkit-scrollbar {
+        height: 0px;
+    }
+}
+
+.chat-container {
+    position: relative;
+    display: flex;
+    height: 90vh;
+    border: 1px solid #E5E6E6;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.sidebarchat {
+    width: 300px;
+    border-right: 1px solid #E5E6E6;
+    display: flex;
+    flex-direction: column;
+    /* transition: all 0.5s ease-in-out 0s; */
+}
+
+.search-box {
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid #E5E6E6;
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    width: 100%;
+    height: 50px;
+    padding: 8px 8px 8px 38px;
+    background: #F5F5F5;
+    border-radius: 4px;
+    font-weight: 500;
+    outline: none;
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    top: 19px;
+    left: 18px;
+}
+
+.search-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.chat-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.chat-list::-webkit-scrollbar-thumb,
+.messages::-webkit-scrollbar-thumb {
+    background-color: #C5D92D;
+}
+
+.chat-item {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #E5E6E6;
+    transition: background 0.2s;
+}
+
+.chat-item:last-child {
+    border: 0;
+}
+
+.chat-item:hover {
+    background: #f9f9f9;
+}
+
+.chat-left {
+    display: flex;
+    align-items: center;
+}
+
+.chat-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.chatoff {
+    position: relative;
+    justify-content: flex-end;
+}
+
+.chat-item .red {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #EB5757;
+}
+
+.chat-info span {
+    font-weight: bold;
+}
+
+.chat-info small {
+    color: gray;
+    font-size: 15px;
+}
+
+.chat-time {
+    font-size: 14px;
+    color: gray;
+    font-weight: 500;
+}
+
+
+/* Chat area */
+
+.chat-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    padding: 7px 15px;
+    border-bottom: 1px solid #E5E6E6;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.nameuser {
+    display: flex;
+    align-items: center;
+}
+
+.nameuser .photo {
+    min-width: 40px;
+    max-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #B1B1B1;
+    overflow: hidden;
+    margin-right: 12px;
+}
+
+.nameuser .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nameuser p {
+    font-weight: bold;
+}
+
+.nameuser .map {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.nameuser .map svg {
+    min-width: 16px;
+    max-width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+.chat-header .dropdown .dropdown-toggle svg {
+    width: 24px;
+    height: 24px;
+}
+
+.chat-header .dropdown .dropdown-toggle::after {
+    display: none;
+}
+
+.chat-header .dropdown .dropdown-menu {
+    min-width: inherit;
+    box-shadow: 0px 4px 24px 0px #0000000D;
+    width: 148px;
+    padding: 12px 0px;
+    top: 100% !important;
+    left: auto !important;
+    right: 0;
+    transform: inherit !important;
+    border: 0;
+}
+
+.chat-header .dropdown .dropdown-menu .dropdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 18px;
+    height: auto;
+    border: 0px;
+    margin: 0px;
+    padding: 8px 12px !important;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+    border: 0px !important;
+    background: none !important;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.chat-header .dropdown .dropdown-menu .dropdown-item:hover {
+    background: #f7f8fa !important;
+    color: #C5D92D;
+}
+
+.date-separator {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: gray;
+    margin: 10px 0;
+}
+
+.messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    margin: 8px 0;
+    max-width: 60%;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+.received {
+    align-self: flex-start;
+}
+
+.received .text {
+    background: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 15px;
+    line-height: 1.4;
+    font-weight: 500;
+    border-bottom-left-radius: 0;
+}
+
+.message .time {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.sent {
+    align-self: flex-end;
+}
+
+.sent .text {
+    background: #C5D92D;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 15px;
+    line-height: 1.4;
+    font-weight: 500;
+    border-bottom-right-radius: 0;
+}
+
+.sent .text svg {
+    margin-right: 4px;
+}
+
+.sent .time {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chat-input {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #E5E6E6;
+    padding: 15px;
+    align-items: center;
+}
+
+.subemoji {
+    display: flex;
+}
+
+.message .emoji {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 22px;
+    margin: 0 3px;
+}
+
+.mes-item {
+    position: relative;
+    width: calc(100% - 65px);
+}
+
+.emoji-btn,
+.attach-btn {
+    position: absolute;
+    right: 12px;
+    border: 0;
+    top: 10px;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.attach-btn {
+    right: 32px;
+}
+
+
+/* Emoji Picker */
+
+.emoji-picker {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    right: 10px;
+    background: #fff;
+    border-radius: .25rem;
+    padding: 10px;
+    width: 170px;
+    box-shadow: 0px 4px 24px 0px #0000000D;
+    flex-wrap: wrap;
+    font-size: 20px;
+    z-index: 20;
+}
+
+.emoji-picker span {
+    cursor: pointer;
+    margin: 5px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    padding-right: 75px;
+    width: 100%;
+    background: #F5F5F5;
+    border-radius: 8px;
+    font-weight: 500;
+    outline: none;
+}
+
+.chat-input label {
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: gray;
+}
+
+.chat-input #sendBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #C5D92D;
+    border: none;
+    min-width: 50px;
+    max-width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.chat-input input[type="file"] {
+    display: none;
+}
+
+.toggle-sidebar {
+    display: none;
+    position: absolute;
+    right: 56px;
+    cursor: pointer;
+}
+
+#menuIcon {
+    width: 24px;
+}
+
+@media (max-width:767px) {
+    .toggle-sidebar {
+        display: block;
+    }
+    .sidebarchat {
+        position: absolute;
+        left: -100%;
+        top: 72px;
+        width: 100%;
+        height: 69%;
+        background: #fff;
+        border: 0;
+        z-index: 2;
+    }
+    .sidebarchat.active {
+        left: 0;
+    }
+}
+
+
+/*//////////////////////////////////////////////////////////////////////*/
+
+.subdeposit {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 16px;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.formcontrol {
+    border: 1px solid #E4E4E4;
+}
+
+@media (max-width:999px) {
+    .subdeposit {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .subdeposit {
+        padding-top: 16px;
+    }
+}
+
+.subdeposit .che-box {
+    margin: 0 !important;
+}
+
+.subdeposit .text-chek .red,
+.subdeposit .text-chek .green {
+    color: #D9000D;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.subdeposit .text-chek p {
+    font-size: 16px;
+    padding-left: 25px;
+}
+
+.subdeposit .text-chek .green {
+    color: #27BA00;
+}
+
+.withdebit {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+    color: #000;
+    text-transform: capitalize;
+    margin-top: 12px;
+    padding-left: 25px;
+}
+
+.withdebit svg {
+    min-width: 20px;
+    max-width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.formstyle {
+    padding: 16px;
+    padding-top: 0;
 }
