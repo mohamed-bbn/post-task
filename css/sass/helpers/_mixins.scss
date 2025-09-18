@@ -7,11 +7,10 @@
     list-style: $none;
     font-size: $fontsize;
     line-height: $lineheight;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 100;
-    font-style: normal;
     color: $colortext;
 }
 
@@ -85,9 +84,9 @@
     outline-style: $none;
     border: $zero;
     text-align: center;
-    background: $red;
+    background: $green;
     font-weight: 500;
-    border: 1px solid $red;
+    border: 1px solid $green;
     border-radius: 4px;
     text-transform: capitalize;
     @include transition(all 0.5s ease-in-out 0s);
@@ -101,9 +100,8 @@
         @include transition(all 0.5s ease-in-out 0s);
     }
     &:hover {
-        background: $dark;
-        border: 1px solid $dark;
-        color: $white;
+        background: $blue;
+        border: 1px solid $blue;
         svg {
             fill: $white;
         }
@@ -219,6 +217,8 @@
 
 @mixin input {
     height: 56px;
+    background: #FBFCF0;
+    border: 1px solid #E5E5E5;
     text-transform: $none;
     font-weight: 500;
     @include transition(all 0.5s ease-in-out 0s);
@@ -227,7 +227,7 @@
     &:focus-visible {
         outline: 0;
         outline-style: $none;
-        border: 1px solid $red;
+        border: 1px solid $green;
     }
 }
 
@@ -248,7 +248,7 @@
         }
     }
     span {
-        color: $red;
+        color: $green;
     }
 }
 
@@ -263,7 +263,7 @@
         font-size: 22px;
     }
     &:hover {
-        color: $red;
+        color: $green;
         opacity: 1;
     }
 }
@@ -345,7 +345,7 @@
             padding-right: $com-spacing-4;
             @include transition(all 0.5s ease-in-out 0s);
             &:hover {
-                color: $red;
+                color: $green;
             }
             &:before {
                 @include position(absolute, $top: -6px, $right: $zero);
@@ -398,8 +398,8 @@
             @include transition(all 0.5s ease-in-out 0s);
         }
         &:hover {
-            background: $red;
-            border: 1px solid $red;
+            background: $green;
+            border: 1px solid $green;
             svg {
                 fill: $white;
             }
@@ -444,7 +444,7 @@
         }
         li.slick-active {
             button {
-                background: $red !important;
+                background: $green !important;
             }
         }
     }
@@ -455,7 +455,8 @@
     cursor: pointer;
     font-weight: normal;
     margin: $zero;
-    padding-left: 28px;
+    width: 19px;
+    height: 19px;
     input[type="checkbox"],
     input[type="radio"] {
         @include position(absolute, $right: 9000px);
@@ -478,13 +479,17 @@
         box-sizing: border-box;
         border-radius: 50%;
     }
-    input[type="radio"]+.label-text:before {
-        @include border-radius(50%);
+    input[type="checkbox"]+.label-text:before {
+        @include border-radius(4px);
     }
-    input[type="checkbox"]:checked+.label-text:before,
     input[type="radio"]:checked+.label-text:before {
-        background: $red !important;
+        background: $green !important;
         box-shadow: inset 0 0 0px 4px $white;
+    }
+    input[type="checkbox"]:checked+.label-text:before {
+        background: $green url(../images/tick.svg) no-repeat center center !important;
+        border: 1px solid $green;
+        box-shadow: none;
     }
     span.label-text {
         font-style: normal;

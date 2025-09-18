@@ -114,7 +114,7 @@
         padding-top: 5px;
     }
     input[type="file"]::file-selector-button {
-        width: 105px;
+        width: 120px;
         color: transparent;
     }
     input[type="file"]::before {
@@ -132,7 +132,7 @@
         pointer-events: none;
         top: 15px;
         left: 34px;
-        color: $dark;
+        color: $blak;
         content: "Download";
     }
     input[type="file"]::file-selector-button {
@@ -140,8 +140,8 @@
         padding: 0 16px;
         height: 44px;
         cursor: pointer;
-        background-color: $ofwhite;
-        border: 1px solid #dcdcdc;
+        background-color: #e7e9d8;
+        border: 1px solid #E5E5E5;
         transition: background-color 200ms;
     }
     /* file upload button hover state */

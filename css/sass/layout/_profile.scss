@@ -72,7 +72,7 @@
                         position: absolute;
                         left: $zero;
                         top: $zero;
-                        background: $red;
+                        background: $green;
                         width: $zero;
                         height: $fullwidth;
                         @include transition(all 0.5s ease-in-out 0s);
@@ -167,7 +167,7 @@
                     font-weight: 600;
                 }
                 .more {
-                    color: $red;
+                    color: $green;
                     font-weight: 500;
                     &:hover {
                         text-decoration: underline;
@@ -243,7 +243,7 @@
                             text-align: center;
                             overflow: hidden;
                             p {
-                                color: $red;
+                                color: $green;
                                 font-size: 20px;
                                 font-weight: 700;
                                 text-align: center;
@@ -481,8 +481,8 @@
             .progress-bar {
                 height: 12px;
                 background: $green;
-                &.red {
-                    background: $red;
+                &.green {
+                    background: $green;
                 }
             }
         }
@@ -631,7 +631,7 @@
         margin: $zero $auto;
         width: 40px;
         height: 40px;
-        background: $red;
+        background: $green;
         @include flex;
         cursor: pointer;
         @include border-radius(50%);
@@ -650,7 +650,7 @@
             background: $white;
             svg {
                 path {
-                    fill: $red;
+                    fill: $green;
                 }
             }
         }
@@ -803,13 +803,13 @@
     width: 280px;
     height: $fullwidth;
     overflow: auto;
-    background: $dark;
     z-index: 1008;
     overflow: hidden;
     @include transition(all 0.5s ease-in-out 0s);
     overflow-y: scroll;
-    // scrollbar-width: thin;
-    // scroll-behavior: smooth;
+    background: $white;
+    padding-bottom: 24px;
+    border-right: 1px solid #F2EDED;
     @media (max-width: 999px) {
         left: -280px;
     }
@@ -828,61 +828,15 @@
         }
     }
     &.active {
-        width: 70px;
+        left: -100%;
         @media (max-width: 999px) {
             left: $zero;
             width: 280px;
-        }
-        .title,
-        .email,
-        .listmenu a span,
-        .imglogo,
-        .job,
-        .progressbar {
-            display: none;
-            @media (max-width: 999px) {
-                display: block;
-            }
         }
         .favicon {
             display: block;
             @media (max-width: 999px) {
                 display: none;
-            }
-        }
-        .imgcent {
-            width: 50px;
-            height: 50px;
-            @media (max-width: 999px) {
-                width: 100px;
-                height: 100px;
-            }
-            .img_prev {
-                height: 50px;
-                @media (max-width: 999px) {
-                    height: 100px;
-                }
-            }
-        }
-    }
-    &:hover {
-        width: 280px;
-        .title,
-        .email,
-        .listmenu a span,
-        .imglogo,
-        .job,
-        .progressbar {
-            display: block;
-        }
-        .favicon {
-            display: none;
-        }
-        .imgcent {
-            width: 100px;
-            height: 100px;
-            .img_prev {
-                height: 100px;
             }
         }
     }
@@ -892,26 +846,22 @@
     .logo {
         @include flex;
         width: $fullwidth;
-        height: 82px;
-        background: #ffffff0d;
         padding: $zero $com-spacing-4;
+        margin: $com-spacing-8 $zero $com-spacing-6 $zero;
         @media (max-width: 999px) {
             justify-content: flex-start;
         }
         img {
-            max-width: 158px !important;
-            @media (max-width: 1120px) {
-                // max-width: 138px;
-            }
+            max-width: $fullwidth !important;
         }
     }
     .favicon {
         display: none;
     }
     .imgcent {
-        width: 100px;
-        height: 100px;
-        margin: $com-spacing-5 $auto $zero $auto;
+        width: 140px;
+        height: 140px;
+        margin: $com-spacing-4 $auto $zero $auto;
         &:hover {
             .file-bro {
                 opacity: 1;
@@ -934,73 +884,59 @@
         }
     }
     .title {
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        justify-content: center;
-        text-align: center;
-        font-size: 22px;
+        color: $blak;
+        white-space: normal;
+        font-size: 16px;
         font-weight: 600;
-        color: $white;
+        justify-content: center;
         margin-top: $com-spacing-4;
     }
-    .email,
-    .job {
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
+    .text {
+        color: $blak;
         text-align: center;
+        margin-top: 12px;
         font-weight: 400;
-        color: #cdcdcd;
-        margin-top: $com-spacing-1;
-        text-transform: capitalize;
+        b {
+            font-weight: bold;
+            color: $blak;
+        }
     }
     .listmenu {
-        padding: $com-spacing-4;
-        @include transition(all 0.5s ease-in-out 0s);
+        margin-top: $com-spacing-6;
         a {
             display: flex;
             align-items: center;
-            margin-bottom: $com-spacing-4;
+            padding: $com-spacing-3 $com-spacing-4;
+            border-radius: 4px;
+            margin-top: 1px;
             @include transition(all 0.5s ease-in-out 0s);
-            &:last-child {
-                margin: $zero;
-            }
             &:hover,
             &.active {
+                background: $blue;
                 span {
-                    color: $red
+                    color: $white
                 }
                 .icon {
-                    background: $white;
                     svg {
-                        fill: $red
+                        fill: $green;
                     }
                 }
             }
             .icon {
-                @include flex;
-                min-width: 38px;
-                max-width: 38px;
-                height: 38px;
-                border-radius: 8px;
-                background: #ffffff0d;
-                font-style: normal;
                 margin-right: $com-spacing-2;
                 @include transition(all 0.5s ease-in-out 0s);
                 svg,
                 img {
-                    fill: $white;
-                    width: 17px !important;
-                    height: 17px !important;
+                    fill: #64666C;
+                    width: 20px !important;
+                    height: 20px !important;
                     @include transition(all 0.5s ease-in-out 0s);
                 }
             }
             span {
-                white-space: nowrap;
-                text-overflow: ellipsis;
                 overflow: hidden;
-                color: $white;
+                color: #121212;
+                font-weight: 700;
                 text-transform: capitalize;
                 font-weight: 500;
                 @include transition(all 0.5s ease-in-out 0s);
@@ -1013,22 +949,17 @@
     position: relative;
     width: $fullwidth;
     min-height: 100vh;
-    background: $ofwhite;
     padding-left: 280px;
     @include transition(all 0.5s ease-in-out 0s);
     @media (max-width: 999px) {
         padding-left: $zero;
     }
     &.active {
-        padding-left: 70px;
-        @media (max-width: 999px) {
-            padding-left: $zero;
-        }
+        padding-left: $zero;
+        @media (max-width: 999px) {}
         .header {
-            width: calc(100% - 70px);
-            @media (max-width: 999px) {
-                width: $fullwidth;
-            }
+            width: $fullwidth;
+            @media (max-width: 999px) {}
         }
     }
     .header {
@@ -1045,6 +976,23 @@
             width: $fullwidth;
             padding: $zero $com-spacing-3;
             // height: 66px;
+        }
+        .homeitem {
+            display: flex;
+            align-items: center;
+            .iconhome {
+                @include flex;
+                border: 1.14px solid #E5E3FF;
+                border-radius: 14px;
+                width: 40px;
+                height: 40px;
+                margin-left: $com-spacing-4;
+                svg {
+                    min-width: 18px;
+                    max-width: 18px;
+                    height: 18px;
+                }
+            }
         }
         .burger {
             position: relative;
@@ -1157,7 +1105,7 @@
             &:nth-last-child(4) {
                 .inner {
                     .icon {
-                        background: $red;
+                        background: $green;
                     }
                 }
             }
@@ -1206,7 +1154,7 @@
                         font-weight: 600;
                     }
                     .more {
-                        color: $red;
+                        color: $green;
                         font-weight: 500;
                         &:hover {
                             text-decoration: underline;
@@ -1282,7 +1230,7 @@
                                 text-align: center;
                                 overflow: hidden;
                                 p {
-                                    color: $red;
+                                    color: $green;
                                     font-size: 20px;
                                     font-weight: 700;
                                     text-align: center;
@@ -1707,7 +1655,7 @@
                     text-transform: capitalize;
                     &:active,
                     &:hover {
-                        color: $red;
+                        color: $green;
                         background: $ofwhite !important;
                     }
                 }
@@ -1729,7 +1677,7 @@
         svg {
             min-width: 100px;
             max-width: 100px;
-            fill: $red;
+            fill: $green;
         }
     }
     p {
@@ -1932,7 +1880,7 @@
             text-align: center;
             overflow: hidden;
             p {
-                color: $red;
+                color: $green;
                 font-size: 24px;
                 font-weight: 700;
                 text-align: center;

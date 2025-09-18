@@ -3,17 +3,15 @@
     top: $zero;
     left: $zero;
     width: $fullwidth;
+    background: $dark;
     z-index: 1002;
     @include transition(all 0.5s ease-in-out 0s);
     @media (max-width: 1120px) {
         position: relative;
-        background: $white;
         padding: $com-spacing-3 $zero;
-        @include prefixer (box-shadow, 4px 4px 60px #0000000d, webkit moz o ms);
     }
     &.sticky {
         position: fixed;
-        background: $white;
         @include prefixer (box-shadow, 4px 4px 60px #0000000d, webkit moz o ms);
         @include transition(all 0.5s ease-in-out 0s);
         .bottoms {
@@ -70,7 +68,7 @@
                 opacity: 1;
                 border: none;
                 outline: none;
-                background: $blak;
+                background: $white;
                 &:nth-child(1) {
                     top: 0px;
                 }
@@ -142,8 +140,7 @@
             overflow: hidden;
             overflow-y: auto;
             visibility: hidden;
-            box-shadow: 0px 10px 40px 0px #06163a1a;
-            background: $white;
+            background: $dark;
             transition: all 0.5s ease;
             &.active {
                 left: 0rem;
@@ -209,14 +206,14 @@
             font-weight: 500;
             padding: $com-spacing-6+$com-spacing-1 $zero;
             cursor: pointer;
-            color: $blak;
+            color: $white;
             text-transform: capitalize;
             @include transition(all 0.5s ease-in-out 0s);
             svg {
                 position: relative;
                 max-width: 14px;
                 max-height: 14px;
-                fill: $blak;
+                fill: $white;
                 margin-top: $com-spacing-1;
                 @include transition(all 0.5s ease-in-out 0s);
                 @media only screen and (max-width: 1120px) {
@@ -259,16 +256,16 @@
         .activelink {
             .menu-link {
                 svg {
-                    fill: $red;
+                    fill: $green;
                 }
             }
         }
         .activelink,
         .menu-item:hover {
             .menu-link {
-                color: $red;
+                color: $green;
                 svg {
-                    fill: $red;
+                    fill: $green;
                 }
             }
         }
@@ -325,7 +322,7 @@
                 margin: $zero;
             }
             &:hover {
-                color: $red;
+                color: $green;
             }
         }
     }
@@ -397,62 +394,31 @@
         @media (max-width: 1120px) {
             display: none;
         }
-        .color {
-            position: relative;
-            width: 22px;
-            height: 22px;
-            li {
-                display: none;
-                position: absolute;
-                cursor: pointer;
-                width: $fullwidth;
-                height: $fullwidth;
-                @include transition(all 0.5s ease-in-out 0s);
-                svg {
-                    width: 16px;
-                    height: 16px;
-                    fill: $blak;
-                    @include transition(all 0.5s ease-in-out 0s);
-                }
-                &.night {
-                    svg {
-                        width: 20px;
-                        height: 20px;
-                    }
-                }
-                &.active {
-                    @include flex;
-                    // svg {
-                    //     fill: $white;
-                    // }
-                }
-            }
-        }
-        ///* End colors
         .language {
-            display: flex;
-            align-items: center;
-            color: $blak;
+            @include flex;
+            border: 1.14px solid #E5E3FF;
+            border-radius: 14px;
+            background: $white;
+            width: 40px;
+            height: 40px;
             font-weight: 400;
             cursor: pointer;
-            margin-left: $com-spacing-2;
             @include transition(all 0.5s ease-in-out 0s);
             svg {
-                min-width: 14px;
-                max-width: 14px;
-                height: 14px;
+                min-width: 18px;
+                max-width: 18px;
+                height: 18px;
                 fill: $blak;
-                margin-right: $com-spacing-1;
             }
             &:hover {
-                color: $red
+                color: $green
             }
         }
         .login {
             @include bottom;
             min-width: 120px;
             max-width: 120px;
-            border: 1px solid $red;
+            border: 1px solid $green;
             color: $blak;
             background: $none;
             margin-left: $com-spacing-3;
@@ -502,22 +468,28 @@
                     color: $blak;
                     max-width: 100px;
                     font-weight: 400;
+                    @media (max-width: 999px) {
+                        color: $white;
+                    }
                 }
                 svg {
                     fill: $blak;
                     margin-top: $com-spacing-3;
                     max-width: 12px;
+                    @media (max-width: 999px) {
+                        fill: $white;
+                    }
                 }
             }
             .dropdown-menu.show {
                 margin-top: $zero;
-                right: $auto !important;
-                left: $zero !important;
+                right: $zero !important;
+                left: $auto !important;
                 top: 38px !important;
                 min-width: inherit;
                 box-shadow: 0px 4px 24px 0px #0000000D;
                 border-radius: $zero;
-                width: 148px;
+                width: 168px;
                 padding: $com-spacing-3 $zero;
                 transform: $none !important;
                 border: $zero;
@@ -545,7 +517,7 @@
                     text-transform: capitalize;
                     &:active,
                     &:hover {
-                        color: $red;
+                        color: $green;
                         background: $ofwhite !important;
                     }
                 }

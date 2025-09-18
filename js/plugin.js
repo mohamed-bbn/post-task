@@ -1,30 +1,5 @@
 $(document).ready(function() {
 
-
-
-
-
-    var colorLi = $(".color li");
-    colorLi
-        .eq(0).css("backgroundColor", "transparent").end()
-        .eq(1).css("backgroundColor", "transparent").end()
-
-
-    colorLi.click(function() {
-        $("link[href*='theme']").attr("href", $(this).attr("data-value"));
-        $('.color  li').toggleClass("active");
-        $('.logo .night-logo').addClass("active");
-    });
-
-
-    // End color
-
-    ////////////////////////// End Menu
-
-
-
-
-
     $(window).scroll(function() {
         if ($(this).scrollTop() > 1) {
             $('.header').addClass("sticky");
@@ -403,5 +378,4 @@ function readURL(input) {
     }
 }
 
-// End loop of file input elementsResponse
 // End loop of file input elementsResponse

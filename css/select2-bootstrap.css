@@ -273,9 +273,9 @@
     position: relative;
     overflow: hidden;
     min-height: 56px;
-    border: 1px solid #ced4da;
+    background: #FBFCF0;
+    border: 1px solid #E5E5E5;
     border-radius: .25rem;
-    background: #fff;
     font-weight: 500;
     text-decoration: none;
     white-space: nowrap;
@@ -360,7 +360,6 @@
     float: right;
     color: #e10d0d;
     cursor: pointer;
-    margin-top: 1px;
     margin-left: 10px;
 }
 
