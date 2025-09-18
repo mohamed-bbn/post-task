@@ -167,6 +167,19 @@ background-color: #C5D92D;
     height: 68px;
 }
 
+.cuspageitem .innerpage .minhead .bottom {
+    background: #C5D92D;
+    color: #000;
+    min-width: 88px;
+    height: 40px;
+    border: 0 !important;
+}
+
+.cuspageitem .innerpage .minhead .bottom:hover {
+    background: #6568F4;
+    color: #fff;
+}
+
 .cuspageitem .listtask li {
     display: flex;
     align-items: center;
@@ -407,7 +420,8 @@ background-color: #C5D92D;
     max-height: 40px;
 }
 
-.tabwizard .textlistjob li a {
+.tabwizard .textlistjob li a,
+.innersubcolum .edit {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -418,18 +432,35 @@ background-color: #C5D92D;
     transition: all 0.5s ease-in-out 0s;
 }
 
-.tabwizard .textlistjob li a svg {
+.innersubcolum .edit {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 28px;
+    height: 28px;
+    z-index: 1;
+}
+
+.tabwizard .textlistjob li a svg,
+.innersubcolum .edit svg {
     fill: #C5D92D;
     max-width: 20px;
     max-height: 20px;
     transition: all 0.5s ease-in-out 0s;
 }
 
-.tabwizard .textlistjob li a:hover {
+.innersubcolum .edit svg {
+    max-width: 14px;
+    max-height: 14px;
+}
+
+.tabwizard .textlistjob li a:hover,
+.innersubcolum .edit:hover {
     background: #C5D92D;
 }
 
-.tabwizard .textlistjob li a:hover svg {
+.tabwizard .textlistjob li a:hover svg,
+.innersubcolum .edit:hover svg {
     fill: #fff;
 }
 
@@ -689,8 +720,8 @@ span.statuscompleted {
     margin-top: 16px;
 }
 
-.flexinput select.form-control:focus,
-.flexinput select.form-control:hover {
+.flexinput .form-control:focus,
+.flexinput .form-control:hover {
     border: 1px solid #C5D92D;
 }
 
@@ -814,6 +845,9 @@ span.statuscompleted {
         height: 0px;
     }
 }
+
+
+/*//////////////////////////////////////////////////////////////////////*/
 
 .chat-container {
     position: relative;
@@ -1299,4 +1333,511 @@ span.statuscompleted {
 .formstyle {
     padding: 16px;
     padding-top: 0;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////*/
+
+.taskmeeting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid #F5F5F5;
+    margin-top: 24px;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+@media (max-width:600px) {
+    .taskmeeting {
+        display: block;
+    }
+    .taskmeeting .listaction {
+        margin-top: 16px;
+    }
+    .tablelistjob .minhead .form-control {
+        display: none;
+    }
+}
+
+.taskmeeting:hover {
+    background: #F5F5F5;
+}
+
+.taskmeeting:hover .flex .date,
+.taskmeeting:hover .listaction .chat-icon {
+    background: #fff;
+}
+
+.taskmeeting .flex,
+.taskmeeting .subtext .listtime,
+.taskmeeting .subtext .listtime li {
+    display: flex;
+    align-items: flex-start;
+}
+
+.taskmeeting .subtext .listtime,
+.taskmeeting .subtext .listtime li {
+    align-items: center;
+}
+
+.taskmeeting .flex .date {
+    min-width: 76px;
+    max-width: 76px;
+    background: #FAF7F1;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    overflow: hidden;
+    text-align: center;
+    margin-right: 24px;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.taskmeeting .flex .date .headdate {
+    text-align: center;
+    background: #C5D92D;
+    font-size: 14px;
+    color: #fff;
+}
+
+.taskmeeting .flex .date .numdate {
+    padding: 12px;
+}
+
+.taskmeeting .subtext .title {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.taskmeeting .subtext p,
+.taskmeeting .subtext .listtime li {
+    font-size: 14px;
+    font-weight: 500;
+    color: #64666C;
+}
+
+.taskmeeting .subtext .listtime li {
+    color: #000;
+    margin-right: 24px;
+}
+
+.taskmeeting .subtext .listtime li:last-child {
+    margin-right: 0px;
+}
+
+.taskmeeting .subtext p span {
+    color: #C5D92D;
+}
+
+.taskmeeting .subtext .listtime li svg {
+    margin-right: 4px;
+}
+
+.taskmeeting .listaction {
+    display: flex;
+}
+
+.taskmeeting .listaction .chat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-width: 40px;
+    max-width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: #F5F5F5;
+    margin-right: 16px;
+    transition: all 0.5s ease-in-out 0s;
+    cursor: pointer;
+}
+
+.taskmeeting .listaction .chat-icon .tooltip {
+    position: absolute;
+    bottom: 114%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    background: #111827;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.taskmeeting .listaction .chat-icon .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #111827 transparent transparent transparent;
+}
+
+.taskmeeting .listaction .chat-icon:hover .tooltip,
+.taskmeeting .listaction .chat-icon:focus-within .tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+}
+
+.taskmeeting .listaction .bottom {
+    background: #fff;
+    border: 1px solid #C5D92D;
+    color: #000;
+    min-width: 88px;
+    height: 40px;
+}
+
+.taskmeeting .listaction .bottom:hover {
+    background: #C5D92D;
+    color: #fff;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////*/
+
+.tablelistjob {
+    border: 1px solid #E4E4E4;
+    border-radius: 8px;
+    margin-top: 24px;
+    overflow: hidden;
+}
+
+.tablelistjob .minhead,
+.subminhead {
+    background: #F0F0FE;
+    border-bottom: 1px solid #E4E4E4;
+    padding: 16px;
+}
+
+.subminhead {
+    border-radius: 8px 8px 0px 0px;
+}
+
+.tablelistjob .minhead .title,
+.subminhead .title {
+    display: flex;
+    padding: 0 !important;
+    font-size: 20px !important;
+}
+
+.tablelistjob .minhead .form-control {
+    min-width: 184px;
+    max-width: 184px;
+    height: 50px;
+    border: 1px solid #000;
+}
+
+.tablelistjob .minhead .title svg,
+.subminhead .title svg {
+    margin-right: 12px;
+}
+
+.tablelistjob .minhead .title::before,
+.subminhead .title:before {
+    display: none;
+}
+
+.tablelistjob .table-container {
+    border: 0;
+}
+
+.tablelistjob .dataTables_wrapper {
+    padding: 0;
+    border: 0;
+}
+
+.tablelistjob .dataTables_wrapper .btnbottom {
+    padding: 16px;
+    padding-top: 0;
+}
+
+.tablelistjob table.dataTable>thead>tr>th {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    padding: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tablelistjob table.dataTable tbody td {
+    padding: 16px;
+}
+
+.tablelistjob .status,
+.subcolum .status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-width: 155px;
+    max-width: 155px;
+    height: 32px;
+    border-radius: 60px;
+    text-align: center;
+    background: #ccc;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.subcolum .status svg {
+    margin-right: 4px;
+}
+
+.tablelistjob .status::before,
+.subcolum .status::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4D5761;
+}
+
+.tablelistjob .status.draft {
+    background: #F9FAFB;
+}
+
+.tablelistjob .status.review,
+.subcolum .status.review {
+    background: #FFFAEB;
+    color: #93370D;
+}
+
+.tablelistjob .status.review::before,
+.subcolum .status.review::before {
+    background: #93370D;
+}
+
+.tablelistjob .status.active {
+    background: #C5D92D;
+    color: #fff;
+}
+
+.tablelistjob .status.active::before {
+    background: #fff;
+}
+
+.tablelistjob .status.reassigning {
+    background: #EFF8FF;
+    color: #1849A9;
+}
+
+.tablelistjob .status.reassigning::before {
+    background: #1849A9;
+}
+
+.tablelistjob .status.cancelled {
+    background: #FEF3F2;
+    color: #912018;
+}
+
+.tablelistjob .status.cancelled::before {
+    background: #912018;
+}
+
+.tablelistjob .status.progress,
+.subcolum .status.progress {
+    background: #ECFDF3;
+    color: #085D3A;
+}
+
+.tablelistjob .status.progress::before,
+.subcolum .status.progress::before {
+    background: #085D3A;
+}
+
+.subcolum .status.active {
+    background: #F9FBEA;
+    color: #B3C529;
+}
+
+.subcolum .status.active::before {
+    background: #B3C529;
+}
+
+.subcolum .status.completed {
+    background: #067647;
+    color: #fff;
+}
+
+.subcolum .status.completed::before {
+    display: none;
+}
+
+.tablelistjob a {
+    margin: 0px 4px;
+}
+
+.columitem {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.subcolum {
+    background: #FAFAFF;
+    border: 1px solid #B8BAFA;
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 16px;
+}
+
+.innersubcolum {
+    position: relative;
+    width: 100%;
+    padding: 16px;
+    border-radius: 20px;
+    background: #fff;
+    border: 1px solid #C5D92D;
+    box-shadow: 0px 8px 12px -4px #00000014;
+    margin-top: 16px;
+}
+
+.innersubcolum .title {
+    font-size: 16px;
+    padding-right: 32px;
+}
+
+.innersubcolum .status {
+    min-width: inherit;
+    background: none !important;
+    display: inline-flex;
+    padding-left: 18px;
+    margin-top: 4px;
+}
+
+.innersubcolum .status::before {
+    left: 0;
+}
+
+.innersubcolum .list li {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.innersubcolum .list li svg {
+    min-width: 20px;
+    margin-right: 4px;
+}
+
+.innersubcolum .list.bord li {
+    margin-top: 0px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #E8E3E3;
+}
+
+.innersubcolum .approaching p {
+    display: flex;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.innersubcolum .approaching p.green {
+    color: #1B8354;
+}
+
+.innersubcolum .approaching p svg {
+    min-width: 15px;
+    max-width: 15px;
+    height: 15px;
+    margin: 3px 4px 0px 0px;
+}
+
+.innersubcolum .progress {
+    margin: 8px 0px;
+    border-radius: 60px;
+    background: #F3F4F6;
+}
+
+.innersubcolum .progress .progress-bar {
+    background: #1B8354;
+    border-radius: 60px;
+}
+
+.innersubcolum .nameuser {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.innersubcolum .nameuser .flex {
+    display: flex;
+    align-items: center;
+}
+
+.innersubcolum .nameuser .flex .photo {
+    min-width: 40px;
+    max-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 8px;
+    overflow: hidden;
+}
+
+.innersubcolum .nameuser .flex .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.innersubcolum .nameuser .flex .title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.innersubcolum .nameuser .chat svg {
+    min-width: 20px;
+    max-width: 20px;
+    height: 20px;
+}
+
+.innersubcolum .bottom {
+    width: 100%;
+    border-radius: 60px;
+    background: #ECFDF3;
+    color: #085D3A;
+    border: 1px solid #ABEFC6;
+    margin-top: 16px;
+}
+
+.innersubcolum .bottom:hover {
+    background: #085D3A;
+    border: 1px solid #085D3A;
+    color: #fff;
+}
+
+@media (max-width: 1199px) {
+    .columitem {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .columitem {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .subminhead {
+        display: block !important;
+    }
+    .subminhead .bottom {
+        margin-top: 16px;
+    }
 }
