@@ -12,37 +12,6 @@ $(document).ready(function() {
 
     // End Scroll Header
 
-    $('.jobs-slider').slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        responsive: [{
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 500,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
-
 
     $.fn.select2.defaults.set("theme", "bootstrap");
     $(".select2-single, .select2-multiple").select2({
@@ -62,65 +31,39 @@ $(document).ready(function() {
     /////////////////////////////// END Select 2
 
 
+    $(function() {
+        const navbarMenu = $("#navbar");
+        const overlayMenu = $(".overlay");
 
-    const navbarMenu = document.getElementById("navbar");
-    const burgerMenu = document.getElementById("burger");
-    const overlayMenu = document.querySelector(".overlay");
+        $("#burger, .overlay").click(function() {
+            navbarMenu.toggleClass("active");
+            overlayMenu.toggleClass("active");
+        });
 
-    // Show and Hide Navbar Function
-    const toggleMenu = () => {
-        navbarMenu.classList.toggle("active");
-        overlayMenu.classList.toggle("active");
-    };
+        navbarMenu.on("click", "[data-toggle]", function(e) {
+            if (window.innerWidth <= 999) {
+                e.preventDefault();
+                const $menuDropdown = $(this).parent();
 
-    // Collapsible Mobile Submenu Function
-    const collapseSubMenu = () => {
-        navbarMenu
-            .querySelector(".menu-dropdown.active .submenu")
-            .removeAttribute("style");
-        navbarMenu.querySelector(".menu-dropdown.active").classList.remove("active");
-    };
+                if ($menuDropdown.hasClass("active")) {
+                    $menuDropdown.removeClass("active").find(".submenu").removeAttr("style");
+                } else {
+                    $(".menu-dropdown.active .submenu").removeAttr("style");
+                    $(".menu-dropdown.active").removeClass("active");
 
-    // Toggle Mobile Submenu Function
-    const toggleSubMenu = (e) => {
-        if (e.target.hasAttribute("data-toggle") && window.innerWidth <= 1120) {
-            e.preventDefault();
-            const menuDropdown = e.target.parentElement;
-
-            // If Dropdown is Expanded, then Collapse It
-            if (menuDropdown.classList.contains("active")) {
-                collapseSubMenu();
-            } else {
-                // Collapse Existing Expanded Dropdown
-                if (navbarMenu.querySelector(".menu-dropdown.active")) {
-                    collapseSubMenu();
+                    $menuDropdown.addClass("active");
+                    $menuDropdown.find(".submenu").css("max-height", $menuDropdown.find(".submenu")[0].scrollHeight + "px");
                 }
-
-                // Expanded the New Dropdown
-                menuDropdown.classList.add("active");
-                const subMenu = menuDropdown.querySelector(".submenu");
-                subMenu.style.maxHeight = subMenu.scrollHeight + "px";
             }
-        }
-    };
+        });
 
-    // Fixed Resize Window Function
-    const resizeWindow = () => {
-        if (window.innerWidth > 1120) {
-            if (navbarMenu.classList.contains("active")) {
-                toggleMenu();
+        $(window).on("resize", function() {
+            if (window.innerWidth > 999) {
+                navbarMenu.removeClass("active");
+                $(".menu-dropdown.active").removeClass("active").find(".submenu").removeAttr("style");
             }
-            if (navbarMenu.querySelector(".menu-dropdown.active")) {
-                collapseSubMenu();
-            }
-        }
-    };
-
-    // Initialize Event Listeners
-    burgerMenu.addEventListener("click", toggleMenu);
-    overlayMenu.addEventListener("click", toggleMenu);
-    navbarMenu.addEventListener("click", toggleSubMenu);
-    window.addEventListener("resize", resizeWindow);
+        });
+    });
 
 
 
@@ -135,120 +78,61 @@ $(document).ready(function() {
     });
 
 
+    ///////////////////// start text slider
 
+    $(function() {
+        let $t = $("#typing"),
+            txt = $t.data("text"),
+            i = 0,
+            typingSpeed = 120,
+            deletingSpeed = 80,
+            pauseTime = 1000;
 
-
-
-    $('.brandlogos').slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        responsive: [{
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 500,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
+        function type() {
+            if (i < txt.length) {
+                $t.text(txt.slice(0, ++i));
+                setTimeout(type, typingSpeed);
+            } else {
+                setTimeout(deleteText, pauseTime);
             }
-        ]
-    });
+        }
 
-    $('.discoverteam').slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        responsive: [{
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            },
-        ]
-    });
-
-    $('.usersprofiles').slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        responsive: [{
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 500,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
+        function deleteText() {
+            if (i > 0) {
+                $t.text(txt.slice(0, --i));
+                setTimeout(deleteText, deletingSpeed);
+            } else {
+                setTimeout(type, typingSpeed);
             }
-        ]
+        }
+
+        type();
     });
 
-    $('.sliderblogs').slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        responsive: [{
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
+    ///////////////////// End text slider
 
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
+
+    $('.number').each(function() {
+        let $this = $(this),
+            target = +$this.attr('data-target'),
+            suffix = $this.data('suffix') || "",
+            count = 0,
+            speed = target / 200;
+
+        let updateCount = setInterval(() => {
+            count += speed;
+            if (count >= target) {
+                count = target;
+                clearInterval(updateCount);
             }
-        ]
+            let formatted = Math.floor(count).toLocaleString();
+            $this.text(formatted + suffix);
+        }, 20);
     });
+
+
+    ///////////////////// End text number
+
 
 
     $(window).scroll(function() {
@@ -272,14 +156,6 @@ $(document).ready(function() {
         $('.pagination li a').removeClass("active");
         $(this).addClass("active");
     });
-
-    $('.listmenu a').click(function() {
-        $('.listmenu a').removeClass("active");
-        $(this).addClass("active");
-    });
-
-
-
 
     $(function() {
 
@@ -309,28 +185,25 @@ $(document).ready(function() {
 
     });
 
+    $(".icon-pass").click(function() {
+        let $wrapper = $(this).closest(".field");
+        let $input = $wrapper.find("input.pass");
 
-
-
-
-
-
+        if ($(this).hasClass("eye")) {
+            $input.attr("type", "text");
+            $(this).hide();
+            $wrapper.find(".eye-slash").show();
+        } else {
+            $input.attr("type", "password");
+            $(this).hide();
+            $wrapper.find(".eye").show();
+        }
+    });
 
 });
 
 $(document).ready(function() {
 
-    $(".eye.icon-pass").click(function() {
-        $("input.pass").attr("type", "text");
-        $(this).hide();
-        $(".eye-slash.icon-pass").show();
-    });
-
-    $(".eye-slash.icon-pass").click(function() {
-        $("input.pass").attr("type", "password");
-        $(this).hide();
-        $(".eye.icon-pass ").show();
-    });
 
 
     $('.itemmenu').click(function() {

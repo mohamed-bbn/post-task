@@ -3,9 +3,10 @@
     align-items: center;
     position: relative;
     width: $fullwidth;
-    height: 700px;
+    height: 650px;
     overflow: hidden;
-    background: url(../images/slider.png) no-repeat top right/cover;
+    background: $dark;
+    border-bottom: 1px solid #FFFFFF0D;
     @media (max-width: 999px) {
         height: auto;
     }
@@ -13,170 +14,169 @@
         @media (max-width: 999px) {}
     }
     .item {
+        display: flex;
+        align-items: center;
         @media (max-width: 999px) {
             max-width: $fullwidth;
             flex: $fullwidth;
             text-align: center;
             margin-top: $com-spacing-6;
-        }
-        &:nth-child(1) {
-            display: flex;
-            align-items: center;
-            @media (max-width: 999px) {
-                justify-content: center;
-            }
+            justify-content: center;
         }
         .title {
-            font-size: 72px;
-            margin-bottom: $com-spacing-2;
-            @media (max-width: 1199px) {
-                font-size: 50px;
-            }
+            display: block;
+            color: $white;
             @media (max-width: 999px) {
-                font-size: 40px;
                 justify-content: center;
                 text-align: center;
             }
         }
-        p {
-            font-size: 20px;
-            font-weight: 500;
-            color: #555;
-            line-height: 40px;
-            text-transform: capitalize;
-            margin-bottom: $com-spacing-6;
-            @media (max-width: 999px) {
-                font-size: 18px;
-                line-height: 28px;
-                text-align: center;
+        .cursor {
+            display: inline-block;
+            width: 16px;
+            height: 4px;
+            margin-left: $com-spacing-1;
+            background: $green;
+            animation: blink 900ms steps(1) infinite;
+        }
+        @keyframes blink {
+            50% {
+                opacity: 0
             }
         }
-        .bottoms {
-            position: relative;
-            display: flex;
-            align-items: center;
-            @media (max-width: 999px) {
-                justify-content: center;
+        .field {
+            .form-control {
+                border-radius: 60px;
+                padding-right: $com-spacing-8;
             }
-            .login {
-                @include bottom;
-                min-width: 130px;
-                // max-width: 130px;
-                height: 44px;
-                border: 1px solid $red;
-                color: $blak;
+            button {
+                position: absolute;
+                right: 22px;
+                padding: $zero;
                 background: $none;
-            }
-            .bottom {
-                min-width: 130px;
-                // max-width: 130px;
-                height: 44px;
-                margin-right: $com-spacing-3;
+                border: $zero;
+                top: $com-spacing-3;
+                cursor: pointer;
             }
         }
     }
     .photo {
+        @include flex;
         position: relative;
         margin: $zero $auto;
-        width: 480px;
-        height: 480px;
-        border-radius: 50%;
-        background: $ofwhite;
-        border: 30px solid #ffffffa6;
+        width: $fullwidth;
+        height: $fullwidth;
         text-align: center;
         @media (max-width: 999px) {
-            border: 20px solid #ffffffa6;
-            width: 280px;
-            height: 280px;
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            left: 30px;
-            top: 30px;
-            width: 360px;
-            height: 360px;
-            border-radius: 50%;
-            animation: spin 20s linear infinite;
-            border: 30px dashed #ffffff1f;
-            background: $dark;
-            @keyframes spin {
-                100% {
-                    transform: rotateZ(360deg);
-                }
-            }
-            @media (max-width: 999px) {
-                left: 20px;
-                top: 20px;
-                border: 10px dashed #ffffff1f;
-                width: 200px;
-                height: 200px;
-            }
+            // width: 280px;
+            // height: 280px;
         }
         img {
-            position: relative;
-            z-index: 10;
             max-width: $fullwidth;
+            max-height: $fullwidth;
         }
     }
 }
 
-.brands {
+.userssay {
     @include section;
-    padding: $com-spacing-7 $zero;
-    background: $ofwhite;
-    @media (max-width: 999px) {}
-    .title {
+    background: $dark;
+    &::before {
+        content: "";
         position: absolute;
-        font-size: 20px;
-        font-weight: 600;
-        width: 200px;
-        height: 47px;
+        left: $zero;
+        width: 44%;
+        height: 142px;
+        background: $green;
         @media (max-width: 999px) {
-            position: relative;
-            width: $fullwidth;
-            justify-content: center;
+            display: none;
         }
     }
-}
-
-.brandlogos {
-    @include styleslider;
-    width: calc(100% - 200px);
-    margin-left: 200px;
-    height: 47px;
-    overflow: hidden;
-    @media (max-width: 999px) {
-        width: $fullwidth;
-        margin: $zero;
-        margin-top: $com-spacing-3;
-    }
-    .slick-prev,
-    .slick-next {
-        display: none !important;
-    }
-    .slick-slide {
-        position: relative;
-        display: inline-flex;
+    .container {
+        display: flex;
         align-items: center;
-        justify-content: center;
-        margin: $zero $com-spacing-2;
-        overflow: hidden;
-        text-align: center;
-        min-height: 47px;
-        a {
-            // display: block;
-            // width: $fullwidth;
+        @media (max-width: 999px) {
+            display: grid;
+        }
+    }
+    .counters {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        min-width: 50%;
+        max-width: 50%;
+        height: 142px;
+        background: $green;
+        border-radius: $zero 30px 30px $zero;
+        margin-right: $com-spacing-7;
+        @media (max-width: 999px) {
+            margin: $zero;
+            margin-top: $com-spacing-6;
+            justify-content: space-between;
+            order: 2;
+            border-radius: 30px;
+            min-width: $fullwidth;
+            max-width: $fullwidth;
+            height: auto;
+            padding: $com-spacing-6;
+        }
+        @media (max-width: 600px) {
+            display: block;
+        }
+        .counter-box {
+            min-width: 33.333%;
+            max-width: 33.333%;
             text-align: center;
-            // @include transition(all 0.5s ease-in-out 0s);
-            img {
-                max-width: 78%;
-                max-height: $fullwidth;
+            @media (max-width: 999px) {}
+            @media (max-width: 600px) {
+                min-width: $fullwidth;
+                max-width: $fullwidth;
+                margin-bottom: $com-spacing-6;
+                &:last-child {
+                    margin: $zero;
+                }
+            }
+            .number {
+                color: $blue;
+                font-weight: 700;
+                font-size: 50px;
+                text-align: center;
+                @media (max-width: 999px) {
+                    font-size: 40px;
+                }
+            }
+            p {
+                color: $white;
+                margin-top: $com-spacing-4;
+                text-align: center;
+                font-weight: 400;
             }
         }
     }
-    .slick-dots {
-        display: none !important;
+    .text {
+        .title {
+            color: $white;
+            @media (max-width: 999px) {
+                justify-content: center;
+            }
+        }
+        .photos {
+            display: flex;
+            align-items: center;
+            margin-top: $com-spacing-4;
+            @media (max-width: 999px) {
+                justify-content: center;
+            }
+            img {
+                min-width: 76px;
+                max-width: 76px;
+                height: 76px;
+                object-fit: cover;
+                border-radius: 50%;
+                margin-right: -25px;
+                border: 1px solid $green;
+            }
+        }
     }
 }
 

@@ -1,29 +1,17 @@
 .header {
-    position: absolute;
-    top: $zero;
-    left: $zero;
     width: $fullwidth;
     background: $dark;
     z-index: 1002;
     @include transition(all 0.5s ease-in-out 0s);
-    @media (max-width: 1120px) {
-        position: relative;
+    @media (max-width: 999px) {
         padding: $com-spacing-3 $zero;
     }
     &.sticky {
         position: fixed;
+        top: $zero;
+        left: $zero;
         @include prefixer (box-shadow, 4px 4px 60px #0000000d, webkit moz o ms);
         @include transition(all 0.5s ease-in-out 0s);
-        .bottoms {
-            .dropdown {
-                .dropdown-menu.show {
-                    top: 56px !important;
-                    @media only screen and (max-width: 991px) {
-                        top: 28px !important;
-                    }
-                }
-            }
-        }
     }
     @media (max-width:767px) {}
     .flexrow {
@@ -31,22 +19,21 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @media (max-width: 1120px) {
+        max-width: $fullwidth;
+        @media (max-width: 999px) {
             position: relative;
         }
     }
     .itemlogomenu {
         display: flex;
         align-items: center;
+        width: $fullwidth;
         .logo {
             img {
                 max-width: 158px;
-                @media (max-width: 1120px) {
+                @media (max-width: 999px) {
                     max-width: 138px;
                 }
-            }
-            .night-logo {
-                display: none;
             }
         }
         .burger {
@@ -82,7 +69,7 @@
                 }
             }
             // Responsive Media Query
-            @media only screen and (max-width: 1120px) {
+            @media only screen and (max-width: 999px) {
                 display: block;
                 opacity: 1;
                 visibility: visible;
@@ -90,7 +77,7 @@
         }
     }
     .socialicons {
-        @media screen and (max-width: 1120px) {
+        @media screen and (max-width: 999px) {
             display: flex;
             justify-content: center;
             a {
@@ -102,15 +89,12 @@
         position: inherit;
         padding: $zero;
         width: $fullwidth;
-        .bottoms {
-            display: none;
-        }
         .logo {
             display: none;
             position: absolute;
             top: $com-spacing-6;
             left: $com-spacing-3;
-            @media screen and (max-width: 1120px) {
+            @media screen and (max-width: 999px) {
                 display: block;
                 // margin: $com-spacing-6 $zero;
             }
@@ -130,7 +114,7 @@
                 height: 18px;
             }
         }
-        @media screen and (max-width: 1120px) {
+        @media screen and (max-width: 999px) {
             position: fixed;
             top: 0;
             left: -100%;
@@ -166,11 +150,6 @@
                 .bottom {
                     min-width: $fullwidth;
                 }
-                .color {
-                    position: absolute;
-                    right: $com-spacing-3;
-                    top: 6px;
-                }
             }
         }
     }
@@ -180,9 +159,9 @@
         align-items: center;
         margin-left: $com-spacing-9;
         @media (max-width: 1220px) {
-            margin-left: $com-spacing-4;
+            margin-left: $com-spacing-2;
         }
-        @media (max-width: 1120px) {
+        @media (max-width: 999px) {
             margin: $zero;
         }
         &-item {
@@ -191,7 +170,7 @@
             margin-right: $com-spacing-7;
             // @include transition(all 0.5s ease-in-out 0s);
             @media (max-width: 1220px) {
-                margin-right: $com-spacing-3;
+                margin-right: 4px;
             }
             &:last-child {
                 margin: $zero;
@@ -216,13 +195,13 @@
                 fill: $white;
                 margin-top: $com-spacing-1;
                 @include transition(all 0.5s ease-in-out 0s);
-                @media only screen and (max-width: 1120px) {
+                @media only screen and (max-width: 999px) {
                     z-index: -1;
                 }
             }
         }
         // Responsive Media Query
-        @media only screen and (min-width: 1120px) {
+        @media only screen and (min-width: 999px) {
             &-dropdown:hover {
                 >.submenu {
                     opacity: 1;
@@ -233,7 +212,7 @@
             }
         }
         // Responsive Media Query
-        @media only screen and (max-width: 1120px) {
+        @media only screen and (max-width: 999px) {
             display: block;
             width: 100%;
             height: auto;
@@ -271,7 +250,7 @@
         }
         .activelink {
             .submenu {
-                @media only screen and (max-width: 1120px) {
+                @media only screen and (max-width: 999px) {
                     opacity: 1;
                     visibility: visible;
                     transform: none;
@@ -295,7 +274,7 @@
         overflow: hidden;
         padding: $com-spacing-3;
         // Responsive Media Query
-        @media only screen and (max-width: 1120px) {
+        @media only screen and (max-width: 999px) {
             display: block;
             position: relative;
             max-height: 0px;
@@ -315,7 +294,7 @@
             font-weight: 400;
             text-transform: capitalize;
             margin-bottom: $com-spacing-1;
-            @media only screen and (max-width: 1120px) {
+            @media only screen and (max-width: 999px) {
                 padding: $zero $com-spacing-3;
             }
             &:last-child {
@@ -323,46 +302,6 @@
             }
             &:hover {
                 color: $green;
-            }
-        }
-    }
-    .newstylelist {
-        position: inherit;
-        .submenu {
-            width: $fullwidth;
-            padding: $zero;
-            height: 342px;
-            overflow-y: scroll;
-            padding-bottom: $com-spacing-4;
-            @media only screen and (max-width: 1120px) {
-                height: auto;
-                overflow-y: inherit;
-                padding: $zero;
-            }
-            .item {
-                margin-top: $com-spacing-4;
-                @media only screen and (max-width: 1120px) {
-                    max-width: $fullwidth;
-                    flex: $fullwidth;
-                }
-                .title {
-                    font-size: 20px;
-                    font-weight: 600;
-                    transition: none;
-                    @media only screen and (max-width: 1120px) {
-                        font-size: 18px;
-                    }
-                }
-                ul {
-                    margin-top: $com-spacing-2;
-                    li {
-                        a {
-                            @media only screen and (max-width: 1120px) {
-                                padding: $zero;
-                            }
-                        }
-                    }
-                }
             }
         }
     }
@@ -378,7 +317,7 @@
         transition: all 0.35s ease-in-out;
         background-color: rgba(0, 0, 0, 0.65);
         // Responsive Media Query
-        @media only screen and (max-width: 1120px) {
+        @media only screen and (max-width: 999px) {
             &.active {
                 display: block;
                 opacity: 1;
@@ -391,12 +330,9 @@
         position: relative;
         display: flex;
         align-items: center;
-        @media (max-width: 1120px) {
-            display: none;
-        }
         .language {
             @include flex;
-            border: 1.14px solid #E5E3FF;
+            border: 1px solid #E5E3FF;
             border-radius: 14px;
             background: $white;
             width: 40px;
@@ -404,33 +340,37 @@
             font-weight: 400;
             cursor: pointer;
             @include transition(all 0.5s ease-in-out 0s);
+            &:hover {
+                background: $green;
+                border: 1px solid $green;
+                svg {
+                    fill: $white;
+                }
+            }
             svg {
                 min-width: 18px;
                 max-width: 18px;
                 height: 18px;
                 fill: $blak;
-            }
-            &:hover {
-                color: $green
+                @include transition(all 0.5s ease-in-out 0s);
             }
         }
         .login {
             @include bottom;
             min-width: 120px;
             max-width: 120px;
-            border: 1px solid $green;
-            color: $blak;
+            border: 1px solid $white;
+            color: $white;
             background: $none;
-            margin-left: $com-spacing-3;
-            @media (max-width: 1120px) {}
+            margin-right: $com-spacing-3;
         }
         .bottom {
-            margin-left: $com-spacing-3;
+            margin-right: $com-spacing-3;
             min-width: 120px;
             max-width: 120px;
         }
         .dropdown {
-            margin-left: $com-spacing-3;
+            margin-right: $com-spacing-3;
             .dropdown-toggle {
                 display: flex;
                 align-items: center;
@@ -462,18 +402,17 @@
                 }
                 p {
                     white-space: nowrap;
-                    // background: $beige;
                     text-overflow: ellipsis;
                     overflow: hidden;
-                    color: $blak;
-                    max-width: 100px;
+                    color: $white;
+                    max-width: 76px;
                     font-weight: 400;
                     @media (max-width: 999px) {
-                        color: $white;
+                        max-width: $fullwidth;
                     }
                 }
                 svg {
-                    fill: $blak;
+                    fill: $white;
                     margin-top: $com-spacing-3;
                     max-width: 12px;
                     @media (max-width: 999px) {
@@ -485,7 +424,7 @@
                 margin-top: $zero;
                 right: $zero !important;
                 left: $auto !important;
-                top: 38px !important;
+                top: 56px !important;
                 min-width: inherit;
                 box-shadow: 0px 4px 24px 0px #0000000D;
                 border-radius: $zero;
@@ -493,10 +432,11 @@
                 padding: $com-spacing-3 $zero;
                 transform: $none !important;
                 border: $zero;
-                z-index: 2;
+                z-index: 12;
                 @include transition(all 0.5s ease-in-out 0s);
-                @media only screen and (max-width: 991px) {
-                    top: 28px !important;
+                @media (max-width: 999px) {
+                    top: 38px !important;
+                    width: $fullwidth;
                 }
                 &:before {
                     display: $none;
@@ -530,10 +470,50 @@
     position: relative;
     background: $white;
     @include prefixer (box-shadow, 4px 4px 60px #0000000d, webkit moz o ms);
-    .bottoms .dropdown .dropdown-menu.show {
-        top: 56px !important;
-        @media (max-width: 1120px) {
-            top: 28px !important;
+    .itemlogomenu .burger-line {
+        background: $blak;
+    }
+    .menu-link {
+        color: $blak;
+        svg {
+            fill: $blak;
+        }
+    }
+    .navbar {
+        @media (max-width: 999px) {
+            background: $white;
+        }
+    }
+    .bottoms {
+        .login {
+            color: $blak;
+            border: 1px solid $blak;
+            &:hover {
+                color: $white;
+            }
+        }
+        .dropdown {
+            margin-right: $zero;
+            margin-left: $com-spacing-3;
+            .dropdown-toggle {
+                .photo {
+                    width: 40px;
+                    height: 40px;
+                }
+                p {
+                    color: $blak;
+                    max-width: 76px;
+                }
+                svg {
+                    fill: $blak;
+                }
+            }
+            .dropdown-menu.show {
+                top: 61px !important;
+                // @media (max-width: 999px) {
+                //     top: 28px !important;
+                // }
+            }
         }
     }
 }

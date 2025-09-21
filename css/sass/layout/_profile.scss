@@ -982,15 +982,25 @@
             align-items: center;
             .iconhome {
                 @include flex;
-                border: 1.14px solid #E5E3FF;
+                border: 1px solid #E5E3FF;
                 border-radius: 14px;
                 width: 40px;
                 height: 40px;
                 margin-left: $com-spacing-4;
+                @include transition(all 0.5s ease-in-out 0s);
+                &:hover {
+                    border: 1px solid $green;
+                    background: $green;
+                    svg {
+                        fill: $white;
+                    }
+                }
                 svg {
                     min-width: 18px;
                     max-width: 18px;
                     height: 18px;
+                    fill: $blak;
+                    @include transition(all 0.5s ease-in-out 0s);
                 }
             }
         }
@@ -1021,17 +1031,6 @@
                     top: 1rem;
                     width: 60%;
                 }
-            }
-        }
-        .bottoms {
-            @media (max-width: 1120px) {
-                display: flex;
-            }
-            .dropdown .dropdown-menu.show {
-                top: 55px !important;
-                // @media (max-width: 999px) {
-                //     top: 47px !important;
-                // }
             }
         }
     }

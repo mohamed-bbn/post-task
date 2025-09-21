@@ -69,12 +69,6 @@ body {
 }
 
 select.form-control {
-    // -webkit-appearance: none;
-    // background: $white url(../images/arrow.svg) no-repeat !important;
-    // background-position: 12px 20px;
-}
-
-select.form-control {
     -webkit-appearance: none;
     background: $none !important;
     background: $white url(../images/arrow.svg) 98% center no-repeat !important;
@@ -83,10 +77,6 @@ select.form-control {
 textarea.form-control {
     height: 160px;
     resize: $none;
-}
-
-.container {
-    z-index: 10;
 }
 
 .social {
@@ -103,12 +93,6 @@ textarea.form-control {
 
 .map-back {
     @include map-back;
-}
-
-.hidden {
-    @media (max-width: 999px) {
-        display: none;
-    }
 }
 
 .alert {
@@ -150,44 +134,6 @@ textarea.form-control {
 
 .maplink {
     @include maplink;
-}
-
-.towmap {
-    height: 350px;
-    @media (max-width: 999px) {
-        height: 250px;
-    }
-    @media (max-width: 767px) {
-        height: 200px;
-    }
-    &::after {
-        display: none;
-    }
-}
-
-.formsearch {
-    margin: $com-spacing-6 $auto $zero $auto;
-    max-width: 660px;
-    position: relative;
-    overflow: hidden;
-    .form-control {
-        padding: $zero;
-        border: $zero !important;
-        background: none !important;
-        padding: $zero;
-        border-bottom: 1px solid #ffffff40 !important;
-        border-radius: $zero !important;
-        color: $white;
-        &::placeholder {
-            color: $white;
-            opacity: 1;
-            /* Firefox */
-        }
-        &::-ms-input-placeholder {
-            /* Edge 12 -18 */
-            color: $white;
-        }
-    }
 }
 
 .pagination {

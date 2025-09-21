@@ -145,12 +145,12 @@
             }
         }
         svg {
-            fill: $white;
+            fill: $blue;
             width: 20px;
             height: 20px;
         }
         &.icon-twitter svg path {
-            fill: $white;
+            fill: $blue;
         }
         @each $type in $social {
             &.icon-#{nth($type, 1)} {
@@ -227,6 +227,7 @@
     &:focus-visible {
         outline: 0;
         outline-style: $none;
+        background: #FBFCF0;
         border: 1px solid $green;
     }
 }

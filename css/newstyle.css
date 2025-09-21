@@ -68,8 +68,8 @@
  
  .cuspageitem .listtask li .bottom {
      min-width: 184px;
-     background: #C5D92D;
-     border: 0px !important;
+     /* background: #C5D92D;
+     border: 0px !important; */
  }
  
  .step-wizard {
@@ -506,11 +506,11 @@
      margin-right: 12px;
      border-radius: 10px;
      margin-top: 16px;
- }
- 
- .flexinput input.form-control {
      background: #fff;
  }
+ /* .flexinput input.form-control {
+     background: #fff;
+ } */
  
  .filterinput .form-control {
      min-width: 300px;
