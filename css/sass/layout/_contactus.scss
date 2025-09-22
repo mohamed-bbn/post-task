@@ -1,160 +1,90 @@
-.contactus {
+.contact-item {
     @include section;
-    background: #fef8f8;
-    overflow: hidden;
-    &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -50px;
-        width: $fullwidth;
-        height: $fullwidth;
-        background: url(../images/c-1.png) left top no-repeat;
+    margin-bottom: 100px;
+    @media (max-width: 999px) {
+        margin: $zero;
     }
-    &:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        right: $zero;
-        width: $fullwidth;
-        height: $fullwidth;
-        background: url(../images/c-2.png) right bottom no-repeat;
-    }
-    .title {
-        justify-content: center;
-    }
-    .itemform {
-        margin: $com-spacing-6 $auto $zero $auto;
-        max-width: 70%;
+    .inner {
+        display: grid;
+        grid-template-columns: 1fr 500px;
+        border-radius: 30px;
+        background: $dark;
+        overflow: hidden;
         @media (max-width: 999px) {
-            max-width: $fullwidth;
-        }
-        .field {}
-        .bottom {
-            height: 50px;
-            min-width: 120px;
-            max-width: 120px;
-        }
-    }
-}
-
-.contactinfo {
-    @include section;
-    background: $white url(../images/testimonial-bg-1.png) no-repeat center center/cover;
-    .title {
-        justify-content: center;
-    }
-    .item {
-        margin-top: $com-spacing-8;
-        @media (max-width: 999px) {
-            max-width: $fullwidth;
-            flex: $fullwidth;
-            margin-top: $com-spacing-6;
-        }
-        .contactus {
-            padding: $com-spacing-8;
-            @media (max-width: 999px) {
-                padding: $com-spacing-6;
-            }
-            form,
-            .title {
-                position: relative;
-                z-index: 10;
-            }
-            .field {
-                margin: $zero;
-                margin-bottom: $com-spacing-6;
-                &:last-child {
-                    margin: $zero;
-                }
-            }
+            grid-template-columns: 1fr;
         }
         .photo {
-            position: relative;
             width: $fullwidth;
-            height: 190px;
+            height: $fullwidth;
             overflow: hidden;
-            background: $dark;
+            @media (max-width: 999px) {
+                display: none;
+            }
             img {
                 width: $fullwidth;
                 height: $fullwidth;
                 object-fit: cover;
             }
-        }
-        .text {
-            font-size: 20px;
-            font-weight: 500;
-            margin-top: $com-spacing-6;
-            @media (max-width: 999px) {
-                font-size: 16px;
-            }
-        }
-        .map-text {
-            display: flex;
-            align-items: center;
-            width: 80%;
-            margin-top: $com-spacing-6;
-            border-bottom: 1px solid #c8ced5;
-            padding-bottom: $com-spacing-6;
-            @media (max-width: 999px) {
+            .text {
                 width: $fullwidth;
+                background: $green;
+                padding: $com-spacing-6;
+                .logo {
+                    img {
+                        width: 232px;
+                        height: 67px;
+                        object-fit: inherit;
+                    }
+                }
+                .title {
+                    font-size: 32px;
+                    font-weight: 500;
+                    color: $white;
+                    margin-top: $com-spacing-5;
+                    @media (max-width: 999px) {
+                        font-size: 26px;
+                    }
+                }
+                p {
+                    color: $white;
+                    font-weight: 400;
+                    margin-top: $com-spacing-2;
+                }
             }
-            &:last-child {
-                border: $zero;
-                padding: $zero;
+        }
+        .item {
+            padding: $com-spacing-8;
+            @media (max-width: 999px) {
+                padding: $com-spacing-6;
             }
             .title {
-                justify-content: flex-start;
-                font-size: 18px;
-                font-weight: 600;
+                color: $white;
             }
-            .icon {
-                @include flex;
-                min-width: 56px;
-                max-width: 56px;
-                height: 56px;
-                background: $red;
-                margin-right: $com-spacing-3;
-                @include border-radius(60px);
-                svg {
-                    fill: $white;
-                    width: 22px;
-                    height: 22px;
+            .field {
+                label {
+                    color: $white;
                 }
-            }
-            p,
-            a {
-                display: flex;
-                align-items: center;
-                font-weight: 500;
-            }
-            a {
-                display: block;
-                margin: $zero;
-                @include transition(all 0.5s ease-in-out 0s);
-                &:hover {
-                    color: $red;
+                .form-control {
+                    background: $none;
+                    border: 1px solid $white;
+                    color: $white;
+                    &:focus {
+                        border: 1px solid $green;
+                    }
+                }
+                 ::placeholder {
+                    color: $white;
+                    opacity: 1;
+                    /* Firefox */
+                }
+                 ::-ms-input-placeholder {
+                    /* Edge 12 -18 */
+                    color: $white;
+                }
+                em {
+                    color: $green;
                 }
             }
         }
-    }
-    .alert {
-        margin: $zero;
-        margin-top: $com-spacing-6;
-    }
-}
-
-.mapiframe {
-    width: $fullwidth;
-    height: 400px;
-    background: #fef8f8;
-    @media (max-width: 999px) {
-        height: 300px;
-    }
-    iframe {
-        display: block;
-        border: $zero;
-        width: $fullwidth;
-        height: $fullwidth
     }
 }

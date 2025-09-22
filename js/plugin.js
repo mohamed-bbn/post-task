@@ -200,12 +200,6 @@ $(document).ready(function() {
         }
     });
 
-});
-
-$(document).ready(function() {
-
-
-
     $('.itemmenu').click(function() {
         $('.item.hideitem').addClass("active");
         $('.overlaybox').addClass("active");
@@ -214,6 +208,7 @@ $(document).ready(function() {
         $('.item.hideitem').removeClass("active");
         $('.overlaybox').removeClass("active");
     });
+
 
     $('.page-content .header .burger').click(function() {
         $(".page-content,.sidebar,.overlayinner").toggleClass("active");
@@ -229,10 +224,35 @@ $(document).ready(function() {
         $(this).addClass("activelink");
     });
 
+    function filterItems(buttonClass, filterClass) {
+        $(buttonClass).click(function() {
+            var value = $(this).data('filter');
+
+            $(buttonClass).removeClass('active');
+            $(this).addClass('active');
+
+            if (value === "all") {
+                $(filterClass).stop(true, true).fadeIn(300);
+            } else {
+                $(filterClass).stop(true, true).fadeOut(300).filter('.' + value).fadeIn(300);
+            }
+        });
+        const urlParams = new URLSearchParams(window.location.search);
+        const initialFilter = urlParams.get('filter');
+        if (initialFilter) {
+            const targetBtn = $(`${buttonClass}[data-filter="${initialFilter}"]`);
+            if (targetBtn.length) {
+                targetBtn.click();
+            }
+        } else {
+            $(`${buttonClass}[data-filter="all"]`).click();
+        }
+    }
+    filterItems(".filter-but", ".filter");
+
 });
 
 
-// End 
 
 
 //var blank="http://upload.wikimedia.org/wikipedia/commons/c/c0/Blank.gif";

@@ -272,20 +272,14 @@
 @mixin map-back {
     @include section;
     @include flex;
-    background: $blak;
-    @media (max-width: 999px) {}
+    background: $dark;
+    height: 248px;
+    @media (max-width: 999px) {
+        height: 160px;
+    }
     // .container {
     //     z-index: 10;
     // }
-    &::after {
-        content: "";
-        position: absolute;
-        left: $zero;
-        top: $zero;
-        width: $fullwidth;
-        height: $fullwidth;
-        background: url(../images/baner.png) no-repeat center center/cover;
-    }
     .title {
         color: $white;
         text-align: center;
