@@ -1,624 +1,81 @@
 .profile {
-    // @include section;
-    // background: $ofwhite;
-    // .container {
-    //     z-index: inherit;
-    // }
-    .item {
-        @media (max-width: 1199px) {
-            max-width: $fullwidth;
-            flex: $fullwidth;
-        }
-        .inner {
-            position: sticky;
-            top: 120px;
-            width: $fullwidth;
-            padding: $com-spacing-7 $com-spacing-6 $com-spacing-6 $com-spacing-6;
-            border-radius: 12px;
-            background: $dark;
-            overflow: hidden;
-            &:before {
-                content: "";
-                position: absolute;
-                top: -52px;
-                left: -20px;
-                width: $fullwidth;
-                height: $fullwidth;
-                background: url(../images/in-bg.png) left top no-repeat;
-                background-size: 100%;
-                opacity: .4;
-            }
-            @media (max-width: 1199px) {
-                border-radius: $zero;
-                position: relative;
-                top: auto;
-            }
-            .title {
-                justify-content: center;
-                text-align: center;
-                font-size: 24px;
-                font-weight: 600;
-                color: $white;
-                margin-top: $com-spacing-7;
-            }
-            .job {
-                text-align: center;
-                font-size: 18px;
-                font-weight: 500;
-                color: $white;
-                margin-top: $com-spacing-2;
-                text-transform: capitalize;
-            }
-            .listmenu {
-                margin-top: $com-spacing-6;
-                a {
-                    position: relative;
-                    display: flex;
-                    background: #ffffff1f;
-                    margin-top: $com-spacing-3;
-                    color: $white;
-                    border-radius: 12px;
-                    font-weight: 500;
-                    padding: $com-spacing-2 $com-spacing-3;
-                    overflow: hidden;
-                    &:hover,
-                    &.active {
-                        &::after {
-                            width: $fullwidth;
-                        }
-                    }
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        left: $zero;
-                        top: $zero;
-                        background: $green;
-                        width: $zero;
-                        height: $fullwidth;
-                        @include transition(all 0.5s ease-in-out 0s);
-                    }
-                    span {
-                        display: flex;
-                        align-items: center;
-                        width: $fullwidth;
-                        position: relative;
-                        z-index: 1;
-                        svg,
-                        img {
-                            min-width: 18px;
-                            max-width: 18px;
-                            height: 18px;
-                            margin-right: $com-spacing-1;
-                            fill: $white;
-                        }
-                    }
-                }
-            }
-        }
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: $com-spacing-6;
+    border: 1px solid #DDDDE0;
+    border-radius: 8px;
+    padding: $com-spacing-6;
+    @media (max-width: 999px) {
+        grid-template-columns: 1fr;
     }
-    .itemmenu {
-        display: none;
-        @media (max-width: 1199px) {
-            display: block;
-        }
-        svg {
-            width: 30px;
-            height: 30px;
-            margin-right: $com-spacing-2;
+    .itemprofile {
+        &:first-child {
+            border-right: 1px solid #DDDDE0;
             @media (max-width: 999px) {
-                width: 20px;
-                height: 20px;
-            }
-        }
-    }
-    .hideitem {
-        .cancel {
-            display: none;
-            position: absolute;
-            top: 18px;
-            right: 18px;
-            z-index: 10;
-            @media (max-width: 1199px) {
-                display: block;
-            }
-            svg {
-                width: 18px;
-                height: 18px;
-            }
-        }
-        @media (max-width: 1199px) {
-            position: fixed;
-            left: -100%;
-            top: $zero;
-            width: 280px;
-            height: $fullwidth;
-            overflow-y: scroll;
-            padding: $zero;
-            @include transition(all 0.5s ease-in-out 0s);
-            z-index: 1005;
-            &::-webkit-scrollbar {
-                width: 2px;
-            }
-            &.active {
-                left: $zero;
-            }
-        }
-    }
-    .subitem {
-        margin-top: $com-spacing-6;
-        @media (max-width: 999px) {
-            max-width: $fullwidth;
-            flex: $fullwidth;
-        }
-        .inneritem {
-            position: relative;
-            width: $fullwidth;
-            background: $white;
-            border: 1px solid #e8e9ee;
-            border-radius: 12px;
-            .minhead {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: $com-spacing-4;
-                border-bottom: 1px solid #e8e9ee;
-                .title {
-                    font-size: 22px;
-                    font-weight: 600;
-                }
-                .more {
-                    color: $green;
-                    font-weight: 500;
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-                .filter {
-                    position: relative;
-                    width: 120px;
-                    svg {
-                        position: absolute;
-                        left: $com-spacing-3;
-                        top: 14px;
-                        width: 15px;
-                        height: 15px;
-                    }
-                    .form-control {
-                        height: 40px;
-                        padding-left: 30px;
-                    }
-                }
-            }
-            .subinner {
-                padding: $com-spacing-4;
-                .list {
-                    a {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                        background: $ofwhite;
-                        border-radius: 12px;
-                        padding: $com-spacing-3;
-                        margin-bottom: $com-spacing-4;
-                        color: $blak;
-                        font-weight: 500;
-                        @include transition(all 0.5s ease-in-out 0s);
-                        &:last-child {
-                            margin: $zero;
-                        }
-                        &:hover {
-                            background: #e3e3e3;
-                            // color: $white; 
-                        }
-                        svg {
-                            min-width: 24px;
-                            max-width: 24px;
-                            height: 24px;
-                            margin: 3px $zero;
-                        }
-                        .cls-1 {
-                            fill: $green;
-                            fill-rule: evenodd;
-                        }
-                        .cls-2 {
-                            fill: $white;
-                        }
-                    }
-                }
-                .meeting {
-                    a {
-                        justify-content: flex-start;
-                        align-items: flex-start;
-                        .manth {
-                            min-width: 53px;
-                            max-width: 53px;
-                            height: 53px;
-                            border-radius: 12px;
-                            background: $white;
-                            padding: $com-spacing-1 $zero;
-                            margin-right: $com-spacing-2;
-                            text-align: center;
-                            overflow: hidden;
-                            p {
-                                color: $green;
-                                font-size: 20px;
-                                font-weight: 700;
-                                text-align: center;
-                                span {
-                                    color: $blak;
-                                    font-size: 14px;
-                                    font-weight: 500;
-                                }
-                            }
-                            .date {
-                                display: block;
-                                line-height: 8px;
-                                color: $gray;
-                                font-size: 14px;
-                                font-weight: 500;
-                                text-transform: uppercase;
-                            }
-                        }
-                        .time {
-                            color: $gray;
-                            font-size: 14px;
-                            font-weight: 500;
-                        }
-                        .title {
-                            font-size: 16px;
-                            font-weight: 500;
-                        }
-                    }
-                }
-                .action {
-                    a {
-                        justify-content: flex-start;
-                        align-items: flex-start;
-                        .photo {
-                            min-width: 53px;
-                            max-width: 53px;
-                            height: 53px;
-                            border-radius: 12px;
-                            background: $white;
-                            overflow: hidden;
-                            margin-right: $com-spacing-2;
-                            img {
-                                width: $fullwidth;
-                                height: $fullwidth;
-                                object-fit: cover;
-                            }
-                        }
-                        .info {
-                            display: flex;
-                        }
-                        .time,
-                        .map {
-                            display: flex;
-                            align-items: center;
-                            color: $gray;
-                            font-size: 14px;
-                            font-weight: 500;
-                            svg {
-                                min-width: 12px;
-                                max-width: 12px;
-                                height: 12px;
-                                fill: $gray;
-                                margin: $zero;
-                                margin-right: $com-spacing-1;
-                            }
-                        }
-                        .map {
-                            margin-right: $com-spacing-4;
-                        }
-                        .title {
-                            font-size: 16px;
-                            font-weight: 500;
-                        }
-                    }
-                }
-                .application {
-                    a {
-                        flex-wrap: wrap;
-                        .imgitle {
-                            display: flex;
-                            align-items: center;
-                            .photo {
-                                @include flex;
-                                min-width: 53px;
-                                max-width: 53px;
-                                height: 53px;
-                                border-radius: 12px;
-                                background: $white;
-                                overflow: hidden;
-                                padding: $com-spacing-2;
-                                margin-right: $com-spacing-2;
-                                img {
-                                    max-width: $fullwidth;
-                                    max-height: $fullwidth;
-                                }
-                            }
-                            .title {
-                                font-size: 16px;
-                                font-weight: 500;
-                                min-width: 150px;
-                                max-width: 150px;
-                                white-space: nowrap;
-                                text-overflow: ellipsis;
-                                overflow: hidden;
-                            }
-                        }
-                        .info {
-                            display: flex;
-                            flex-wrap: wrap;
-                        }
-                        .time,
-                        .map {
-                            display: flex;
-                            align-items: center;
-                            color: $gray;
-                            font-size: 14px;
-                            font-weight: 500;
-                            svg {
-                                min-width: 12px;
-                                max-width: 12px;
-                                height: 12px;
-                                fill: $gray;
-                                margin: $zero;
-                                margin-right: $com-spacing-1;
-                            }
-                        }
-                        .map {
-                            margin-right: $com-spacing-4;
-                        }
-                        .waiting,
-                        .approval {
-                            @include flex;
-                            padding: $zero $com-spacing-3;
-                            border-radius: 12px;
-                            color: $yellow;
-                            border: 1px solid $yellow;
-                            text-transform: capitalize;
-                            min-width: 100px;
-                            max-width: 100px;
-                        }
-                        .approval {
-                            color: $green;
-                            border: 1px solid $green;
-                        }
-                    }
-                }
-                .allemploy {
-                    .imgitle {
-                        .photo {
-                            border-radius: 50% !important;
-                            padding: $zero !important;
-                            img {
-                                width: $fullwidth;
-                                height: $fullwidth;
-                                object-fit: cover;
-                            }
-                        }
-                        .title {
-                            font-size: 20px !important;
-                        }
-                    }
-                    .info {
-                        .map,
-                        .time {
-                            font-size: 16px;
-                            svg {
-                                min-width: 14px;
-                                max-width: 14px;
-                                height: 14px;
-                            }
-                        }
-                    }
-                }
-            }
-            .favorite {
-                max-width: 50%;
-                flex: 50%;
-                padding: $zero $com-spacing-2;
-                margin-top: $com-spacing-4;
-                .innerfavorite {
-                    @include flex;
-                    position: relative;
-                    width: $fullwidth;
-                    height: 124px;
-                    padding: $com-spacing-3;
-                    background: $ofwhite;
-                    border-radius: 12px;
-                    text-align: center;
-                    overflow: hidden;
-                    @include transition(all 0.5s ease-in-out 0s);
-                    &:hover {
-                        background: #e3e3e3;
-                        // color: $white; 
-                    }
-                    .photo {
-                        @include flex;
-                        width: $fullwidth;
-                        height: 40px;
-                        overflow: hidden;
-                        img {
-                            max-width: $fullwidth;
-                            max-height: $fullwidth;
-                        }
-                    }
-                    .title {
-                        font-size: 16px;
-                        font-weight: 500;
-                        margin-top: $com-spacing-2;
-                        justify-content: center;
-                        text-align: center;
-                    }
-                }
-            }
-        }
-    }
-    .n-pad {
-        margin-left: -8px;
-        margin-right: -8px;
-    }
-    .complete {
-        padding: $zero $com-spacing-1;
-        @media (max-width: 575px) {
-            margin-bottom: $com-spacing-4;
-            &:last-child {
-                margin: $zero;
+                border: $zero;
+                border-bottom: 1px solid #DDDDE0;
+                padding-bottom: $com-spacing-6;
             }
         }
         .title {
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .progress {
-            margin-top: $com-spacing-3;
-            height: 12px;
-            .progress-bar {
-                height: 12px;
-                background: $green;
-                &.green {
-                    background: $green;
-                }
-            }
-        }
-    }
-    .listjob {
-        padding: $zero $com-spacing-2;
-        margin-top: $com-spacing-4;
-        @media (max-width: 999px) {
-            max-width: 33.333%;
-            flex: 33.333%;
-        }
-        @media (max-width: 767px) {
-            max-width: 50%;
-            flex: 50%;
-        }
-        @media (max-width: 500px) {
-            max-width: $fullwidth;
-            flex: $fullwidth;
-        }
-        .iteminner {
-            display: block;
-            width: $fullwidth;
-            padding: $com-spacing-6;
-            background: $ofwhite;
-            border-radius: 10px;
-            text-align: center;
-            @include transition(all 0.5s ease-in-out 0s);
-            &:hover {
-                background: #e3e3e3;
-            }
-            .photo {
-                @include flex;
-                width: 53px;
-                height: 53px;
-                border-radius: 12px;
-                background: $white;
-                overflow: hidden;
-                padding: $com-spacing-2;
-                margin: $zero $auto;
-                img {
-                    max-width: $fullwidth;
-                    max-height: $fullwidth;
-                }
-            }
-            .title {
-                font-size: 16px;
-                font-weight: 500;
-                justify-content: center;
-                margin-top: $com-spacing-4;
-                text-align: center;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;
-            }
-            .info {
-                @include flex;
-                margin-top: $com-spacing-1;
-                .time,
-                .map {
-                    display: flex;
-                    align-items: center;
-                    color: $gray;
-                    font-size: 14px;
-                    font-weight: 500;
-                    svg {
-                        min-width: 12px;
-                        max-width: 12px;
-                        height: 12px;
-                        fill: $gray;
-                        margin: $zero;
-                        margin-right: $com-spacing-1;
-                    }
-                }
-                .map {
-                    margin-right: $com-spacing-4;
-                }
-            }
-        }
-    }
-    .nav-tabs {
-        border: $zero;
-        li {
-            width: calc(100% / 9);
-            height: 39px;
-            margin: $zero;
-            @media (max-width: 999px) {
-                width: auto;
-                margin-bottom: 2px;
-            }
-            a {
-                display: flex;
-                align-items: center;
-                position: relative;
-                height: 39px;
-                padding: $zero;
-                background: url(../images/icon.png) no-repeat;
-                background-size: $fullwidth $fullwidth;
-                font-size: 14px;
-                font-weight: 500;
-                line-height: 13px;
-                padding-left: $com-spacing-5;
-                border: $zero !important;
-                border-radius: $zero !important;
-                color: $blak;
-                @include transition(all 0.5s ease-in-out 0s);
-                @media (max-width: 999px) {
-                    padding-right: $com-spacing-3;
-                }
-                &.active {
-                    background: url(../images/icon-hover.png) no-repeat;
-                    background-size: $fullwidth $fullwidth;
-                    color: $white;
-                }
-            }
+            justify-content: center;
+            font-size: 20px;
         }
     }
     .field {
-        .bottom {
-            width: $auto;
-            min-width: 140px;
+        margin: $zero;
+        margin-bottom: $com-spacing-6;
+        &:last-child {
+            margin: $zero;
+        }
+        .form-control,
+        .select2-container--bootstrap .select2-selection--single,
+        .select2-container--bootstrap .select2-selection--multiple {
+            background: #F0F0FE;
+            border: 1px solid #E5E3FF;
+            &:focus {
+                border: 1px solid $blue;
+            }
+        }
+    }
+}
+
+.subform {
+    border: 1px solid #DDDDE0;
+    border-radius: 8px;
+    padding: $com-spacing-6;
+    margin-top: $com-spacing-6;
+    .title {
+        font-size: 20px;
+    }
+    .field {
+        .form-control,
+        .select2-container--bootstrap .select2-selection--single,
+        .ql-container.ql-snow {
+            background: #F0F0FE;
+            border: 1px solid #E5E3FF;
+            &:focus {
+                border: 1px solid $blue;
+            }
+        }
+        .select2-container--bootstrap .select2-selection--multiple {
+            background: #F0F0FE url(../images/arrow.svg) no-repeat right 12px center !important;
+            background-size: 12px 12px !important;
+            padding-right: 20px;
         }
     }
 }
 
 .imgcent {
-    margin: $zero $auto;
+    margin: $com-spacing-4 $auto $zero $auto;
     text-align: center;
-    width: 180px;
-    height: 180px;
+    width: 140px;
+    // height: 140px;
     @include border-radius(50%);
     position: relative;
-    margin-bottom: $com-spacing-5;
-    @include prefixer (box-shadow, 4px 4px 60px #0000000d, webkit moz o ms);
     .img_prev {
         width: $fullwidth;
-        height: 180px;
+        height: 140px;
         min-height: $fullwidth;
         background: $ofwhite;
         @include border-radius(50%);
@@ -627,27 +84,24 @@
         object-fit: cover;
     }
     .file-bro {
-        @include position(absolute, $bottom: -16px, $right: 0px, $left: 0px, );
-        margin: $zero $auto;
-        width: 40px;
-        height: 40px;
-        background: $green;
         @include flex;
         cursor: pointer;
-        @include border-radius(50%);
-        @include prefixer (box-shadow, 0 0 10px 0 rgba(0, 24, 128, 0.1), webkit moz o ms);
         @include transition(all 0.5s ease-in-out 0s);
+        font-weight: 400;
+        margin: $zero;
+        margin-top: $com-spacing-2;
         z-index: 3;
         svg {
             z-index: 10;
-            min-width: 16px;
-            @include transition(all 0.5s ease-in-out 0s);
+            max-width: 16px;
+            margin-right: $com-spacing-1;
             path {
-                fill: $white;
+                fill: $blak;
+                @include transition(all 0.5s ease-in-out 0s);
             }
         }
         &:hover {
-            background: $white;
+            color: $green;
             svg {
                 path {
                     fill: $green;
@@ -691,109 +145,6 @@
             display: block;
             opacity: 1;
             visibility: visible;
-        }
-    }
-}
-
-.jobs-slider {
-    @include styleslider;
-    .iteminner {
-        position: relative;
-        display: inline-block;
-        vertical-align: top;
-        margin: $zero $com-spacing-2;
-        overflow: hidden;
-        a {
-            display: block;
-            width: $fullwidth;
-            padding: $com-spacing-6;
-            background: $ofwhite;
-            border-radius: 10px;
-            text-align: center;
-            @include transition(all 0.5s ease-in-out 0s);
-            &:hover {
-                background: #e3e3e3;
-            }
-            .photo {
-                @include flex;
-                width: 53px;
-                height: 53px;
-                border-radius: 12px;
-                background: $white;
-                overflow: hidden;
-                padding: $com-spacing-2;
-                margin: $zero $auto;
-                img {
-                    max-width: $fullwidth;
-                    max-height: $fullwidth;
-                }
-            }
-            .title {
-                font-size: 16px;
-                font-weight: 500;
-                justify-content: center;
-                margin-top: $com-spacing-4;
-                text-align: center;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;
-            }
-            .info {
-                @include flex;
-                margin-top: $com-spacing-1;
-                .time,
-                .map {
-                    display: flex;
-                    align-items: center;
-                    color: $gray;
-                    font-size: 14px;
-                    font-weight: 500;
-                    svg {
-                        min-width: 12px;
-                        max-width: 12px;
-                        height: 12px;
-                        fill: $gray;
-                        margin: $zero;
-                        margin-right: $com-spacing-1;
-                    }
-                }
-                .map {
-                    margin-right: $com-spacing-4;
-                }
-            }
-        }
-    }
-    .slick-dots {
-        display: none !important;
-    }
-}
-
-.progressbar {
-    position: relative;
-    padding: $com-spacing-3 $com-spacing-4;
-    .textprofile {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        p {
-            font-weight: 500;
-            color: $white;
-            text-transform: capitalize;
-        }
-        .editicon {
-            svg {
-                width: 20px;
-                height: 20px;
-                fill: $white;
-            }
-        }
-    }
-    .progress {
-        margin-top: $com-spacing-1;
-        height: 8px;
-        .progress-bar {
-            height: 8px;
-            background: $green;
         }
     }
 }
@@ -859,23 +210,21 @@
         display: none;
     }
     .imgcent {
-        width: 140px;
         height: 140px;
-        margin: $com-spacing-4 $auto $zero $auto;
+        overflow: hidden;
         &:hover {
             .file-bro {
                 opacity: 1;
             }
         }
-        .img_prev {
-            height: 100px;
-        }
         .file-bro {
-            bottom: $zero;
+            position: absolute;
+            top: $zero;
             width: $fullwidth;
             height: $fullwidth;
             background: #00000082;
             opacity: 0;
+            margin: $zero;
             svg {
                 path {
                     fill: $white;
@@ -1043,413 +392,6 @@
             width: $fullwidth;
             padding: 112px $com-spacing-3 $com-spacing-3 $com-spacing-3;
             // height: 66px;
-        }
-        .item {
-            margin-top: $com-spacing-6;
-            @media (max-width: 1199px) {
-                max-width: 50%;
-                flex: 50%;
-            }
-            @media (max-width:450px) {
-                max-width: $fullwidth;
-                flex: $fullwidth;
-            }
-            &:after {
-                content: '';
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 0;
-                border-radius: 12px;
-                bottom: -16px;
-                background: $white;
-                @include prefixer (box-shadow, 2px 2px 30px #0000000d, webkit moz o ms);
-                z-index: 0;
-                margin: $zero $com-spacing-7;
-            }
-            .inner {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                position: relative;
-                width: $fullwidth;
-                background: $white;
-                padding: $com-spacing-6;
-                border-radius: 12px;
-                z-index: 1;
-                @include transition(all 0.5s ease-in-out 0s);
-                @include prefixer (box-shadow, 2px 2px 30px #0000000d, webkit moz o ms);
-                .icon {
-                    @include flex;
-                    width: 58px;
-                    height: 58px;
-                    @include border-radius(50%);
-                    img,
-                    svg {
-                        width: 35px;
-                        height: 35px;
-                        fill: $white;
-                    }
-                }
-                .label {
-                    font-weight: 500;
-                    margin-top: 2px;
-                }
-                .value {
-                    font-size: 24px;
-                    font-weight: 600;
-                    color: $blak;
-                }
-            }
-            &:nth-last-child(4) {
-                .inner {
-                    .icon {
-                        background: $green;
-                    }
-                }
-            }
-            &:nth-last-child(3) {
-                .inner {
-                    .icon {
-                        background: $dark;
-                    }
-                }
-            }
-            &:nth-last-child(2) {
-                .inner {
-                    .icon {
-                        background: $yellow;
-                    }
-                }
-            }
-            &:nth-last-child(1) {
-                .inner {
-                    .icon {
-                        background: $green;
-                    }
-                }
-            }
-        }
-        .subitem {
-            margin-top: $com-spacing-6;
-            @media (max-width: 999px) {
-                max-width: $fullwidth;
-                flex: $fullwidth;
-            }
-            .inneritem {
-                position: relative;
-                width: $fullwidth;
-                background: $white;
-                border: 1px solid #e8e9ee;
-                border-radius: 12px;
-                .minhead {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    padding: $com-spacing-4;
-                    border-bottom: 1px solid #e8e9ee;
-                    .title {
-                        font-size: 22px;
-                        font-weight: 600;
-                    }
-                    .more {
-                        color: $green;
-                        font-weight: 500;
-                        &:hover {
-                            text-decoration: underline;
-                        }
-                    }
-                    .filter {
-                        position: relative;
-                        width: 120px;
-                        svg {
-                            position: absolute;
-                            left: $com-spacing-3;
-                            top: 14px;
-                            width: 15px;
-                            height: 15px;
-                        }
-                        .form-control {
-                            height: 40px;
-                            padding-left: 30px;
-                        }
-                    }
-                }
-                .subinner {
-                    padding: $com-spacing-4;
-                    .list {
-                        a {
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-                            white-space: nowrap;
-                            text-overflow: ellipsis;
-                            overflow: hidden;
-                            background: $ofwhite;
-                            border-radius: 12px;
-                            padding: $com-spacing-3;
-                            margin-bottom: $com-spacing-4;
-                            color: $blak;
-                            font-weight: 500;
-                            @include transition(all 0.5s ease-in-out 0s);
-                            &:last-child {
-                                margin: $zero;
-                            }
-                            &:hover {
-                                background: #e3e3e3;
-                                // color: $white; 
-                            }
-                            svg {
-                                min-width: 24px;
-                                max-width: 24px;
-                                height: 24px;
-                                margin: 3px $zero;
-                            }
-                            .cls-1 {
-                                fill: $green;
-                                fill-rule: evenodd;
-                            }
-                            .cls-2 {
-                                fill: $white;
-                            }
-                        }
-                    }
-                    .meeting {
-                        a {
-                            justify-content: flex-start;
-                            align-items: flex-start;
-                            .manth {
-                                min-width: 53px;
-                                max-width: 53px;
-                                height: 53px;
-                                border-radius: 12px;
-                                background: $white;
-                                padding: $com-spacing-1 $zero;
-                                margin-right: $com-spacing-2;
-                                text-align: center;
-                                overflow: hidden;
-                                p {
-                                    color: $green;
-                                    font-size: 20px;
-                                    font-weight: 700;
-                                    text-align: center;
-                                    span {
-                                        color: $blak;
-                                        font-size: 14px;
-                                        font-weight: 500;
-                                    }
-                                }
-                                .date {
-                                    display: block;
-                                    line-height: 8px;
-                                    color: $gray;
-                                    font-size: 14px;
-                                    font-weight: 500;
-                                    text-transform: uppercase;
-                                }
-                            }
-                            .time {
-                                color: $gray;
-                                font-size: 14px;
-                                font-weight: 500;
-                            }
-                            .title {
-                                font-size: 16px;
-                                font-weight: 500;
-                            }
-                        }
-                    }
-                    .action {
-                        a {
-                            justify-content: flex-start;
-                            align-items: flex-start;
-                            .photo {
-                                min-width: 53px;
-                                max-width: 53px;
-                                height: 53px;
-                                border-radius: 12px;
-                                background: $white;
-                                overflow: hidden;
-                                margin-right: $com-spacing-2;
-                                img {
-                                    width: $fullwidth;
-                                    height: $fullwidth;
-                                    object-fit: cover;
-                                }
-                            }
-                            .info {
-                                display: flex;
-                            }
-                            .time,
-                            .map {
-                                display: flex;
-                                align-items: center;
-                                color: $gray;
-                                font-size: 14px;
-                                font-weight: 500;
-                                svg {
-                                    min-width: 12px;
-                                    max-width: 12px;
-                                    height: 12px;
-                                    fill: $gray;
-                                    margin: $zero;
-                                    margin-right: $com-spacing-1;
-                                }
-                            }
-                            .map {
-                                margin-right: $com-spacing-4;
-                            }
-                            .title {
-                                font-size: 16px;
-                                font-weight: 500;
-                            }
-                        }
-                    }
-                    .application {
-                        a {
-                            flex-wrap: wrap;
-                            .imgitle {
-                                display: flex;
-                                align-items: center;
-                                .photo {
-                                    @include flex;
-                                    min-width: 53px;
-                                    max-width: 53px;
-                                    height: 53px;
-                                    border-radius: 12px;
-                                    background: $white;
-                                    overflow: hidden;
-                                    padding: $com-spacing-2;
-                                    margin-right: $com-spacing-2;
-                                    img {
-                                        max-width: $fullwidth;
-                                        max-height: $fullwidth;
-                                    }
-                                }
-                                .title {
-                                    font-size: 16px;
-                                    font-weight: 500;
-                                    min-width: 150px;
-                                    max-width: 150px;
-                                    white-space: nowrap;
-                                    text-overflow: ellipsis;
-                                    overflow: hidden;
-                                }
-                            }
-                            .info {
-                                display: flex;
-                                flex-wrap: wrap;
-                            }
-                            .time,
-                            .map {
-                                display: flex;
-                                align-items: center;
-                                color: $gray;
-                                font-size: 14px;
-                                font-weight: 500;
-                                svg {
-                                    min-width: 12px;
-                                    max-width: 12px;
-                                    height: 12px;
-                                    fill: $gray;
-                                    margin: $zero;
-                                    margin-right: $com-spacing-1;
-                                }
-                            }
-                            .map {
-                                margin-right: $com-spacing-4;
-                            }
-                            .waiting,
-                            .approval {
-                                @include flex;
-                                padding: $zero $com-spacing-3;
-                                border-radius: 12px;
-                                color: $yellow;
-                                border: 1px solid $yellow;
-                                text-transform: capitalize;
-                                min-width: 100px;
-                                max-width: 100px;
-                            }
-                            .approval {
-                                color: $green;
-                                border: 1px solid $green;
-                            }
-                        }
-                    }
-                    .allemploy {
-                        .imgitle {
-                            .photo {
-                                border-radius: 50% !important;
-                                padding: $zero !important;
-                                img {
-                                    width: $fullwidth;
-                                    height: $fullwidth;
-                                    object-fit: cover;
-                                }
-                            }
-                            .title {
-                                font-size: 20px !important;
-                            }
-                        }
-                        .info {
-                            .map,
-                            .time {
-                                font-size: 16px;
-                                svg {
-                                    min-width: 14px;
-                                    max-width: 14px;
-                                    height: 14px;
-                                }
-                            }
-                        }
-                    }
-                }
-                .favorite {
-                    max-width: 50%;
-                    flex: 50%;
-                    padding: $zero $com-spacing-2;
-                    margin-top: $com-spacing-4;
-                    .innerfavorite {
-                        @include flex;
-                        position: relative;
-                        width: $fullwidth;
-                        height: 124px;
-                        padding: $com-spacing-3;
-                        background: $ofwhite;
-                        border-radius: 12px;
-                        text-align: center;
-                        overflow: hidden;
-                        @include transition(all 0.5s ease-in-out 0s);
-                        &:hover {
-                            background: #e3e3e3;
-                            // color: $white; 
-                        }
-                        .photo {
-                            @include flex;
-                            width: $fullwidth;
-                            height: 40px;
-                            overflow: hidden;
-                            img {
-                                max-width: $fullwidth;
-                                max-height: $fullwidth;
-                            }
-                        }
-                        .title {
-                            font-size: 16px;
-                            font-weight: 500;
-                            margin-top: $com-spacing-2;
-                            justify-content: center;
-                            text-align: center;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .field {
-        .bottom {
-            width: $auto;
-            min-width: 140px;
         }
     }
 }
