@@ -250,6 +250,27 @@ $(document).ready(function() {
     }
     filterItems(".filter-but", ".filter");
 
+
+    $(function() {
+        $(".box-header").on("click", function() {
+            $(this).prev(".box-content").slideToggle();
+            $(this).toggleClass("active");
+            $(this).find(".arrow").toggleClass("rotate");
+        });
+
+        $(".header-btn").on("click", function(e) {
+            e.stopPropagation();
+            $("#popup-backdrop").fadeIn();
+        });
+
+        $(".closePopup, #popup-backdrop").on("click", function(e) {
+            if ($(e.target).closest(".closePopup").length > 0 || e.target.id === "popup-backdrop") {
+                $("#popup-backdrop").fadeOut();
+            }
+        });
+    });
+
+
 });
 
 
