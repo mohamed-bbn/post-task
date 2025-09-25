@@ -557,13 +557,14 @@
  @media (max-width: 999px) {
      .header .bottoms .dropdown .dropdown-toggle p {
          max-width: 100%;
+         margin-left: 8px;
      }
  }
  
  .header .bottoms .dropdown .dropdown-toggle svg {
      fill: #fff;
-     margin-top: 12px;
      max-width: 12px;
+     margin-left: 4px;
  }
  
  @media (max-width: 999px) {
@@ -2548,6 +2549,11 @@
  @media (max-width: 999px) {
      .blogs .listbtn {
          margin-top: 12px;
+         justify-content: center;
+     }
+     a#transactionsTable_next,
+     div#transactionsTable_paginate {
+         min-width: inherit !important;
      }
  }
  
@@ -4846,13 +4852,35 @@
      .loginpage,
      .forgot {
          padding: 24px 0px;
+         min-height: calc(100vh - 64px);
      }
  }
  
  .signup .photo,
  .loginpage .photo,
  .forgot .photo {
+     position: absolute;
+     right: 0px;
+     top: 0px;
+     width: 50%;
+     height: 100%;
+     background: #142c4b;
+     overflow: hidden;
      z-index: 12;
+ }
+ 
+ .signup .photo img,
+ .loginpage .photo img,
+ .forgot .photo img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+ 
+ .signup:before,
+ .loginpage:before,
+ .forgot:before {
+     display: block;
  }
  
  .signup .photo .text,
@@ -5010,7 +5038,7 @@
      .profile .itemprofile:first-child {
          border: 0px;
          border-bottom: 1px solid #DDDDE0;
-         padding-bottom: 24px;
+         padding-bottom: 52px;
      }
  }
  
@@ -6819,6 +6847,7 @@
          display: block;
          padding: 24px;
          position: relative;
+         width: 100%;
          top: auto;
          left: auto;
      }
@@ -6889,13 +6918,6 @@
  .footer .getthings .flex .icons {
      display: flex;
      flex-wrap: wrap;
- }
- 
- @media (max-width: 767px) {
-     .footer .getthings .flex .icons {
-         zoom: 80%;
-         justify-content: center;
-     }
  }
  
  .footer .getthings .flex .icons a {
@@ -7013,6 +7035,21 @@
      .footer .boxfot .logo {
          text-align: center;
      }
+     .signup .photo,
+     .loginpage .photo,
+     .forgot .photo {
+         display: none !important;
+     }
+ }
+ 
+ @media (max-width: 767px) {
+     .footer .getthings .flex .icons {
+         justify-content: center;
+     }
+     .footer .getthings .flex .icons a img {
+         width: 105px;
+         height: 32px;
+     }
  }
  
  .footer .boxfot .logo img {
@@ -7084,38 +7121,14 @@
  }
  
  .bottom {
-     display: inline-flex;
-     align-items: center;
-     justify-content: center;
-     position: relative;
-     overflow: hidden;
-     color: #fff;
-     outline: none;
-     outline-style: none;
-     border: 0px;
-     text-align: center;
      background: #C5D92D;
-     font-weight: 500;
      border: 1px solid #C5D92D;
-     border-radius: 4px;
-     text-transform: capitalize;
-     -moz-transition: all 0.5s ease-in-out 0s;
-     -o-transition: all 0.5s ease-in-out 0s;
-     -webkit-transition: all 0.5s ease-in-out 0s;
-     transition: all 0.5s ease-in-out 0s;
-     cursor: pointer;
-     padding: 0px 12px;
-     height: 40px;
  }
  
  .bottom svg {
      margin-right: 4px;
      max-width: 16px;
      max-height: 16px;
-     -moz-transition: all 0.5s ease-in-out 0s;
-     -o-transition: all 0.5s ease-in-out 0s;
-     -webkit-transition: all 0.5s ease-in-out 0s;
-     transition: all 0.5s ease-in-out 0s;
  }
  
  .bottom:hover {
@@ -8577,7 +8590,7 @@
  .toggle-sidebar {
      display: none;
      position: absolute;
-     right: 56px;
+     right: 40px;
      cursor: pointer;
  }
  
@@ -9153,7 +9166,7 @@
      color: #fff;
  }
  
- @media (max-width: 1199px) {
+ @media (max-width: 1300px) {
      .columitem {
          grid-template-columns: repeat(2, 1fr);
      }
@@ -9168,5 +9181,8 @@
      }
      .subminhead .bottom {
          margin-top: 16px;
+     }
+     .cuspageitem .buttons .bottom {
+         min-width: 120px;
      }
  }
