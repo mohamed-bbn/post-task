@@ -75,10 +75,6 @@
  }
  
  .header .flexrow {
-     position: initial;
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
      max-width: 100%;
  }
  
@@ -206,9 +202,7 @@
          display: block;
      }
      .header .navbar .bottoms {
-         width: 100%;
-         display: block;
-         padding: 0px 12px;
+         display: block !important;
      }
      .header .navbar .bottoms .language,
      .header .navbar .bottoms .login,
@@ -224,11 +218,7 @@
      }
  }
  
- .header .menu {
-     display: flex;
-     align-items: center;
-     margin-left: 64px;
- }
+ .header .menu {}
  
  @media (max-width: 1220px) {
      .header .menu {
@@ -250,7 +240,7 @@
  
  @media (max-width: 1220px) {
      .header .menu-item {
-         margin-right: 4px;
+         margin-right: 2px;
      }
  }
  
@@ -6954,7 +6944,9 @@
  }
  
  .footer .alllinks .inner {
+     padding: 0;
      min-width: calc(100% / 3);
+     margin: 0;
  }
  
  @media (max-width: 999px) {
