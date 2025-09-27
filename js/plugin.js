@@ -252,15 +252,27 @@ $(document).ready(function() {
 
 
     $(function() {
+
         $(".box-header").on("click", function() {
-            $(this).prev(".box-content").slideToggle();
+            $(this).siblings(".box-content").slideToggle();
             $(this).toggleClass("active");
             $(this).find(".arrow").toggleClass("rotate");
         });
 
         $(".header-btn").on("click", function(e) {
             e.stopPropagation();
-            $("#popup-backdrop").fadeIn();
+            $("#popup-backdrop").fadeIn(function() {
+                var $sel = $(this).find('.select2-multiple');
+
+                if ($sel.hasClass('select2-hidden-accessible')) {
+                    $sel.select2('destroy');
+                }
+
+                $sel.select2({
+                    dropdownParent: $('#popup-backdrop .popup'),
+                    width: '100%'
+                });
+            });
         });
 
         $(".closePopup, #popup-backdrop").on("click", function(e) {
@@ -269,6 +281,7 @@ $(document).ready(function() {
             }
         });
     });
+
 
 
 });
