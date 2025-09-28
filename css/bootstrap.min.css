@@ -615,16 +615,15 @@ pre code {
 @media (min-width:1600px) {
     .container {
         /* max-width: 960px */
-        max-width: 1330px;
+        max-width: 1430px;
     }
 }
 
-
-/* @media (min-width:1900px) {
+@media (min-width:1900px) {
     .container {
         max-width: 1680px;
     }
-}  */
+}
 
 .container-fluid {
     width: 100%;

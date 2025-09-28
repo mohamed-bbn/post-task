@@ -3296,7 +3296,8 @@ body.active {
 }
 
 .faqs,
-.project-page-passive {
+.project-page-passive,
+.portfolio-passive-user {
     position: relative;
     width: 100%;
     padding: 48px 0px;
@@ -3306,7 +3307,8 @@ body.active {
 
 @media (max-width: 999px) {
     .faqs,
-    .project-page-passive {
+    .project-page-passive,
+    .portfolio-passive-user {
         padding: 24px 0px;
         margin-bottom: 0px;
     }
@@ -5283,11 +5285,13 @@ body.active {
     overflow: hidden;
 }
 
-.sidebar .imgcent .file-bro svg {
+.sidebar .imgcent .file-bro svg,
+.portfolio-passive-user .item .imgcent .file-bro svg {
     margin: 0 !important;
 }
 
-.sidebar .imgcent .file-bro {
+.sidebar .imgcent .file-bro,
+.portfolio-passive-user .item .imgcent .file-bro {
     position: absolute;
     top: 0px;
     width: 100%;
@@ -5297,8 +5301,13 @@ body.active {
     margin: 0px;
 }
 
-.sidebar .imgcent .file-bro svg path {
+.sidebar .imgcent .file-bro svg path,
+.portfolio-passive-user .item .imgcent .file-bro svg path {
     fill: #fff;
+}
+
+.portfolio-passive-user .item .imgcent:hover .file-bro {
+    opacity: 1;
 }
 
 .sidebar .title {
@@ -6408,12 +6417,16 @@ body.active {
     }
 }
 
-.itemoffers .user {
+.itemoffers .user,
+.cuspopup .user,
+.detailsproject .user {
     display: flex;
     align-items: center;
 }
 
-.itemoffers .user .photo {
+.itemoffers .user .photo,
+.cuspopup .user .photo,
+.detailsproject .user .photo {
     min-width: 60px;
     max-width: 60px;
     height: 60px;
@@ -6422,25 +6435,33 @@ body.active {
     overflow: hidden;
 }
 
-.itemoffers .photo img {
+.itemoffers .photo img,
+.cuspopup .user .photo img,
+.detailsproject .user .photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.itemoffers .user .title {
+.itemoffers .user .title,
+.cuspopup .user .title,
+.detailsproject .user .title {
     color: #6568F4;
     font-size: 16px;
     font-weight: 600;
 }
 
-.itemoffers .user .flex {
+.itemoffers .user .flex,
+.cuspopup .user .flex,
+.detailsproject .user .flex {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.itemoffers .user .flex .innerflex {
+.itemoffers .user .flex .innerflex,
+.cuspopup .user .flex .innerflex,
+.detailsproject .user .flex .innerflex {
     display: flex;
     align-items: center;
     font-size: 14px;
@@ -6449,11 +6470,15 @@ body.active {
     margin: 8px 12px 0px 0px;
 }
 
-.itemoffers .user .flex .innerflex:last-child {
+.itemoffers .user .flex .innerflex:last-child,
+.cuspopup .user .flex .innerflex:last-child,
+.detailsproject .user .flex .innerflex:last-child {
     margin-right: 0px;
 }
 
-.itemoffers .user .flex .innerflex svg {
+.itemoffers .user .flex .innerflex svg,
+.cuspopup .user .flex .innerflex svg,
+.detailsproject .user .flex .innerflex svg {
     margin-right: 4px;
 }
 
@@ -6602,11 +6627,13 @@ body.active {
     color: red;
 }
 
-.itemoffers .box .box-header .arrow {
+.itemoffers .box .box-header .arrow,
+.boxproject .boxproject-header .arrow {
     transition: transform 0.3s ease;
 }
 
-.itemoffers .box .box-header .arrow.rotate {
+.itemoffers .box .box-header .arrow.rotate,
+.boxproject .boxproject-header .arrow.rotate {
     transform: rotate(180deg);
 }
 
@@ -7355,16 +7382,18 @@ textarea.form-control {
 .map-back {
     background: #151528;
     height: 248px;
+    padding: 0px !important;
+    overflow: hidden;
+}
+
+.map-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .map-back::after {
     display: none;
-}
-
-@media (max-width: 999px) {
-    .map-back {
-        padding: 24px 0px;
-    }
 }
 
 @media (max-width: 999px) {
@@ -9283,7 +9312,9 @@ span.statuscompleted {
     margin-top: 12px;
 }
 
-.detailsproject .box {
+.detailsproject .box,
+.jobsservices,
+.boxproject {
     background: #fff;
     border-radius: 12px;
     margin-top: 20px;
@@ -9305,7 +9336,7 @@ span.statuscompleted {
 
 .detailsproject .box .box-content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     background: none;
     border-top: 1px solid #E3E3E3;
@@ -9999,8 +10030,482 @@ span.statuscompleted {
     max-width: 184px;
 }
 
+.portfolio-passive-user .item {
+    margin-top: -124px;
+}
+
+.portfolio-passive-user .item .title {
+    font-size: 20px;
+    margin-top: 16px;
+}
+
+.portfolio-passive-user .item .imgcent {
+    margin: 0;
+}
+
+.portfolio-passive-user .item .status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 32px;
+    border-radius: 60px;
+    background: #ECFDF3;
+    color: #085D3A;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-top: 16px;
+}
+
+.portfolio-passive-user .item .status::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #085D3A;
+}
+
+.portfolio-passive-user .item .list {
+    margin-top: 20px;
+}
+
+.portfolio-passive-user .item .list li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.portfolio-passive-user .item .list li svg {
+    margin-right: 4px;
+}
+
+.portfolio-passive-user .item .bottom {
+    border-radius: 60px;
+    padding: 4px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 20px;
+    background: #6568F4;
+    border: 0;
+}
+
+.portfolio-passive-user .item .bottom svg path {
+    fill: #fff;
+}
+
+.portfolio-passive-user .item .bottom:hover {
+    background: #C5D92D;
+}
+
+.portfolio-passive-user .item .hirejob {
+    border: 1px solid #E8E8EB;
+    padding: 16px;
+    margin-top: 24px;
+}
+
+.portfolio-passive-user .item .hirejob .title {
+    font-size: 14px;
+    padding-bottom: 16px;
+    margin: 0;
+    border-bottom: 1px solid #E8E8EB;
+}
+
+.portfolio-passive-user .item .hirejob .listhire a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.portfolio-passive-user .item .hirejob .listhire a .icon {
+    margin-right: 8px;
+}
+
+.portfolio-passive-user .item .hirejob .listhire a .arrow {
+    position: absolute;
+    right: 0px;
+}
+
+.portfolio-passive-user .item .hirejob .listhire a p {
+    color: #000;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.portfolio-passive-user .item .hirejob .listhire a small {
+    color: #707070;
+    line-height: 1;
+    font-size: 10px;
+}
+
+.portfolio-passive-user .item .ratings {
+    margin-top: 24px;
+}
+
+.portfolio-passive-user .item .ratings li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.portfolio-passive-user .item .ratings li p {
+    color: #191919;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.portfolio-passive-user .item .iconsrating {
+    display: flex;
+    align-items: center;
+}
+
+.portfolio-passive-user .item .iconsrating svg.active {
+    fill: #6568F4;
+}
+
+.portfolio-passive-user .item .progress {
+    border-radius: 60px;
+    background: #F3F4F6;
+    min-width: 130px;
+    max-width: 130px;
+}
+
+.portfolio-passive-user .item .progress .progress-bar {
+    background: #1B8354;
+    border-radius: 60px;
+}
+
+.portfolio-passive-user .item .ratings .status {
+    color: #B3C529;
+    background: #F9FBEA;
+    max-width: 100px;
+    margin: 0;
+}
+
+.portfolio-passive-user .item .ratings .status:before {
+    background: #C5D92D;
+}
+
+.portfolio-passive-user .subitem .projecttabs {
+    margin: 0;
+    border-top: 0;
+}
+
+.portfolio-passive-user .subitem .projecttabs li {
+    margin-right: 16px;
+}
+
+.portfolio-passive-user .subitem .projecttabs li:last-child {
+    margin: 0;
+}
+
+.portfolio-passive-user .subitem .projecttabs li a {
+    padding: 0;
+    padding-bottom: 12px;
+    color: #B8B8BF;
+    font-size: 20px;
+}
+
+.portfolio-passive-user .subitem .projecttabs li a::after {
+    background: #6568F4;
+}
+
+.portfolio-passive-user .subitem .projecttabs li a.active {
+    color: #000;
+}
+
+.portfolio-passive-user .subitem .rowbox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    background: none;
+    margin-top: 12px;
+}
+
+.portfolio-passive-user .subitem .header-btn,
+.portfolio-passive-user .subitem .create-project {
+    display: block;
+    background: #B8B8BF;
+    height: 240px;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.portfolio-passive-user .subitem .header-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-passive-user .subitem .create-project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px dashed #B8B8BF;
+    padding: 12px;
+    height: 100%;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.portfolio-passive-user .subitem .create-project:hover {
+    border: 1px dashed #C5D92D;
+}
+
+.portfolio-passive-user .subitem .create-project .icon {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: #E0EAFF;
+}
+
+.portfolio-passive-user .subitem .create-project .bottom {
+    border-radius: 60px;
+    background: #fff;
+    border: 1px solid #B8B8BF;
+    color: #000;
+    margin-top: 16px;
+}
+
+.portfolio-passive-user .subitem .create-project:hover .bottom {
+    border: 1px solid #C5D92D;
+    background: #C5D92D;
+    color: #fff;
+}
+
+.portfolio-passive-user .subitem .detailsproject .title {
+    justify-content: space-between;
+}
+
+.portfolio-passive-user .subitem .detailsproject .edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #6568F4;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.portfolio-passive-user .subitem .detailsproject .edit:hover {
+    background: #6568F4;
+}
+
+.portfolio-passive-user .subitem .detailsproject .edit:hover svg {
+    fill: #fff;
+}
+
+.portfolio-passive-user .subitem .detailsproject .edit svg {
+    fill: #6568F4;
+    max-width: 20px;
+    max-height: 20px;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.cuspopup .popup {
+    border-radius: 8px;
+}
+
+
+/* .cuspopup .popup .minhead {
+    border: 0;
+    padding-bottom: 0;
+} */
+
+.cuspopup .popup .description {
+    padding: 16px;
+}
+
+.cuspopup .popup .description .title {
+    font-size: 28px;
+}
+
+.cuspopup .popup .description p {
+    font-weight: 400;
+    margin-top: 12px;
+}
+
+.cuspopup .popup .description .photo {
+    width: 100%;
+    height: 522px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.cuspopup .popup .description .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.client-reviews {
+    display: flex;
+    margin-top: 24px;
+}
+
+.client-reviews .done {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-width: 155px;
+    max-width: 155px;
+    height: 32px;
+    border-radius: 60px;
+    background: #067647;
+    color: #fff;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-right: 16px;
+}
+
+.client-reviews .done svg {
+    position: absolute;
+    left: 8px
+}
+
+.client-reviews p {
+    font-weight: 400;
+    max-width: 76%;
+}
+
+.client-reviews .innerflex {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #767676;
+    margin-top: 4px;
+}
+
+.client-reviews .innerflex svg {
+    margin-right: 4px;
+}
+
+.textthank {
+    font-weight: 400;
+    color: #000;
+    margin-top: 12px;
+}
+
+.clientservices {
+    margin-top: 24px;
+}
+
+.clientservices .title {
+    font-size: 24px;
+}
+
+.servisitem {
+    border: 1px solid #E5E3FF;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.servisitem .photo {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+
+.servisitem .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.servisitem .title {
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+.servisitem p {
+    font-weight: 400;
+    margin-top: 4px;
+    color: #191919;
+}
+
+.servisitem span.price {
+    display: flex;
+    align-items: flex-start;
+    color: #6568f4;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+.servisitem span.price small {
+    margin-left: 12px;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.servisitem span.price b {
+    margin-left: 2px;
+    font-weight: 900;
+    font-size: 18px;
+    color: #6568f4;
+}
+
+.servisitem .bottom {
+    width: 100%;
+    border: 1px solid #6568f4;
+    border-radius: 60px;
+    margin-top: 16px;
+    color: #6568f4;
+    background: #E0EAFF;
+}
+
+.servisitem .bottom:hover {
+    background: #6568f4;
+    color: #fff;
+}
+
+.jobsservices {}
+
+.boxproject .boxproject-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+}
+
+.boxproject-content {
+    display: none;
+}
+
+
+/* @media (max-width:1199px) {
+    .portfolio-passive-user .subitem .rowbox {
+        grid-template-columns: repeat(3, 1fr);
+    }
+} */
+
 @media (max-width:999px) {
-    .boxapplynow .formapply .field ul li {
+    .boxapplynow .formapply .field ul li,
+    .portfolio-passive-user .subitem .projecttabs li a {
         font-size: 16px;
     }
     .thank-message .title {
@@ -10022,13 +10527,39 @@ span.statuscompleted {
         margin: 0 !important;
         margin-top: 24px !important;
     }
+    .cuspopup .popup .description .title {
+        font-size: 24px;
+    }
+    .cuspopup .popup .description .photo {
+        height: 300px;
+    }
+    .portfolio-passive-user .item,
+    .portfolio-passive-user .subitem,
+    .client-reviews p {
+        max-width: 100%;
+        flex: 100%;
+    }
+    .portfolio-passive-user .subitem {
+        margin-top: 24px;
+    }
+    .portfolio-passive-user .subitem .rowbox {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width:550px) {
-    .listrating li {
+    .listrating li,
+    .client-reviews {
         display: block;
+    }
+    .client-reviews .done {
+        margin: 0;
+        margin-bottom: 12px;
     }
     .listrating li .flex {
         margin-top: 12px;
+    }
+    .portfolio-passive-user .subitem .rowbox {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
