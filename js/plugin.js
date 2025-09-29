@@ -259,31 +259,34 @@ $(document).ready(function() {
             $(this).find(".arrow").toggleClass("rotate");
         });
 
-        $(".header-btn").on("click", function(e) {
-            e.stopPropagation();
-            $("#popup-backdrop").fadeIn(function() {
-                $("body").addClass("no-scroll"); //      
+        function initPopup(btnClass, popupId) {
+            $("." + btnClass).on("click", function(e) {
+                e.stopPropagation();
+                $("#" + popupId).fadeIn(function() {
+                    $("body").addClass("no-scroll");
 
-                var $sel = $(this).find('.select2-multiple');
-
-                if ($sel.hasClass('select2-hidden-accessible')) {
-                    $sel.select2('destroy');
-                }
-
-                $sel.select2({
-                    dropdownParent: $('#popup-backdrop .popup'),
-                    width: '100%'
+                    var $sel = $(this).find(".select2-multiple");
+                    if ($sel.hasClass("select2-hidden-accessible")) {
+                        $sel.select2("destroy");
+                    }
+                    $sel.select2({
+                        dropdownParent: $("#" + popupId + " .popup"),
+                        width: "100%"
+                    });
                 });
             });
-        });
 
-        $(".closePopup, #popup-backdrop").on("click", function(e) {
-            if ($(e.target).closest(".closePopup").length > 0 || e.target.id === "popup-backdrop") {
-                $("#popup-backdrop").fadeOut(function() {
-                    $("body").removeClass("no-scroll"); //      
-                });
-            }
-        });
+            $("#" + popupId + " .closePopup, #" + popupId).on("click", function(e) {
+                if ($(e.target).closest(".closePopup").length > 0 || e.target.id === popupId) {
+                    $("#" + popupId).fadeOut(function() {
+                        $("body").removeClass("no-scroll");
+                    });
+                }
+            });
+        }
+        initPopup("header-btn", "popup-backdrop");
+        initPopup("header-btn2", "popup-backdrop2");
+        initPopup("header-btn3", "popup-backdrop3");
     });
 
 
@@ -293,6 +296,67 @@ $(document).ready(function() {
         $(this).toggleClass("active");
         $(this).find(".arrow").toggleClass("rotate");
     });
+
+
+    $(function() {
+        // عند اختيار صورة من الجاليري
+        $(".gallery .itemimg").on("click", function() {
+            $(this).toggleClass("selected");
+            $("#count").text($(".gallery .itemimg.selected").length);
+        });
+
+        // عند الضغط على زر الإضافة
+        $("#addImages").on("click", function() {
+            $("#selectedImages").empty();
+
+            $(".gallery .itemimg.selected").each(function() {
+                const imgSrc = $(this).find("img").attr("src");
+                const title = $(this).find(".title").text();
+
+                const item = $(`
+                <div class="selected-item" data-src="${imgSrc}">
+                    <div class="photo">
+                        <div class="overlayimg">
+                            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7218 0.437216C12.0984 0.588644 9.54735 1.4233 7.31302 2.86125C6.38109 3.46104 5.77765 3.9469 4.91654 4.79078C4.05602 5.63412 3.56112 6.22436 2.94735 7.13933C0.821863 10.308 0.0111594 14.1291 0.667019 17.8877C1.08806 20.3005 2.14972 22.6332 3.70448 24.5617C6.01564 27.4284 9.27814 29.3591 12.9241 30.0174C15.1626 30.4217 17.6987 30.303 19.8497 29.6931C22.3132 28.9948 24.4659 27.7714 26.2846 26.0364C28.2207 24.1893 29.5994 21.9351 30.3312 19.42C31.0251 17.0347 31.0891 14.336 30.5088 11.9239C29.7843 8.91232 28.1258 6.19944 25.7541 4.14627C22.7115 1.51204 18.8122 0.201134 14.7218 0.437216ZM14.835 2.43326C11.3401 2.64629 8.02796 4.24972 5.73595 6.83812C3.24528 9.65088 2.12448 13.2649 2.59137 16.9781C2.83084 18.8829 3.56752 20.8335 4.65319 22.4374C6.49469 25.1581 9.26733 27.0876 12.4654 27.8739C14.5474 28.3857 16.8051 28.3857 18.8871 27.8739C21.5123 27.2284 23.8615 25.8097 25.6559 23.7861C28.3062 20.7971 29.4028 16.7314 28.615 12.8147C28.2365 10.9336 27.4256 9.14669 26.2555 7.61491C23.5622 4.08938 19.3108 2.16043 14.835 2.43326ZM23.0921 7.95448C22.8974 7.98277 22.727 8.06121 22.5779 8.19117C22.5214 8.24045 20.2455 11.0487 17.5204 14.4317C14.7954 17.8147 12.5295 20.6147 12.4854 20.654C12.3925 20.7363 12.2297 20.7481 12.1297 20.6795C12.093 20.6542 11.3436 19.632 10.4645 18.408C8.78527 16.07 8.7173 15.9867 8.41911 15.8995C7.91695 15.7528 7.38941 15.9827 7.17216 16.4429C7.05365 16.6939 7.05288 17.0341 7.17032 17.2557C7.21594 17.3416 7.96519 18.4037 8.83533 19.6156C10.5269 21.9717 10.6913 22.1735 11.1144 22.4145C11.2301 22.4802 11.4412 22.5725 11.5836 22.6194C11.8158 22.696 11.8891 22.7048 12.2953 22.7046C12.7059 22.7043 12.7725 22.6962 13.0071 22.6166C13.3448 22.5021 13.6599 22.3174 13.8985 22.0941C14.1641 21.8455 24.0657 9.56153 24.1766 9.34308C24.25 9.19878 24.2649 9.12802 24.2639 8.9309C24.2608 8.30481 23.7293 7.8619 23.0921 7.95448Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <img src="${imgSrc}">
+                        <button type="button" class="remove-btn">×</button>
+                    </div>
+                    <h6 class="title">${title}</h6>
+                </div>
+            `);
+
+                $("#selectedImages").append(item);
+            });
+
+            $(".popup-backdrop").fadeOut();
+            $("body").removeClass("no-scroll");
+        });
+
+        // عند الضغط على زر الحذف
+        $(document).on("click", ".remove-btn", function() {
+            const parent = $(this).closest(".selected-item");
+            const imgSrc = parent.data("src");
+
+            // شيل الصورة من القائمة
+            parent.remove();
+
+            // شيل الكلاس selected من الصورة اللي في الجاليري بنفس الـ src
+            $(`.gallery .itemimg img[src="${imgSrc}"]`).closest(".itemimg").removeClass("selected");
+
+            // لو مفيش أي صور متبقية → شيل كل الـ selected
+            if ($("#selectedImages .selected-item").length === 0) {
+                $(".gallery .itemimg").removeClass("selected");
+            }
+
+            // عدّل العداد
+            $("#count").text($(".gallery .itemimg.selected").length);
+        });
+    });
+
+
 
 });
 
