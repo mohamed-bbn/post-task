@@ -3297,7 +3297,8 @@ body.active {
 
 .faqs,
 .project-page-passive,
-.portfolio-passive-user {
+.portfolio-passive-user,
+.pricing-table {
     position: relative;
     width: 100%;
     padding: 48px 0px;
@@ -3308,7 +3309,8 @@ body.active {
 @media (max-width: 999px) {
     .faqs,
     .project-page-passive,
-    .portfolio-passive-user {
+    .portfolio-passive-user,
+    .pricing-table {
         padding: 24px 0px;
         margin-bottom: 0px;
     }
@@ -10813,5 +10815,242 @@ span.statuscompleted {
     .innerselectimg .gallery,
     #selectedImages {
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.pricing-table {
+    overflow: hidden;
+}
+
+.pricing-table .container {
+    align-items: flex-start;
+}
+
+.pricing-table .tab-content {
+    border: 1px solid #E0E1E2;
+    border-radius: 0px 8px 8px 0px;
+}
+
+.pricingsidebar {
+    border: 1px solid #E0E1E2;
+    border-right: 0;
+    min-width: 20%;
+    max-width: 20%;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.pricingsidebar .title,
+.plan-col .title {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 16px;
+    height: 62px;
+    border-bottom: 1px solid #E0E1E2;
+}
+
+.plan-col .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #505373;
+    font-size: 16px;
+}
+
+.textpackage {
+    height: 166px;
+    padding: 16px;
+}
+
+.plan-col .textpackage {
+    height: 227px;
+}
+
+.textpackage p {
+    color: #000;
+    font-weight: 600;
+}
+
+.textpackage .nav {
+    display: inline-flex;
+    margin-top: 16px;
+    border-radius: 100px;
+    padding: 4px;
+    background: #F1F1F1;
+    border: 1px solid #EDEDED
+}
+
+.textpackage .nav a {
+    font-size: 14px;
+    font-weight: 700;
+    background: none;
+    padding: 3px 10px;
+    border-radius: 60px;
+    border: 1.2px solid transparent;
+}
+
+.textpackage .nav a.active {
+    background: #fff;
+    border: 1.2px solid #0000001F;
+    color: #000;
+}
+
+.detailsprice:last-child ul li:last-child {
+    border: 0;
+}
+
+.detailsprice .title {
+    font-size: 18px;
+}
+
+.detailsprice ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #505373;
+    height: 45px;
+    overflow: hidden;
+    border-bottom: 1px solid #E0E1E2;
+}
+
+.plan-col {
+    border-right: 1px solid #E0E1E2;
+    text-align: center;
+    min-width: 25%;
+    max-width: 25%;
+}
+
+.plan-col:last-child {
+    border: 0;
+}
+
+.plan-col .title .most {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 29px;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 8px;
+    border: 1px solid #4D3CF214;
+    background: #D9C8FF30;
+    color: #4D3CF2;
+    margin-left: 4px;
+}
+
+.plan-col .title .most svg {
+    margin-right: 2px;
+}
+
+.numprice {
+    font-size: 36px;
+    font-weight: 600;
+    color: #000;
+}
+
+.numprice small {
+    font-size: 14px;
+    font-weight: 500;
+    color: #272727B2;
+}
+
+.plan-col .sub {
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1.5%;
+    color: #505373;
+    margin-top: 24px;
+}
+
+.btn-downgrade,
+.btn-plan,
+.btn-upgrade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    border: 1.5px solid #E9C6C6;
+    color: #F14949;
+    font-weight: 600;
+    font-size: 15px;
+    background: #fff;
+    border-radius: 8px;
+    margin-top: 16px;
+    transition: all 0.5s ease-in-out 0s;
+    box-shadow: 0px 1px 3px 0px #A403031A;
+}
+
+.btn-downgrade:hover {
+    background: #F14949;
+    border: 1.5px solid #F14949;
+    color: #fff;
+}
+
+.btn-plan {
+    border: 1.5px solid #B1A0FF;
+    color: #4D3CF2;
+    box-shadow: 0px 1px 3px 0px #1D048326;
+}
+
+.btn-plan:hover,
+.btn-upgrade {
+    border: 1.5px solid #4D3CF2;
+    background: #4D3CF2;
+    color: #fff;
+}
+
+.btn-upgrade:hover {
+    background: #C5D92D;
+    border: 1.5px solid #C5D92D;
+}
+
+.plan-col .feature {
+    border-top: 1px solid #E0E1E2;
+    margin-bottom: 61px;
+}
+
+.plan-col .feature:last-child {
+    margin: 0;
+}
+
+.plan-col .feature li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #505373;
+    height: 45px;
+    border-bottom: 1px solid #E0E1E2;
+}
+
+.plan-col .feature:last-child li:last-child {
+    border-bottom: 0;
+}
+
+.plan-col.bg {
+    background: #fcfbff;
+}
+
+.plan-col.bg .feature li {
+    color: #000;
+}
+
+@media (max-width:999px) {
+    .pricing-table .container {
+        overflow: hidden;
+        overflow-x: scroll;
+        padding: 0;
+    }
+    .pricingsidebar,
+    .plan-col {
+        min-width: 256px;
+        max-width: 256px;
     }
 }
