@@ -299,13 +299,11 @@ $(document).ready(function() {
 
 
     $(function() {
-        // عند اختيار صورة من الجاليري
         $(".gallery .itemimg").on("click", function() {
             $(this).toggleClass("selected");
             $("#count").text($(".gallery .itemimg.selected").length);
         });
 
-        // عند الضغط على زر الإضافة
         $("#addImages").on("click", function() {
             $("#selectedImages").empty();
 
@@ -335,28 +333,59 @@ $(document).ready(function() {
             $("body").removeClass("no-scroll");
         });
 
-        // عند الضغط على زر الحذف
         $(document).on("click", ".remove-btn", function() {
             const parent = $(this).closest(".selected-item");
             const imgSrc = parent.data("src");
 
-            // شيل الصورة من القائمة
             parent.remove();
 
-            // شيل الكلاس selected من الصورة اللي في الجاليري بنفس الـ src
             $(`.gallery .itemimg img[src="${imgSrc}"]`).closest(".itemimg").removeClass("selected");
 
-            // لو مفيش أي صور متبقية → شيل كل الـ selected
             if ($("#selectedImages .selected-item").length === 0) {
                 $(".gallery .itemimg").removeClass("selected");
             }
 
-            // عدّل العداد
             $("#count").text($(".gallery .itemimg.selected").length);
         });
     });
 
+    $(function() {
+        $(".subfilter").each(function() {
+            const $sub = $(this);
+            const $min = $sub.find(".min");
+            const $max = $sub.find(".max");
+            const $range = $sub.find(".slider-range");
+            const $minVal = $sub.find(".min-value");
+            const $maxVal = $sub.find(".max-value");
+            const sliderMax = 100;
+            const minGap = 1;
 
+            function updateSlider() {
+                let minVal = parseInt($min.val());
+                let maxVal = parseInt($max.val());
+
+                if (maxVal - minVal <= minGap) {
+                    if (this.classList.contains("min")) $min.val(maxVal - minGap);
+                    else $max.val(minVal + minGap);
+                    minVal = parseInt($min.val());
+                    maxVal = parseInt($max.val());
+                }
+
+                const left = (minVal / sliderMax) * 100;
+                const width = ((maxVal - minVal) / sliderMax) * 100;
+
+                $range.css({
+                    left: left + "%",
+                    width: width + "%"
+                });
+                $minVal.text(minVal);
+                $maxVal.text(maxVal);
+            }
+
+            $sub.find("input[type=range]").on("input", updateSlider);
+            updateSlider();
+        });
+    });
 
 });
 

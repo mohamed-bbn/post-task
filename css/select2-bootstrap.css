@@ -354,6 +354,7 @@
     line-height: 1.42857143;
     margin-top: 0;
     min-width: 5em;
+    font-weight: 500;
 }
 
 .select2-container--bootstrap .select2-selection--multiple .select2-selection__choice__remove {

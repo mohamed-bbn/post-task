@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Lorem PugJs">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <meta name="keywords" content="">
+    <title>TaskLink</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/select2.css">
+    <link rel="stylesheet" href="css/select2-bootstrap.css">
+    <link rel="stylesheet" href="css/froala_editor.min.css">
+    <link rel="stylesheet" href="css/newstyle.css">
+    <!-- <link rel="stylesheet" href="css/home-rtl.css"> -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/plugin.js"></script>
+
+</head>
+
+
+<body>
+
+    <header class="header">
+        <div class="container flexrow">
+            <div class="itemlogomenu">
+                <div class="burger" id="burger">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </div>
+                <!-- End burger -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img loading="lazy" class="wight-logo" src="images/logowight.png" alt="TaskLink">
+                    </a>
+                </div>
+                <!-- End logo -->
+                <span class="overlay"></span>
+                <nav class="navbar" id="navbar">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img loading="lazy" class="wight-logo" src="images/logowight.png" alt="TaskLink">
+                        </a>
+                    </div>
+                    <!-- End logo -->
+                    <span class="cancel">
+                        <svg width="10" height="10" viewBox="0 0 12 12"  xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.66271 6.00002L11.8625 0.800231C12.0455 0.617161 12.0455 0.320349 11.8625 0.137303C11.6794 -0.0457441 11.3826 -0.0457675 11.1995 0.137303L5.99975 5.33709L0.799987 0.137303C0.616917 -0.0457675 0.320105 -0.0457675 0.137058 0.137303C-0.0459882 0.320373 -0.0460117 0.617185 0.137058 0.800231L5.33682 6L0.137058 11.1998C-0.0460117 11.3829 -0.0460117 11.6797 0.137058 11.8627C0.228582 11.9542 0.348558 12 0.468535 12C0.588511 12 0.708464 11.9542 0.800011 11.8627L5.99975 6.66295L11.1995 11.8627C11.291 11.9542 11.411 12 11.531 12C11.651 12 11.7709 11.9542 11.8625 11.8627C12.0455 11.6796 12.0455 11.3828 11.8625 11.1998L6.66271 6.00002Z" fill="#D1362A"></path>
+                        </svg>
+                    </span>
+                    <!-- class activelink -->
+                    <ul class="menu" id="menu">
+                        <li class="menu-item menu-dropdown">
+                            <span class="menu-link" data-toggle="submenu">Companies
+                            <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.31717 8.39716L10.8775 4.1144C11.0408 3.97387 11.0408 3.74594 10.8775 3.6054C10.7141 3.46487 10.449 3.46487 10.2856 3.6054L5.99999 7.62993L1.71435 3.60576C1.55098 3.46522 1.2859 3.46522 1.12253 3.60576C0.95917 3.7463 0.95917 3.97422 1.12253 4.11475L5.68284 8.39752C5.76993 8.47242 5.88539 8.50454 5.99958 8.49954C6.11419 8.50419 6.22964 8.47209 6.31717 8.39716Z"></path>
+                            </svg>
+                        </span>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a class="submenu-link" href="hire.html" title="AngularJS">AngularJS</a></li>
+                                <li class="submenu-item"><a class="submenu-link" href="hire.html" title="ReactJS">ReactJS</a></li>
+                                <li class="submenu-item"><a class="submenu-link" href="hire.html" title="Vue.js">Vue.js</a></li>
+                                <li class="submenu-item"><a class="submenu-link" href="hire.html" title="JavaScript">JavaScript</a></li>
+                                <li class="submenu-item"><a class="submenu-link" href="hire.html" title="TypeScript">TypeScript</a></li>
+                                <li class="submenu-item"><a class="submenu-link" href="hire.html" title="Tailwind CSS">Tailwind CSS</a></li>
+                                <li class="submenu-item"><a class="submenu-link" href="hire.html" title="ViteJS">ViteJS</a></li>
+                                <li class="submenu-item"><a class="submenu-link" href="hire.html" title="CSS3">CSS3</a></li>
+                                <li class="submenu-item"><a class="submenu-link" href="hire.html" title="HTML5">HTML5</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-dropdown">
+                            <span class="menu-link" data-toggle="submenu">Talents
+                            <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.31717 8.39716L10.8775 4.1144C11.0408 3.97387 11.0408 3.74594 10.8775 3.6054C10.7141 3.46487 10.449 3.46487 10.2856 3.6054L5.99999 7.62993L1.71435 3.60576C1.55098 3.46522 1.2859 3.46522 1.12253 3.60576C0.95917 3.7463 0.95917 3.97422 1.12253 4.11475L5.68284 8.39752C5.76993 8.47242 5.88539 8.50454 5.99958 8.49954C6.11419 8.50419 6.22964 8.47209 6.31717 8.39716Z"></path>
+                            </svg>
+                        </span>
+                            <ul class="submenu">
+                                <li class="submenu-item"> <a class="submenu-link" href="how-it-works.html">How it Works</a></li>
+                                <li class="submenu-item"> <a class="submenu-link" href="faqs.html">FAQ</a></li>
+                                <li class="submenu-item"> <a class="submenu-link" href="talent.html">Find a Job</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a class="menu-link" href="success-stories.html">  Success Stories</a></li>
+                        <li class="menu-item "><a class="menu-link" href="blogs.html">  Blogs</a></li>
+                        <li class="menu-item"><a class="menu-link" href="pricing.html">  Pricing</a></li>
+                        <li class="menu-item "><a class="menu-link" href="contactus.html">  contact us</a></li>
+                    </ul>
+                    <div class="bottoms">
+                        <!-- <a href="talent.html" class="bottom"> Hire a Talent </a> -->
+                        <!-- End bottom -->
+                        <!-- <a href="login.html" class="login">  Find a Job </a> -->
+                        <!-- End login -->
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="true">
+                                <div class="photo"> <img src="images/user.jpg"></div>
+                                <div class="d-flex">
+                                    <p>Mohamed Ahmed</p>
+                                    <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.31717 8.39716L10.8775 4.1144C11.0408 3.97387 11.0408 3.74594 10.8775 3.6054C10.7141 3.46487 10.449 3.46487 10.2856 3.6054L5.99999 7.62993L1.71435 3.60576C1.55098 3.46522 1.2859 3.46522 1.12253 3.60576C0.95917 3.7463 0.95917 3.97422 1.12253 4.11475L5.68284 8.39752C5.76993 8.47242 5.88539 8.50454 5.99958 8.49954C6.11419 8.50419 6.22964 8.47209 6.31717 8.39716Z" stroke-width="0.3"></path>
+                                </svg>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu" x-placement="bottom-start">
+                                <a class="dropdown-item" href="dashboard.html"> Dashboard  </a>
+                                <a class="dropdown-item" href="profile.html">Profile </a>
+                                <a class="dropdown-item" href="employees.html">Employees </a>
+                                <a class="dropdown-item" href="available-jobs.html">Available jobs </a>
+                                <a class="dropdown-item" href="#"> Logout  </a>
+                            </div>
+                        </div>
+                        <!-- End dropdown -->
+                        <a href="ar/index.html" class="language">
+                            <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_598_2769)"> <mask id="mask0_598_2769" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="22" height="22"> <path d="M21.794 0.772797H0.203125V21.2273H21.794V0.772797Z" fill="white"></path> </mask> <g mask="url(#mask0_598_2769)"> <path d="M15.2516 7.62817C15.2578 7.62854 15.2643 7.62881 15.2705 7.62927L15.3238 7.63372C15.3352 7.63513 15.3468 7.63751 15.3581 7.63926C15.376 7.64201 15.3938 7.64567 15.4114 7.64925C15.4239 7.65179 15.4368 7.65405 15.4491 7.65702C15.4719 7.66246 15.4945 7.66908 15.5169 7.67589C15.5346 7.68132 15.5524 7.68729 15.5702 7.69364C15.5862 7.69942 15.6021 7.70602 15.6179 7.71251C15.6291 7.71715 15.6411 7.72079 15.6522 7.72583C15.6577 7.72829 15.6635 7.73106 15.6689 7.73359C15.6897 7.74334 15.7097 7.75479 15.7299 7.76577C15.7423 7.77252 15.7545 7.77971 15.7665 7.78686C15.7836 7.79696 15.7999 7.80805 15.8165 7.81905C15.8334 7.83031 15.8503 7.84139 15.8664 7.85344C15.8755 7.86022 15.8841 7.86748 15.893 7.87452C15.9141 7.8913 15.9355 7.90751 15.9552 7.92558C15.9612 7.93105 15.966 7.93773 15.9719 7.94333C15.992 7.9626 16.0122 7.98159 16.0306 8.00215C16.039 8.01149 16.047 8.02135 16.0551 8.031C16.0706 8.04956 16.0862 8.06816 16.1006 8.08759C16.1088 8.09869 16.1161 8.11055 16.1239 8.122C16.1374 8.14194 16.1504 8.16232 16.1627 8.18303C16.1702 8.19564 16.1768 8.20889 16.1838 8.22188C16.1929 8.23874 16.2022 8.25564 16.2104 8.27292C16.2141 8.28076 16.219 8.28826 16.2227 8.29623L21.3363 19.6598C21.5936 20.232 21.3379 20.9048 20.7659 21.1625C20.1936 21.4197 19.5209 21.1643 19.2634 20.592L18.0271 17.8444V17.8544H12.3409L11.109 20.592C10.8515 21.1643 10.1787 21.4197 9.60643 21.1625C9.0344 20.9048 8.77874 20.232 9.03604 19.6598L14.1497 8.29623C14.1531 8.28848 14.1571 8.28056 14.1607 8.27292C14.1673 8.25916 14.1747 8.24536 14.1819 8.23186C14.192 8.21267 14.2029 8.19366 14.214 8.17526C14.2162 8.17168 14.2185 8.16773 14.2207 8.16417L14.2651 8.09758C14.2677 8.09401 14.2703 8.09001 14.2729 8.08649C14.2831 8.07263 14.2941 8.05884 14.3051 8.04543C14.319 8.02816 14.3334 8.01067 14.3484 7.99438C14.3594 7.98235 14.3711 7.97046 14.3827 7.95886C14.3943 7.9473 14.4062 7.93548 14.4182 7.92447C14.4345 7.90955 14.452 7.89523 14.4693 7.88118C14.4827 7.8703 14.4964 7.85924 14.5103 7.849C14.5139 7.84641 14.5179 7.84381 14.5214 7.84124L14.588 7.79685C14.5915 7.79465 14.5955 7.79235 14.5991 7.79019C14.6176 7.77911 14.6365 7.76814 14.6557 7.75801C14.6693 7.75089 14.683 7.74349 14.6968 7.73692C14.7044 7.73327 14.7123 7.72931 14.7201 7.72583C14.7335 7.71982 14.7477 7.71464 14.7611 7.70918C14.7743 7.70388 14.7878 7.69846 14.8011 7.69364C14.8182 7.68747 14.836 7.68232 14.8532 7.677C14.8763 7.66991 14.8997 7.66264 14.9231 7.65702C14.9348 7.65423 14.9469 7.65166 14.9587 7.64925C14.9773 7.64543 14.9964 7.64216 15.0153 7.63926C15.0388 7.63567 15.0627 7.63247 15.0863 7.63039C15.0977 7.62939 15.1093 7.62884 15.1207 7.62817C15.1339 7.6274 15.1474 7.62624 15.1606 7.62594H15.2128C15.2256 7.62625 15.2388 7.62743 15.2516 7.62817ZM3.47961 1.68778C4.35792 1.00468 5.56881 0.693427 7.04518 0.790012L7.34481 0.814426L7.4591 0.832182C8.02332 0.947249 8.42097 1.4731 8.36243 2.05843C8.30365 2.64325 7.81029 3.08022 7.23494 3.0816L7.11842 3.07606L6.68341 3.04721C5.72743 3.01881 5.17449 3.24889 4.87566 3.4811C4.54471 3.73852 4.39069 4.10071 4.39071 4.50206C4.39089 4.92316 4.56378 5.34097 4.83903 5.61623C5.09083 5.86772 5.43822 6.01647 5.90882 5.93805C6.01339 5.92069 6.11684 5.91831 6.21732 5.92917C7.33421 5.62001 8.6033 5.41989 10.0204 5.35544L10.1369 5.35655C10.7118 5.38882 11.1811 5.85199 11.2078 6.43965C11.2356 7.06594 10.7499 7.59721 10.1236 7.62594L9.57315 7.65813C4.01395 8.06769 2.45318 10.6706 2.47531 12.1359C2.48763 12.9385 2.90974 13.6463 3.67603 14.0313C4.45043 14.4201 5.73147 14.5463 7.50017 13.7883C8.07689 13.5414 8.7445 13.8087 8.99165 14.3853C9.23804 14.9619 8.97093 15.6296 8.39461 15.8768C6.18691 16.8229 4.18102 16.8285 2.65509 16.0621C1.12172 15.2915 0.228658 13.8076 0.203692 12.1703C0.175482 10.3026 1.20074 8.50188 3.2266 7.21757C2.511 6.49914 2.11816 5.49865 2.11798 4.50206C2.11795 3.48309 2.53249 2.42465 3.47961 1.68778ZM13.364 15.5817H17.0084L15.1862 11.5311L13.364 15.5817Z" fill=""></path> </g> </g> <defs> <clipPath id="clip0_598_2769"> <rect width="21.5909" height="20.4545" fill="white" transform="translate(0.203125 0.772797)"></rect> </clipPath> </defs> </svg>
+                        </a>
+                    </div>
+                    <!-- End bottoms -->
+                </nav>
+            </div>
+            <!--End itemlogomenu -->
+        </div>
+        <!-- End container -->
+    </header>
+    <!--End Header-->
+
+
+    <section class="talent__item">
+        <div class="container">
+            <div class="minhead">
+                <ul class="nav" id="myTab" role="tablist">
+                    <li class="nav-item"> <a class="nav-link active show" id="item-1-tab" data-toggle="tab" href="#item-1" role="tab" aria-controls="item-1" aria-selected="true">Talent</a></li>
+                    <li class="nav-item"><a class="nav-link" id="item-2-tab" data-toggle="tab" href="#item-2" role="tab" aria-controls="item-2" aria-selected="false">  Jobs</a></li>
+                    <li class="nav-item"><a class="nav-link" id="item-3-tab" data-toggle="tab" href="#item-3" role="tab" aria-controls="item-3" aria-selected="false">  Projects</a></li>
+                </ul>
+                <div class="filterinput">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4494 3.94C6.98655 3.94 4.17937 6.74717 4.17937 10.21C4.17937 13.6728 6.98655 16.48 10.4494 16.48C13.9122 16.48 16.7194 13.6728 16.7194 10.21C16.7194 6.74717 13.9122 3.94 10.4494 3.94ZM2.85938 10.21C2.85938 6.01816 6.25753 2.62 10.4494 2.62C14.6412 2.62 18.0394 6.01816 18.0394 10.21C18.0394 14.4018 14.6412 17.8 10.4494 17.8C6.25753 17.8 2.85938 14.4018 2.85938 10.21Z" fill="#1A1A32"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8832 14.6438C15.1409 14.3861 15.5588 14.3861 15.8166 14.6438L19.8261 18.6533C20.0838 18.9111 20.0838 19.3289 19.8261 19.5867C19.5683 19.8444 19.1504 19.8444 18.8927 19.5867L14.8832 15.5772C14.6254 15.3194 14.6254 14.9016 14.8832 14.6438Z" fill="#1A1A32"></path>
+                    </svg>
+                </div>
+            </div>
+            <!-- End minhead -->
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active " id="item-1" role="tabpanel" aria-labelledby="item-1-tab">
+                    <div class="row">
+                        <div class="col-sm-3 subitem">
+                            <div class="subfilter">
+                                <h2 class="title m-0">Filter </h2>
+                                <ul class="listskills mt-1">
+                                    <li>Html
+                                        <a href="#"> <svg width="10" height="10" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"> <path d="M6.66271 6.00002L11.8625 0.800231C12.0455 0.617161 12.0455 0.320349 11.8625 0.137303C11.6794 -0.0457441 11.3826 -0.0457675 11.1995 0.137303L5.99975 5.33709L0.799987 0.137303C0.616917 -0.0457675 0.320105 -0.0457675 0.137058 0.137303C-0.0459882 0.320373 -0.0460117 0.617185 0.137058 0.800231L5.33682 6L0.137058 11.1998C-0.0460117 11.3829 -0.0460117 11.6797 0.137058 11.8627C0.228582 11.9542 0.348558 12 0.468535 12C0.588511 12 0.708464 11.9542 0.800011 11.8627L5.99975 6.66295L11.1995 11.8627C11.291 11.9542 11.411 12 11.531 12C11.651 12 11.7709 11.9542 11.8625 11.8627C12.0455 11.6796 12.0455 11.3828 11.8625 11.1998L6.66271 6.00002Z" fill="#000"></path> </svg></a>
+                                    </li>
+                                    <li>CSS
+                                        <a href="#"> <svg width="10" height="10" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"> <path d="M6.66271 6.00002L11.8625 0.800231C12.0455 0.617161 12.0455 0.320349 11.8625 0.137303C11.6794 -0.0457441 11.3826 -0.0457675 11.1995 0.137303L5.99975 5.33709L0.799987 0.137303C0.616917 -0.0457675 0.320105 -0.0457675 0.137058 0.137303C-0.0459882 0.320373 -0.0460117 0.617185 0.137058 0.800231L5.33682 6L0.137058 11.1998C-0.0460117 11.3829 -0.0460117 11.6797 0.137058 11.8627C0.228582 11.9542 0.348558 12 0.468535 12C0.588511 12 0.708464 11.9542 0.800011 11.8627L5.99975 6.66295L11.1995 11.8627C11.291 11.9542 11.411 12 11.531 12C11.651 12 11.7709 11.9542 11.8625 11.8627C12.0455 11.6796 12.0455 11.3828 11.8625 11.1998L6.66271 6.00002Z" fill="#000"></path> </svg></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End subfilter -->
+
+
+                            <div class="subfilter">
+                                <h2 class="title">Category / Specialization </h2>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">Software Development <small>(22)</small></span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">IT Infrastructure & Cloud <small>(22)</small></span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">Cybersecurity <small>(22)</small></span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">Data & AI <small>(22)</small></span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">Design & UX/UI <small>(22)</small></span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">IT Support & Maintenance <small>(22)</small></span>
+                        </label>
+                            </div>
+                            <!-- End subfilter -->
+
+
+                            <div class="subfilter">
+                                <h2 class="title">Job Title </h2>
+                                <select class="form-control select2-multiple select2-hidden-accessible" data-placeholder="Choose Title" tabindex="-1" aria-hidden="true">
+                            <option></option>
+                           <option value="Front">Front End developer</option>
+                            <option value="Back">Back End developer</option>
+                        </select>
+                            </div>
+                            <!-- End subfilter -->
+
+
+                            <div class="subfilter">
+                                <h2 class="title">Skills </h2>
+                                <select class="form-control select2-multiple select2-hidden-accessible" data-placeholder="Choose" multiple="" tabindex="-1" aria-hidden="true">
+                                <option value="Html">Html</option>
+                                <option value="Css">Css</option>
+                                <option value="JavaScript">JavaScript</option>
+                                <option value="jquery">jquery</option>
+                                <option value="PHP">PHP</option>
+                                <option value="PhotoShop">PhotoShop</option>
+                        </select>
+                            </div>
+                            <!-- End subfilter -->
+
+                            <div class="subfilter">
+                                <h2 class="title">conutry </h2>
+                                <select class="form-control select2-multiple select2-hidden-accessible" data-placeholder="Choose Country" tabindex="-1" aria-hidden="true">
+                            <option></option>
+                            <option value="Qatar">Qatar</option>
+                            <option value="Egypt">Egypt    </option>
+                        </select>
+                            </div>
+                            <!-- End subfilter -->
+                            <div class="subfilter">
+                                <h2 class="title">Rating </h2>
+                                <div class="rating">
+                                    <!-- نجمة كاملة -->
+                                    <svg class="star" viewBox="0 0 24 24">
+    <path d="M12 2l2.9 6.9L22 10l-5 5.2L18 22l-6-3.4L6 22l1-6.8L2 10l7.1-1.1z"/>
+  </svg>
+
+                                    <!-- نجمة كاملة -->
+                                    <svg class="star" viewBox="0 0 24 24">
+    <path d="M12 2l2.9 6.9L22 10l-5 5.2L18 22l-6-3.4L6 22l1-6.8L2 10l7.1-1.1z"/>
+  </svg>
+
+                                    <!-- نجمة كاملة -->
+                                    <svg class="star" viewBox="0 0 24 24">
+    <path d="M12 2l2.9 6.9L22 10l-5 5.2L18 22l-6-3.4L6 22l1-6.8L2 10l7.1-1.1z"/>
+  </svg>
+
+                                    <!-- نصف نجمة -->
+                                    <svg class="star half" viewBox="0 0 24 24">
+    <defs>
+      <linearGradient id="halfGradient">
+        <stop offset="50%" />
+        <stop offset="50%" />
+      </linearGradient>
+    </defs>
+    <path fill="url(#halfGradient)" d="M12 2l2.9 6.9L22 10l-5 5.2L18 22l-6-3.4L6 22l1-6.8L2 10l7.1-1.1z"/>
+  </svg>
+
+                                    <!-- نجمة فاضية -->
+                                    <svg class="star empty" viewBox="0 0 24 24">
+    <path d="M12 2l2.9 6.9L22 10l-5 5.2L18 22l-6-3.4L6 22l1-6.8L2 10l7.1-1.1z"/>
+  </svg>
+                                </div>
+                                <!-- ENd rating -->
+                            </div>
+                            <!-- End subfilter -->
+                        </div>
+                        <!-- End item -->
+                        <div class="col-sm-9 subitem">
+                            <div class="subtalent">
+                                <div class="flex">
+                                    <div class="user">
+                                        <div class="photo"><img loading="lazy" src="images/te-1.jpg" alt="TaskLink"></div>
+                                        <div>
+                                            <h4 class="title">Mohammad Bataineh</h4>
+                                            <div class="flex">
+                                                <div class="innerflex">
+                                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 6.76001H16V4.76001C16 3.65001 15.11 2.76001 14 2.76001H10C8.89 2.76001 8 3.65001 8 4.76001V6.76001H4C2.89 6.76001 2.01 7.65001 2.01 8.76001L2 19.76C2 20.87 2.89 21.76 4 21.76H20C21.11 21.76 22 20.87 22 19.76V8.76001C22 7.65001 21.11 6.76001 20 6.76001ZM14 6.76001H10V4.76001H14V6.76001Z" fill="#C5D92D"></path> </svg>                                                    UI/UX Designer
+                                                </div>
+                                                <!-- End innerflex -->
+                                                <div class="innerflex">
+                                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11.9981 2.01001C13.0473 2.01001 13.8738 2.80254 14.4015 3.87192L16.1635 7.42517C16.2169 7.53514 16.3436 7.68999 16.534 7.83165C16.7242 7.97316 16.9105 8.05122 17.033 8.07181L20.2227 8.60613C21.3748 8.79974 22.3405 9.3645 22.654 10.3479C22.9673 11.3305 22.5083 12.3516 21.6798 13.1817L21.679 13.1825L19.2011 15.6809C19.1029 15.7799 18.9928 15.9664 18.9238 16.2095C18.8553 16.4508 18.8492 16.6707 18.8803 16.8128L18.8807 16.8147L19.5897 19.9054C19.8837 21.1918 19.7863 22.4673 18.879 23.1342C17.9687 23.8033 16.7246 23.5067 15.5945 22.8336L12.6045 21.049C12.479 20.974 12.2633 20.9132 12.003 20.9132C11.7447 20.9132 11.5245 20.9732 11.3908 21.051L11.3889 21.0521L8.40484 22.8332C7.276 23.5087 6.03349 23.8 5.12306 23.1302C4.21644 22.4632 4.11409 21.19 4.40906 19.9047L5.11785 16.8147L5.11829 16.8128C5.14936 16.6707 5.14328 16.4508 5.07475 16.2095C5.00575 15.9664 4.89574 15.7799 4.79753 15.6809L2.3178 13.1806C1.4946 12.3506 1.03716 11.3304 1.3479 10.3493C1.65955 9.36525 2.62338 8.79981 3.77628 8.60607L6.96327 8.0722L6.96429 8.07203C7.08112 8.05176 7.26466 7.97457 7.45443 7.83269C7.64456 7.69055 7.77154 7.53536 7.82507 7.42517L7.82777 7.41968L9.58757 3.87098L9.58827 3.86958C10.1209 2.80109 10.95 2.01001 11.9981 2.01001Z" fill="#C5D92D"></path> </svg>                                                    5.0
+                                                </div>
+                                                <!-- End innerflex -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End user -->
+                                    <a href="#" class="bottom">
+                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18 0.0800781H2C0.9 0.0800781 0.01 0.980078 0.01 2.08008L0 20.0801L4 16.0801H18C19.1 16.0801 20 15.1801 20 14.0801V2.08008C20 0.980078 19.1 0.0800781 18 0.0800781ZM5 7.08008H15C15.55 7.08008 16 7.53008 16 8.08008C16 8.63008 15.55 9.08008 15 9.08008H5C4.45 9.08008 4 8.63008 4 8.08008C4 7.53008 4.45 7.08008 5 7.08008ZM11 12.0801H5C4.45 12.0801 4 11.6301 4 11.0801C4 10.5301 4.45 10.0801 5 10.0801H11C11.55 10.0801 12 10.5301 12 11.0801C12 11.6301 11.55 12.0801 11 12.0801ZM15 6.08008H5C4.45 6.08008 4 5.63008 4 5.08008C4 4.53008 4.45 4.08008 5 4.08008H15C15.55 4.08008 16 4.53008 16 5.08008C16 5.63008 15.55 6.08008 15 6.08008Z" fill="#2196F3"></path>
+                                        </svg> CONTACT
+                                    </a>
+                                </div>
+                                <!-- End flex -->
+                                <ul class="listskills">
+                                    <li>Html</li>
+                                    <li>CSS</li>
+                                    <li>Javascript</li>
+                                    <li>Html</li>
+                                    <li>CSS</li>
+                                    <li>Javascript</li>
+                                    <li>Html</li>
+                                    <li>CSS</li>
+                                </ul>
+                                <p>Hi! I’m a passionate UI/UX designer with expertise in creating intuitive and visually appealing web and mobile experiences. I specialize in user interface design, user experience research, prototyping, and interaction design.
+                                    I love turning ideas into engaging, easy-to-use digital products that delight users.</p>
+                            </div>
+                            <!-- End subtalent -->
+
+                            <div class="subtalent">
+                                <div class="flex">
+                                    <div class="user">
+                                        <div class="photo"><img loading="lazy" src="images/te-2.jpg" alt="TaskLink"></div>
+                                        <div>
+                                            <h4 class="title">Mohammad Bataineh</h4>
+                                            <div class="flex">
+                                                <div class="innerflex">
+                                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 6.76001H16V4.76001C16 3.65001 15.11 2.76001 14 2.76001H10C8.89 2.76001 8 3.65001 8 4.76001V6.76001H4C2.89 6.76001 2.01 7.65001 2.01 8.76001L2 19.76C2 20.87 2.89 21.76 4 21.76H20C21.11 21.76 22 20.87 22 19.76V8.76001C22 7.65001 21.11 6.76001 20 6.76001ZM14 6.76001H10V4.76001H14V6.76001Z" fill="#C5D92D"></path> </svg>                                                    UI/UX Designer
+                                                </div>
+                                                <!-- End innerflex -->
+                                                <div class="innerflex">
+                                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11.9981 2.01001C13.0473 2.01001 13.8738 2.80254 14.4015 3.87192L16.1635 7.42517C16.2169 7.53514 16.3436 7.68999 16.534 7.83165C16.7242 7.97316 16.9105 8.05122 17.033 8.07181L20.2227 8.60613C21.3748 8.79974 22.3405 9.3645 22.654 10.3479C22.9673 11.3305 22.5083 12.3516 21.6798 13.1817L21.679 13.1825L19.2011 15.6809C19.1029 15.7799 18.9928 15.9664 18.9238 16.2095C18.8553 16.4508 18.8492 16.6707 18.8803 16.8128L18.8807 16.8147L19.5897 19.9054C19.8837 21.1918 19.7863 22.4673 18.879 23.1342C17.9687 23.8033 16.7246 23.5067 15.5945 22.8336L12.6045 21.049C12.479 20.974 12.2633 20.9132 12.003 20.9132C11.7447 20.9132 11.5245 20.9732 11.3908 21.051L11.3889 21.0521L8.40484 22.8332C7.276 23.5087 6.03349 23.8 5.12306 23.1302C4.21644 22.4632 4.11409 21.19 4.40906 19.9047L5.11785 16.8147L5.11829 16.8128C5.14936 16.6707 5.14328 16.4508 5.07475 16.2095C5.00575 15.9664 4.89574 15.7799 4.79753 15.6809L2.3178 13.1806C1.4946 12.3506 1.03716 11.3304 1.3479 10.3493C1.65955 9.36525 2.62338 8.79981 3.77628 8.60607L6.96327 8.0722L6.96429 8.07203C7.08112 8.05176 7.26466 7.97457 7.45443 7.83269C7.64456 7.69055 7.77154 7.53536 7.82507 7.42517L7.82777 7.41968L9.58757 3.87098L9.58827 3.86958C10.1209 2.80109 10.95 2.01001 11.9981 2.01001Z" fill="#C5D92D"></path> </svg>                                                    5.0
+                                                </div>
+                                                <!-- End innerflex -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End user -->
+                                    <a href="#" class="bottom">
+                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18 0.0800781H2C0.9 0.0800781 0.01 0.980078 0.01 2.08008L0 20.0801L4 16.0801H18C19.1 16.0801 20 15.1801 20 14.0801V2.08008C20 0.980078 19.1 0.0800781 18 0.0800781ZM5 7.08008H15C15.55 7.08008 16 7.53008 16 8.08008C16 8.63008 15.55 9.08008 15 9.08008H5C4.45 9.08008 4 8.63008 4 8.08008C4 7.53008 4.45 7.08008 5 7.08008ZM11 12.0801H5C4.45 12.0801 4 11.6301 4 11.0801C4 10.5301 4.45 10.0801 5 10.0801H11C11.55 10.0801 12 10.5301 12 11.0801C12 11.6301 11.55 12.0801 11 12.0801ZM15 6.08008H5C4.45 6.08008 4 5.63008 4 5.08008C4 4.53008 4.45 4.08008 5 4.08008H15C15.55 4.08008 16 4.53008 16 5.08008C16 5.63008 15.55 6.08008 15 6.08008Z" fill="#2196F3"></path>
+                                        </svg> CONTACT
+                                    </a>
+                                </div>
+                                <!-- End flex -->
+                                <ul class="listskills">
+                                    <li>Html</li>
+                                    <li>CSS</li>
+                                    <li>Javascript</li>
+                                    <li>Html</li>
+                                    <li>CSS</li>
+                                    <li>Javascript</li>
+                                    <li>Html</li>
+                                    <li>CSS</li>
+                                </ul>
+                                <p>Hi! I’m a passionate UI/UX designer with expertise in creating intuitive and visually appealing web and mobile experiences. I specialize in user interface design, user experience research, prototyping, and interaction design.
+                                    I love turning ideas into engaging, easy-to-use digital products that delight users.</p>
+                            </div>
+                            <!-- End subtalent -->
+
+                            <div class="subtalent">
+                                <div class="flex">
+                                    <div class="user">
+                                        <div class="photo"><img loading="lazy" src="images/te-3.jpg" alt="TaskLink"></div>
+                                        <div>
+                                            <h4 class="title">Mohammad Bataineh</h4>
+                                            <div class="flex">
+                                                <div class="innerflex">
+                                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 6.76001H16V4.76001C16 3.65001 15.11 2.76001 14 2.76001H10C8.89 2.76001 8 3.65001 8 4.76001V6.76001H4C2.89 6.76001 2.01 7.65001 2.01 8.76001L2 19.76C2 20.87 2.89 21.76 4 21.76H20C21.11 21.76 22 20.87 22 19.76V8.76001C22 7.65001 21.11 6.76001 20 6.76001ZM14 6.76001H10V4.76001H14V6.76001Z" fill="#C5D92D"></path> </svg>                                                    UI/UX Designer
+                                                </div>
+                                                <!-- End innerflex -->
+                                                <div class="innerflex">
+                                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11.9981 2.01001C13.0473 2.01001 13.8738 2.80254 14.4015 3.87192L16.1635 7.42517C16.2169 7.53514 16.3436 7.68999 16.534 7.83165C16.7242 7.97316 16.9105 8.05122 17.033 8.07181L20.2227 8.60613C21.3748 8.79974 22.3405 9.3645 22.654 10.3479C22.9673 11.3305 22.5083 12.3516 21.6798 13.1817L21.679 13.1825L19.2011 15.6809C19.1029 15.7799 18.9928 15.9664 18.9238 16.2095C18.8553 16.4508 18.8492 16.6707 18.8803 16.8128L18.8807 16.8147L19.5897 19.9054C19.8837 21.1918 19.7863 22.4673 18.879 23.1342C17.9687 23.8033 16.7246 23.5067 15.5945 22.8336L12.6045 21.049C12.479 20.974 12.2633 20.9132 12.003 20.9132C11.7447 20.9132 11.5245 20.9732 11.3908 21.051L11.3889 21.0521L8.40484 22.8332C7.276 23.5087 6.03349 23.8 5.12306 23.1302C4.21644 22.4632 4.11409 21.19 4.40906 19.9047L5.11785 16.8147L5.11829 16.8128C5.14936 16.6707 5.14328 16.4508 5.07475 16.2095C5.00575 15.9664 4.89574 15.7799 4.79753 15.6809L2.3178 13.1806C1.4946 12.3506 1.03716 11.3304 1.3479 10.3493C1.65955 9.36525 2.62338 8.79981 3.77628 8.60607L6.96327 8.0722L6.96429 8.07203C7.08112 8.05176 7.26466 7.97457 7.45443 7.83269C7.64456 7.69055 7.77154 7.53536 7.82507 7.42517L7.82777 7.41968L9.58757 3.87098L9.58827 3.86958C10.1209 2.80109 10.95 2.01001 11.9981 2.01001Z" fill="#C5D92D"></path> </svg>                                                    5.0
+                                                </div>
+                                                <!-- End innerflex -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End user -->
+                                    <a href="#" class="bottom">
+                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18 0.0800781H2C0.9 0.0800781 0.01 0.980078 0.01 2.08008L0 20.0801L4 16.0801H18C19.1 16.0801 20 15.1801 20 14.0801V2.08008C20 0.980078 19.1 0.0800781 18 0.0800781ZM5 7.08008H15C15.55 7.08008 16 7.53008 16 8.08008C16 8.63008 15.55 9.08008 15 9.08008H5C4.45 9.08008 4 8.63008 4 8.08008C4 7.53008 4.45 7.08008 5 7.08008ZM11 12.0801H5C4.45 12.0801 4 11.6301 4 11.0801C4 10.5301 4.45 10.0801 5 10.0801H11C11.55 10.0801 12 10.5301 12 11.0801C12 11.6301 11.55 12.0801 11 12.0801ZM15 6.08008H5C4.45 6.08008 4 5.63008 4 5.08008C4 4.53008 4.45 4.08008 5 4.08008H15C15.55 4.08008 16 4.53008 16 5.08008C16 5.63008 15.55 6.08008 15 6.08008Z" fill="#2196F3"></path>
+                                        </svg> CONTACT
+                                    </a>
+                                </div>
+                                <!-- End flex -->
+                                <ul class="listskills">
+                                    <li>Html</li>
+                                    <li>CSS</li>
+                                    <li>Javascript</li>
+                                    <li>Html</li>
+                                    <li>CSS</li>
+                                    <li>Javascript</li>
+                                    <li>Html</li>
+                                    <li>CSS</li>
+                                </ul>
+                                <p>Hi! I’m a passionate UI/UX designer with expertise in creating intuitive and visually appealing web and mobile experiences. I specialize in user interface design, user experience research, prototyping, and interaction design.
+                                    I love turning ideas into engaging, easy-to-use digital products that delight users.</p>
+                            </div>
+                            <!-- End subtalent -->
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#">
+                                        <svg width="16" height="12" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M5.27438 5.58083L9.89199 0.963231C10.0396 0.810363 10.0354 0.566767 9.88252 0.41913C9.73339 0.2751 9.49699 0.2751 9.34789 0.41913L5.00233 4.76468L0.656779 0.41913C0.506526 0.2689 0.262929 0.2689 0.112677 0.41913C-0.0375528 0.569405 -0.0375529 0.812978 0.112677 0.963231L4.73028 5.58083C4.88056 5.73106 5.12413 5.73106 5.27438 5.58083Z"></path>
+                        </svg> Previous
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link active" href="#">1 </a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">
+                        Next
+                        <svg width="16" height="12" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.27438 5.58083L9.89199 0.963231C10.0396 0.810363 10.0354 0.566767 9.88252 0.41913C9.73339 0.2751 9.49699 0.2751 9.34789 0.41913L5.00233 4.76468L0.656779 0.41913C0.506526 0.2689 0.262929 0.2689 0.112677 0.41913C-0.0375528 0.569405 -0.0375529 0.812978 0.112677 0.963231L4.73028 5.58083C4.88056 5.73106 5.12413 5.73106 5.27438 5.58083Z"> </path>
+                    </svg></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End subitem -->
+                    </div>
+                    <!-- End row -->
+                </div>
+                <div class="tab-pane" id="item-2" role="tabpanel" aria-labelledby="item-2-tab">
+                    <div class="row">
+                        <div class="col-sm-3 subitem">
+                            <div class="subfilter">
+                                <h2 class="title m-0">Filter </h2>
+                                <ul class="listskills mt-1">
+                                    <li>Html
+                                        <a href="#"> <svg width="10" height="10" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"> <path d="M6.66271 6.00002L11.8625 0.800231C12.0455 0.617161 12.0455 0.320349 11.8625 0.137303C11.6794 -0.0457441 11.3826 -0.0457675 11.1995 0.137303L5.99975 5.33709L0.799987 0.137303C0.616917 -0.0457675 0.320105 -0.0457675 0.137058 0.137303C-0.0459882 0.320373 -0.0460117 0.617185 0.137058 0.800231L5.33682 6L0.137058 11.1998C-0.0460117 11.3829 -0.0460117 11.6797 0.137058 11.8627C0.228582 11.9542 0.348558 12 0.468535 12C0.588511 12 0.708464 11.9542 0.800011 11.8627L5.99975 6.66295L11.1995 11.8627C11.291 11.9542 11.411 12 11.531 12C11.651 12 11.7709 11.9542 11.8625 11.8627C12.0455 11.6796 12.0455 11.3828 11.8625 11.1998L6.66271 6.00002Z" fill="#000"></path> </svg></a>
+                                    </li>
+                                    <li>CSS
+                                        <a href="#"> <svg width="10" height="10" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"> <path d="M6.66271 6.00002L11.8625 0.800231C12.0455 0.617161 12.0455 0.320349 11.8625 0.137303C11.6794 -0.0457441 11.3826 -0.0457675 11.1995 0.137303L5.99975 5.33709L0.799987 0.137303C0.616917 -0.0457675 0.320105 -0.0457675 0.137058 0.137303C-0.0459882 0.320373 -0.0460117 0.617185 0.137058 0.800231L5.33682 6L0.137058 11.1998C-0.0460117 11.3829 -0.0460117 11.6797 0.137058 11.8627C0.228582 11.9542 0.348558 12 0.468535 12C0.588511 12 0.708464 11.9542 0.800011 11.8627L5.99975 6.66295L11.1995 11.8627C11.291 11.9542 11.411 12 11.531 12C11.651 12 11.7709 11.9542 11.8625 11.8627C12.0455 11.6796 12.0455 11.3828 11.8625 11.1998L6.66271 6.00002Z" fill="#000"></path> </svg></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End subfilter -->
+
+
+                            <div class="subfilter">
+                                <h2 class="title">Category / Specialization </h2>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">Software Development <small>(22)</small></span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">IT Infrastructure & Cloud <small>(22)</small></span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">Cybersecurity <small>(22)</small></span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">Data & AI <small>(22)</small></span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">Design & UX/UI <small>(22)</small></span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">IT Support & Maintenance <small>(22)</small></span>
+                        </label>
+                            </div>
+                            <!-- End subfilter -->
+
+
+                            <div class="subfilter">
+                                <h2 class="title">Job Title </h2>
+                                <select class="form-control select2-multiple select2-hidden-accessible" data-placeholder="Choose Title" tabindex="-1" aria-hidden="true">
+                            <option></option>
+                           <option value="Front">Front End developer</option>
+                            <option value="Back">Back End developer</option>
+                        </select>
+                            </div>
+                            <!-- End subfilter -->
+
+
+                            <div class="subfilter">
+                                <h2 class="title">Posted time </h2>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">Less than 1 week</span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">1 to 2 weeks</span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">2 weeks to 1 month</span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">1 to 3 months</span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">More than 3 months</span>
+                        </label>
+                            </div>
+                            <!-- End subfilter -->
+
+                            <div class="subfilter">
+                                <h2 class="title">On-site/Remote</h2>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">On-site</span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">Remote</span>
+                        </label>
+                            </div>
+                            <!-- End subfilter -->
+                            <div class="subfilter">
+                                <h2 class="title">Salaries</h2>
+                                <div class="values">
+                                    <span class="min-value">20</span>
+                                    <div class="range-container">
+                                        <div class="slider-track"></div>
+                                        <div class="slider-range"></div>
+                                        <input type="range" class="min" min="0" max="100" value="20">
+                                        <input type="range" class="max" min="0" max="100" value="70">
+                                    </div>
+                                    <span class="max-value">70</span>
+                                </div>
+                            </div>
+                            <!-- End subfilter -->
+                        </div>
+                        <!-- End item -->
+                        <div class="col-sm-9 subitem">
+                            <div class="rockstar">
+                                <div class="flex">
+                                    <div class="user">
+                                        <div class="photo"><img loading="lazy" src="images/te-1.jpg" alt="TaskLink"></div>
+                                        <div>
+                                            <h4 class="title">Rockstar Games New York</h4>
+                                            <h5 class="title">Senior UI/UX Designer <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.8C0 5.27714 4.47715 0.799988 10 0.799988C15.5228 0.799988 20 5.27714 20 10.8C20 16.3228 15.5228 20.8 10 20.8C4.47715 20.8 0 16.3228 0 10.8Z" fill="#504CFE"/> <g clip-path="url(#clip0_1488_2390)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9099 4.53217C11.052 4.57686 11.1762 4.66572 11.2643 4.78582C11.3524 4.90592 11.3999 5.051 11.3999 5.19997V8.69997H14.1999C14.328 8.69991 14.4536 8.73498 14.5631 8.80135C14.6726 8.86772 14.7618 8.96285 14.821 9.07639C14.8801 9.18993 14.9071 9.31753 14.8988 9.4453C14.8905 9.57308 14.8473 9.69613 14.7739 9.80107L9.87392 16.8011C9.78864 16.9232 9.6666 17.015 9.52556 17.0631C9.38452 17.1111 9.23183 17.1129 9.08971 17.0681C8.94759 17.0234 8.82345 16.9344 8.73537 16.8143C8.64728 16.6941 8.59983 16.549 8.59992 16.4V12.9H5.79992C5.67188 12.9 5.54627 12.865 5.43677 12.7986C5.32727 12.7322 5.23808 12.6371 5.17889 12.5235C5.1197 12.41 5.09279 12.2824 5.10108 12.1546C5.10937 12.0269 5.15255 11.9038 5.22592 11.7989L10.1259 4.79887C10.2113 4.67692 10.3334 4.58538 10.4744 4.53754C10.6154 4.48971 10.7679 4.48807 10.9099 4.53287V4.53217Z" fill="white"/> </g> <defs> <clipPath id="clip0_1488_2390"> <rect width="14" height="14" fill="white" transform="translate(3 3.79999)"/> </clipPath> </defs> </svg></h5>
+                                            <div class="flex">
+                                                <div class="innerflex">
+                                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_1488_2401)"> <path d="M14 7.46698C14 12.1336 8 16.1336 8 16.1336C8 16.1336 2 12.1336 2 7.46698C2 5.87568 2.63214 4.34956 3.75736 3.22434C4.88258 2.09912 6.4087 1.46698 8 1.46698C9.5913 1.46698 11.1174 2.09912 12.2426 3.22434C13.3679 4.34956 14 5.87568 14 7.46698Z" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M8 9.46698C9.10457 9.46698 10 8.57155 10 7.46698C10 6.36241 9.10457 5.46698 8 5.46698C6.89543 5.46698 6 6.36241 6 7.46698C6 8.57155 6.89543 9.46698 8 9.46698Z" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> </g> <defs> <clipPath id="clip0_1488_2401"> <rect width="16" height="16" fill="white" transform="translate(0 0.799988)"/> </clipPath> </defs> </svg>                                                    Las Vegas, NV 89107, USA
+                                                </div>
+                                                <!-- End innerflex -->
+                                                <div class="innerflex">
+                                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12.6667 3.46698H3.33333C2.59695 3.46698 2 4.06393 2 4.80031V14.1336C2 14.87 2.59695 15.467 3.33333 15.467H12.6667C13.403 15.467 14 14.87 14 14.1336V4.80031C14 4.06393 13.403 3.46698 12.6667 3.46698Z" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M10.667 2.133V4.79966" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M5.33301 2.133V4.79966" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M2 7.46698H14" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> </svg>                                                    2 days ago
+                                                </div>
+                                                <!-- End innerflex -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End user -->
+                                    <a href="talent-inner.html" class="bottom"> Apply </a>
+                                </div>
+                                <!-- End flex -->
+                                <ul class="listskills">
+                                    <li>Contract</li>
+                                    <li>Hybrid</li>
+                                </ul>
+                                <div class="rowtext">
+                                    <p>
+                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_1488_2421)"> <path d="M10 20.8C7.32891 20.8 4.81766 19.7598 2.92891 17.8711C1.04016 15.9823 0 13.4711 0 10.8C0 8.12889 1.0402 5.61768 2.92891 3.72889C4.81762 1.84011 7.32891 0.799988 10 0.799988C12.6711 0.799988 15.1823 1.84014 17.0711 3.72889C18.9598 5.61764 20 8.12889 20 10.8C20 13.4711 18.9598 15.9823 17.0711 17.8711C15.1824 19.7599 12.6711 20.8 10 20.8ZM10 2.04999C5.17523 2.04999 1.25 5.97522 1.25 10.8C1.25 15.6248 5.17523 19.55 10 19.55C14.8248 19.55 18.75 15.6248 18.75 10.8C18.75 5.97522 14.8248 2.04999 10 2.04999Z" fill="#121212"/> <path d="M10 10.175C9.13844 10.175 8.4375 9.47405 8.4375 8.61249C8.4375 7.75093 9.13844 7.04999 10 7.04999C10.8616 7.04999 11.5625 7.75093 11.5625 8.61249C11.5625 8.95764 11.8423 9.23749 12.1875 9.23749C12.5327 9.23749 12.8125 8.95764 12.8125 8.61249C12.8125 7.27651 11.8759 6.15593 10.625 5.87085V5.17499C10.625 4.82983 10.3452 4.54999 10 4.54999C9.6548 4.54999 9.375 4.82983 9.375 5.17499V5.87085C8.12414 6.15593 7.1875 7.27651 7.1875 8.61249C7.1875 10.1633 8.44918 11.425 10 11.425C10.8616 11.425 11.5625 12.1259 11.5625 12.9875C11.5625 13.8491 10.8616 14.55 10 14.55C9.13844 14.55 8.4375 13.8491 8.4375 12.9875C8.4375 12.6423 8.1577 12.3625 7.8125 12.3625C7.4673 12.3625 7.1875 12.6423 7.1875 12.9875C7.1875 14.3235 8.12414 15.4441 9.375 15.7291V16.425C9.375 16.7701 9.6548 17.05 10 17.05C10.3452 17.05 10.625 16.7701 10.625 16.425V15.7291C11.8759 15.4441 12.8125 14.3235 12.8125 12.9875C12.8125 11.4367 11.5508 10.175 10 10.175Z" fill="#121212"/> </g> <defs> <clipPath id="clip0_1488_2421"> <rect width="20" height="20" fill="white" transform="translate(0 0.799988)"/> </clipPath> </defs> </svg>
+                                        <b>$83,000 - $110,000</b> /year
+                                    </p>
+                                    <p>22 days left to apply</p>
+                                </div>
+                                <!-- ENd rowtext -->
+                            </div>
+                            <!-- End rockstar -->
+                            <div class="rockstar">
+                                <div class="flex">
+                                    <div class="user">
+                                        <div class="photo"><img loading="lazy" src="images/te-1.jpg" alt="TaskLink"></div>
+                                        <div>
+                                            <h4 class="title">Rockstar Games New York</h4>
+                                            <h5 class="title">Senior UI/UX Designer <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.8C0 5.27714 4.47715 0.799988 10 0.799988C15.5228 0.799988 20 5.27714 20 10.8C20 16.3228 15.5228 20.8 10 20.8C4.47715 20.8 0 16.3228 0 10.8Z" fill="#504CFE"/> <g clip-path="url(#clip0_1488_2390)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9099 4.53217C11.052 4.57686 11.1762 4.66572 11.2643 4.78582C11.3524 4.90592 11.3999 5.051 11.3999 5.19997V8.69997H14.1999C14.328 8.69991 14.4536 8.73498 14.5631 8.80135C14.6726 8.86772 14.7618 8.96285 14.821 9.07639C14.8801 9.18993 14.9071 9.31753 14.8988 9.4453C14.8905 9.57308 14.8473 9.69613 14.7739 9.80107L9.87392 16.8011C9.78864 16.9232 9.6666 17.015 9.52556 17.0631C9.38452 17.1111 9.23183 17.1129 9.08971 17.0681C8.94759 17.0234 8.82345 16.9344 8.73537 16.8143C8.64728 16.6941 8.59983 16.549 8.59992 16.4V12.9H5.79992C5.67188 12.9 5.54627 12.865 5.43677 12.7986C5.32727 12.7322 5.23808 12.6371 5.17889 12.5235C5.1197 12.41 5.09279 12.2824 5.10108 12.1546C5.10937 12.0269 5.15255 11.9038 5.22592 11.7989L10.1259 4.79887C10.2113 4.67692 10.3334 4.58538 10.4744 4.53754C10.6154 4.48971 10.7679 4.48807 10.9099 4.53287V4.53217Z" fill="white"/> </g> <defs> <clipPath id="clip0_1488_2390"> <rect width="14" height="14" fill="white" transform="translate(3 3.79999)"/> </clipPath> </defs> </svg></h5>
+                                            <div class="flex">
+                                                <div class="innerflex">
+                                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_1488_2401)"> <path d="M14 7.46698C14 12.1336 8 16.1336 8 16.1336C8 16.1336 2 12.1336 2 7.46698C2 5.87568 2.63214 4.34956 3.75736 3.22434C4.88258 2.09912 6.4087 1.46698 8 1.46698C9.5913 1.46698 11.1174 2.09912 12.2426 3.22434C13.3679 4.34956 14 5.87568 14 7.46698Z" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M8 9.46698C9.10457 9.46698 10 8.57155 10 7.46698C10 6.36241 9.10457 5.46698 8 5.46698C6.89543 5.46698 6 6.36241 6 7.46698C6 8.57155 6.89543 9.46698 8 9.46698Z" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> </g> <defs> <clipPath id="clip0_1488_2401"> <rect width="16" height="16" fill="white" transform="translate(0 0.799988)"/> </clipPath> </defs> </svg>                                                    Las Vegas, NV 89107, USA
+                                                </div>
+                                                <!-- End innerflex -->
+                                                <div class="innerflex">
+                                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12.6667 3.46698H3.33333C2.59695 3.46698 2 4.06393 2 4.80031V14.1336C2 14.87 2.59695 15.467 3.33333 15.467H12.6667C13.403 15.467 14 14.87 14 14.1336V4.80031C14 4.06393 13.403 3.46698 12.6667 3.46698Z" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M10.667 2.133V4.79966" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M5.33301 2.133V4.79966" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M2 7.46698H14" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> </svg>                                                    2 days ago
+                                                </div>
+                                                <!-- End innerflex -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End user -->
+                                    <a href="talent-inner.html" class="bottom"> Apply </a>
+                                </div>
+                                <!-- End flex -->
+                                <ul class="listskills">
+                                    <li>Contract</li>
+                                    <li>Hybrid</li>
+                                </ul>
+                                <div class="rowtext">
+                                    <p>
+                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_1488_2421)"> <path d="M10 20.8C7.32891 20.8 4.81766 19.7598 2.92891 17.8711C1.04016 15.9823 0 13.4711 0 10.8C0 8.12889 1.0402 5.61768 2.92891 3.72889C4.81762 1.84011 7.32891 0.799988 10 0.799988C12.6711 0.799988 15.1823 1.84014 17.0711 3.72889C18.9598 5.61764 20 8.12889 20 10.8C20 13.4711 18.9598 15.9823 17.0711 17.8711C15.1824 19.7599 12.6711 20.8 10 20.8ZM10 2.04999C5.17523 2.04999 1.25 5.97522 1.25 10.8C1.25 15.6248 5.17523 19.55 10 19.55C14.8248 19.55 18.75 15.6248 18.75 10.8C18.75 5.97522 14.8248 2.04999 10 2.04999Z" fill="#121212"/> <path d="M10 10.175C9.13844 10.175 8.4375 9.47405 8.4375 8.61249C8.4375 7.75093 9.13844 7.04999 10 7.04999C10.8616 7.04999 11.5625 7.75093 11.5625 8.61249C11.5625 8.95764 11.8423 9.23749 12.1875 9.23749C12.5327 9.23749 12.8125 8.95764 12.8125 8.61249C12.8125 7.27651 11.8759 6.15593 10.625 5.87085V5.17499C10.625 4.82983 10.3452 4.54999 10 4.54999C9.6548 4.54999 9.375 4.82983 9.375 5.17499V5.87085C8.12414 6.15593 7.1875 7.27651 7.1875 8.61249C7.1875 10.1633 8.44918 11.425 10 11.425C10.8616 11.425 11.5625 12.1259 11.5625 12.9875C11.5625 13.8491 10.8616 14.55 10 14.55C9.13844 14.55 8.4375 13.8491 8.4375 12.9875C8.4375 12.6423 8.1577 12.3625 7.8125 12.3625C7.4673 12.3625 7.1875 12.6423 7.1875 12.9875C7.1875 14.3235 8.12414 15.4441 9.375 15.7291V16.425C9.375 16.7701 9.6548 17.05 10 17.05C10.3452 17.05 10.625 16.7701 10.625 16.425V15.7291C11.8759 15.4441 12.8125 14.3235 12.8125 12.9875C12.8125 11.4367 11.5508 10.175 10 10.175Z" fill="#121212"/> </g> <defs> <clipPath id="clip0_1488_2421"> <rect width="20" height="20" fill="white" transform="translate(0 0.799988)"/> </clipPath> </defs> </svg>
+                                        <b>$83,000 - $110,000</b> /year
+                                    </p>
+                                    <p>22 days left to apply</p>
+                                </div>
+                                <!-- ENd rowtext -->
+                            </div>
+                            <!-- End rockstar -->
+                            <div class="rockstar">
+                                <div class="flex">
+                                    <div class="user">
+                                        <div class="photo"><img loading="lazy" src="images/te-1.jpg" alt="TaskLink"></div>
+                                        <div>
+                                            <h4 class="title">Rockstar Games New York</h4>
+                                            <h5 class="title">Senior UI/UX Designer <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.8C0 5.27714 4.47715 0.799988 10 0.799988C15.5228 0.799988 20 5.27714 20 10.8C20 16.3228 15.5228 20.8 10 20.8C4.47715 20.8 0 16.3228 0 10.8Z" fill="#504CFE"/> <g clip-path="url(#clip0_1488_2390)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9099 4.53217C11.052 4.57686 11.1762 4.66572 11.2643 4.78582C11.3524 4.90592 11.3999 5.051 11.3999 5.19997V8.69997H14.1999C14.328 8.69991 14.4536 8.73498 14.5631 8.80135C14.6726 8.86772 14.7618 8.96285 14.821 9.07639C14.8801 9.18993 14.9071 9.31753 14.8988 9.4453C14.8905 9.57308 14.8473 9.69613 14.7739 9.80107L9.87392 16.8011C9.78864 16.9232 9.6666 17.015 9.52556 17.0631C9.38452 17.1111 9.23183 17.1129 9.08971 17.0681C8.94759 17.0234 8.82345 16.9344 8.73537 16.8143C8.64728 16.6941 8.59983 16.549 8.59992 16.4V12.9H5.79992C5.67188 12.9 5.54627 12.865 5.43677 12.7986C5.32727 12.7322 5.23808 12.6371 5.17889 12.5235C5.1197 12.41 5.09279 12.2824 5.10108 12.1546C5.10937 12.0269 5.15255 11.9038 5.22592 11.7989L10.1259 4.79887C10.2113 4.67692 10.3334 4.58538 10.4744 4.53754C10.6154 4.48971 10.7679 4.48807 10.9099 4.53287V4.53217Z" fill="white"/> </g> <defs> <clipPath id="clip0_1488_2390"> <rect width="14" height="14" fill="white" transform="translate(3 3.79999)"/> </clipPath> </defs> </svg></h5>
+                                            <div class="flex">
+                                                <div class="innerflex">
+                                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_1488_2401)"> <path d="M14 7.46698C14 12.1336 8 16.1336 8 16.1336C8 16.1336 2 12.1336 2 7.46698C2 5.87568 2.63214 4.34956 3.75736 3.22434C4.88258 2.09912 6.4087 1.46698 8 1.46698C9.5913 1.46698 11.1174 2.09912 12.2426 3.22434C13.3679 4.34956 14 5.87568 14 7.46698Z" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M8 9.46698C9.10457 9.46698 10 8.57155 10 7.46698C10 6.36241 9.10457 5.46698 8 5.46698C6.89543 5.46698 6 6.36241 6 7.46698C6 8.57155 6.89543 9.46698 8 9.46698Z" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> </g> <defs> <clipPath id="clip0_1488_2401"> <rect width="16" height="16" fill="white" transform="translate(0 0.799988)"/> </clipPath> </defs> </svg>                                                    Las Vegas, NV 89107, USA
+                                                </div>
+                                                <!-- End innerflex -->
+                                                <div class="innerflex">
+                                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12.6667 3.46698H3.33333C2.59695 3.46698 2 4.06393 2 4.80031V14.1336C2 14.87 2.59695 15.467 3.33333 15.467H12.6667C13.403 15.467 14 14.87 14 14.1336V4.80031C14 4.06393 13.403 3.46698 12.6667 3.46698Z" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M10.667 2.133V4.79966" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M5.33301 2.133V4.79966" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M2 7.46698H14" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> </svg>                                                    2 days ago
+                                                </div>
+                                                <!-- End innerflex -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End user -->
+                                    <a href="talent-inner.html" class="bottom"> Apply </a>
+                                </div>
+                                <!-- End flex -->
+                                <ul class="listskills">
+                                    <li>Contract</li>
+                                    <li>Hybrid</li>
+                                </ul>
+                                <div class="rowtext">
+                                    <p>
+                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_1488_2421)"> <path d="M10 20.8C7.32891 20.8 4.81766 19.7598 2.92891 17.8711C1.04016 15.9823 0 13.4711 0 10.8C0 8.12889 1.0402 5.61768 2.92891 3.72889C4.81762 1.84011 7.32891 0.799988 10 0.799988C12.6711 0.799988 15.1823 1.84014 17.0711 3.72889C18.9598 5.61764 20 8.12889 20 10.8C20 13.4711 18.9598 15.9823 17.0711 17.8711C15.1824 19.7599 12.6711 20.8 10 20.8ZM10 2.04999C5.17523 2.04999 1.25 5.97522 1.25 10.8C1.25 15.6248 5.17523 19.55 10 19.55C14.8248 19.55 18.75 15.6248 18.75 10.8C18.75 5.97522 14.8248 2.04999 10 2.04999Z" fill="#121212"/> <path d="M10 10.175C9.13844 10.175 8.4375 9.47405 8.4375 8.61249C8.4375 7.75093 9.13844 7.04999 10 7.04999C10.8616 7.04999 11.5625 7.75093 11.5625 8.61249C11.5625 8.95764 11.8423 9.23749 12.1875 9.23749C12.5327 9.23749 12.8125 8.95764 12.8125 8.61249C12.8125 7.27651 11.8759 6.15593 10.625 5.87085V5.17499C10.625 4.82983 10.3452 4.54999 10 4.54999C9.6548 4.54999 9.375 4.82983 9.375 5.17499V5.87085C8.12414 6.15593 7.1875 7.27651 7.1875 8.61249C7.1875 10.1633 8.44918 11.425 10 11.425C10.8616 11.425 11.5625 12.1259 11.5625 12.9875C11.5625 13.8491 10.8616 14.55 10 14.55C9.13844 14.55 8.4375 13.8491 8.4375 12.9875C8.4375 12.6423 8.1577 12.3625 7.8125 12.3625C7.4673 12.3625 7.1875 12.6423 7.1875 12.9875C7.1875 14.3235 8.12414 15.4441 9.375 15.7291V16.425C9.375 16.7701 9.6548 17.05 10 17.05C10.3452 17.05 10.625 16.7701 10.625 16.425V15.7291C11.8759 15.4441 12.8125 14.3235 12.8125 12.9875C12.8125 11.4367 11.5508 10.175 10 10.175Z" fill="#121212"/> </g> <defs> <clipPath id="clip0_1488_2421"> <rect width="20" height="20" fill="white" transform="translate(0 0.799988)"/> </clipPath> </defs> </svg>
+                                        <b>$83,000 - $110,000</b> /year
+                                    </p>
+                                    <p>22 days left to apply</p>
+                                </div>
+                                <!-- ENd rowtext -->
+                            </div>
+                            <!-- End rockstar -->
+                            <div class="rockstar">
+                                <div class="flex">
+                                    <div class="user">
+                                        <div class="photo"><img loading="lazy" src="images/te-1.jpg" alt="TaskLink"></div>
+                                        <div>
+                                            <h4 class="title">Rockstar Games New York</h4>
+                                            <h5 class="title">Senior UI/UX Designer <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.8C0 5.27714 4.47715 0.799988 10 0.799988C15.5228 0.799988 20 5.27714 20 10.8C20 16.3228 15.5228 20.8 10 20.8C4.47715 20.8 0 16.3228 0 10.8Z" fill="#504CFE"/> <g clip-path="url(#clip0_1488_2390)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9099 4.53217C11.052 4.57686 11.1762 4.66572 11.2643 4.78582C11.3524 4.90592 11.3999 5.051 11.3999 5.19997V8.69997H14.1999C14.328 8.69991 14.4536 8.73498 14.5631 8.80135C14.6726 8.86772 14.7618 8.96285 14.821 9.07639C14.8801 9.18993 14.9071 9.31753 14.8988 9.4453C14.8905 9.57308 14.8473 9.69613 14.7739 9.80107L9.87392 16.8011C9.78864 16.9232 9.6666 17.015 9.52556 17.0631C9.38452 17.1111 9.23183 17.1129 9.08971 17.0681C8.94759 17.0234 8.82345 16.9344 8.73537 16.8143C8.64728 16.6941 8.59983 16.549 8.59992 16.4V12.9H5.79992C5.67188 12.9 5.54627 12.865 5.43677 12.7986C5.32727 12.7322 5.23808 12.6371 5.17889 12.5235C5.1197 12.41 5.09279 12.2824 5.10108 12.1546C5.10937 12.0269 5.15255 11.9038 5.22592 11.7989L10.1259 4.79887C10.2113 4.67692 10.3334 4.58538 10.4744 4.53754C10.6154 4.48971 10.7679 4.48807 10.9099 4.53287V4.53217Z" fill="white"/> </g> <defs> <clipPath id="clip0_1488_2390"> <rect width="14" height="14" fill="white" transform="translate(3 3.79999)"/> </clipPath> </defs> </svg></h5>
+                                            <div class="flex">
+                                                <div class="innerflex">
+                                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_1488_2401)"> <path d="M14 7.46698C14 12.1336 8 16.1336 8 16.1336C8 16.1336 2 12.1336 2 7.46698C2 5.87568 2.63214 4.34956 3.75736 3.22434C4.88258 2.09912 6.4087 1.46698 8 1.46698C9.5913 1.46698 11.1174 2.09912 12.2426 3.22434C13.3679 4.34956 14 5.87568 14 7.46698Z" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M8 9.46698C9.10457 9.46698 10 8.57155 10 7.46698C10 6.36241 9.10457 5.46698 8 5.46698C6.89543 5.46698 6 6.36241 6 7.46698C6 8.57155 6.89543 9.46698 8 9.46698Z" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> </g> <defs> <clipPath id="clip0_1488_2401"> <rect width="16" height="16" fill="white" transform="translate(0 0.799988)"/> </clipPath> </defs> </svg>                                                    Las Vegas, NV 89107, USA
+                                                </div>
+                                                <!-- End innerflex -->
+                                                <div class="innerflex">
+                                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12.6667 3.46698H3.33333C2.59695 3.46698 2 4.06393 2 4.80031V14.1336C2 14.87 2.59695 15.467 3.33333 15.467H12.6667C13.403 15.467 14 14.87 14 14.1336V4.80031C14 4.06393 13.403 3.46698 12.6667 3.46698Z" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M10.667 2.133V4.79966" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M5.33301 2.133V4.79966" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M2 7.46698H14" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> </svg>                                                    2 days ago
+                                                </div>
+                                                <!-- End innerflex -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End user -->
+                                    <a href="talent-inner.html" class="bottom"> Apply </a>
+                                </div>
+                                <!-- End flex -->
+                                <ul class="listskills">
+                                    <li>Contract</li>
+                                    <li>Hybrid</li>
+                                </ul>
+                                <div class="rowtext">
+                                    <p>
+                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_1488_2421)"> <path d="M10 20.8C7.32891 20.8 4.81766 19.7598 2.92891 17.8711C1.04016 15.9823 0 13.4711 0 10.8C0 8.12889 1.0402 5.61768 2.92891 3.72889C4.81762 1.84011 7.32891 0.799988 10 0.799988C12.6711 0.799988 15.1823 1.84014 17.0711 3.72889C18.9598 5.61764 20 8.12889 20 10.8C20 13.4711 18.9598 15.9823 17.0711 17.8711C15.1824 19.7599 12.6711 20.8 10 20.8ZM10 2.04999C5.17523 2.04999 1.25 5.97522 1.25 10.8C1.25 15.6248 5.17523 19.55 10 19.55C14.8248 19.55 18.75 15.6248 18.75 10.8C18.75 5.97522 14.8248 2.04999 10 2.04999Z" fill="#121212"/> <path d="M10 10.175C9.13844 10.175 8.4375 9.47405 8.4375 8.61249C8.4375 7.75093 9.13844 7.04999 10 7.04999C10.8616 7.04999 11.5625 7.75093 11.5625 8.61249C11.5625 8.95764 11.8423 9.23749 12.1875 9.23749C12.5327 9.23749 12.8125 8.95764 12.8125 8.61249C12.8125 7.27651 11.8759 6.15593 10.625 5.87085V5.17499C10.625 4.82983 10.3452 4.54999 10 4.54999C9.6548 4.54999 9.375 4.82983 9.375 5.17499V5.87085C8.12414 6.15593 7.1875 7.27651 7.1875 8.61249C7.1875 10.1633 8.44918 11.425 10 11.425C10.8616 11.425 11.5625 12.1259 11.5625 12.9875C11.5625 13.8491 10.8616 14.55 10 14.55C9.13844 14.55 8.4375 13.8491 8.4375 12.9875C8.4375 12.6423 8.1577 12.3625 7.8125 12.3625C7.4673 12.3625 7.1875 12.6423 7.1875 12.9875C7.1875 14.3235 8.12414 15.4441 9.375 15.7291V16.425C9.375 16.7701 9.6548 17.05 10 17.05C10.3452 17.05 10.625 16.7701 10.625 16.425V15.7291C11.8759 15.4441 12.8125 14.3235 12.8125 12.9875C12.8125 11.4367 11.5508 10.175 10 10.175Z" fill="#121212"/> </g> <defs> <clipPath id="clip0_1488_2421"> <rect width="20" height="20" fill="white" transform="translate(0 0.799988)"/> </clipPath> </defs> </svg>
+                                        <b>$83,000 - $110,000</b> /year
+                                    </p>
+                                    <p>22 days left to apply</p>
+                                </div>
+                                <!-- ENd rowtext -->
+                            </div>
+                            <!-- End rockstar -->
+                            <div class="rockstar">
+                                <div class="flex">
+                                    <div class="user">
+                                        <div class="photo"><img loading="lazy" src="images/te-1.jpg" alt="TaskLink"></div>
+                                        <div>
+                                            <h4 class="title">Rockstar Games New York</h4>
+                                            <h5 class="title">Senior UI/UX Designer <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.8C0 5.27714 4.47715 0.799988 10 0.799988C15.5228 0.799988 20 5.27714 20 10.8C20 16.3228 15.5228 20.8 10 20.8C4.47715 20.8 0 16.3228 0 10.8Z" fill="#504CFE"/> <g clip-path="url(#clip0_1488_2390)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9099 4.53217C11.052 4.57686 11.1762 4.66572 11.2643 4.78582C11.3524 4.90592 11.3999 5.051 11.3999 5.19997V8.69997H14.1999C14.328 8.69991 14.4536 8.73498 14.5631 8.80135C14.6726 8.86772 14.7618 8.96285 14.821 9.07639C14.8801 9.18993 14.9071 9.31753 14.8988 9.4453C14.8905 9.57308 14.8473 9.69613 14.7739 9.80107L9.87392 16.8011C9.78864 16.9232 9.6666 17.015 9.52556 17.0631C9.38452 17.1111 9.23183 17.1129 9.08971 17.0681C8.94759 17.0234 8.82345 16.9344 8.73537 16.8143C8.64728 16.6941 8.59983 16.549 8.59992 16.4V12.9H5.79992C5.67188 12.9 5.54627 12.865 5.43677 12.7986C5.32727 12.7322 5.23808 12.6371 5.17889 12.5235C5.1197 12.41 5.09279 12.2824 5.10108 12.1546C5.10937 12.0269 5.15255 11.9038 5.22592 11.7989L10.1259 4.79887C10.2113 4.67692 10.3334 4.58538 10.4744 4.53754C10.6154 4.48971 10.7679 4.48807 10.9099 4.53287V4.53217Z" fill="white"/> </g> <defs> <clipPath id="clip0_1488_2390"> <rect width="14" height="14" fill="white" transform="translate(3 3.79999)"/> </clipPath> </defs> </svg></h5>
+                                            <div class="flex">
+                                                <div class="innerflex">
+                                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_1488_2401)"> <path d="M14 7.46698C14 12.1336 8 16.1336 8 16.1336C8 16.1336 2 12.1336 2 7.46698C2 5.87568 2.63214 4.34956 3.75736 3.22434C4.88258 2.09912 6.4087 1.46698 8 1.46698C9.5913 1.46698 11.1174 2.09912 12.2426 3.22434C13.3679 4.34956 14 5.87568 14 7.46698Z" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M8 9.46698C9.10457 9.46698 10 8.57155 10 7.46698C10 6.36241 9.10457 5.46698 8 5.46698C6.89543 5.46698 6 6.36241 6 7.46698C6 8.57155 6.89543 9.46698 8 9.46698Z" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> </g> <defs> <clipPath id="clip0_1488_2401"> <rect width="16" height="16" fill="white" transform="translate(0 0.799988)"/> </clipPath> </defs> </svg>                                                    Las Vegas, NV 89107, USA
+                                                </div>
+                                                <!-- End innerflex -->
+                                                <div class="innerflex">
+                                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12.6667 3.46698H3.33333C2.59695 3.46698 2 4.06393 2 4.80031V14.1336C2 14.87 2.59695 15.467 3.33333 15.467H12.6667C13.403 15.467 14 14.87 14 14.1336V4.80031C14 4.06393 13.403 3.46698 12.6667 3.46698Z" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M10.667 2.133V4.79966" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M5.33301 2.133V4.79966" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M2 7.46698H14" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> </svg>                                                    2 days ago
+                                                </div>
+                                                <!-- End innerflex -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End user -->
+                                    <a href="talent-inner.html" class="bottom"> Apply </a>
+                                </div>
+                                <!-- End flex -->
+                                <ul class="listskills">
+                                    <li>Contract</li>
+                                    <li>Hybrid</li>
+                                </ul>
+                                <div class="rowtext">
+                                    <p>
+                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_1488_2421)"> <path d="M10 20.8C7.32891 20.8 4.81766 19.7598 2.92891 17.8711C1.04016 15.9823 0 13.4711 0 10.8C0 8.12889 1.0402 5.61768 2.92891 3.72889C4.81762 1.84011 7.32891 0.799988 10 0.799988C12.6711 0.799988 15.1823 1.84014 17.0711 3.72889C18.9598 5.61764 20 8.12889 20 10.8C20 13.4711 18.9598 15.9823 17.0711 17.8711C15.1824 19.7599 12.6711 20.8 10 20.8ZM10 2.04999C5.17523 2.04999 1.25 5.97522 1.25 10.8C1.25 15.6248 5.17523 19.55 10 19.55C14.8248 19.55 18.75 15.6248 18.75 10.8C18.75 5.97522 14.8248 2.04999 10 2.04999Z" fill="#121212"/> <path d="M10 10.175C9.13844 10.175 8.4375 9.47405 8.4375 8.61249C8.4375 7.75093 9.13844 7.04999 10 7.04999C10.8616 7.04999 11.5625 7.75093 11.5625 8.61249C11.5625 8.95764 11.8423 9.23749 12.1875 9.23749C12.5327 9.23749 12.8125 8.95764 12.8125 8.61249C12.8125 7.27651 11.8759 6.15593 10.625 5.87085V5.17499C10.625 4.82983 10.3452 4.54999 10 4.54999C9.6548 4.54999 9.375 4.82983 9.375 5.17499V5.87085C8.12414 6.15593 7.1875 7.27651 7.1875 8.61249C7.1875 10.1633 8.44918 11.425 10 11.425C10.8616 11.425 11.5625 12.1259 11.5625 12.9875C11.5625 13.8491 10.8616 14.55 10 14.55C9.13844 14.55 8.4375 13.8491 8.4375 12.9875C8.4375 12.6423 8.1577 12.3625 7.8125 12.3625C7.4673 12.3625 7.1875 12.6423 7.1875 12.9875C7.1875 14.3235 8.12414 15.4441 9.375 15.7291V16.425C9.375 16.7701 9.6548 17.05 10 17.05C10.3452 17.05 10.625 16.7701 10.625 16.425V15.7291C11.8759 15.4441 12.8125 14.3235 12.8125 12.9875C12.8125 11.4367 11.5508 10.175 10 10.175Z" fill="#121212"/> </g> <defs> <clipPath id="clip0_1488_2421"> <rect width="20" height="20" fill="white" transform="translate(0 0.799988)"/> </clipPath> </defs> </svg>
+                                        <b>$83,000 - $110,000</b> /year
+                                    </p>
+                                    <p>22 days left to apply</p>
+                                </div>
+                                <!-- ENd rowtext -->
+                            </div>
+                            <!-- End rockstar -->
+                            <div class="rockstar">
+                                <div class="flex">
+                                    <div class="user">
+                                        <div class="photo"><img loading="lazy" src="images/te-1.jpg" alt="TaskLink"></div>
+                                        <div>
+                                            <h4 class="title">Rockstar Games New York</h4>
+                                            <h5 class="title">Senior UI/UX Designer <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.8C0 5.27714 4.47715 0.799988 10 0.799988C15.5228 0.799988 20 5.27714 20 10.8C20 16.3228 15.5228 20.8 10 20.8C4.47715 20.8 0 16.3228 0 10.8Z" fill="#504CFE"/> <g clip-path="url(#clip0_1488_2390)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9099 4.53217C11.052 4.57686 11.1762 4.66572 11.2643 4.78582C11.3524 4.90592 11.3999 5.051 11.3999 5.19997V8.69997H14.1999C14.328 8.69991 14.4536 8.73498 14.5631 8.80135C14.6726 8.86772 14.7618 8.96285 14.821 9.07639C14.8801 9.18993 14.9071 9.31753 14.8988 9.4453C14.8905 9.57308 14.8473 9.69613 14.7739 9.80107L9.87392 16.8011C9.78864 16.9232 9.6666 17.015 9.52556 17.0631C9.38452 17.1111 9.23183 17.1129 9.08971 17.0681C8.94759 17.0234 8.82345 16.9344 8.73537 16.8143C8.64728 16.6941 8.59983 16.549 8.59992 16.4V12.9H5.79992C5.67188 12.9 5.54627 12.865 5.43677 12.7986C5.32727 12.7322 5.23808 12.6371 5.17889 12.5235C5.1197 12.41 5.09279 12.2824 5.10108 12.1546C5.10937 12.0269 5.15255 11.9038 5.22592 11.7989L10.1259 4.79887C10.2113 4.67692 10.3334 4.58538 10.4744 4.53754C10.6154 4.48971 10.7679 4.48807 10.9099 4.53287V4.53217Z" fill="white"/> </g> <defs> <clipPath id="clip0_1488_2390"> <rect width="14" height="14" fill="white" transform="translate(3 3.79999)"/> </clipPath> </defs> </svg></h5>
+                                            <div class="flex">
+                                                <div class="innerflex">
+                                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_1488_2401)"> <path d="M14 7.46698C14 12.1336 8 16.1336 8 16.1336C8 16.1336 2 12.1336 2 7.46698C2 5.87568 2.63214 4.34956 3.75736 3.22434C4.88258 2.09912 6.4087 1.46698 8 1.46698C9.5913 1.46698 11.1174 2.09912 12.2426 3.22434C13.3679 4.34956 14 5.87568 14 7.46698Z" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M8 9.46698C9.10457 9.46698 10 8.57155 10 7.46698C10 6.36241 9.10457 5.46698 8 5.46698C6.89543 5.46698 6 6.36241 6 7.46698C6 8.57155 6.89543 9.46698 8 9.46698Z" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> </g> <defs> <clipPath id="clip0_1488_2401"> <rect width="16" height="16" fill="white" transform="translate(0 0.799988)"/> </clipPath> </defs> </svg>                                                    Las Vegas, NV 89107, USA
+                                                </div>
+                                                <!-- End innerflex -->
+                                                <div class="innerflex">
+                                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12.6667 3.46698H3.33333C2.59695 3.46698 2 4.06393 2 4.80031V14.1336C2 14.87 2.59695 15.467 3.33333 15.467H12.6667C13.403 15.467 14 14.87 14 14.1336V4.80031C14 4.06393 13.403 3.46698 12.6667 3.46698Z" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M10.667 2.133V4.79966" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M5.33301 2.133V4.79966" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> <path d="M2 7.46698H14" stroke="#64666C" stroke-linecap="round" stroke-linejoin="round"/> </svg>                                                    2 days ago
+                                                </div>
+                                                <!-- End innerflex -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End user -->
+                                    <a href="talent-inner.html" class="bottom"> Apply </a>
+                                </div>
+                                <!-- End flex -->
+                                <ul class="listskills">
+                                    <li>Contract</li>
+                                    <li>Hybrid</li>
+                                </ul>
+                                <div class="rowtext">
+                                    <p>
+                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_1488_2421)"> <path d="M10 20.8C7.32891 20.8 4.81766 19.7598 2.92891 17.8711C1.04016 15.9823 0 13.4711 0 10.8C0 8.12889 1.0402 5.61768 2.92891 3.72889C4.81762 1.84011 7.32891 0.799988 10 0.799988C12.6711 0.799988 15.1823 1.84014 17.0711 3.72889C18.9598 5.61764 20 8.12889 20 10.8C20 13.4711 18.9598 15.9823 17.0711 17.8711C15.1824 19.7599 12.6711 20.8 10 20.8ZM10 2.04999C5.17523 2.04999 1.25 5.97522 1.25 10.8C1.25 15.6248 5.17523 19.55 10 19.55C14.8248 19.55 18.75 15.6248 18.75 10.8C18.75 5.97522 14.8248 2.04999 10 2.04999Z" fill="#121212"/> <path d="M10 10.175C9.13844 10.175 8.4375 9.47405 8.4375 8.61249C8.4375 7.75093 9.13844 7.04999 10 7.04999C10.8616 7.04999 11.5625 7.75093 11.5625 8.61249C11.5625 8.95764 11.8423 9.23749 12.1875 9.23749C12.5327 9.23749 12.8125 8.95764 12.8125 8.61249C12.8125 7.27651 11.8759 6.15593 10.625 5.87085V5.17499C10.625 4.82983 10.3452 4.54999 10 4.54999C9.6548 4.54999 9.375 4.82983 9.375 5.17499V5.87085C8.12414 6.15593 7.1875 7.27651 7.1875 8.61249C7.1875 10.1633 8.44918 11.425 10 11.425C10.8616 11.425 11.5625 12.1259 11.5625 12.9875C11.5625 13.8491 10.8616 14.55 10 14.55C9.13844 14.55 8.4375 13.8491 8.4375 12.9875C8.4375 12.6423 8.1577 12.3625 7.8125 12.3625C7.4673 12.3625 7.1875 12.6423 7.1875 12.9875C7.1875 14.3235 8.12414 15.4441 9.375 15.7291V16.425C9.375 16.7701 9.6548 17.05 10 17.05C10.3452 17.05 10.625 16.7701 10.625 16.425V15.7291C11.8759 15.4441 12.8125 14.3235 12.8125 12.9875C12.8125 11.4367 11.5508 10.175 10 10.175Z" fill="#121212"/> </g> <defs> <clipPath id="clip0_1488_2421"> <rect width="20" height="20" fill="white" transform="translate(0 0.799988)"/> </clipPath> </defs> </svg>
+                                        <b>$83,000 - $110,000</b> /year
+                                    </p>
+                                    <p>22 days left to apply</p>
+                                </div>
+                                <!-- ENd rowtext -->
+                            </div>
+                            <!-- End rockstar -->
+
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#">
+                                        <svg width="16" height="12" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M5.27438 5.58083L9.89199 0.963231C10.0396 0.810363 10.0354 0.566767 9.88252 0.41913C9.73339 0.2751 9.49699 0.2751 9.34789 0.41913L5.00233 4.76468L0.656779 0.41913C0.506526 0.2689 0.262929 0.2689 0.112677 0.41913C-0.0375528 0.569405 -0.0375529 0.812978 0.112677 0.963231L4.73028 5.58083C4.88056 5.73106 5.12413 5.73106 5.27438 5.58083Z"></path>
+                        </svg> Previous
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link active" href="#">1 </a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">
+                        Next
+                        <svg width="16" height="12" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.27438 5.58083L9.89199 0.963231C10.0396 0.810363 10.0354 0.566767 9.88252 0.41913C9.73339 0.2751 9.49699 0.2751 9.34789 0.41913L5.00233 4.76468L0.656779 0.41913C0.506526 0.2689 0.262929 0.2689 0.112677 0.41913C-0.0375528 0.569405 -0.0375529 0.812978 0.112677 0.963231L4.73028 5.58083C4.88056 5.73106 5.12413 5.73106 5.27438 5.58083Z"> </path>
+                    </svg></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End subitem -->
+                    </div>
+                    <!-- End row -->
+                </div>
+                <div class="tab-pane" id="item-3" role="tabpanel" aria-labelledby="item-3-tab">
+                    <div class="row">
+                        <div class="col-sm-3 subitem">
+                            <div class="subfilter">
+                                <h2 class="title m-0">Filter </h2>
+                                <ul class="listskills mt-1">
+                                    <li>Html
+                                        <a href="#"> <svg width="10" height="10" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"> <path d="M6.66271 6.00002L11.8625 0.800231C12.0455 0.617161 12.0455 0.320349 11.8625 0.137303C11.6794 -0.0457441 11.3826 -0.0457675 11.1995 0.137303L5.99975 5.33709L0.799987 0.137303C0.616917 -0.0457675 0.320105 -0.0457675 0.137058 0.137303C-0.0459882 0.320373 -0.0460117 0.617185 0.137058 0.800231L5.33682 6L0.137058 11.1998C-0.0460117 11.3829 -0.0460117 11.6797 0.137058 11.8627C0.228582 11.9542 0.348558 12 0.468535 12C0.588511 12 0.708464 11.9542 0.800011 11.8627L5.99975 6.66295L11.1995 11.8627C11.291 11.9542 11.411 12 11.531 12C11.651 12 11.7709 11.9542 11.8625 11.8627C12.0455 11.6796 12.0455 11.3828 11.8625 11.1998L6.66271 6.00002Z" fill="#000"></path> </svg></a>
+                                    </li>
+                                    <li>CSS
+                                        <a href="#"> <svg width="10" height="10" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"> <path d="M6.66271 6.00002L11.8625 0.800231C12.0455 0.617161 12.0455 0.320349 11.8625 0.137303C11.6794 -0.0457441 11.3826 -0.0457675 11.1995 0.137303L5.99975 5.33709L0.799987 0.137303C0.616917 -0.0457675 0.320105 -0.0457675 0.137058 0.137303C-0.0459882 0.320373 -0.0460117 0.617185 0.137058 0.800231L5.33682 6L0.137058 11.1998C-0.0460117 11.3829 -0.0460117 11.6797 0.137058 11.8627C0.228582 11.9542 0.348558 12 0.468535 12C0.588511 12 0.708464 11.9542 0.800011 11.8627L5.99975 6.66295L11.1995 11.8627C11.291 11.9542 11.411 12 11.531 12C11.651 12 11.7709 11.9542 11.8625 11.8627C12.0455 11.6796 12.0455 11.3828 11.8625 11.1998L6.66271 6.00002Z" fill="#000"></path> </svg></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End subfilter -->
+                            <div class="subfilter">
+                                <h2 class="title">Category / Specialization </h2>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">Software Development <small>(22)</small></span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">IT Infrastructure & Cloud <small>(22)</small></span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">Cybersecurity <small>(22)</small></span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">Data & AI <small>(22)</small></span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">Design & UX/UI <small>(22)</small></span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">IT Support & Maintenance <small>(22)</small></span>
+                        </label>
+                            </div>
+                            <!-- End subfilter -->
+                            <div class="subfilter">
+                                <h2 class="title">Skills </h2>
+                                <select class="form-control select2-multiple select2-hidden-accessible" data-placeholder="Choose" multiple="" tabindex="-1" aria-hidden="true">
+                                <option value="Html">Html</option>
+                                <option value="Css">Css</option>
+                                <option value="JavaScript">JavaScript</option>
+                                <option value="jquery">jquery</option>
+                                <option value="PHP">PHP</option>
+                                <option value="PhotoShop">PhotoShop</option>
+                        </select>
+                            </div>
+                            <!-- End subfilter -->
+
+
+
+                            <div class="subfilter">
+                                <h2 class="title">Delivery Time </h2>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">Less than 1 week</span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">1 to 2 weeks</span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">2 weeks to 1 month</span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">1 to 3 months</span>
+                        </label>
+                                <label class="che-box"> 
+                            <input type="checkbox" name="checkbox">
+                            <span class="label-text">More than 3 months</span>
+                        </label>
+                            </div>
+                            <!-- End subfilter -->
+
+
+                            <div class="subfilter">
+                                <h2 class="title">Budget Range</h2>
+                                <div class="values">
+                                    <span class="min-value">10</span>
+                                    <div class="range-container">
+                                        <div class="slider-track"></div>
+                                        <div class="slider-range"></div>
+                                        <input type="range" class="min" min="0" max="100" value="10">
+                                        <input type="range" class="max" min="0" max="100" value="50">
+                                    </div>
+                                    <span class="max-value">50</span>
+                                </div>
+                            </div>
+                            <!-- End subfilter -->
+                        </div>
+                        <!-- End item -->
+                        <div class="col-sm-9 subitem">
+                            <div class="itemprogress">
+                                <a href="talent-inner.html" class="title">DevOps Engineer – Cloud Automation, CI/<br>CD, Kubernetes, Terraform (EKS/AKS)</a>
+                                <div class="flex">
+                                    <div class="innerflex">
+                                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 11.05C14.2802 11.05 17.75 14.5198 17.75 18.8C17.75 19.2142 17.4142 19.55 17 19.55H1C0.585786 19.55 0.25 19.2142 0.25 18.8C0.25 14.5198 3.71979 11.05 8 11.05H10ZM9 0.0499878C11.6234 0.0499878 13.75 2.17664 13.75 4.79999C13.75 7.42334 11.6234 9.54999 9 9.54999C6.37665 9.54999 4.25 7.42334 4.25 4.79999C4.25 2.17664 6.37665 0.0499878 9 0.0499878Z" fill="#C5D92D"/>
+                                        </svg> User Name
+                                    </div>
+                                    <div class="innerflex">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.0654 2.04999C13.4346 2.04997 14.5385 2.04965 15.4062 2.1662C16.307 2.28718 17.0656 2.54598 17.668 3.14764C18.5409 4.01967 18.7035 5.23523 18.75 6.77753C18.7624 7.19148 18.4364 7.5375 18.0225 7.54999C17.6085 7.56238 17.2625 7.23642 17.25 6.82245C17.2028 5.25797 17.0184 4.61973 16.6074 4.20917C16.3302 3.93237 15.9407 3.75217 15.2061 3.6535C14.4498 3.55197 13.4475 3.54999 12.0107 3.54999H8.00684C6.56991 3.54999 5.56685 3.55193 4.81055 3.6535C4.07629 3.75217 3.68729 3.93249 3.41016 4.20917C3.13306 4.48596 2.95226 4.87495 2.85352 5.60858C2.7519 6.36383 2.75 7.36476 2.75 8.79999V16.8C2.75 18.2352 2.7519 19.2361 2.85352 19.9914C2.95226 20.725 3.13306 21.114 3.41016 21.3908C3.68729 21.6675 4.07629 21.8478 4.81055 21.9465C5.56685 22.048 6.56991 22.05 8.00684 22.05H12.0107C13.4475 22.05 14.4498 22.048 15.2061 21.9465C15.9407 21.8478 16.3302 21.6676 16.6074 21.3908C17.0184 20.9802 17.2028 20.342 17.25 18.7775C17.2625 18.3636 17.6085 18.0376 18.0225 18.05C18.4364 18.0625 18.7624 18.4085 18.75 18.8224C18.7035 20.3647 18.5409 21.5803 17.668 22.4523C17.0656 23.054 16.307 23.3128 15.4062 23.4338C14.5384 23.5503 13.4346 23.55 12.0654 23.55H7.95215C6.58302 23.55 5.47912 23.5503 4.61133 23.4338C3.71059 23.3128 2.952 23.054 2.34961 22.4523C1.74707 21.8504 1.48738 21.0918 1.36621 20.1916C1.24956 19.3246 1.24998 18.2221 1.25 16.8547V8.7453C1.24998 7.37792 1.24956 6.27536 1.36621 5.40839C1.48738 4.50813 1.74707 3.74953 2.34961 3.14764C2.952 2.54602 3.71059 2.28717 4.61133 2.1662C5.47912 2.04966 6.58303 2.04997 7.95215 2.04999H12.0654ZM7.25 16.55C7.53408 16.55 7.79385 16.7109 7.9209 16.965L8.96387 19.05H9.5C9.91421 19.05 10.25 19.3858 10.25 19.8C10.25 20.2142 9.91421 20.55 9.5 20.55H8.5C8.21592 20.55 7.95615 20.389 7.8291 20.1349L7.25 18.9767L6.6709 20.1349C6.54385 20.389 6.28408 20.55 6 20.55H5C4.58579 20.55 4.25 20.2142 4.25 19.8C4.25 19.3858 4.58579 19.05 5 19.05H5.53613L6.5791 16.965C6.70614 16.7109 6.96592 16.55 7.25 16.55ZM19.6533 8.23065C20.1405 7.98923 20.7129 7.98937 21.2002 8.23065C21.3958 8.32758 21.57 8.47697 21.7334 8.63495L22.165 9.06659C22.323 9.22999 22.4724 9.40419 22.5693 9.59979C22.8106 10.087 22.8108 10.6595 22.5693 11.1467C22.4724 11.3422 22.3229 11.5156 22.165 11.6789L15.5059 18.3381C15.4235 18.4204 15.3233 18.4829 15.2129 18.5197L12.2373 19.5119C11.9678 19.6017 11.6706 19.5311 11.4697 19.3303C11.2689 19.1294 11.1983 18.8322 11.2881 18.5627L12.2803 15.5871C12.3171 15.4766 12.3796 15.3765 12.4619 15.2941L19.1211 8.63495C19.2844 8.47705 19.4578 8.32755 19.6533 8.23065ZM13.6475 16.2297L13.1855 17.6144L14.5703 17.1525L19.1816 12.5422L18.2578 11.6183L13.6475 16.2297ZM12 10.05C12.4142 10.05 12.75 10.3858 12.75 10.8C12.75 11.2142 12.4142 11.55 12 11.55H6C5.58579 11.55 5.25 11.2142 5.25 10.8C5.25 10.3858 5.58579 10.05 6 10.05H12ZM20.5312 9.57343C20.4653 9.54197 20.3882 9.54185 20.3223 9.57343C20.3168 9.57705 20.2971 9.59119 20.2568 9.62714C20.1906 9.68633 20.1068 9.77031 19.9658 9.91132L19.3184 10.5578L20.2422 11.4816L20.8887 10.8342C21.0297 10.6932 21.1137 10.6094 21.1729 10.5432C21.2088 10.5029 21.2229 10.4832 21.2266 10.4777C21.2581 10.4118 21.258 10.3347 21.2266 10.2687C21.2231 10.2635 21.2089 10.2437 21.1729 10.2033C21.1136 10.137 21.0299 10.0525 20.8887 9.91132C20.7475 9.77013 20.663 9.68635 20.5967 9.62714C20.5563 9.5911 20.5365 9.57692 20.5312 9.57343ZM14 6.04999C14.4142 6.04999 14.75 6.38578 14.75 6.79999C14.75 7.2142 14.4142 7.54999 14 7.54999H6C5.58579 7.54999 5.25 7.2142 5.25 6.79999C5.25 6.38578 5.58579 6.04999 6 6.04999H14Z" fill="#C5D92D"/>
+                                        </svg> 1 Offer
+                                    </div>
+                                    <div class="innerflex">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 1.98022C12.41 1.98022 12.75 2.32022 12.75 2.73022C12.7498 3.1401 12.4099 3.48022 12 3.48022C6.9 3.48022 2.75 7.63022 2.75 12.7302C2.75016 17.8301 6.9001 21.9802 12 21.9802C17.0999 21.9802 21.2498 17.8301 21.25 12.7302C21.25 12.3202 21.59 11.9803 22 11.9802C22.41 11.9802 22.75 12.3202 22.75 12.7302C22.7498 18.6601 17.9299 23.4802 12 23.4802C6.0701 23.4802 1.25016 18.6601 1.25 12.7302C1.25 6.80022 6.07 1.98022 12 1.98022ZM12 5.98022C12.41 5.98022 12.75 6.32022 12.75 6.73022V11.9802H16C16.41 11.9802 16.75 12.3202 16.75 12.7302C16.7498 13.1401 16.4099 13.4802 16 13.4802H12C11.5901 13.4802 11.2502 13.1401 11.25 12.7302V6.73022C11.25 6.32022 11.59 5.98022 12 5.98022ZM21.1201 7.60034C21.5 7.42048 21.9401 7.57988 22.1201 7.95972C22.3601 8.45972 22.5597 8.9805 22.7197 9.5105C22.8395 9.91039 22.6196 10.33 22.2197 10.45C22.1498 10.4699 22.0699 10.4802 22 10.4802C21.68 10.4802 21.3803 10.2699 21.2803 9.94995C21.1403 9.49 20.9597 9.0403 20.7598 8.60034C20.5798 8.22034 20.7501 7.78034 21.1201 7.60034ZM18.2803 4.40015C18.5603 4.09023 19.0299 4.0606 19.3398 4.34058C19.5198 4.50052 19.7 4.67041 19.8799 4.85034C20.0598 5.03023 20.2295 5.21006 20.3994 5.40991C20.6694 5.72991 20.6196 6.20046 20.3096 6.47046C20.1697 6.59018 19.9999 6.64034 19.8301 6.64038C19.6201 6.64038 19.4 6.54984 19.25 6.36987C19.1101 6.20995 18.9702 6.04986 18.8203 5.90991C18.6603 5.74991 18.4998 5.59972 18.3398 5.45972C18.03 5.18969 18.0003 4.71009 18.2803 4.40015ZM16.4102 4.03003H16.3994C16.4006 4.03003 16.4022 4.02906 16.4033 4.02905C16.4055 4.02907 16.408 4.03003 16.4102 4.03003ZM14.2803 2.52026C14.4003 2.12026 14.82 1.8905 15.21 2.0105C15.6998 2.15047 16.1897 2.34044 16.7295 2.60034C17.0995 2.78034 17.2601 3.23034 17.0801 3.60034C16.9506 3.86919 16.6821 4.02774 16.4033 4.02905C16.2955 4.02827 16.1879 4.00872 16.0898 3.95972C15.6199 3.73977 15.2 3.56994 14.79 3.44995C14.3901 3.32996 14.1603 2.92024 14.2803 2.52026Z" fill="#C5D92D"/>
+                                            </svg> 1 Minute ago
+                                    </div>
+                                </div>
+                                <!-- End flex -->
+                                <ul class="listskills">
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                </ul>
+                                <p>Hi! I’m a passionate UI/UX designer with expertise in creating intuitive and visually appealing web and mobile experiences. I specialize in user interface design, user experience research, prototyping, and interaction design.
+                                    I love turning ideas into engaging, easy-to-use digital products that delight users.</p>
+                            </div>
+                            <!-- End itemprogress -->
+                            <div class="itemprogress">
+                                <a href="talent-inner.html" class="title">DevOps Engineer – Cloud Automation, CI/<br>CD, Kubernetes, Terraform (EKS/AKS)</a>
+                                <div class="flex">
+                                    <div class="innerflex">
+                                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 11.05C14.2802 11.05 17.75 14.5198 17.75 18.8C17.75 19.2142 17.4142 19.55 17 19.55H1C0.585786 19.55 0.25 19.2142 0.25 18.8C0.25 14.5198 3.71979 11.05 8 11.05H10ZM9 0.0499878C11.6234 0.0499878 13.75 2.17664 13.75 4.79999C13.75 7.42334 11.6234 9.54999 9 9.54999C6.37665 9.54999 4.25 7.42334 4.25 4.79999C4.25 2.17664 6.37665 0.0499878 9 0.0499878Z" fill="#C5D92D"/>
+                                        </svg> User Name
+                                    </div>
+                                    <div class="innerflex">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.0654 2.04999C13.4346 2.04997 14.5385 2.04965 15.4062 2.1662C16.307 2.28718 17.0656 2.54598 17.668 3.14764C18.5409 4.01967 18.7035 5.23523 18.75 6.77753C18.7624 7.19148 18.4364 7.5375 18.0225 7.54999C17.6085 7.56238 17.2625 7.23642 17.25 6.82245C17.2028 5.25797 17.0184 4.61973 16.6074 4.20917C16.3302 3.93237 15.9407 3.75217 15.2061 3.6535C14.4498 3.55197 13.4475 3.54999 12.0107 3.54999H8.00684C6.56991 3.54999 5.56685 3.55193 4.81055 3.6535C4.07629 3.75217 3.68729 3.93249 3.41016 4.20917C3.13306 4.48596 2.95226 4.87495 2.85352 5.60858C2.7519 6.36383 2.75 7.36476 2.75 8.79999V16.8C2.75 18.2352 2.7519 19.2361 2.85352 19.9914C2.95226 20.725 3.13306 21.114 3.41016 21.3908C3.68729 21.6675 4.07629 21.8478 4.81055 21.9465C5.56685 22.048 6.56991 22.05 8.00684 22.05H12.0107C13.4475 22.05 14.4498 22.048 15.2061 21.9465C15.9407 21.8478 16.3302 21.6676 16.6074 21.3908C17.0184 20.9802 17.2028 20.342 17.25 18.7775C17.2625 18.3636 17.6085 18.0376 18.0225 18.05C18.4364 18.0625 18.7624 18.4085 18.75 18.8224C18.7035 20.3647 18.5409 21.5803 17.668 22.4523C17.0656 23.054 16.307 23.3128 15.4062 23.4338C14.5384 23.5503 13.4346 23.55 12.0654 23.55H7.95215C6.58302 23.55 5.47912 23.5503 4.61133 23.4338C3.71059 23.3128 2.952 23.054 2.34961 22.4523C1.74707 21.8504 1.48738 21.0918 1.36621 20.1916C1.24956 19.3246 1.24998 18.2221 1.25 16.8547V8.7453C1.24998 7.37792 1.24956 6.27536 1.36621 5.40839C1.48738 4.50813 1.74707 3.74953 2.34961 3.14764C2.952 2.54602 3.71059 2.28717 4.61133 2.1662C5.47912 2.04966 6.58303 2.04997 7.95215 2.04999H12.0654ZM7.25 16.55C7.53408 16.55 7.79385 16.7109 7.9209 16.965L8.96387 19.05H9.5C9.91421 19.05 10.25 19.3858 10.25 19.8C10.25 20.2142 9.91421 20.55 9.5 20.55H8.5C8.21592 20.55 7.95615 20.389 7.8291 20.1349L7.25 18.9767L6.6709 20.1349C6.54385 20.389 6.28408 20.55 6 20.55H5C4.58579 20.55 4.25 20.2142 4.25 19.8C4.25 19.3858 4.58579 19.05 5 19.05H5.53613L6.5791 16.965C6.70614 16.7109 6.96592 16.55 7.25 16.55ZM19.6533 8.23065C20.1405 7.98923 20.7129 7.98937 21.2002 8.23065C21.3958 8.32758 21.57 8.47697 21.7334 8.63495L22.165 9.06659C22.323 9.22999 22.4724 9.40419 22.5693 9.59979C22.8106 10.087 22.8108 10.6595 22.5693 11.1467C22.4724 11.3422 22.3229 11.5156 22.165 11.6789L15.5059 18.3381C15.4235 18.4204 15.3233 18.4829 15.2129 18.5197L12.2373 19.5119C11.9678 19.6017 11.6706 19.5311 11.4697 19.3303C11.2689 19.1294 11.1983 18.8322 11.2881 18.5627L12.2803 15.5871C12.3171 15.4766 12.3796 15.3765 12.4619 15.2941L19.1211 8.63495C19.2844 8.47705 19.4578 8.32755 19.6533 8.23065ZM13.6475 16.2297L13.1855 17.6144L14.5703 17.1525L19.1816 12.5422L18.2578 11.6183L13.6475 16.2297ZM12 10.05C12.4142 10.05 12.75 10.3858 12.75 10.8C12.75 11.2142 12.4142 11.55 12 11.55H6C5.58579 11.55 5.25 11.2142 5.25 10.8C5.25 10.3858 5.58579 10.05 6 10.05H12ZM20.5312 9.57343C20.4653 9.54197 20.3882 9.54185 20.3223 9.57343C20.3168 9.57705 20.2971 9.59119 20.2568 9.62714C20.1906 9.68633 20.1068 9.77031 19.9658 9.91132L19.3184 10.5578L20.2422 11.4816L20.8887 10.8342C21.0297 10.6932 21.1137 10.6094 21.1729 10.5432C21.2088 10.5029 21.2229 10.4832 21.2266 10.4777C21.2581 10.4118 21.258 10.3347 21.2266 10.2687C21.2231 10.2635 21.2089 10.2437 21.1729 10.2033C21.1136 10.137 21.0299 10.0525 20.8887 9.91132C20.7475 9.77013 20.663 9.68635 20.5967 9.62714C20.5563 9.5911 20.5365 9.57692 20.5312 9.57343ZM14 6.04999C14.4142 6.04999 14.75 6.38578 14.75 6.79999C14.75 7.2142 14.4142 7.54999 14 7.54999H6C5.58579 7.54999 5.25 7.2142 5.25 6.79999C5.25 6.38578 5.58579 6.04999 6 6.04999H14Z" fill="#C5D92D"/>
+                                        </svg> 1 Offer
+                                    </div>
+                                    <div class="innerflex">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 1.98022C12.41 1.98022 12.75 2.32022 12.75 2.73022C12.7498 3.1401 12.4099 3.48022 12 3.48022C6.9 3.48022 2.75 7.63022 2.75 12.7302C2.75016 17.8301 6.9001 21.9802 12 21.9802C17.0999 21.9802 21.2498 17.8301 21.25 12.7302C21.25 12.3202 21.59 11.9803 22 11.9802C22.41 11.9802 22.75 12.3202 22.75 12.7302C22.7498 18.6601 17.9299 23.4802 12 23.4802C6.0701 23.4802 1.25016 18.6601 1.25 12.7302C1.25 6.80022 6.07 1.98022 12 1.98022ZM12 5.98022C12.41 5.98022 12.75 6.32022 12.75 6.73022V11.9802H16C16.41 11.9802 16.75 12.3202 16.75 12.7302C16.7498 13.1401 16.4099 13.4802 16 13.4802H12C11.5901 13.4802 11.2502 13.1401 11.25 12.7302V6.73022C11.25 6.32022 11.59 5.98022 12 5.98022ZM21.1201 7.60034C21.5 7.42048 21.9401 7.57988 22.1201 7.95972C22.3601 8.45972 22.5597 8.9805 22.7197 9.5105C22.8395 9.91039 22.6196 10.33 22.2197 10.45C22.1498 10.4699 22.0699 10.4802 22 10.4802C21.68 10.4802 21.3803 10.2699 21.2803 9.94995C21.1403 9.49 20.9597 9.0403 20.7598 8.60034C20.5798 8.22034 20.7501 7.78034 21.1201 7.60034ZM18.2803 4.40015C18.5603 4.09023 19.0299 4.0606 19.3398 4.34058C19.5198 4.50052 19.7 4.67041 19.8799 4.85034C20.0598 5.03023 20.2295 5.21006 20.3994 5.40991C20.6694 5.72991 20.6196 6.20046 20.3096 6.47046C20.1697 6.59018 19.9999 6.64034 19.8301 6.64038C19.6201 6.64038 19.4 6.54984 19.25 6.36987C19.1101 6.20995 18.9702 6.04986 18.8203 5.90991C18.6603 5.74991 18.4998 5.59972 18.3398 5.45972C18.03 5.18969 18.0003 4.71009 18.2803 4.40015ZM16.4102 4.03003H16.3994C16.4006 4.03003 16.4022 4.02906 16.4033 4.02905C16.4055 4.02907 16.408 4.03003 16.4102 4.03003ZM14.2803 2.52026C14.4003 2.12026 14.82 1.8905 15.21 2.0105C15.6998 2.15047 16.1897 2.34044 16.7295 2.60034C17.0995 2.78034 17.2601 3.23034 17.0801 3.60034C16.9506 3.86919 16.6821 4.02774 16.4033 4.02905C16.2955 4.02827 16.1879 4.00872 16.0898 3.95972C15.6199 3.73977 15.2 3.56994 14.79 3.44995C14.3901 3.32996 14.1603 2.92024 14.2803 2.52026Z" fill="#C5D92D"/>
+                                            </svg> 1 Minute ago
+                                    </div>
+                                </div>
+                                <!-- End flex -->
+                                <ul class="listskills">
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                </ul>
+                                <p>Hi! I’m a passionate UI/UX designer with expertise in creating intuitive and visually appealing web and mobile experiences. I specialize in user interface design, user experience research, prototyping, and interaction design.
+                                    I love turning ideas into engaging, easy-to-use digital products that delight users.</p>
+                            </div>
+                            <!-- End itemprogress -->
+                            <div class="itemprogress">
+                                <a href="talent-inner.html" class="title">DevOps Engineer – Cloud Automation, CI/<br>CD, Kubernetes, Terraform (EKS/AKS)</a>
+                                <div class="flex">
+                                    <div class="innerflex">
+                                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 11.05C14.2802 11.05 17.75 14.5198 17.75 18.8C17.75 19.2142 17.4142 19.55 17 19.55H1C0.585786 19.55 0.25 19.2142 0.25 18.8C0.25 14.5198 3.71979 11.05 8 11.05H10ZM9 0.0499878C11.6234 0.0499878 13.75 2.17664 13.75 4.79999C13.75 7.42334 11.6234 9.54999 9 9.54999C6.37665 9.54999 4.25 7.42334 4.25 4.79999C4.25 2.17664 6.37665 0.0499878 9 0.0499878Z" fill="#C5D92D"/>
+                                        </svg> User Name
+                                    </div>
+                                    <div class="innerflex">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.0654 2.04999C13.4346 2.04997 14.5385 2.04965 15.4062 2.1662C16.307 2.28718 17.0656 2.54598 17.668 3.14764C18.5409 4.01967 18.7035 5.23523 18.75 6.77753C18.7624 7.19148 18.4364 7.5375 18.0225 7.54999C17.6085 7.56238 17.2625 7.23642 17.25 6.82245C17.2028 5.25797 17.0184 4.61973 16.6074 4.20917C16.3302 3.93237 15.9407 3.75217 15.2061 3.6535C14.4498 3.55197 13.4475 3.54999 12.0107 3.54999H8.00684C6.56991 3.54999 5.56685 3.55193 4.81055 3.6535C4.07629 3.75217 3.68729 3.93249 3.41016 4.20917C3.13306 4.48596 2.95226 4.87495 2.85352 5.60858C2.7519 6.36383 2.75 7.36476 2.75 8.79999V16.8C2.75 18.2352 2.7519 19.2361 2.85352 19.9914C2.95226 20.725 3.13306 21.114 3.41016 21.3908C3.68729 21.6675 4.07629 21.8478 4.81055 21.9465C5.56685 22.048 6.56991 22.05 8.00684 22.05H12.0107C13.4475 22.05 14.4498 22.048 15.2061 21.9465C15.9407 21.8478 16.3302 21.6676 16.6074 21.3908C17.0184 20.9802 17.2028 20.342 17.25 18.7775C17.2625 18.3636 17.6085 18.0376 18.0225 18.05C18.4364 18.0625 18.7624 18.4085 18.75 18.8224C18.7035 20.3647 18.5409 21.5803 17.668 22.4523C17.0656 23.054 16.307 23.3128 15.4062 23.4338C14.5384 23.5503 13.4346 23.55 12.0654 23.55H7.95215C6.58302 23.55 5.47912 23.5503 4.61133 23.4338C3.71059 23.3128 2.952 23.054 2.34961 22.4523C1.74707 21.8504 1.48738 21.0918 1.36621 20.1916C1.24956 19.3246 1.24998 18.2221 1.25 16.8547V8.7453C1.24998 7.37792 1.24956 6.27536 1.36621 5.40839C1.48738 4.50813 1.74707 3.74953 2.34961 3.14764C2.952 2.54602 3.71059 2.28717 4.61133 2.1662C5.47912 2.04966 6.58303 2.04997 7.95215 2.04999H12.0654ZM7.25 16.55C7.53408 16.55 7.79385 16.7109 7.9209 16.965L8.96387 19.05H9.5C9.91421 19.05 10.25 19.3858 10.25 19.8C10.25 20.2142 9.91421 20.55 9.5 20.55H8.5C8.21592 20.55 7.95615 20.389 7.8291 20.1349L7.25 18.9767L6.6709 20.1349C6.54385 20.389 6.28408 20.55 6 20.55H5C4.58579 20.55 4.25 20.2142 4.25 19.8C4.25 19.3858 4.58579 19.05 5 19.05H5.53613L6.5791 16.965C6.70614 16.7109 6.96592 16.55 7.25 16.55ZM19.6533 8.23065C20.1405 7.98923 20.7129 7.98937 21.2002 8.23065C21.3958 8.32758 21.57 8.47697 21.7334 8.63495L22.165 9.06659C22.323 9.22999 22.4724 9.40419 22.5693 9.59979C22.8106 10.087 22.8108 10.6595 22.5693 11.1467C22.4724 11.3422 22.3229 11.5156 22.165 11.6789L15.5059 18.3381C15.4235 18.4204 15.3233 18.4829 15.2129 18.5197L12.2373 19.5119C11.9678 19.6017 11.6706 19.5311 11.4697 19.3303C11.2689 19.1294 11.1983 18.8322 11.2881 18.5627L12.2803 15.5871C12.3171 15.4766 12.3796 15.3765 12.4619 15.2941L19.1211 8.63495C19.2844 8.47705 19.4578 8.32755 19.6533 8.23065ZM13.6475 16.2297L13.1855 17.6144L14.5703 17.1525L19.1816 12.5422L18.2578 11.6183L13.6475 16.2297ZM12 10.05C12.4142 10.05 12.75 10.3858 12.75 10.8C12.75 11.2142 12.4142 11.55 12 11.55H6C5.58579 11.55 5.25 11.2142 5.25 10.8C5.25 10.3858 5.58579 10.05 6 10.05H12ZM20.5312 9.57343C20.4653 9.54197 20.3882 9.54185 20.3223 9.57343C20.3168 9.57705 20.2971 9.59119 20.2568 9.62714C20.1906 9.68633 20.1068 9.77031 19.9658 9.91132L19.3184 10.5578L20.2422 11.4816L20.8887 10.8342C21.0297 10.6932 21.1137 10.6094 21.1729 10.5432C21.2088 10.5029 21.2229 10.4832 21.2266 10.4777C21.2581 10.4118 21.258 10.3347 21.2266 10.2687C21.2231 10.2635 21.2089 10.2437 21.1729 10.2033C21.1136 10.137 21.0299 10.0525 20.8887 9.91132C20.7475 9.77013 20.663 9.68635 20.5967 9.62714C20.5563 9.5911 20.5365 9.57692 20.5312 9.57343ZM14 6.04999C14.4142 6.04999 14.75 6.38578 14.75 6.79999C14.75 7.2142 14.4142 7.54999 14 7.54999H6C5.58579 7.54999 5.25 7.2142 5.25 6.79999C5.25 6.38578 5.58579 6.04999 6 6.04999H14Z" fill="#C5D92D"/>
+                                        </svg> 1 Offer
+                                    </div>
+                                    <div class="innerflex">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 1.98022C12.41 1.98022 12.75 2.32022 12.75 2.73022C12.7498 3.1401 12.4099 3.48022 12 3.48022C6.9 3.48022 2.75 7.63022 2.75 12.7302C2.75016 17.8301 6.9001 21.9802 12 21.9802C17.0999 21.9802 21.2498 17.8301 21.25 12.7302C21.25 12.3202 21.59 11.9803 22 11.9802C22.41 11.9802 22.75 12.3202 22.75 12.7302C22.7498 18.6601 17.9299 23.4802 12 23.4802C6.0701 23.4802 1.25016 18.6601 1.25 12.7302C1.25 6.80022 6.07 1.98022 12 1.98022ZM12 5.98022C12.41 5.98022 12.75 6.32022 12.75 6.73022V11.9802H16C16.41 11.9802 16.75 12.3202 16.75 12.7302C16.7498 13.1401 16.4099 13.4802 16 13.4802H12C11.5901 13.4802 11.2502 13.1401 11.25 12.7302V6.73022C11.25 6.32022 11.59 5.98022 12 5.98022ZM21.1201 7.60034C21.5 7.42048 21.9401 7.57988 22.1201 7.95972C22.3601 8.45972 22.5597 8.9805 22.7197 9.5105C22.8395 9.91039 22.6196 10.33 22.2197 10.45C22.1498 10.4699 22.0699 10.4802 22 10.4802C21.68 10.4802 21.3803 10.2699 21.2803 9.94995C21.1403 9.49 20.9597 9.0403 20.7598 8.60034C20.5798 8.22034 20.7501 7.78034 21.1201 7.60034ZM18.2803 4.40015C18.5603 4.09023 19.0299 4.0606 19.3398 4.34058C19.5198 4.50052 19.7 4.67041 19.8799 4.85034C20.0598 5.03023 20.2295 5.21006 20.3994 5.40991C20.6694 5.72991 20.6196 6.20046 20.3096 6.47046C20.1697 6.59018 19.9999 6.64034 19.8301 6.64038C19.6201 6.64038 19.4 6.54984 19.25 6.36987C19.1101 6.20995 18.9702 6.04986 18.8203 5.90991C18.6603 5.74991 18.4998 5.59972 18.3398 5.45972C18.03 5.18969 18.0003 4.71009 18.2803 4.40015ZM16.4102 4.03003H16.3994C16.4006 4.03003 16.4022 4.02906 16.4033 4.02905C16.4055 4.02907 16.408 4.03003 16.4102 4.03003ZM14.2803 2.52026C14.4003 2.12026 14.82 1.8905 15.21 2.0105C15.6998 2.15047 16.1897 2.34044 16.7295 2.60034C17.0995 2.78034 17.2601 3.23034 17.0801 3.60034C16.9506 3.86919 16.6821 4.02774 16.4033 4.02905C16.2955 4.02827 16.1879 4.00872 16.0898 3.95972C15.6199 3.73977 15.2 3.56994 14.79 3.44995C14.3901 3.32996 14.1603 2.92024 14.2803 2.52026Z" fill="#C5D92D"/>
+                                            </svg> 1 Minute ago
+                                    </div>
+                                </div>
+                                <!-- End flex -->
+                                <ul class="listskills">
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                </ul>
+                                <p>Hi! I’m a passionate UI/UX designer with expertise in creating intuitive and visually appealing web and mobile experiences. I specialize in user interface design, user experience research, prototyping, and interaction design.
+                                    I love turning ideas into engaging, easy-to-use digital products that delight users.</p>
+                            </div>
+                            <!-- End itemprogress -->
+                            <div class="itemprogress">
+                                <a href="talent-inner.html" class="title">DevOps Engineer – Cloud Automation, CI/<br>CD, Kubernetes, Terraform (EKS/AKS)</a>
+                                <div class="flex">
+                                    <div class="innerflex">
+                                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 11.05C14.2802 11.05 17.75 14.5198 17.75 18.8C17.75 19.2142 17.4142 19.55 17 19.55H1C0.585786 19.55 0.25 19.2142 0.25 18.8C0.25 14.5198 3.71979 11.05 8 11.05H10ZM9 0.0499878C11.6234 0.0499878 13.75 2.17664 13.75 4.79999C13.75 7.42334 11.6234 9.54999 9 9.54999C6.37665 9.54999 4.25 7.42334 4.25 4.79999C4.25 2.17664 6.37665 0.0499878 9 0.0499878Z" fill="#C5D92D"/>
+                                        </svg> User Name
+                                    </div>
+                                    <div class="innerflex">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.0654 2.04999C13.4346 2.04997 14.5385 2.04965 15.4062 2.1662C16.307 2.28718 17.0656 2.54598 17.668 3.14764C18.5409 4.01967 18.7035 5.23523 18.75 6.77753C18.7624 7.19148 18.4364 7.5375 18.0225 7.54999C17.6085 7.56238 17.2625 7.23642 17.25 6.82245C17.2028 5.25797 17.0184 4.61973 16.6074 4.20917C16.3302 3.93237 15.9407 3.75217 15.2061 3.6535C14.4498 3.55197 13.4475 3.54999 12.0107 3.54999H8.00684C6.56991 3.54999 5.56685 3.55193 4.81055 3.6535C4.07629 3.75217 3.68729 3.93249 3.41016 4.20917C3.13306 4.48596 2.95226 4.87495 2.85352 5.60858C2.7519 6.36383 2.75 7.36476 2.75 8.79999V16.8C2.75 18.2352 2.7519 19.2361 2.85352 19.9914C2.95226 20.725 3.13306 21.114 3.41016 21.3908C3.68729 21.6675 4.07629 21.8478 4.81055 21.9465C5.56685 22.048 6.56991 22.05 8.00684 22.05H12.0107C13.4475 22.05 14.4498 22.048 15.2061 21.9465C15.9407 21.8478 16.3302 21.6676 16.6074 21.3908C17.0184 20.9802 17.2028 20.342 17.25 18.7775C17.2625 18.3636 17.6085 18.0376 18.0225 18.05C18.4364 18.0625 18.7624 18.4085 18.75 18.8224C18.7035 20.3647 18.5409 21.5803 17.668 22.4523C17.0656 23.054 16.307 23.3128 15.4062 23.4338C14.5384 23.5503 13.4346 23.55 12.0654 23.55H7.95215C6.58302 23.55 5.47912 23.5503 4.61133 23.4338C3.71059 23.3128 2.952 23.054 2.34961 22.4523C1.74707 21.8504 1.48738 21.0918 1.36621 20.1916C1.24956 19.3246 1.24998 18.2221 1.25 16.8547V8.7453C1.24998 7.37792 1.24956 6.27536 1.36621 5.40839C1.48738 4.50813 1.74707 3.74953 2.34961 3.14764C2.952 2.54602 3.71059 2.28717 4.61133 2.1662C5.47912 2.04966 6.58303 2.04997 7.95215 2.04999H12.0654ZM7.25 16.55C7.53408 16.55 7.79385 16.7109 7.9209 16.965L8.96387 19.05H9.5C9.91421 19.05 10.25 19.3858 10.25 19.8C10.25 20.2142 9.91421 20.55 9.5 20.55H8.5C8.21592 20.55 7.95615 20.389 7.8291 20.1349L7.25 18.9767L6.6709 20.1349C6.54385 20.389 6.28408 20.55 6 20.55H5C4.58579 20.55 4.25 20.2142 4.25 19.8C4.25 19.3858 4.58579 19.05 5 19.05H5.53613L6.5791 16.965C6.70614 16.7109 6.96592 16.55 7.25 16.55ZM19.6533 8.23065C20.1405 7.98923 20.7129 7.98937 21.2002 8.23065C21.3958 8.32758 21.57 8.47697 21.7334 8.63495L22.165 9.06659C22.323 9.22999 22.4724 9.40419 22.5693 9.59979C22.8106 10.087 22.8108 10.6595 22.5693 11.1467C22.4724 11.3422 22.3229 11.5156 22.165 11.6789L15.5059 18.3381C15.4235 18.4204 15.3233 18.4829 15.2129 18.5197L12.2373 19.5119C11.9678 19.6017 11.6706 19.5311 11.4697 19.3303C11.2689 19.1294 11.1983 18.8322 11.2881 18.5627L12.2803 15.5871C12.3171 15.4766 12.3796 15.3765 12.4619 15.2941L19.1211 8.63495C19.2844 8.47705 19.4578 8.32755 19.6533 8.23065ZM13.6475 16.2297L13.1855 17.6144L14.5703 17.1525L19.1816 12.5422L18.2578 11.6183L13.6475 16.2297ZM12 10.05C12.4142 10.05 12.75 10.3858 12.75 10.8C12.75 11.2142 12.4142 11.55 12 11.55H6C5.58579 11.55 5.25 11.2142 5.25 10.8C5.25 10.3858 5.58579 10.05 6 10.05H12ZM20.5312 9.57343C20.4653 9.54197 20.3882 9.54185 20.3223 9.57343C20.3168 9.57705 20.2971 9.59119 20.2568 9.62714C20.1906 9.68633 20.1068 9.77031 19.9658 9.91132L19.3184 10.5578L20.2422 11.4816L20.8887 10.8342C21.0297 10.6932 21.1137 10.6094 21.1729 10.5432C21.2088 10.5029 21.2229 10.4832 21.2266 10.4777C21.2581 10.4118 21.258 10.3347 21.2266 10.2687C21.2231 10.2635 21.2089 10.2437 21.1729 10.2033C21.1136 10.137 21.0299 10.0525 20.8887 9.91132C20.7475 9.77013 20.663 9.68635 20.5967 9.62714C20.5563 9.5911 20.5365 9.57692 20.5312 9.57343ZM14 6.04999C14.4142 6.04999 14.75 6.38578 14.75 6.79999C14.75 7.2142 14.4142 7.54999 14 7.54999H6C5.58579 7.54999 5.25 7.2142 5.25 6.79999C5.25 6.38578 5.58579 6.04999 6 6.04999H14Z" fill="#C5D92D"/>
+                                        </svg> 1 Offer
+                                    </div>
+                                    <div class="innerflex">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 1.98022C12.41 1.98022 12.75 2.32022 12.75 2.73022C12.7498 3.1401 12.4099 3.48022 12 3.48022C6.9 3.48022 2.75 7.63022 2.75 12.7302C2.75016 17.8301 6.9001 21.9802 12 21.9802C17.0999 21.9802 21.2498 17.8301 21.25 12.7302C21.25 12.3202 21.59 11.9803 22 11.9802C22.41 11.9802 22.75 12.3202 22.75 12.7302C22.7498 18.6601 17.9299 23.4802 12 23.4802C6.0701 23.4802 1.25016 18.6601 1.25 12.7302C1.25 6.80022 6.07 1.98022 12 1.98022ZM12 5.98022C12.41 5.98022 12.75 6.32022 12.75 6.73022V11.9802H16C16.41 11.9802 16.75 12.3202 16.75 12.7302C16.7498 13.1401 16.4099 13.4802 16 13.4802H12C11.5901 13.4802 11.2502 13.1401 11.25 12.7302V6.73022C11.25 6.32022 11.59 5.98022 12 5.98022ZM21.1201 7.60034C21.5 7.42048 21.9401 7.57988 22.1201 7.95972C22.3601 8.45972 22.5597 8.9805 22.7197 9.5105C22.8395 9.91039 22.6196 10.33 22.2197 10.45C22.1498 10.4699 22.0699 10.4802 22 10.4802C21.68 10.4802 21.3803 10.2699 21.2803 9.94995C21.1403 9.49 20.9597 9.0403 20.7598 8.60034C20.5798 8.22034 20.7501 7.78034 21.1201 7.60034ZM18.2803 4.40015C18.5603 4.09023 19.0299 4.0606 19.3398 4.34058C19.5198 4.50052 19.7 4.67041 19.8799 4.85034C20.0598 5.03023 20.2295 5.21006 20.3994 5.40991C20.6694 5.72991 20.6196 6.20046 20.3096 6.47046C20.1697 6.59018 19.9999 6.64034 19.8301 6.64038C19.6201 6.64038 19.4 6.54984 19.25 6.36987C19.1101 6.20995 18.9702 6.04986 18.8203 5.90991C18.6603 5.74991 18.4998 5.59972 18.3398 5.45972C18.03 5.18969 18.0003 4.71009 18.2803 4.40015ZM16.4102 4.03003H16.3994C16.4006 4.03003 16.4022 4.02906 16.4033 4.02905C16.4055 4.02907 16.408 4.03003 16.4102 4.03003ZM14.2803 2.52026C14.4003 2.12026 14.82 1.8905 15.21 2.0105C15.6998 2.15047 16.1897 2.34044 16.7295 2.60034C17.0995 2.78034 17.2601 3.23034 17.0801 3.60034C16.9506 3.86919 16.6821 4.02774 16.4033 4.02905C16.2955 4.02827 16.1879 4.00872 16.0898 3.95972C15.6199 3.73977 15.2 3.56994 14.79 3.44995C14.3901 3.32996 14.1603 2.92024 14.2803 2.52026Z" fill="#C5D92D"/>
+                                            </svg> 1 Minute ago
+                                    </div>
+                                </div>
+                                <!-- End flex -->
+                                <ul class="listskills">
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                </ul>
+                                <p>Hi! I’m a passionate UI/UX designer with expertise in creating intuitive and visually appealing web and mobile experiences. I specialize in user interface design, user experience research, prototyping, and interaction design.
+                                    I love turning ideas into engaging, easy-to-use digital products that delight users.</p>
+                            </div>
+                            <!-- End itemprogress -->
+                            <div class="itemprogress">
+                                <a href="talent-inner.html" class="title">DevOps Engineer – Cloud Automation, CI/<br>CD, Kubernetes, Terraform (EKS/AKS)</a>
+                                <div class="flex">
+                                    <div class="innerflex">
+                                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 11.05C14.2802 11.05 17.75 14.5198 17.75 18.8C17.75 19.2142 17.4142 19.55 17 19.55H1C0.585786 19.55 0.25 19.2142 0.25 18.8C0.25 14.5198 3.71979 11.05 8 11.05H10ZM9 0.0499878C11.6234 0.0499878 13.75 2.17664 13.75 4.79999C13.75 7.42334 11.6234 9.54999 9 9.54999C6.37665 9.54999 4.25 7.42334 4.25 4.79999C4.25 2.17664 6.37665 0.0499878 9 0.0499878Z" fill="#C5D92D"/>
+                                        </svg> User Name
+                                    </div>
+                                    <div class="innerflex">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.0654 2.04999C13.4346 2.04997 14.5385 2.04965 15.4062 2.1662C16.307 2.28718 17.0656 2.54598 17.668 3.14764C18.5409 4.01967 18.7035 5.23523 18.75 6.77753C18.7624 7.19148 18.4364 7.5375 18.0225 7.54999C17.6085 7.56238 17.2625 7.23642 17.25 6.82245C17.2028 5.25797 17.0184 4.61973 16.6074 4.20917C16.3302 3.93237 15.9407 3.75217 15.2061 3.6535C14.4498 3.55197 13.4475 3.54999 12.0107 3.54999H8.00684C6.56991 3.54999 5.56685 3.55193 4.81055 3.6535C4.07629 3.75217 3.68729 3.93249 3.41016 4.20917C3.13306 4.48596 2.95226 4.87495 2.85352 5.60858C2.7519 6.36383 2.75 7.36476 2.75 8.79999V16.8C2.75 18.2352 2.7519 19.2361 2.85352 19.9914C2.95226 20.725 3.13306 21.114 3.41016 21.3908C3.68729 21.6675 4.07629 21.8478 4.81055 21.9465C5.56685 22.048 6.56991 22.05 8.00684 22.05H12.0107C13.4475 22.05 14.4498 22.048 15.2061 21.9465C15.9407 21.8478 16.3302 21.6676 16.6074 21.3908C17.0184 20.9802 17.2028 20.342 17.25 18.7775C17.2625 18.3636 17.6085 18.0376 18.0225 18.05C18.4364 18.0625 18.7624 18.4085 18.75 18.8224C18.7035 20.3647 18.5409 21.5803 17.668 22.4523C17.0656 23.054 16.307 23.3128 15.4062 23.4338C14.5384 23.5503 13.4346 23.55 12.0654 23.55H7.95215C6.58302 23.55 5.47912 23.5503 4.61133 23.4338C3.71059 23.3128 2.952 23.054 2.34961 22.4523C1.74707 21.8504 1.48738 21.0918 1.36621 20.1916C1.24956 19.3246 1.24998 18.2221 1.25 16.8547V8.7453C1.24998 7.37792 1.24956 6.27536 1.36621 5.40839C1.48738 4.50813 1.74707 3.74953 2.34961 3.14764C2.952 2.54602 3.71059 2.28717 4.61133 2.1662C5.47912 2.04966 6.58303 2.04997 7.95215 2.04999H12.0654ZM7.25 16.55C7.53408 16.55 7.79385 16.7109 7.9209 16.965L8.96387 19.05H9.5C9.91421 19.05 10.25 19.3858 10.25 19.8C10.25 20.2142 9.91421 20.55 9.5 20.55H8.5C8.21592 20.55 7.95615 20.389 7.8291 20.1349L7.25 18.9767L6.6709 20.1349C6.54385 20.389 6.28408 20.55 6 20.55H5C4.58579 20.55 4.25 20.2142 4.25 19.8C4.25 19.3858 4.58579 19.05 5 19.05H5.53613L6.5791 16.965C6.70614 16.7109 6.96592 16.55 7.25 16.55ZM19.6533 8.23065C20.1405 7.98923 20.7129 7.98937 21.2002 8.23065C21.3958 8.32758 21.57 8.47697 21.7334 8.63495L22.165 9.06659C22.323 9.22999 22.4724 9.40419 22.5693 9.59979C22.8106 10.087 22.8108 10.6595 22.5693 11.1467C22.4724 11.3422 22.3229 11.5156 22.165 11.6789L15.5059 18.3381C15.4235 18.4204 15.3233 18.4829 15.2129 18.5197L12.2373 19.5119C11.9678 19.6017 11.6706 19.5311 11.4697 19.3303C11.2689 19.1294 11.1983 18.8322 11.2881 18.5627L12.2803 15.5871C12.3171 15.4766 12.3796 15.3765 12.4619 15.2941L19.1211 8.63495C19.2844 8.47705 19.4578 8.32755 19.6533 8.23065ZM13.6475 16.2297L13.1855 17.6144L14.5703 17.1525L19.1816 12.5422L18.2578 11.6183L13.6475 16.2297ZM12 10.05C12.4142 10.05 12.75 10.3858 12.75 10.8C12.75 11.2142 12.4142 11.55 12 11.55H6C5.58579 11.55 5.25 11.2142 5.25 10.8C5.25 10.3858 5.58579 10.05 6 10.05H12ZM20.5312 9.57343C20.4653 9.54197 20.3882 9.54185 20.3223 9.57343C20.3168 9.57705 20.2971 9.59119 20.2568 9.62714C20.1906 9.68633 20.1068 9.77031 19.9658 9.91132L19.3184 10.5578L20.2422 11.4816L20.8887 10.8342C21.0297 10.6932 21.1137 10.6094 21.1729 10.5432C21.2088 10.5029 21.2229 10.4832 21.2266 10.4777C21.2581 10.4118 21.258 10.3347 21.2266 10.2687C21.2231 10.2635 21.2089 10.2437 21.1729 10.2033C21.1136 10.137 21.0299 10.0525 20.8887 9.91132C20.7475 9.77013 20.663 9.68635 20.5967 9.62714C20.5563 9.5911 20.5365 9.57692 20.5312 9.57343ZM14 6.04999C14.4142 6.04999 14.75 6.38578 14.75 6.79999C14.75 7.2142 14.4142 7.54999 14 7.54999H6C5.58579 7.54999 5.25 7.2142 5.25 6.79999C5.25 6.38578 5.58579 6.04999 6 6.04999H14Z" fill="#C5D92D"/>
+                                        </svg> 1 Offer
+                                    </div>
+                                    <div class="innerflex">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 1.98022C12.41 1.98022 12.75 2.32022 12.75 2.73022C12.7498 3.1401 12.4099 3.48022 12 3.48022C6.9 3.48022 2.75 7.63022 2.75 12.7302C2.75016 17.8301 6.9001 21.9802 12 21.9802C17.0999 21.9802 21.2498 17.8301 21.25 12.7302C21.25 12.3202 21.59 11.9803 22 11.9802C22.41 11.9802 22.75 12.3202 22.75 12.7302C22.7498 18.6601 17.9299 23.4802 12 23.4802C6.0701 23.4802 1.25016 18.6601 1.25 12.7302C1.25 6.80022 6.07 1.98022 12 1.98022ZM12 5.98022C12.41 5.98022 12.75 6.32022 12.75 6.73022V11.9802H16C16.41 11.9802 16.75 12.3202 16.75 12.7302C16.7498 13.1401 16.4099 13.4802 16 13.4802H12C11.5901 13.4802 11.2502 13.1401 11.25 12.7302V6.73022C11.25 6.32022 11.59 5.98022 12 5.98022ZM21.1201 7.60034C21.5 7.42048 21.9401 7.57988 22.1201 7.95972C22.3601 8.45972 22.5597 8.9805 22.7197 9.5105C22.8395 9.91039 22.6196 10.33 22.2197 10.45C22.1498 10.4699 22.0699 10.4802 22 10.4802C21.68 10.4802 21.3803 10.2699 21.2803 9.94995C21.1403 9.49 20.9597 9.0403 20.7598 8.60034C20.5798 8.22034 20.7501 7.78034 21.1201 7.60034ZM18.2803 4.40015C18.5603 4.09023 19.0299 4.0606 19.3398 4.34058C19.5198 4.50052 19.7 4.67041 19.8799 4.85034C20.0598 5.03023 20.2295 5.21006 20.3994 5.40991C20.6694 5.72991 20.6196 6.20046 20.3096 6.47046C20.1697 6.59018 19.9999 6.64034 19.8301 6.64038C19.6201 6.64038 19.4 6.54984 19.25 6.36987C19.1101 6.20995 18.9702 6.04986 18.8203 5.90991C18.6603 5.74991 18.4998 5.59972 18.3398 5.45972C18.03 5.18969 18.0003 4.71009 18.2803 4.40015ZM16.4102 4.03003H16.3994C16.4006 4.03003 16.4022 4.02906 16.4033 4.02905C16.4055 4.02907 16.408 4.03003 16.4102 4.03003ZM14.2803 2.52026C14.4003 2.12026 14.82 1.8905 15.21 2.0105C15.6998 2.15047 16.1897 2.34044 16.7295 2.60034C17.0995 2.78034 17.2601 3.23034 17.0801 3.60034C16.9506 3.86919 16.6821 4.02774 16.4033 4.02905C16.2955 4.02827 16.1879 4.00872 16.0898 3.95972C15.6199 3.73977 15.2 3.56994 14.79 3.44995C14.3901 3.32996 14.1603 2.92024 14.2803 2.52026Z" fill="#C5D92D"/>
+                                            </svg> 1 Minute ago
+                                    </div>
+                                </div>
+                                <!-- End flex -->
+                                <ul class="listskills">
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                </ul>
+                                <p>Hi! I’m a passionate UI/UX designer with expertise in creating intuitive and visually appealing web and mobile experiences. I specialize in user interface design, user experience research, prototyping, and interaction design.
+                                    I love turning ideas into engaging, easy-to-use digital products that delight users.</p>
+                            </div>
+                            <!-- End itemprogress -->
+                            <div class="itemprogress">
+                                <a href="talent-inner.html" class="title">DevOps Engineer – Cloud Automation, CI/<br>CD, Kubernetes, Terraform (EKS/AKS)</a>
+                                <div class="flex">
+                                    <div class="innerflex">
+                                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 11.05C14.2802 11.05 17.75 14.5198 17.75 18.8C17.75 19.2142 17.4142 19.55 17 19.55H1C0.585786 19.55 0.25 19.2142 0.25 18.8C0.25 14.5198 3.71979 11.05 8 11.05H10ZM9 0.0499878C11.6234 0.0499878 13.75 2.17664 13.75 4.79999C13.75 7.42334 11.6234 9.54999 9 9.54999C6.37665 9.54999 4.25 7.42334 4.25 4.79999C4.25 2.17664 6.37665 0.0499878 9 0.0499878Z" fill="#C5D92D"/>
+                                        </svg> User Name
+                                    </div>
+                                    <div class="innerflex">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.0654 2.04999C13.4346 2.04997 14.5385 2.04965 15.4062 2.1662C16.307 2.28718 17.0656 2.54598 17.668 3.14764C18.5409 4.01967 18.7035 5.23523 18.75 6.77753C18.7624 7.19148 18.4364 7.5375 18.0225 7.54999C17.6085 7.56238 17.2625 7.23642 17.25 6.82245C17.2028 5.25797 17.0184 4.61973 16.6074 4.20917C16.3302 3.93237 15.9407 3.75217 15.2061 3.6535C14.4498 3.55197 13.4475 3.54999 12.0107 3.54999H8.00684C6.56991 3.54999 5.56685 3.55193 4.81055 3.6535C4.07629 3.75217 3.68729 3.93249 3.41016 4.20917C3.13306 4.48596 2.95226 4.87495 2.85352 5.60858C2.7519 6.36383 2.75 7.36476 2.75 8.79999V16.8C2.75 18.2352 2.7519 19.2361 2.85352 19.9914C2.95226 20.725 3.13306 21.114 3.41016 21.3908C3.68729 21.6675 4.07629 21.8478 4.81055 21.9465C5.56685 22.048 6.56991 22.05 8.00684 22.05H12.0107C13.4475 22.05 14.4498 22.048 15.2061 21.9465C15.9407 21.8478 16.3302 21.6676 16.6074 21.3908C17.0184 20.9802 17.2028 20.342 17.25 18.7775C17.2625 18.3636 17.6085 18.0376 18.0225 18.05C18.4364 18.0625 18.7624 18.4085 18.75 18.8224C18.7035 20.3647 18.5409 21.5803 17.668 22.4523C17.0656 23.054 16.307 23.3128 15.4062 23.4338C14.5384 23.5503 13.4346 23.55 12.0654 23.55H7.95215C6.58302 23.55 5.47912 23.5503 4.61133 23.4338C3.71059 23.3128 2.952 23.054 2.34961 22.4523C1.74707 21.8504 1.48738 21.0918 1.36621 20.1916C1.24956 19.3246 1.24998 18.2221 1.25 16.8547V8.7453C1.24998 7.37792 1.24956 6.27536 1.36621 5.40839C1.48738 4.50813 1.74707 3.74953 2.34961 3.14764C2.952 2.54602 3.71059 2.28717 4.61133 2.1662C5.47912 2.04966 6.58303 2.04997 7.95215 2.04999H12.0654ZM7.25 16.55C7.53408 16.55 7.79385 16.7109 7.9209 16.965L8.96387 19.05H9.5C9.91421 19.05 10.25 19.3858 10.25 19.8C10.25 20.2142 9.91421 20.55 9.5 20.55H8.5C8.21592 20.55 7.95615 20.389 7.8291 20.1349L7.25 18.9767L6.6709 20.1349C6.54385 20.389 6.28408 20.55 6 20.55H5C4.58579 20.55 4.25 20.2142 4.25 19.8C4.25 19.3858 4.58579 19.05 5 19.05H5.53613L6.5791 16.965C6.70614 16.7109 6.96592 16.55 7.25 16.55ZM19.6533 8.23065C20.1405 7.98923 20.7129 7.98937 21.2002 8.23065C21.3958 8.32758 21.57 8.47697 21.7334 8.63495L22.165 9.06659C22.323 9.22999 22.4724 9.40419 22.5693 9.59979C22.8106 10.087 22.8108 10.6595 22.5693 11.1467C22.4724 11.3422 22.3229 11.5156 22.165 11.6789L15.5059 18.3381C15.4235 18.4204 15.3233 18.4829 15.2129 18.5197L12.2373 19.5119C11.9678 19.6017 11.6706 19.5311 11.4697 19.3303C11.2689 19.1294 11.1983 18.8322 11.2881 18.5627L12.2803 15.5871C12.3171 15.4766 12.3796 15.3765 12.4619 15.2941L19.1211 8.63495C19.2844 8.47705 19.4578 8.32755 19.6533 8.23065ZM13.6475 16.2297L13.1855 17.6144L14.5703 17.1525L19.1816 12.5422L18.2578 11.6183L13.6475 16.2297ZM12 10.05C12.4142 10.05 12.75 10.3858 12.75 10.8C12.75 11.2142 12.4142 11.55 12 11.55H6C5.58579 11.55 5.25 11.2142 5.25 10.8C5.25 10.3858 5.58579 10.05 6 10.05H12ZM20.5312 9.57343C20.4653 9.54197 20.3882 9.54185 20.3223 9.57343C20.3168 9.57705 20.2971 9.59119 20.2568 9.62714C20.1906 9.68633 20.1068 9.77031 19.9658 9.91132L19.3184 10.5578L20.2422 11.4816L20.8887 10.8342C21.0297 10.6932 21.1137 10.6094 21.1729 10.5432C21.2088 10.5029 21.2229 10.4832 21.2266 10.4777C21.2581 10.4118 21.258 10.3347 21.2266 10.2687C21.2231 10.2635 21.2089 10.2437 21.1729 10.2033C21.1136 10.137 21.0299 10.0525 20.8887 9.91132C20.7475 9.77013 20.663 9.68635 20.5967 9.62714C20.5563 9.5911 20.5365 9.57692 20.5312 9.57343ZM14 6.04999C14.4142 6.04999 14.75 6.38578 14.75 6.79999C14.75 7.2142 14.4142 7.54999 14 7.54999H6C5.58579 7.54999 5.25 7.2142 5.25 6.79999C5.25 6.38578 5.58579 6.04999 6 6.04999H14Z" fill="#C5D92D"/>
+                                        </svg> 1 Offer
+                                    </div>
+                                    <div class="innerflex">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 1.98022C12.41 1.98022 12.75 2.32022 12.75 2.73022C12.7498 3.1401 12.4099 3.48022 12 3.48022C6.9 3.48022 2.75 7.63022 2.75 12.7302C2.75016 17.8301 6.9001 21.9802 12 21.9802C17.0999 21.9802 21.2498 17.8301 21.25 12.7302C21.25 12.3202 21.59 11.9803 22 11.9802C22.41 11.9802 22.75 12.3202 22.75 12.7302C22.7498 18.6601 17.9299 23.4802 12 23.4802C6.0701 23.4802 1.25016 18.6601 1.25 12.7302C1.25 6.80022 6.07 1.98022 12 1.98022ZM12 5.98022C12.41 5.98022 12.75 6.32022 12.75 6.73022V11.9802H16C16.41 11.9802 16.75 12.3202 16.75 12.7302C16.7498 13.1401 16.4099 13.4802 16 13.4802H12C11.5901 13.4802 11.2502 13.1401 11.25 12.7302V6.73022C11.25 6.32022 11.59 5.98022 12 5.98022ZM21.1201 7.60034C21.5 7.42048 21.9401 7.57988 22.1201 7.95972C22.3601 8.45972 22.5597 8.9805 22.7197 9.5105C22.8395 9.91039 22.6196 10.33 22.2197 10.45C22.1498 10.4699 22.0699 10.4802 22 10.4802C21.68 10.4802 21.3803 10.2699 21.2803 9.94995C21.1403 9.49 20.9597 9.0403 20.7598 8.60034C20.5798 8.22034 20.7501 7.78034 21.1201 7.60034ZM18.2803 4.40015C18.5603 4.09023 19.0299 4.0606 19.3398 4.34058C19.5198 4.50052 19.7 4.67041 19.8799 4.85034C20.0598 5.03023 20.2295 5.21006 20.3994 5.40991C20.6694 5.72991 20.6196 6.20046 20.3096 6.47046C20.1697 6.59018 19.9999 6.64034 19.8301 6.64038C19.6201 6.64038 19.4 6.54984 19.25 6.36987C19.1101 6.20995 18.9702 6.04986 18.8203 5.90991C18.6603 5.74991 18.4998 5.59972 18.3398 5.45972C18.03 5.18969 18.0003 4.71009 18.2803 4.40015ZM16.4102 4.03003H16.3994C16.4006 4.03003 16.4022 4.02906 16.4033 4.02905C16.4055 4.02907 16.408 4.03003 16.4102 4.03003ZM14.2803 2.52026C14.4003 2.12026 14.82 1.8905 15.21 2.0105C15.6998 2.15047 16.1897 2.34044 16.7295 2.60034C17.0995 2.78034 17.2601 3.23034 17.0801 3.60034C16.9506 3.86919 16.6821 4.02774 16.4033 4.02905C16.2955 4.02827 16.1879 4.00872 16.0898 3.95972C15.6199 3.73977 15.2 3.56994 14.79 3.44995C14.3901 3.32996 14.1603 2.92024 14.2803 2.52026Z" fill="#C5D92D"/>
+                                            </svg> 1 Minute ago
+                                    </div>
+                                </div>
+                                <!-- End flex -->
+                                <ul class="listskills">
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                    <li>skill</li>
+                                </ul>
+                                <p>Hi! I’m a passionate UI/UX designer with expertise in creating intuitive and visually appealing web and mobile experiences. I specialize in user interface design, user experience research, prototyping, and interaction design.
+                                    I love turning ideas into engaging, easy-to-use digital products that delight users.</p>
+                            </div>
+                            <!-- End itemprogress -->
+
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#">
+                                        <svg width="16" height="12" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M5.27438 5.58083L9.89199 0.963231C10.0396 0.810363 10.0354 0.566767 9.88252 0.41913C9.73339 0.2751 9.49699 0.2751 9.34789 0.41913L5.00233 4.76468L0.656779 0.41913C0.506526 0.2689 0.262929 0.2689 0.112677 0.41913C-0.0375528 0.569405 -0.0375529 0.812978 0.112677 0.963231L4.73028 5.58083C4.88056 5.73106 5.12413 5.73106 5.27438 5.58083Z"></path>
+                        </svg> Previous
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link active" href="#">1 </a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">
+                        Next
+                        <svg width="16" height="12" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.27438 5.58083L9.89199 0.963231C10.0396 0.810363 10.0354 0.566767 9.88252 0.41913C9.73339 0.2751 9.49699 0.2751 9.34789 0.41913L5.00233 4.76468L0.656779 0.41913C0.506526 0.2689 0.262929 0.2689 0.112677 0.41913C-0.0375528 0.569405 -0.0375529 0.812978 0.112677 0.963231L4.73028 5.58083C4.88056 5.73106 5.12413 5.73106 5.27438 5.58083Z"> </path>
+                    </svg></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End subitem -->
+                    </div>
+                    <!-- End row -->
+                </div>
+            </div>
+            <!-- End myTabContent -->
+        </div>
+    </section>
+    <!-- End talent__item -->
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="getthings">
+                <div class="flex">
+                    <div class="barcode"><img loading="lazy" src="images/qr.png" alt="TaskLink"></div>
+                    <div>
+                        <h3 class="title">TaskLink – Get Things Done!</h3>
+                        <p>
+                            Download the TaskLink app today and manage your tasks,<br> projects, and jobs effortlessly.
+                        </p>
+                        <nav class="icons">
+                            <a href="#"><img loading="lazy" src="images/ic-1.png" alt="TaskLink"></a>
+                            <a href="#"><img loading="lazy" src="images/ic-2.png" alt="TaskLink"></a>
+                            <a href="#"><img loading="lazy" src="images/ic-3.png" alt="TaskLink"></a>
+                        </nav>
+                    </div>
+                </div>
+                <nav class="social">
+                    <a class="icon-facebook" href="#" target="_blank" title="Facebook">
+                        <svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"></path>
+                    </svg>
+                    </a>
+                    <a class="icon-twitter" href="#" target="_blank" title="Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
+                        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                            <path d="M 0.219 2.882 l 34.748 46.461 L 0 87.118 h 7.87 l 30.614 -33.073 l 24.735 33.073 H 90 L 53.297 38.043 L 85.844 2.882 h -7.87 L 49.781 33.341 L 27.001 2.882 H 0.219 z M 11.793 8.679 h 12.303 L 78.425 81.32 H 66.122 L 11.793 8.679 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10;  fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) "></path>
+                        </g>
+                    </svg>
+                    </a>
+                    <a class="icon-snapchat" href="#" target="_blank" title="Snapchat">
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 512"><g fill-rule="nonzero"><path fill="" d="M496.27 378.17c-2.1-6.96-12.17-11.86-12.17-11.86h.01c-.93-.52-1.79-.96-2.51-1.3-16.75-8.11-31.58-17.83-44.09-28.9-10.05-8.88-18.65-18.68-25.57-29.1-8.43-12.71-12.38-23.32-14.1-29.07-.94-3.74-.79-5.23 0-7.18.67-1.63 2.58-3.22 3.52-3.93 5.67-4 14.77-9.9 20.36-13.52 4.84-3.13 9.01-5.84 11.44-7.53 7.87-5.5 13.24-11.1 16.42-17.13 4.12-7.81 4.6-16.41 1.4-24.87-4.32-11.41-14.97-18.22-28.49-18.22-3.02 0-6.1.34-9.18 1.01-7.74 1.68-15.1 4.43-21.26 6.83a.666.666 0 01-.91-.65c.66-15.25 1.38-35.73-.31-55.22-1.52-17.61-5.14-32.45-11.07-45.38-5.96-12.99-13.68-22.62-19.74-29.55-5.79-6.62-15.91-16.35-31.2-25.1-21.53-12.32-46.03-18.56-72.82-18.56-26.72 0-51.2 6.24-72.76 18.56-16.18 9.24-26.53 19.7-31.25 25.1-6.06 6.93-13.79 16.56-19.75 29.55-5.93 12.93-9.55 27.77-11.07 45.38-1.69 19.53-1.01 38.39-.31 55.21.02.49-.46.84-.92.66-6.15-2.4-13.52-5.15-21.25-6.83-3.07-.67-6.16-1.01-9.18-1.01-13.52 0-24.17 6.81-28.49 18.22-3.2 8.46-2.71 17.06 1.4 24.87 3.18 6.03 8.56 11.63 16.42 17.13 2.43 1.69 6.61 4.4 11.44 7.53 5.48 3.55 14.32 9.28 20.01 13.27.7.5 3.09 2.31 3.86 4.18.81 2 .95 3.51-.08 7.48-1.76 5.81-5.72 16.28-14 28.77-6.92 10.42-15.53 20.22-25.58 29.1-12.51 11.07-27.34 20.79-44.09 28.9-.78.38-1.73.86-2.76 1.45v-.01s-9.99 5.12-11.88 11.72c-2.79 9.75 4.63 18.88 12.23 23.78 12.4 8 27.5 12.3 36.26 14.63 2.44.65 4.65 1.24 6.66 1.87 1.26.42 4.41 1.61 5.76 3.34 1.7 2.18 1.9 4.9 2.51 7.94.98 5.13 3.11 11.51 9.46 15.89 6.98 4.83 15.85 5.17 27.08 5.6 11.75.45 26.37 1.01 43.1 6.53 7.75 2.56 14.78 6.88 22.91 11.88 16.99 10.44 38.14 23.43 74.27 23.43 36.15 0 57.44-13.06 74.55-23.56 8.08-4.96 15.06-9.25 22.64-11.75 16.73-5.53 31.35-6.08 43.1-6.53 11.22-.43 20.09-.77 27.08-5.6 6.79-4.69 8.76-11.68 9.64-16.97.48-2.6.81-4.94 2.31-6.86 1.27-1.64 4.18-2.8 5.56-3.27 2.06-.65 4.35-1.27 6.88-1.94 8.76-2.33 19.73-5.11 33.1-12.66 15.98-9.03 17.07-20.24 15.41-25.75z"></path><path d="M474.29 391.99c-21.88 12.07-36.44 10.79-47.75 18.07-9.61 6.18-3.93 19.53-10.91 24.35-8.57 5.93-33.95-.43-66.7 10.4-27.02 8.93-44.27 34.62-92.91 34.62-48.75 0-65.49-25.57-92.91-34.62-32.76-10.82-58.13-4.47-66.71-10.4-6.97-4.82-1.29-18.17-10.9-24.35-11.31-7.28-25.87-6-47.75-18.07-13.94-7.7-6.04-12.46-1.39-14.71 79.28-38.38 91.92-97.64 92.49-102.1.68-5.33 1.44-9.51-4.42-14.93-5.67-5.24-30.8-20.79-37.76-25.65-11.54-8.05-16.62-16.11-12.88-26 2.59-6.83 8.99-9.41 15.74-9.41 2.1 0 4.23.25 6.28.7 12.67 2.75 24.97 9.09 32.08 10.81.97.24 1.84.35 2.61.35 3.78 0 5.12-1.91 4.87-6.25-.81-13.85-2.78-40.86-.6-66.09 3-34.71 14.19-51.92 27.5-67.13 6.39-7.31 36.38-39.01 93.75-39.01 57.52 0 87.36 31.7 93.75 39.01 13.31 15.21 24.5 32.42 27.5 67.13 2.18 25.23.3 52.25-.6 66.09-.29 4.56 1.08 6.25 4.87 6.25.77 0 1.64-.11 2.61-.35 7.11-1.72 19.41-8.06 32.08-10.81 2.05-.45 4.18-.7 6.28-.7 6.74 0 13.15 2.58 15.74 9.41 3.74 9.89-1.34 17.95-12.88 26-6.97 4.86-32.09 20.41-37.76 25.65-5.86 5.42-5.1 9.6-4.42 14.93.57 4.46 13.21 63.72 92.49 102.1 4.65 2.25 12.55 7.01-1.39 14.71zM268.94 4.4h-25.83c-24.4 1.74-46.98 8.47-67.29 20.08-17.18 9.81-28.57 20.78-35.11 28.25-15.7 17.97-30.75 40.52-34.46 83.51-1.06 12.22-1.32 24.73-1.14 36.43-1.06-.27-2.13-.52-3.22-.76-4.11-.89-8.27-1.35-12.36-1.35-19.71 0-36 10.7-42.51 27.91-4.7 12.42-3.93 25.62 2.15 37.17 4.33 8.2 11.23 15.54 21.11 22.43 2.63 1.84 6.71 4.48 11.86 7.83 2.79 1.8 6.86 4.44 10.86 7.08.6.42 2.76 1.99 3.48 3.49.82 1.71.85 3.57-.38 6.97-2.12 4.67-5.14 10.36-9.44 16.65-12.74 18.64-30.97 34.44-54.26 47.05-12.34 6.57-25.16 10.91-30.57 25.62C.61 376.06 0 379.49 0 382.97c.01 8.23 3.5 16.7 10.79 24.19l.01-.02c3.41 3.67 7.7 6.92 13.11 9.91 12.71 7.01 23.51 10.45 32.01 12.81 1.49.44 4.95 1.56 6.46 2.89 3.78 3.3 3.24 8.29 8.29 15.58 3.04 4.54 6.57 7.63 9.46 9.63 10.57 7.31 22.45 7.76 35.03 8.24 11.37.44 24.26.93 38.97 5.79 6.1 2.02 12.43 5.91 19.77 10.42 15.79 9.7 36.82 22.62 70.09 25.19h24.03c33.32-2.58 54.49-15.56 70.39-25.32 7.28-4.47 13.58-8.33 19.5-10.29 14.72-4.86 27.6-5.36 38.97-5.79 12.58-.48 24.45-.93 35.03-8.24 3.32-2.3 7.48-6.03 10.78-11.75 3.62-6.15 3.53-10.49 6.93-13.46 1.39-1.22 4.43-2.27 6.07-2.77 8.57-2.36 19.52-5.8 32.44-12.93 5.73-3.17 10.22-6.62 13.73-10.56l.13-.16c9.72-10.47 12.17-22.74 8.18-33.57-3.56-9.68-10.33-14.86-18.05-19.15a60.28 60.28 0 00-3.87-2.05c-2.31-1.18-4.66-2.34-7-3.56-24.06-12.75-42.84-28.84-55.88-47.91-4.39-6.44-7.46-12.25-9.58-16.98-1.11-3.19-1.06-4.99-.27-6.64.61-1.26 2.22-2.56 3.08-3.2 4.13-2.73 8.41-5.51 11.29-7.37 5.16-3.35 9.23-5.99 11.87-7.83 9.88-6.89 16.78-14.23 21.1-22.43 6.09-11.55 6.86-24.75 2.16-37.17-6.51-17.21-22.8-27.91-42.51-27.91-4.09 0-8.24.46-12.36 1.35-1.09.24-2.16.49-3.22.76.17-11.7-.08-24.21-1.14-36.43-3.71-42.99-18.76-65.54-34.47-83.51-6.54-7.49-17.94-18.47-35.04-28.25-20.29-11.6-42.89-18.34-67.34-20.08z"></path></g></svg>
+                    </a>
+
+                    <a class="icon-instagram" href="#" target="_blank" title="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.4805 0H5.51913C2.47588 0 0 2.476 0 5.51924V14.4806C0 17.524 2.47588 19.9999 5.51913 19.9999H14.4805C17.524 19.9999 19.9999 17.5239 19.9999 14.4806V5.51924C20 2.476 17.524 0 14.4805 0ZM18.2255 14.4806C18.2255 16.5455 16.5455 18.2254 14.4806 18.2254H5.51913C3.45433 18.2255 1.77449 16.5455 1.77449 14.4806V5.51924C1.77449 3.45445 3.45433 1.77449 5.51913 1.77449H14.4805C16.5454 1.77449 18.2254 3.45445 18.2254 5.51924V14.4806H18.2255Z"></path>
+                    <path d="M10.0001 4.84668C7.15848 4.84668 4.84668 7.15848 4.84668 10.0001C4.84668 12.8417 7.15848 15.1534 10.0001 15.1534C12.8418 15.1534 15.1536 12.8417 15.1536 10.0001C15.1536 7.15848 12.8418 4.84668 10.0001 4.84668ZM10.0001 13.3788C8.13705 13.3788 6.62117 11.8631 6.62117 10C6.62117 8.13681 8.13693 6.62105 10.0001 6.62105C11.8634 6.62105 13.3791 8.13681 13.3791 10C13.3791 11.8631 11.8632 13.3788 10.0001 13.3788Z"></path>
+                    <path d="M15.3696 3.3418C15.0278 3.3418 14.6919 3.48021 14.4505 3.72272C14.2078 3.96405 14.0684 4.30002 14.0684 4.64309C14.0684 4.98509 14.208 5.32094 14.4505 5.56345C14.6918 5.80478 15.0278 5.94438 15.3696 5.94438C15.7127 5.94438 16.0475 5.80478 16.29 5.56345C16.5325 5.32094 16.6709 4.98497 16.6709 4.64309C16.6709 4.30002 16.5325 3.96405 16.29 3.72272C16.0487 3.48021 15.7127 3.3418 15.3696 3.3418Z"></path>
+                    </svg>
+                    </a>
+                    <a class="icon-youtube" href="#" target="_blank" title="youtube">
+                        <svg id="Layer_1" enable-background="new 0 0 511.982 511.982" height="512" viewBox="0 0 511.982 511.982" width="512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m341.885 238.36-130-74c-6.188-3.524-13.787-3.488-19.946.091-6.158 3.581-9.947 10.167-9.947 17.29v148c0 7.123 3.789 13.709 9.947 17.29 6.159 3.58 13.757 3.616 19.946.091l130-74c13.396-7.478 13.392-27.287 0-34.762zm-119.894 56.984v-79.205l69.571 39.603zm282.306-145.855c-6.503-45.918-43.306-81.146-89.5-85.668-36.489-3.572-93.661-7.83-158.806-7.83s-122.316 4.258-158.806 7.83c-46.194 4.521-82.997 39.75-89.5 85.667-10.247 72.73-10.247 140.276 0 213.005 6.503 45.918 43.306 81.146 89.5 85.668 36.489 3.572 93.661 7.83 158.806 7.83s122.316-4.258 158.806-7.83c46.194-4.521 82.997-39.75 89.5-85.667 10.247-72.73 10.247-140.276 0-213.005zm-39.606 207.397c-3.906 27.584-26.025 48.747-53.791 51.465-35.604 3.486-91.379 7.641-154.909 7.641s-119.306-4.154-154.909-7.641c-27.766-2.718-49.885-23.881-53.791-51.466-4.844-34.203-7.3-68.148-7.3-100.894s2.456-66.69 7.3-100.895c3.906-27.584 26.025-48.747 53.791-51.465 35.604-3.486 91.379-7.641 154.909-7.641s119.306 4.154 154.909 7.641c27.766 2.718 49.885 23.881 53.791 51.466 9.722 69.018 9.722 132.771 0 201.789z"></path>
+                    </svg>
+                    </a>
+                    <a class="icon-linkedin" href="#" target="_blank" title="linkedin">
+                        <svg viewBox="-21 -35 682.66669 682" width="682pt" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m77.613281-.667969c-46.929687 0-77.613281 30.816407-77.613281 71.320313 0 39.609375 29.769531 71.304687 75.8125 71.304687h.890625c47.847656 0 77.625-31.695312 77.625-71.304687-.894531-40.503906-29.777344-71.320313-76.714844-71.320313zm0 0"></path>
+                        <path d="m8.109375 198.3125h137.195313v412.757812h-137.195313zm0 0"></path>
+                        <path d="m482.054688 188.625c-74.011719 0-123.640626 69.546875-123.640626 69.546875v-59.859375h-137.199218v412.757812h137.191406v-230.5c0-12.339843.894531-24.660156 4.519531-33.484374 9.917969-24.640626 32.488281-50.167969 70.390625-50.167969 49.644532 0 69.5 37.851562 69.5 93.339843v220.8125h137.183594v-236.667968c0-126.78125-67.6875-185.777344-157.945312-185.777344zm0 0"></path>
+                    </svg>
+                    </a>
+                    <a class="icon-whatsapp" href="#" target="_blank" title="whatsapp">
+                        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6319 3.34007C14.8778 1.58386 12.5449 0.616264 10.0596 0.615234C4.93836 0.615234 0.770424 4.78306 0.768364 9.90566C0.767677 11.5432 1.19546 13.1417 2.00856 14.5507L0.69043 19.3652L5.61585 18.0732C6.97301 18.8135 8.50091 19.2036 10.0558 19.2041H10.0597C15.1804 19.2041 19.3488 15.0359 19.3507 9.9131C19.3517 7.43042 18.3862 5.09617 16.6319 3.34007ZM10.0596 17.635H10.0564C8.67074 17.6344 7.31175 17.262 6.12592 16.5586L5.84405 16.3911L2.92123 17.1579L3.70137 14.3082L3.51769 14.016C2.74464 12.7865 2.33643 11.3654 2.33712 9.90623C2.33872 5.64846 5.80308 2.18445 10.0627 2.18445C12.1254 2.18513 14.0643 2.98943 15.5223 4.44912C16.9803 5.90881 17.7828 7.84904 17.7821 9.91253C17.7802 14.1706 14.3161 17.635 10.0596 17.635ZM14.2955 11.8513C14.0634 11.735 12.922 11.1736 12.7091 11.096C12.4965 11.0185 12.3415 10.9799 12.1869 11.2122C12.0321 11.4445 11.5873 11.9675 11.4518 12.1224C11.3163 12.2773 11.181 12.2968 10.9488 12.1805C10.7166 12.0644 9.96861 11.8191 9.08181 11.0282C8.39173 10.4126 7.92584 9.6524 7.79034 9.42009C7.65508 9.18754 7.7892 9.07402 7.8922 8.9463C8.14351 8.63422 8.39516 8.30704 8.47253 8.1522C8.55 7.99724 8.51121 7.86163 8.45307 7.74547C8.39516 7.62932 7.93088 6.48662 7.73747 6.02165C7.54887 5.56915 7.35764 5.63026 7.21505 5.62317C7.07978 5.61642 6.92494 5.61504 6.7701 5.61504C6.61538 5.61504 6.36384 5.67306 6.15098 5.90561C5.93823 6.13804 5.33856 6.6996 5.33856 7.84229C5.33856 8.98498 6.17043 10.0889 6.28648 10.2438C6.40252 10.3988 7.92355 12.7437 10.2523 13.7492C10.8062 13.9886 11.2386 14.1313 11.5758 14.2383C12.132 14.415 12.6379 14.39 13.038 14.3303C13.4841 14.2636 14.4114 13.7686 14.6051 13.2264C14.7985 12.6841 14.7985 12.2193 14.7403 12.1224C14.6824 12.0256 14.5276 11.9675 14.2955 11.8513Z"></path>
+                    </svg>
+                    </a>
+                </nav>
+            </div>
+            <!-- End getthings -->
+            <div class="row">
+                <div class="col-md-6 boxfot">
+                    <div class="logo">
+                        <img loading="lazy" src="images/logowight.png" alt="TaskLink">
+                    </div>
+                    <!-- End logos -->
+                    <p> Task Link is a smart platform that connects companies, freelancers, and service providers. Post projects, receive offers, and hire the right talent quickly and securely.</p>
+                </div>
+                <!--End boxfot -->
+                <div class="col-md-6 alllinks">
+                    <div class="inner">
+                        <h6 class="title">Main pages</h6>
+                        <nav class="list">
+                            <a href="aboutus.html">About us</a>
+                            <a href="pricing.html">  Pricing</a>
+                            <a href="talent.html">Find a Job</a>
+                        </nav>
+                    </div>
+                    <!-- End inner -->
+                    <div class="inner">
+                        <h6 class="title">Utility pages</h6>
+                        <nav class="list">
+                            <a href="blogs.html">Blogs  </a>
+                            <a href="faqs.html">FAQs</a>
+                            <a href="contactus.html">  contact us</a>
+                        </nav>
+                    </div>
+                    <!-- End inner -->
+                    <div class="inner">
+                        <h6 class="title">Template pages</h6>
+                        <nav class="list">
+                            <a href="terms.html">Terms of use</a>
+                            <a href="privatepolicy.html">  Privacy policy</a>
+
+                        </nav>
+                    </div>
+                    <!-- End inner -->
+                </div>
+                <!-- End boxfot -->
+            </div>
+            <!-- End row -->
+            <div class="copyright">
+                <p>Tasklink© 2025 All rights reserved.</p>
+            </div>
+        </div>
+
+        <a class="scrollToTop" href="#">
+            <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.89638 6.3293L8.44673 11.8643C8.62858 12.0455 8.923 12.0452 9.10455 11.8634C9.28595 11.6815 9.28548 11.3869 9.10361 11.2055L3.88363 5.99998L9.1038 0.794442C9.28565 0.613036 9.28612 0.318639 9.10474 0.136765C9.01373 0.0455932 8.8945 7.59915e-06 8.77528 7.58873e-06C8.65635 7.57833e-06 8.5376 0.045288 8.44675 0.135827L2.89638 5.67069C2.80879 5.75783 2.75964 5.87642 2.75964 5.99998C2.75964 6.12354 2.80893 6.242 2.89638 6.3293Z"></path>
+        </svg>
+        </a>
+    </footer>
+    <!--End Footer-->
+
+</body>
+
+</html>
