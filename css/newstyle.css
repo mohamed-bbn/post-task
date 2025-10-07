@@ -4741,12 +4741,14 @@ body.active {
     height: 50px;
 }
 
-.field .flexbox .che-box {
+.field .flexbox .che-box,
+.flexchebox .che-box {
     display: inline-block;
     margin-right: 48px;
 }
 
-.field .flexbox .che-box:last-child {
+.field .flexbox .che-box:last-child,
+.flexchebox .che-box:last-child {
     margin: 0px;
 }
 
@@ -5312,7 +5314,9 @@ body.active {
 
 .sidebar .listmenu {
     padding: 0;
-    margin-top: 24px;
+    margin-top: 12px;
+    border-top: 1px solid #F2EDED;
+    padding-top: 12px;
 }
 
 .sidebar .listmenu a {
@@ -6401,7 +6405,8 @@ body.active {
 .cuspopup .user,
 .detailsproject .user,
 .rockstar .flex .user,
-.talent-inner .item .user {
+.talent-inner .item .user,
+.innercand .user {
     display: flex;
     align-items: center;
 }
@@ -6411,7 +6416,8 @@ body.active {
 .detailsproject .user .photo,
 .subtalent .flex .user .photo,
 .rockstar .flex .user .photo,
-.talent-inner .item .user .photo {
+.talent-inner .item .user .photo,
+.innercand .user .photo {
     min-width: 60px;
     max-width: 60px;
     height: 60px;
@@ -6431,7 +6437,8 @@ body.active {
 .detailsproject .user .photo img,
 .subtalent .flex .user .photo img,
 .rockstar .flex .user .photo img,
-.talent-inner .item .user .photo img {
+.talent-inner .item .user .photo img,
+.innercand .user .photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -6442,7 +6449,8 @@ body.active {
 .detailsproject .user .title,
 .subtalent .flex .user .title,
 .rockstar .flex .user .title,
-.talent-inner .item .user .title {
+.talent-inner .item .user .title,
+.innercand .user .title {
     color: #6568F4;
     font-size: 16px;
     font-weight: 600;
@@ -6451,7 +6459,8 @@ body.active {
 .itemoffers .user .flex,
 .cuspopup .user .flex,
 .detailsproject .user .flex,
-.itemprogress .flex {
+.itemprogress .flex,
+.innercand .user .flex {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -6463,7 +6472,8 @@ body.active {
 .subtalent .flex .user .innerflex,
 .rockstar .flex .user .innerflex,
 .itemprogress .flex .innerflex,
-.talent-inner .item .user .innerflex {
+.talent-inner .item .user .innerflex,
+.innercand .user .innerflex {
     display: flex;
     align-items: center;
     font-size: 14px;
@@ -6473,7 +6483,8 @@ body.active {
 }
 
 .rockstar .flex .user .innerflex,
-.talent-inner .item .user .innerflex {
+.talent-inner .item .user .innerflex,
+.innercand .user .innerflex {
     font-weight: 400;
 }
 
@@ -6483,7 +6494,8 @@ body.active {
 .subtalent .flex .user .innerflex:last-child,
 .rockstar .flex .user .innerflex:last-child,
 .itemprogress .flex .innerflex:last-child,
-.talent-inner .item .user .innerflex:last-child {
+.talent-inner .item .user .innerflex:last-child,
+.innercand .user .innerflex:last-child {
     margin-right: 0px;
 }
 
@@ -6493,7 +6505,8 @@ body.active {
 .subtalent .flex .user .innerflex svg,
 .rockstar .flex .user .innerflex svg,
 .itemprogress .flex .innerflex svg,
-.talent-inner .item .user .innerflex svg {
+.talent-inner .item .user .innerflex svg,
+.innercand .user .innerflex svg {
     margin-right: 4px;
 }
 
@@ -6830,7 +6843,16 @@ body.active {
 
 @media (max-width: 999px) {
     .popup-backdrop .popup .proceed {
+        display: block;
         padding: 24px;
+        text-align: center;
+    }
+    .popup-backdrop .popup .proceed .title.green {
+        justify-content: center;
+        text-align: center;
+    }
+    .popup-backdrop .popup .proceed p {
+        text-align: center;
     }
 }
 
@@ -6841,6 +6863,10 @@ body.active {
 .popup-backdrop .popup .proceed .icon svg {
     width: 144px;
     height: 144px;
+}
+
+.popup-backdrop .popup .proceed .icon img {
+    width: 240px;
 }
 
 @media (max-width: 999px) {
@@ -7220,7 +7246,8 @@ body.active {
 select.form-control {
     -webkit-appearance: none;
     background: none !important;
-    background: #fff url(../images/arrow.svg) 98% center no-repeat !important;
+    font-size: 14px;
+    background: #fff url(../images/arrow.svg) right 12px center no-repeat !important;
 }
 
 textarea.form-control {
@@ -7671,7 +7698,8 @@ textarea.form-control {
 
 /*# sourceMappingURL=home.css.map */
 
-.cuspageitem .innerpage .minhead {
+.cuspageitem .innerpage .minhead,
+.titlehead {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -7825,7 +7853,7 @@ textarea.form-control {
     color: red;
 }
 
-.tabwizard p.text {
+.field p.text {
     margin-top: 12px;
     font-weight: 400;
     color: #12121280;
@@ -8024,23 +8052,32 @@ textarea.form-control {
     font-weight: 400;
 }
 
-.tabwizard .flexbox {
+.tabwizard .flexbox,
+.flexchebox {
     margin-top: 12px;
 }
 
-.tabwizard .flexbox .che-box {
+.flexchebox {
+    display: flex;
+    align-items: center;
+}
+
+.tabwizard .flexbox .che-box,
+.flexchebox .che-box {
     width: auto;
     height: auto;
     padding-left: 24px;
 }
 
-.tabwizard .flexbox .label-text {
+.tabwizard .flexbox .label-text,
+.flexchebox .che-box .label-text {
     color: #000 !important;
     font-size: 16px;
     font-weight: 400;
 }
 
-.tabwizard .select2-container--bootstrap .select2-selection--multiple {
+.tabwizard .select2-container--bootstrap .select2-selection--multiple,
+.jobinformation .select2-container--bootstrap .select2-selection--multiple {
     background: #fbfcf0 url(../images/arrow.svg) no-repeat right 12px center !important;
     background-size: 12px 12px !important;
     padding-right: 20px;
@@ -8080,7 +8117,7 @@ textarea.form-control {
     height: 42px;
     border-radius: 13px;
     padding: 10px 16px;
-    color: #000;
+    color: #fff;
     background: #C5D92D;
     font-weight: 500;
 }
@@ -8146,6 +8183,10 @@ span.statuscompleted {
     border-left: 1px solid #E4E4E4;
     padding: 16px;
     padding-top: 0;
+}
+
+.categoryfilters.p-0.border-0 .flexinput .form-control:last-child {
+    margin-right: 0;
 }
 
 .addmoney {
@@ -8480,26 +8521,41 @@ span.statuscompleted {
     height: 24px;
 }
 
+.inneritemjobs .dropdown .dropdown-toggle svg,
+.titlejobs .flex .dropdown .dropdown-toggle svg {
+    width: 8px;
+    height: 20px;
+}
+
 .chat-header .dropdown .dropdown-toggle::after,
-.subcardpayment .dropdown .dropdown-toggle::after {
+.subcardpayment .dropdown .dropdown-toggle::after,
+.inneritemjobs .dropdown .dropdown-toggle::after,
+.titlejobs .flex .dropdown .dropdown-toggle::after {
     display: none;
 }
 
 .chat-header .dropdown .dropdown-menu,
-.subcardpayment .dropdown .dropdown-menu {
+.subcardpayment .dropdown .dropdown-menu,
+.inneritemjobs .dropdown .dropdown-menu,
+.titlejobs .flex .dropdown .dropdown-menu {
     min-width: inherit;
     box-shadow: 0px 4px 24px 0px #0000000D;
-    width: 148px;
+    width: 200px;
     padding: 12px 0px;
     top: 100% !important;
     left: auto !important;
     right: 0;
     transform: inherit !important;
     border: 0;
+    margin: 0;
+    border: 1px solid #E5E3FF;
+    border-radius: 10px;
 }
 
 .chat-header .dropdown .dropdown-menu .dropdown-item,
-.subcardpayment .dropdown .dropdown-menu .dropdown-item {
+.subcardpayment .dropdown .dropdown-menu .dropdown-item,
+.inneritemjobs .dropdown .dropdown-menu .dropdown-item,
+.titlejobs .flex .dropdown .dropdown-menu .dropdown-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -8515,11 +8571,14 @@ span.statuscompleted {
     border: 0px !important;
     background: none !important;
     font-size: 15px;
+    white-space: inherit !important;
     text-transform: capitalize;
 }
 
 .chat-header .dropdown .dropdown-menu .dropdown-item:hover,
-.subcardpayment .dropdown .dropdown-menu .dropdown-item:hover {
+.subcardpayment .dropdown .dropdown-menu .dropdown-item:hover,
+.inneritemjobs .dropdown .dropdown-menu .dropdown-item:hover,
+.titlejobs .flex .dropdown .dropdown-menu .dropdown-item:hover {
     background: #f7f8fa !important;
     color: #C5D92D;
 }
@@ -8965,18 +9024,21 @@ span.statuscompleted {
 }
 
 .tablelistjob .minhead,
-.subminhead {
+.subminhead,
+.titlehead {
     background: #F0F0FE;
     border-bottom: 1px solid #E4E4E4;
     padding: 16px;
 }
 
-.subminhead {
+.subminhead,
+.titlehead {
     border-radius: 8px 8px 0px 0px;
 }
 
 .tablelistjob .minhead .title,
-.subminhead .title {
+.subminhead .title,
+.titlehead .title {
     display: flex;
     padding: 0 !important;
     font-size: 20px !important;
@@ -8990,12 +9052,14 @@ span.statuscompleted {
 }
 
 .tablelistjob .minhead .title svg,
-.subminhead .title svg {
+.subminhead .title svg,
+.titlehead .title svg {
     margin-right: 12px;
 }
 
 .tablelistjob .minhead .title::before,
-.subminhead .title:before {
+.subminhead .title:before,
+.titlehead .title:before {
     display: none;
 }
 
@@ -9027,7 +9091,9 @@ span.statuscompleted {
 }
 
 .tablelistjob .status,
-.subcolum .status {
+.subcolum .status,
+.inneritemjobs .status,
+.titlejobs .flexrow .flex .status {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9038,9 +9104,17 @@ span.statuscompleted {
     border-radius: 60px;
     text-align: center;
     background: #ccc;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     text-transform: capitalize;
+}
+
+.inneritemjobs .status,
+.titlejobs .flexrow .flex .status {
+    display: inline-flex;
+    min-width: initial;
+    max-width: initial;
+    padding: 0px 28px;
 }
 
 .subcolum .status svg {
@@ -9048,7 +9122,9 @@ span.statuscompleted {
 }
 
 .tablelistjob .status::before,
-.subcolum .status::before {
+.subcolum .status::before,
+.inneritemjobs .status::before,
+.titlejobs .flexrow .flex .status::before {
     content: "";
     position: absolute;
     left: 12px;
@@ -9063,22 +9139,28 @@ span.statuscompleted {
 }
 
 .tablelistjob .status.review,
-.subcolum .status.review {
+.subcolum .status.review,
+.inneritemjobs .status.hiring {
     background: #FFFAEB;
     color: #93370D;
 }
 
 .tablelistjob .status.review::before,
-.subcolum .status.review::before {
+.subcolum .status.review::before,
+.inneritemjobs .status.hiring::before {
     background: #93370D;
 }
 
-.tablelistjob .status.active {
+.tablelistjob .status.active,
+.inneritemjobs .status.active,
+.titlejobs .flexrow .flex .status.active {
     background: #C5D92D;
     color: #fff;
 }
 
-.tablelistjob .status.active::before {
+.tablelistjob .status.active::before,
+.inneritemjobs .status.active::before,
+.titlejobs .flexrow .flex .status.active::before {
     background: #fff;
 }
 
@@ -9312,12 +9394,14 @@ span.statuscompleted {
     margin-right: 4px;
 }
 
-.projecttabs {
+.projecttabs,
+.tabsjobs {
     margin-top: 20px;
     border-block: 1px solid #496E5233;
 }
 
-.projecttabs li a {
+.projecttabs li a,
+.tabsjobs li a {
     position: relative;
     padding: 16px 20px;
     color: #142E1A9E;
@@ -9325,7 +9409,8 @@ span.statuscompleted {
     font-weight: 500;
 }
 
-.projecttabs li a::after {
+.projecttabs li a::after,
+.tabsjobs li a::after {
     content: "";
     position: absolute;
     left: 0px;
@@ -9336,11 +9421,13 @@ span.statuscompleted {
     transition: all 0.5s ease-in-out 0s;
 }
 
-.projecttabs li a.active {
+.projecttabs li a.active,
+.tabsjobs li a.active {
     color: #1B8354;
 }
 
-.projecttabs li a.active::after {
+.projecttabs li a.active::after,
+.tabsjobs li a.active::after {
     width: 100%;
 }
 
@@ -9979,7 +10066,7 @@ span.statuscompleted {
 }
 
 .thank-message .photo img {
-    max-width: 800px;
+    max-width: 100%;
 }
 
 .thank-message .title {
@@ -10372,32 +10459,45 @@ span.statuscompleted {
     background: #C5D92D;
 }
 
-.portfolio-passive-user .subitem .projecttabs {
+.portfolio-passive-user .subitem .projecttabs,
+.tabsjobs {
     margin: 0;
     border-top: 0;
 }
 
-.portfolio-passive-user .subitem .projecttabs li {
+.portfolio-passive-user .subitem .projecttabs li,
+.tabsjobs li {
     margin-right: 16px;
 }
 
-.portfolio-passive-user .subitem .projecttabs li:last-child {
+.portfolio-passive-user .subitem .projecttabs li:last-child,
+.tabsjobs li:last-child {
     margin: 0;
 }
 
-.portfolio-passive-user .subitem .projecttabs li a {
+.portfolio-passive-user .subitem .projecttabs li a,
+.tabsjobs li a {
     padding: 0;
     padding-bottom: 12px;
     color: #B8B8BF;
     font-size: 20px;
 }
 
-.portfolio-passive-user .subitem .projecttabs li a::after {
+.portfolio-passive-user .subitem .projecttabs li a::after,
+.tabsjobs li a::after {
     background: #6568F4;
 }
 
 .portfolio-passive-user .subitem .projecttabs li a.active {
     color: #000;
+}
+
+.tabsjobs {
+    margin-top: 24px;
+}
+
+.tabsjobs li a.active {
+    color: #6568F4;
 }
 
 .portfolio-passive-user .subitem .rowbox {
@@ -10424,7 +10524,8 @@ span.statuscompleted {
     object-fit: cover;
 }
 
-.portfolio-passive-user .subitem .create-project {
+.portfolio-passive-user .subitem .create-project,
+.itemjobs .create-new {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10439,7 +10540,17 @@ span.statuscompleted {
     border: 1px dashed #C5D92D;
 }
 
-.portfolio-passive-user .subitem .create-project .icon {
+.itemjobs .create-new {
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.itemjobs .create-new:hover {
+    border: 1px dashed #6568F4;
+}
+
+.portfolio-passive-user .subitem .create-project .icon,
+.itemjobs .create-new .icon {
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -10450,7 +10561,13 @@ span.statuscompleted {
     background: #E0EAFF;
 }
 
-.portfolio-passive-user .subitem .create-project .bottom {
+.itemjobs .create-new .icon {
+    margin: 0;
+    margin-right: 24px;
+}
+
+.portfolio-passive-user .subitem .create-project .bottom,
+.itemjobs .create-new .bottom {
     border-radius: 60px;
     background: #fff;
     border: 1px solid #B8B8BF;
@@ -10458,7 +10575,12 @@ span.statuscompleted {
     margin-top: 16px;
 }
 
-.portfolio-passive-user .subitem .create-project:hover .bottom {
+.itemjobs .create-new .bottom {
+    min-width: 140px;
+}
+
+.portfolio-passive-user .subitem .create-project:hover .bottom,
+.itemjobs .create-new:hover .bottom {
     border: 1px solid #C5D92D;
     background: #C5D92D;
     color: #fff;
@@ -10883,6 +11005,7 @@ span.statuscompleted {
     }
     .thank-message .title {
         margin: 0;
+        font-size: 24px;
     }
     .project-page-passive .applynow,
     .talent-inner .item .applynow {
@@ -11738,5 +11861,322 @@ span.statuscompleted {
     }
     .jobapplication .title {
         font-size: 24px;
+    }
+}
+
+.itemjobs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.inneritemjobs,
+.innercand {
+    position: relative;
+    border-radius: 10px;
+    padding: 16px;
+    background: #F8F8FF;
+}
+
+.inneritemjobs .dropdown {
+    position: absolute;
+    right: 16px;
+}
+
+.inneritemjobs .status.review {
+    background: #B54708;
+    color: #fff;
+}
+
+.inneritemjobs .status::before {
+    background: #ffffff82;
+}
+
+.inneritemjobs .title {
+    margin-top: 12px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.inneritemjobs .list,
+.inneritemjobs .list li,
+.titlejobs .list,
+.titlejobs .list li,
+.innertext .grid .iconflex {
+    display: flex;
+    align-items: center;
+}
+
+.inneritemjobs .list,
+.titlejobs .list {
+    flex-wrap: wrap;
+}
+
+.inneritemjobs .list li,
+.titlejobs .list li,
+.innertext .grid .iconflex {
+    margin: 16px 16px 0px 0px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+}
+
+.innertext .grid .iconflex {
+    margin: 0;
+}
+
+.inneritemjobs .list svg,
+.titlejobs .list svg,
+.innertext .grid .iconflex svg {
+    margin-right: 4px;
+}
+
+.inneritemjobs .progress {
+    margin-top: 16px;
+    height: 8px;
+    background: #E2E2E2;
+}
+
+.inneritemjobs .progress .progress-bar {
+    background: #6568F4;
+}
+
+.inneritemjobs .resume {
+    display: flex;
+    align-items: center;
+    min-width: 144px;
+    height: 28px;
+    border-radius: 5px;
+    padding: 2px 10px;
+    background: #F0F0FE;
+    margin-left: 24px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #6568F4;
+}
+
+.inneritemjobs .resume svg {
+    margin-right: 4px;
+}
+
+.inneritemjobs .users {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.inneritemjobs .users .img,
+.inneritemjobs .users .num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    max-width: 22px;
+    height: 22px;
+    background: #F0F0FE;
+    border-radius: 50%;
+    color: #6568F4;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 8px 4px 0px 0px;
+}
+
+.inneritemjobs .users p {
+    color: #6568F4;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.inneritemjobs .flexusers {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.inneritemjobs .flexusers .flex {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.inneritemjobs .flexusers .flex a {
+    margin-right: 16px;
+}
+
+.inneritemjobs .flexusers .flex a:last-child {
+    margin-right: 0;
+}
+
+.inneritemjobs .flexusers .flex .title,
+.inneritemjobs .flexusers {
+    margin: 0;
+}
+
+.inneritemjobs .flexusers .flex .img {
+    margin-top: 0;
+}
+
+.titlejobs {
+    width: 100%;
+    border-radius: 10px;
+    padding: 24px;
+    border: 1px solid #E5E3FF;
+}
+
+.titlejobs .flexrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titlejobs .flexrow .flex {
+    display: flex;
+    align-items: center;
+}
+
+.titlejobs .flexrow .flex .back,
+.titlejobs .flexrow .flex .process svg {
+    margin-right: 8px;
+}
+
+.titlejobs .flexrow .flex .title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.titlejobs .flexrow .flex .process {
+    display: flex;
+    align-items: center;
+    min-width: 144px;
+    height: 44px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 16px;
+    border: 1px solid #E5E3FF;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.jobinformation {
+    margin-top: 24px;
+}
+
+.jobinformation .title.bg {
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid #F5F5F5;
+    background: #F0F0FE;
+    font-size: 20px;
+}
+
+.jobinformation .field,
+.flexend {
+    padding: 0 20px;
+}
+
+.flexend {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.flexend .bottom {
+    margin-right: 20px;
+    min-width: 124px;
+}
+
+.flexend .bottom:last-child {
+    margin: 0;
+}
+
+.flexend .bottom.red {
+    background: #D92D30;
+    border: 1px solid #D92D30;
+}
+
+.flexend .bottom.red:hover {
+    opacity: 0.7;
+}
+
+.candidate {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.innertext {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.innertext .grid p {
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #767676;
+}
+
+.innercand .bottom {
+    width: 100%;
+    margin-top: 16px;
+    background: #5C5FDE;
+    border: 1px solid #5C5FDE;
+}
+
+.innercand .bottom:hover {
+    background: #C5D92D;
+    border: 1px solid #C5D92D;
+}
+
+@media (max-width: 1199px) {
+    .candidate {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 999px) {
+    .itemjobs {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 12px;
+        margin-top: 12px;
+    }
+    .titlejobs {
+        padding: 12px;
+    }
+    .tabsjobs li a {
+        font-size: 15px;
+    }
+    .inneritemjobs .title,
+    .titlejobs .flexrow .flex .title {
+        font-size: 18px;
+    }
+    .jobinformation .field,
+    .flexend {
+        padding: 0px;
+    }
+}
+
+@media (max-width: 767px) {
+    .candidate {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 12px;
+        margin-top: 12px;
+    }
+}
+
+@media (max-width:550px) {
+    .titlejobs .flexrow {
+        display: block;
+    }
+    .titlejobs .flexrow .flex:last-child {
+        margin-top: 12px;
+        justify-content: space-between;
+        width: 100%;
     }
 }
