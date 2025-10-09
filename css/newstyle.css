@@ -4680,11 +4680,9 @@ body.active {
     }
 }
 
-.contact-item .inner .item .title {
-    color: #fff;
-}
-
-.contact-item .inner .item .field label {
+.contact-item .inner .item .title,
+.contact-item .inner .item .field label,
+.contact-item .inner .item p {
     color: #fff;
 }
 
@@ -4692,6 +4690,10 @@ body.active {
     background: none;
     border: 1px solid #fff;
     color: #fff;
+}
+
+.contact-item .inner .item .field select.form-control {
+    background: #151528 url(../images/arrow2.svg) right 12px center no-repeat !important;
 }
 
 .contact-item .inner .item .field .form-control:focus {
@@ -6406,7 +6408,8 @@ body.active {
 .detailsproject .user,
 .rockstar .flex .user,
 .talent-inner .item .user,
-.innercand .user {
+.innercand .user,
+.about-candidate .user {
     display: flex;
     align-items: center;
 }
@@ -6417,7 +6420,8 @@ body.active {
 .subtalent .flex .user .photo,
 .rockstar .flex .user .photo,
 .talent-inner .item .user .photo,
-.innercand .user .photo {
+.innercand .user .photo,
+.about-candidate .user .photo {
     min-width: 60px;
     max-width: 60px;
     height: 60px;
@@ -6438,7 +6442,8 @@ body.active {
 .subtalent .flex .user .photo img,
 .rockstar .flex .user .photo img,
 .talent-inner .item .user .photo img,
-.innercand .user .photo img {
+.innercand .user .photo img,
+.about-candidate .user .photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -6450,7 +6455,8 @@ body.active {
 .subtalent .flex .user .title,
 .rockstar .flex .user .title,
 .talent-inner .item .user .title,
-.innercand .user .title {
+.innercand .user .title,
+.about-candidate .user .title {
     color: #6568F4;
     font-size: 16px;
     font-weight: 600;
@@ -6460,7 +6466,8 @@ body.active {
 .cuspopup .user .flex,
 .detailsproject .user .flex,
 .itemprogress .flex,
-.innercand .user .flex {
+.innercand .user .flex,
+.about-candidate .user .flex {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -6473,7 +6480,8 @@ body.active {
 .rockstar .flex .user .innerflex,
 .itemprogress .flex .innerflex,
 .talent-inner .item .user .innerflex,
-.innercand .user .innerflex {
+.innercand .user .innerflex,
+.about-candidate .user .innerflex {
     display: flex;
     align-items: center;
     font-size: 14px;
@@ -6495,7 +6503,8 @@ body.active {
 .rockstar .flex .user .innerflex:last-child,
 .itemprogress .flex .innerflex:last-child,
 .talent-inner .item .user .innerflex:last-child,
-.innercand .user .innerflex:last-child {
+.innercand .user .innerflex:last-child,
+.about-candidate .user .innerflex:last-child {
     margin-right: 0px;
 }
 
@@ -6506,7 +6515,8 @@ body.active {
 .rockstar .flex .user .innerflex svg,
 .itemprogress .flex .innerflex svg,
 .talent-inner .item .user .innerflex svg,
-.innercand .user .innerflex svg {
+.innercand .user .innerflex svg,
+.about-candidate .user .innerflex svg {
     margin-right: 4px;
 }
 
@@ -8263,7 +8273,8 @@ span.statuscompleted {
     color: #EB5757;
 }
 
-.table-container .subflex i.icon {
+.table-container .subflex i.icon,
+.table-container .subflex i.img {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8273,6 +8284,25 @@ span.statuscompleted {
     background: #c5d92d;
     border-radius: 50%;
     margin-right: 8px;
+    overflow: hidden;
+}
+
+.table-container .subflex i.img {
+    min-width: 60px;
+    max-width: 60px;
+    height: 60px;
+}
+
+.table-container .subflex i.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.table-container .subflex .name {
+    color: #6568F4;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .table-container .subflex p {
@@ -12162,11 +12192,311 @@ span.statuscompleted {
     }
 }
 
+.active-jobs {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 80px 1fr;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.active-jobs .nav {
+    display: block;
+    min-width: 80px;
+    max-width: 80px;
+    border-radius: 10px;
+    background: #F8F8FF;
+    border: 1px solid #E5E3FF;
+}
+
+.active-jobs .nav li {
+    width: 100%;
+}
+
+.active-jobs .nav li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.active-jobs .nav li a img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.active-jobs .nav li a.active {
+    background: #6568F4;
+}
+
+.about-candidate {
+    position: relative;
+    border-radius: 10px;
+    background: #F8F8FF;
+    border: 1px solid #E5E3FF;
+    padding: 16px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.about-candidate:last-child {
+    margin-bottom: 0;
+}
+
+.about-candidate .title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.about-candidate .user {
+    align-items: flex-start;
+    margin-top: 16px;
+}
+
+.about-candidate .user .innerflex .info {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    color: #000;
+}
+
+.about-candidate .action {
+    position: absolute;
+    right: 16px;
+    top: 51px;
+}
+
+.about-candidate .action,
+.about-candidate .action a {
+    display: flex;
+    align-items: center;
+}
+
+.about-candidate .action .green,
+.about-candidate .action .red {
+    height: 38px;
+    border-radius: 5px;
+    padding: 8px;
+    background: #ECFDF3;
+    border: 1px solid #138757;
+    font-weight: 500;
+    color: #138757;
+    cursor: pointer;
+}
+
+.about-candidate .action .red {
+    background: #FEF3F2;
+    border: 1px solid #C53A30;
+    margin-left: 16px;
+}
+
+.about-candidate .action .green svg {
+    margin-right: 4px;
+}
+
+.active-jobs .message {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 113px;
+    padding: 15px 20px;
+    border-radius: 6px;
+    width: fit-content;
+    display: none;
+}
+
+.active-jobs .message .innermessage {
+    display: flex;
+}
+
+.active-jobs .message .innermessage svg {
+    margin-right: 12px;
+}
+
+.active-jobs .success {
+    background: #ECFDF3;
+    border: 1px solid #067647;
+    color: #067647;
+}
+
+.active-jobs .error {
+    background: #FEF3F2;
+    border: 1px solid #B42318;
+    color: #B42318;
+}
+
+.active-jobs .contact-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.active-jobs .contact-info li {
+    display: flex;
+    align-items: center;
+    margin: 12px 32px 0px 0px;
+}
+
+.active-jobs .contact-info li:last-child {
+    margin-right: 0;
+}
+
+.active-jobs .contact-info li .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    max-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #e2e6ee;
+    margin-right: 8px;
+}
+
+.active-jobs .contact-info li a {
+    display: block;
+    color: #47516B;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.active-jobs .contact-info li a:hover {
+    color: #6568F4;
+}
+
+.about-candidate .toolbar {
+    position: relative;
+    background: #fff;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    transition: all 0.3s ease;
+    margin-top: 16px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.about-candidate .toolbar button {
+    border: none;
+    background: #F8F8FF;
+    padding: 0;
+    min-width: 40px;
+    max-width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.about-candidate .toolbar button svg {
+    width: 24px;
+    height: 24px;
+}
+
+.about-candidate .toolbar button:hover {
+    background: #E5E3FF;
+}
+
+.about-candidate .pdf-container {
+    margin: 40px auto;
+    max-width: 600px;
+    background: #fff;
+    overflow: hidden;
+    transform-origin: center center;
+    transition: transform 0.3s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 40px 56px #17171705;
+}
+
+.about-candidate .pdf-container img {
+    max-width: 100%;
+    max-height: 100%;
+    border: none;
+    display: none;
+}
+
+.about-candidate .pdf-container img.active {
+    display: block;
+}
+
+.about-candidate .zoom-display {
+    font-weight: 600;
+    color: #444;
+    background: #f3f4f6;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.about-candidate .page-info {
+    font-weight: bold;
+    color: #444;
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+
+/* ===== Message ===== */
+
+.about-candidate .no-cv-message {
+    display: none;
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin: 100px 0px;
+}
+
 @media (max-width: 767px) {
     .candidate {
         grid-template-columns: repeat(1, 1fr);
         gap: 12px;
         margin-top: 12px;
+    }
+    .about-candidate .action {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 16px;
+    }
+    .active-jobs {
+        grid-template-columns: 1fr;
+    }
+    .active-jobs .nav {
+        display: flex;
+        min-width: 100%;
+        max-width: 100%;
+        flex-wrap: inherit;
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+    .active-jobs .nav::-webkit-scrollbar {
+        height: 0;
+    }
+    .active-jobs .nav li {
+        min-width: 80px;
+        max-width: 80px;
     }
 }
 

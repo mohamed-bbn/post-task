@@ -387,6 +387,17 @@ $(document).ready(function() {
         });
     });
 
+
+    $(".about-candidate .action a.like").click(function() {
+        $(".message").hide();
+        $(".success").fadeIn(300).delay(5000).fadeOut(500);
+    });
+
+    $(".about-candidate .action a.dislike").click(function() {
+        $(".message").hide();
+        $(".error").fadeIn(300).delay(5000).fadeOut(500);
+    });
+
 });
 
 
