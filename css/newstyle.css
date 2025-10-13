@@ -6409,7 +6409,8 @@ body.active {
 .rockstar .flex .user,
 .talent-inner .item .user,
 .innercand .user,
-.about-candidate .user {
+.about-candidate .user,
+.innercomment .user {
     display: flex;
     align-items: center;
 }
@@ -6421,13 +6422,21 @@ body.active {
 .rockstar .flex .user .photo,
 .talent-inner .item .user .photo,
 .innercand .user .photo,
-.about-candidate .user .photo {
+.about-candidate .user .photo,
+.innercomment .user .photo {
     min-width: 60px;
     max-width: 60px;
     height: 60px;
     border-radius: 50%;
     margin-right: 12px;
     overflow: hidden;
+    background: #ccc;
+}
+
+.innercomment .user .photo {
+    min-width: 30px;
+    max-width: 30px;
+    height: 30px;
 }
 
 .talent-inner .item .user .photo {
@@ -6443,7 +6452,8 @@ body.active {
 .rockstar .flex .user .photo img,
 .talent-inner .item .user .photo img,
 .innercand .user .photo img,
-.about-candidate .user .photo img {
+.about-candidate .user .photo img,
+.innercomment .user .photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -8227,7 +8237,7 @@ span.statuscompleted {
     max-width: 130px;
     height: 42px;
     margin-right: 12px;
-    border-radius: 10px;
+    border-radius: 4px;
     margin-top: 16px;
     background: #fff;
 }
@@ -8252,6 +8262,21 @@ span.statuscompleted {
     position: absolute;
     right: 12px;
     top: 11px;
+}
+
+.flexinput .bottom {
+    background: #6568F4;
+    border: 1px solid #6568F4;
+    margin-top: 16px;
+}
+
+.flexinput .bottom:hover {
+    background: #C5D92D;
+    border: 1px solid #C5D92D;
+}
+
+.flexinput .bottom:hover svg {
+    fill: none;
 }
 
 .table-container {
@@ -9431,7 +9456,8 @@ span.statuscompleted {
 }
 
 .projecttabs li a,
-.tabsjobs li a {
+.tabsjobs li a,
+.tabsupport a {
     position: relative;
     padding: 16px 20px;
     color: #142E1A9E;
@@ -9440,7 +9466,8 @@ span.statuscompleted {
 }
 
 .projecttabs li a::after,
-.tabsjobs li a::after {
+.tabsjobs li a::after,
+.tabsupport a:after {
     content: "";
     position: absolute;
     left: 0px;
@@ -9456,8 +9483,31 @@ span.statuscompleted {
     color: #1B8354;
 }
 
+.tabsupport a {
+    padding: 0;
+    margin-right: 24px;
+    padding-bottom: 12px;
+}
+
+.tabsupport a:last-child {
+    margin-right: 0;
+}
+
+.tabsupport a:after {
+    background: #6568F4;
+}
+
+.tabsupport a.active {
+    color: #6568F4;
+}
+
+.tabsupport a.active svg path {
+    stroke: #6568F4;
+}
+
 .projecttabs li a.active::after,
-.tabsjobs li a.active::after {
+.tabsjobs li a.active::after,
+.tabsupport a.active::after {
     width: 100%;
 }
 
@@ -11459,7 +11509,8 @@ span.statuscompleted {
 }
 
 .subtalent p,
-.itemprogress p {
+.itemprogress p,
+.texthelp {
     font-weight: 400;
     margin-top: 16px;
 }
@@ -12190,6 +12241,9 @@ span.statuscompleted {
     .flexend {
         padding: 0px;
     }
+    .rockstar {
+        margin-top: 12px;
+    }
 }
 
 .active-jobs {
@@ -12508,5 +12562,265 @@ span.statuscompleted {
         margin-top: 12px;
         justify-content: space-between;
         width: 100%;
+    }
+}
+
+.tabsupport {
+    border-bottom: 1px solid #EFF0F0;
+    padding-bottom: 7px;
+    margin-top: 24px;
+}
+
+.subhelp {
+    margin-top: 24px;
+    border: 1px solid #EFF0F0;
+    padding: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.subhelp .minhead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.subhelp .minhead.bg {
+    background: #F0F0FE;
+    padding: 16px;
+}
+
+.innerhelp {
+    padding: 16px;
+}
+
+.innerhelp .title {
+    font-size: 16px;
+}
+
+.innerhelp .bottoms {
+    display: flex;
+    align-items: center;
+}
+
+.innerhelp .bottoms a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 152px;
+    margin: 16px 12px 0px 0px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 4px 12px;
+    border: 1px solid #D0D5DD;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.innerhelp .bottoms a svg {
+    margin-right: 8px;
+}
+
+.innerhelp .bottoms a.blue {
+    color: #6172F3;
+}
+
+.innerhelp .bottoms a.blue:hover {
+    border: 1px solid #6172F3;
+}
+
+.innerhelp .bottoms a.red {
+    color: #F63D68;
+}
+
+.innerhelp .bottoms a.red:hover {
+    border: 1px solid #F63D68;
+}
+
+.innerhelp .bottoms a:last-child {
+    margin-right: 0;
+}
+
+.headflex {
+    display: flex;
+}
+
+.headflex .back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    max-width: 50px;
+    height: 50px;
+    margin: 8px 12px 0px 0px;
+    border: 1px solid #E5E3FF;
+    border-radius: 14px;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.headflex .back svg path {
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.headflex .back:hover {
+    background: #C5D92D;
+    border: 1px solid #C5D92D;
+}
+
+.headflex .back:hover svg path {
+    fill: #fff;
+}
+
+.subhelp .minhead .title {
+    font-size: 16px;
+}
+
+.subhelp .minhead .circle {
+    min-width: 22px;
+    max-width: 22px;
+    height: 22px;
+    background: #ccc;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+.subhelp .minhead .date {
+    font-weight: 400;
+    font-size: 13px;
+    color: #84818A;
+}
+
+.subhelp .minhead .circle.oran {
+    background: #F8A53499;
+}
+
+.subhelp .minhead .circle.blue {
+    background: #3B8AFF;
+}
+
+.subhelp .minhead .circle.green {
+    background: #54C104;
+}
+
+.subhelp h3.title {
+    font-weight: 400;
+    font-size: 16px;
+    color: #2E2C34;
+    margin-top: 12px;
+}
+
+.subhelp .rowtext .user {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.subhelp .rowtext .user img {
+    min-width: 28px;
+    max-width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-right: 8px;
+    object-fit: cover;
+}
+
+.subhelp .rowtext .user .title,
+.subhelp .rowtext a {
+    font-weight: 500;
+    font-size: 14px;
+    color: #84818A;
+}
+
+.subhelp .rowtext a {
+    color: #6568F4;
+    text-decoration: underline;
+    margin-top: 16px;
+}
+
+.subhelp .rowtext a:hover {
+    text-decoration: none;
+}
+
+.createticket {
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 24px;
+}
+
+.createticket .title {
+    font-size: 20px;
+}
+
+.comments,
+.innercomment {
+    margin-top: 24px;
+}
+
+.comments .title {
+    font-size: 24px;
+}
+
+.comments .title .num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    max-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 12px;
+    background: #E5E3FF;
+    font-size: 14px;
+    font-style: normal;
+}
+
+.innercomment .user .title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #63637B;
+    margin-right: 8px;
+}
+
+.innercomment .user .date {
+    font-size: 12px;
+    font-weight: 400;
+    color: #9191A8;
+}
+
+.itemreply {
+    padding-left: 80px;
+}
+
+.itemreply .flex {
+    display: flex;
+    align-items: center;
+}
+
+.itemreply .flex .logo {
+    padding-right: 12px;
+    margin-right: 12px;
+    border-right: 1px solid #000;
+}
+
+.itemreply .flex .logo img {
+    max-width: 94px;
+}
+
+@media (max-width:999px) {
+    .tabsupport,
+    .subhelp,
+    .createticket,
+    .comments,
+    .innercomment {
+        margin-top: 12px;
+    }
+    .tabsupport a {
+        margin-right: 12px;
+    }
+    .itemreply {
+        padding-left: 20px;
     }
 }
