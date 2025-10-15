@@ -398,6 +398,12 @@ $(document).ready(function() {
         $(".error").fadeIn(300).delay(5000).fadeOut(500);
     });
 
+
+    $(".closing").click(function() {
+        $(".mes-about").remove();
+    });
+
+
 });
 
 
