@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Lorem PugJs">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <meta name="keywords" content="">
+    <title>TaskLink</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/select2.css">
+    <link rel="stylesheet" href="../css/select2-bootstrap.css">
+    <link rel="stylesheet" href="../css/froala_editor.min.css">
+    <link rel="stylesheet" href="../css/newstyle.css">
+    <link rel="stylesheet" href="../css/home-rtl.css">
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/select2.js"></script>
+    <script src="../js/plugin.js"></script>
+
+</head>
+
+
+<body>
+
+    <header class="header towstyle">
+        <div class="container flexrow">
+            <div class="itemlogomenu">
+                <div class="burger" id="burger">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </div>
+                <!-- End burger -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img loading="lazy" class="wight-logo" src="../images/logotask.png" alt="TaskLink">
+                    </a>
+                </div>
+                <!-- End logo -->
+                <span class="overlay"></span>
+                <nav class="navbar" id="navbar">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img loading="lazy" class="wight-logo" src="../images/logotask.png" alt="TaskLink">
+                        </a>
+                    </div>
+                    <!-- End logo -->
+                    <span class="cancel">
+                        <svg width="10" height="10" viewBox="0 0 12 12"  xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.66271 6.00002L11.8625 0.800231C12.0455 0.617161 12.0455 0.320349 11.8625 0.137303C11.6794 -0.0457441 11.3826 -0.0457675 11.1995 0.137303L5.99975 5.33709L0.799987 0.137303C0.616917 -0.0457675 0.320105 -0.0457675 0.137058 0.137303C-0.0459882 0.320373 -0.0460117 0.617185 0.137058 0.800231L5.33682 6L0.137058 11.1998C-0.0460117 11.3829 -0.0460117 11.6797 0.137058 11.8627C0.228582 11.9542 0.348558 12 0.468535 12C0.588511 12 0.708464 11.9542 0.800011 11.8627L5.99975 6.66295L11.1995 11.8627C11.291 11.9542 11.411 12 11.531 12C11.651 12 11.7709 11.9542 11.8625 11.8627C12.0455 11.6796 12.0455 11.3828 11.8625 11.1998L6.66271 6.00002Z" fill="#D1362A"></path>
+                        </svg>
+                    </span>
+                    <!-- class activelink -->
+                    <ul class="menu" id="menu">
+                        <li class="menu-item menu-dropdown">
+                            <span class="menu-link" data-toggle="submenu">شركات
+                            <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.31717 8.39716L10.8775 4.1144C11.0408 3.97387 11.0408 3.74594 10.8775 3.6054C10.7141 3.46487 10.449 3.46487 10.2856 3.6054L5.99999 7.62993L1.71435 3.60576C1.55098 3.46522 1.2859 3.46522 1.12253 3.60576C0.95917 3.7463 0.95917 3.97422 1.12253 4.11475L5.68284 8.39752C5.76993 8.47242 5.88539 8.50454 5.99958 8.49954C6.11419 8.50419 6.22964 8.47209 6.31717 8.39716Z"></path>
+                            </svg>
+                        </span>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a class="submenu-link" href="hire.html" title="AngularJS">AngularJS</a></li>
+                                <li class="submenu-item"><a class="submenu-link" href="hire.html" title="ReactJS">ReactJS</a></li>
+                                <li class="submenu-item"><a class="submenu-link" href="hire.html" title="Vue.js">Vue.js</a></li>
+                                <li class="submenu-item"><a class="submenu-link" href="hire.html" title="JavaScript">JavaScript</a></li>
+                                <li class="submenu-item"><a class="submenu-link" href="hire.html" title="TypeScript">TypeScript</a></li>
+                                <li class="submenu-item"><a class="submenu-link" href="hire.html" title="Tailwind CSS">Tailwind CSS</a></li>
+                                <li class="submenu-item"><a class="submenu-link" href="hire.html" title="ViteJS">ViteJS</a></li>
+                                <li class="submenu-item"><a class="submenu-link" href="hire.html" title="CSS3">CSS3</a></li>
+                                <li class="submenu-item"><a class="submenu-link" href="hire.html" title="HTML5">HTML5</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-dropdown">
+                            <span class="menu-link" data-toggle="submenu">المواهب
+                            <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.31717 8.39716L10.8775 4.1144C11.0408 3.97387 11.0408 3.74594 10.8775 3.6054C10.7141 3.46487 10.449 3.46487 10.2856 3.6054L5.99999 7.62993L1.71435 3.60576C1.55098 3.46522 1.2859 3.46522 1.12253 3.60576C0.95917 3.7463 0.95917 3.97422 1.12253 4.11475L5.68284 8.39752C5.76993 8.47242 5.88539 8.50454 5.99958 8.49954C6.11419 8.50419 6.22964 8.47209 6.31717 8.39716Z"></path>
+                            </svg>
+                        </span>
+                            <ul class="submenu">
+                                <li class="submenu-item"> <a class="submenu-link" href="how-it-works.html">كيف يعمل</a></li>
+                                <li class="submenu-item"> <a class="submenu-link" href="faqs.html">الأسئلة</a></li>
+                                <li class="submenu-item"> <a class="submenu-link" href="talent.html">بحث عن وظيفة</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a class="menu-link" href="success-stories.html">  قصص النجاح</a></li>
+                        <li class="menu-item"><a class="menu-link" href="blogs.html">  المقالات</a></li>
+                        <li class="menu-item"><a class="menu-link" href="pricing.html">  الأسعار</a></li>
+                        <li class="menu-item"><a class="menu-link" href="contactus.html">  إتصل بنا</a></li>
+                    </ul>
+                    <div class="bottoms">
+                        <a href="talent.html" class="bottom">توظيف موهبة
+ </a>
+                        <!-- End bottom -->
+                        <a href="login.html" class="login">  بحث عن وظيفة </a>
+                        <!-- End login -->
+                        <!-- <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="true">
+                                <div class="photo"> <img src="../images/user.jpg"></div>
+                                <div class="d-flex">
+                                    <p>محمد أحمد</p>
+                                    <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.31717 8.39716L10.8775 4.1144C11.0408 3.97387 11.0408 3.74594 10.8775 3.6054C10.7141 3.46487 10.449 3.46487 10.2856 3.6054L5.99999 7.62993L1.71435 3.60576C1.55098 3.46522 1.2859 3.46522 1.12253 3.60576C0.95917 3.7463 0.95917 3.97422 1.12253 4.11475L5.68284 8.39752C5.76993 8.47242 5.88539 8.50454 5.99958 8.49954C6.11419 8.50419 6.22964 8.47209 6.31717 8.39716Z" stroke-width="0.3"></path>
+                                </svg>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu" x-placement="bottom-start">
+                                <a class="dropdown-item" href="dashboard.html"> لوحة التحكم</a>
+                                <a class="dropdown-item" href="profile.html">الملف الشخصى </a>
+                                <a class="dropdown-item" href="employees.html">موظفين </a>
+                                <a class="dropdown-item" href="available-jobs.html">الوظائف المتاحة </a>
+                                <a class="dropdown-item" href="#"> تسجيل الخروج</a>
+                            </div>
+                        </div> -->
+                        <!-- End dropdown -->
+                        <a href="../index.html" class="language">
+                            <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_598_2769)"> <mask id="mask0_598_2769" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="22" height="22"> <path d="M21.794 0.772797H0.203125V21.2273H21.794V0.772797Z" fill="white"></path> </mask> <g mask="url(#mask0_598_2769)"> <path d="M15.2516 7.62817C15.2578 7.62854 15.2643 7.62881 15.2705 7.62927L15.3238 7.63372C15.3352 7.63513 15.3468 7.63751 15.3581 7.63926C15.376 7.64201 15.3938 7.64567 15.4114 7.64925C15.4239 7.65179 15.4368 7.65405 15.4491 7.65702C15.4719 7.66246 15.4945 7.66908 15.5169 7.67589C15.5346 7.68132 15.5524 7.68729 15.5702 7.69364C15.5862 7.69942 15.6021 7.70602 15.6179 7.71251C15.6291 7.71715 15.6411 7.72079 15.6522 7.72583C15.6577 7.72829 15.6635 7.73106 15.6689 7.73359C15.6897 7.74334 15.7097 7.75479 15.7299 7.76577C15.7423 7.77252 15.7545 7.77971 15.7665 7.78686C15.7836 7.79696 15.7999 7.80805 15.8165 7.81905C15.8334 7.83031 15.8503 7.84139 15.8664 7.85344C15.8755 7.86022 15.8841 7.86748 15.893 7.87452C15.9141 7.8913 15.9355 7.90751 15.9552 7.92558C15.9612 7.93105 15.966 7.93773 15.9719 7.94333C15.992 7.9626 16.0122 7.98159 16.0306 8.00215C16.039 8.01149 16.047 8.02135 16.0551 8.031C16.0706 8.04956 16.0862 8.06816 16.1006 8.08759C16.1088 8.09869 16.1161 8.11055 16.1239 8.122C16.1374 8.14194 16.1504 8.16232 16.1627 8.18303C16.1702 8.19564 16.1768 8.20889 16.1838 8.22188C16.1929 8.23874 16.2022 8.25564 16.2104 8.27292C16.2141 8.28076 16.219 8.28826 16.2227 8.29623L21.3363 19.6598C21.5936 20.232 21.3379 20.9048 20.7659 21.1625C20.1936 21.4197 19.5209 21.1643 19.2634 20.592L18.0271 17.8444V17.8544H12.3409L11.109 20.592C10.8515 21.1643 10.1787 21.4197 9.60643 21.1625C9.0344 20.9048 8.77874 20.232 9.03604 19.6598L14.1497 8.29623C14.1531 8.28848 14.1571 8.28056 14.1607 8.27292C14.1673 8.25916 14.1747 8.24536 14.1819 8.23186C14.192 8.21267 14.2029 8.19366 14.214 8.17526C14.2162 8.17168 14.2185 8.16773 14.2207 8.16417L14.2651 8.09758C14.2677 8.09401 14.2703 8.09001 14.2729 8.08649C14.2831 8.07263 14.2941 8.05884 14.3051 8.04543C14.319 8.02816 14.3334 8.01067 14.3484 7.99438C14.3594 7.98235 14.3711 7.97046 14.3827 7.95886C14.3943 7.9473 14.4062 7.93548 14.4182 7.92447C14.4345 7.90955 14.452 7.89523 14.4693 7.88118C14.4827 7.8703 14.4964 7.85924 14.5103 7.849C14.5139 7.84641 14.5179 7.84381 14.5214 7.84124L14.588 7.79685C14.5915 7.79465 14.5955 7.79235 14.5991 7.79019C14.6176 7.77911 14.6365 7.76814 14.6557 7.75801C14.6693 7.75089 14.683 7.74349 14.6968 7.73692C14.7044 7.73327 14.7123 7.72931 14.7201 7.72583C14.7335 7.71982 14.7477 7.71464 14.7611 7.70918C14.7743 7.70388 14.7878 7.69846 14.8011 7.69364C14.8182 7.68747 14.836 7.68232 14.8532 7.677C14.8763 7.66991 14.8997 7.66264 14.9231 7.65702C14.9348 7.65423 14.9469 7.65166 14.9587 7.64925C14.9773 7.64543 14.9964 7.64216 15.0153 7.63926C15.0388 7.63567 15.0627 7.63247 15.0863 7.63039C15.0977 7.62939 15.1093 7.62884 15.1207 7.62817C15.1339 7.6274 15.1474 7.62624 15.1606 7.62594H15.2128C15.2256 7.62625 15.2388 7.62743 15.2516 7.62817ZM3.47961 1.68778C4.35792 1.00468 5.56881 0.693427 7.04518 0.790012L7.34481 0.814426L7.4591 0.832182C8.02332 0.947249 8.42097 1.4731 8.36243 2.05843C8.30365 2.64325 7.81029 3.08022 7.23494 3.0816L7.11842 3.07606L6.68341 3.04721C5.72743 3.01881 5.17449 3.24889 4.87566 3.4811C4.54471 3.73852 4.39069 4.10071 4.39071 4.50206C4.39089 4.92316 4.56378 5.34097 4.83903 5.61623C5.09083 5.86772 5.43822 6.01647 5.90882 5.93805C6.01339 5.92069 6.11684 5.91831 6.21732 5.92917C7.33421 5.62001 8.6033 5.41989 10.0204 5.35544L10.1369 5.35655C10.7118 5.38882 11.1811 5.85199 11.2078 6.43965C11.2356 7.06594 10.7499 7.59721 10.1236 7.62594L9.57315 7.65813C4.01395 8.06769 2.45318 10.6706 2.47531 12.1359C2.48763 12.9385 2.90974 13.6463 3.67603 14.0313C4.45043 14.4201 5.73147 14.5463 7.50017 13.7883C8.07689 13.5414 8.7445 13.8087 8.99165 14.3853C9.23804 14.9619 8.97093 15.6296 8.39461 15.8768C6.18691 16.8229 4.18102 16.8285 2.65509 16.0621C1.12172 15.2915 0.228658 13.8076 0.203692 12.1703C0.175482 10.3026 1.20074 8.50188 3.2266 7.21757C2.511 6.49914 2.11816 5.49865 2.11798 4.50206C2.11795 3.48309 2.53249 2.42465 3.47961 1.68778ZM13.364 15.5817H17.0084L15.1862 11.5311L13.364 15.5817Z" fill=""></path> </g> </g> <defs> <clipPath id="clip0_598_2769"> <rect width="21.5909" height="20.4545" fill="white" transform="translate(0.203125 0.772797)"></rect> </clipPath> </defs> </svg>
+                        </a>
+                    </div>
+                    <!-- End bottoms -->
+                </nav>
+            </div>
+            <!--End itemlogomenu -->
+        </div>
+        <!-- End container -->
+    </header>
+    <!--End Header-->
+
+    <section class="signup">
+        <div class="photo">
+            <div class="text">
+                <div class="logo"> <img loading="lazy" src="../images/logosmall.png" alt="TaskLink"></div>
+                <h2 class="title">Log in to get started</h2>
+                <p>Log in to start your 30 days free trial</p>
+            </div>
+            <img loading="lazy" src="../images/login.jpg" alt="TaskLink">
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 item">
+                    <h1 class="title">Sign up as Employee/Freelancer</h1>
+                    <p>Hire skilled professionals with ease.</p>
+                    <form action="#" method="">
+                        <!-- <div class="alert alert-success"> 
+                            <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M39.2853 18.2363V20.0106C39.2829 24.1694 37.9363 28.2161 35.4461 31.547C32.956 34.8779 29.4559 37.3147 25.4678 38.4939C21.4796 39.673 17.2172 39.5314 13.3161 38.0902C9.41497 36.6489 6.08427 33.9852 3.82072 30.4964C1.55717 27.0075 0.482036 22.8805 0.755672 18.7307C1.02931 14.5809 2.63705 10.6307 5.33912 7.46926C8.04119 4.30784 11.6928 2.10457 15.7494 1.18804C19.8059 0.271518 24.0501 0.690841 27.8489 2.38348M39.2853 4.58207L19.9996 23.8871L14.2139 18.1014" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <div class="text-mass">
+                                <p>Your message was sent successfully </p>
+                            </div>
+                            </div> -->
+                        <!-- End alert -->
+                        <div class="row">
+                            <div class="col-sm-12 field">
+                                <label>الاسم الكامل <em>*</em></label>
+                                <input class="form-control" type="text" placeholder="Enter الاسم الكامل">
+                            </div>
+                            <div class="col-sm-12 field">
+                                <label>البريد الإلكترونى address <em>*</em></label>
+                                <input class="form-control" type="text" placeholder="Enter البريد الإلكترونى Address">
+                            </div>
+                            <div class="col-sm-12 field">
+                                <label>Password <em>*</em></label>
+                                <input class="form-control pass" type="password" placeholder="Enter your password">
+                                <i class="eye-slash icon-pass">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.87317 17.129C5.02774 15.8181 3.56791 14.1146 2.74375 13.039C2.26944 12.4199 2.26856 11.5813 2.74283 10.9622C4.23598 9.01321 7.81823 5 12 5C13.8755 5 15.6305 5.80728 17.1305 6.87355" stroke="#C5D92D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M14.1292 9.88664C13.5857 9.33907 12.8325 9 12 9C10.3431 9 9 10.3431 9 12C9 12.8324 9.339 13.5856 9.88646 14.1291" stroke="#C5D92D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M4 20L19.9999 4" stroke="#C5D92D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M10 18.7037C10.6462 18.8923 11.3151 19 12 19C16.1818 19 19.764 14.9868 21.2572 13.0378C21.7314 12.4187 21.7302 11.5795 21.2558 10.9605C20.843 10.4217 20.2707 9.72547 19.5704 9" stroke="#C5D92D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                </i>
+                                <i class="eye icon-pass">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 442.04 442.04" style="enable-background:new 0 0 442.04 442.04;" xml:space="preserve">
+                                    <path d="M221.02,341.304c-49.708,0-103.206-19.44-154.71-56.22C27.808,257.59,4.044,230.351,3.051,229.203 c-4.068-4.697-4.068-11.669,0-16.367c0.993-1.146,24.756-28.387,63.259-55.881c51.505-36.777,105.003-56.219,154.71-56.219 c49.708,0,103.207,19.441,154.71,56.219c38.502,27.494,62.266,54.734,63.259,55.881c4.068,4.697,4.068,11.669,0,16.367 c-0.993,1.146-24.756,28.387-63.259,55.881C324.227,321.863,270.729,341.304,221.02,341.304z M29.638,221.021 c9.61,9.799,27.747,27.03,51.694,44.071c32.83,23.361,83.714,51.212,139.688,51.212s106.859-27.851,139.688-51.212 c23.944-17.038,42.082-34.271,51.694-44.071c-9.609-9.799-27.747-27.03-51.694-44.071 c-32.829-23.362-83.714-51.212-139.688-51.212s-106.858,27.85-139.688,51.212C57.388,193.988,39.25,211.219,29.638,221.021z"> </path>
+                                    <path d="M221.02,298.521c-42.734,0-77.5-34.767-77.5-77.5c0-42.733,34.766-77.5,77.5-77.5c18.794,0,36.924,6.814,51.048,19.188 c5.193,4.549,5.715,12.446,1.166,17.639c-4.549,5.193-12.447,5.714-17.639,1.166c-9.564-8.379-21.844-12.993-34.576-12.993 c-28.949,0-52.5,23.552-52.5,52.5s23.551,52.5,52.5,52.5c28.95,0,52.5-23.552,52.5-52.5c0-6.903,5.597-12.5,12.5-12.5 s12.5,5.597,12.5,12.5C298.521,263.754,263.754,298.521,221.02,298.521z"> </path>
+                                    <path d="M221.02,246.021c-13.785,0-25-11.215-25-25s11.215-25,25-25c13.786,0,25,11.215,25,25S234.806,246.021,221.02,246.021z"></path>
+                                </svg>
+                                </i>
+                            </div>
+                            <div class="col-sm-12 field">
+                                <label>Confirm Password <em>*</em></label>
+                                <input class="form-control pass" type="password" placeholder="Re-enter  the password">
+                                <i class="eye-slash icon-pass">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.87317 17.129C5.02774 15.8181 3.56791 14.1146 2.74375 13.039C2.26944 12.4199 2.26856 11.5813 2.74283 10.9622C4.23598 9.01321 7.81823 5 12 5C13.8755 5 15.6305 5.80728 17.1305 6.87355" stroke="#C5D92D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M14.1292 9.88664C13.5857 9.33907 12.8325 9 12 9C10.3431 9 9 10.3431 9 12C9 12.8324 9.339 13.5856 9.88646 14.1291" stroke="#C5D92D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M4 20L19.9999 4" stroke="#C5D92D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M10 18.7037C10.6462 18.8923 11.3151 19 12 19C16.1818 19 19.764 14.9868 21.2572 13.0378C21.7314 12.4187 21.7302 11.5795 21.2558 10.9605C20.843 10.4217 20.2707 9.72547 19.5704 9" stroke="#C5D92D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                </i>
+                                <i class="eye icon-pass">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 442.04 442.04" style="enable-background:new 0 0 442.04 442.04;" xml:space="preserve">
+                                    <path d="M221.02,341.304c-49.708,0-103.206-19.44-154.71-56.22C27.808,257.59,4.044,230.351,3.051,229.203 c-4.068-4.697-4.068-11.669,0-16.367c0.993-1.146,24.756-28.387,63.259-55.881c51.505-36.777,105.003-56.219,154.71-56.219 c49.708,0,103.207,19.441,154.71,56.219c38.502,27.494,62.266,54.734,63.259,55.881c4.068,4.697,4.068,11.669,0,16.367 c-0.993,1.146-24.756,28.387-63.259,55.881C324.227,321.863,270.729,341.304,221.02,341.304z M29.638,221.021 c9.61,9.799,27.747,27.03,51.694,44.071c32.83,23.361,83.714,51.212,139.688,51.212s106.859-27.851,139.688-51.212 c23.944-17.038,42.082-34.271,51.694-44.071c-9.609-9.799-27.747-27.03-51.694-44.071 c-32.829-23.362-83.714-51.212-139.688-51.212s-106.858,27.85-139.688,51.212C57.388,193.988,39.25,211.219,29.638,221.021z"> </path>
+                                    <path d="M221.02,298.521c-42.734,0-77.5-34.767-77.5-77.5c0-42.733,34.766-77.5,77.5-77.5c18.794,0,36.924,6.814,51.048,19.188 c5.193,4.549,5.715,12.446,1.166,17.639c-4.549,5.193-12.447,5.714-17.639,1.166c-9.564-8.379-21.844-12.993-34.576-12.993 c-28.949,0-52.5,23.552-52.5,52.5s23.551,52.5,52.5,52.5c28.95,0,52.5-23.552,52.5-52.5c0-6.903,5.597-12.5,12.5-12.5 s12.5,5.597,12.5,12.5C298.521,263.754,263.754,298.521,221.02,298.521z"> </path>
+                                    <path d="M221.02,246.021c-13.785,0-25-11.215-25-25s11.215-25,25-25c13.786,0,25,11.215,25,25S234.806,246.021,221.02,246.021z"></path>
+                                </svg>
+                                </i>
+                            </div>
+                            <div class="col-sm-12 field">
+                                <button class="bottom" type="submit">Sign Up </button>
+                            </div>
+                        </div>
+                        <div class="text-center field">
+                            <p>Do you have an account? <a href="login.html">login </a> </p>
+                            <p>Don’t have an account? <a href="signup-company.html">Sign up as company </a> Or <a href="signup-employee.html">Sign up as Employee</a></p>
+                        </div>
+                    </form>
+
+                </div>
+                <!-- End item -->
+            </div>
+            <!-- End row -->
+        </div>
+        <!-- End container -->
+    </section>
+
+
+
+</body>
+
+</html>

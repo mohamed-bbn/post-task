@@ -1,0 +1,3090 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+li,
+hr,
+strong,
+b,
+input,
+select,
+textarea,
+.highcharts-title,
+.highcharts-axis-labels,
+.highcharts-yaxis-title {
+    text-align: right !important;
+    font: normal 500 16px / 28px "Readex Pro", sans-serif;
+}
+
+body {
+    direction: rtl;
+}
+
+.header .itemlogomenu .burger {
+    right: auto;
+    left: 12px;
+}
+
+.header .itemlogomenu .burger-line {
+    right: auto;
+    left: 0;
+}
+
+.header .navbar .logo {
+    left: auto;
+    right: 12px;
+}
+
+.header .navbar .cancel {
+    right: auto;
+    left: 18px;
+}
+
+@media screen and (max-width: 999px) {
+    .header .navbar {
+        left: auto;
+        right: -100%;
+    }
+    .header .navbar.active {
+        left: auto;
+        right: 0rem;
+    }
+    .header .navbar .bottoms .color {
+        right: auto;
+        left: 12px;
+    }
+}
+
+.header .menu {
+    margin-left: 0;
+    margin-right: 64px;
+}
+
+@media (max-width: 999px) {
+    .header .menu {
+        margin-left: 0;
+        margin-right: 16px;
+    }
+}
+
+@media (max-width: 999px) {
+    .header .menu {
+        margin: 0px;
+    }
+}
+
+.header .menu-item {
+    margin-right: 0;
+    margin-left: 32px;
+}
+
+@media (max-width: 1220px) {
+    .header .menu-item {
+        margin-right: 0;
+        margin-left: 12px;
+    }
+}
+
+.header .menu-item:last-child {
+    margin: 0px;
+}
+
+.header .submenu {
+    left: auto;
+    right: 0px;
+}
+
+
+/* .header .bottoms .language {
+    margin-left: 0px;
+    margin-right: 8px;
+} */
+
+.header .bottoms .language svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.header .bottoms .login {
+    margin-left: 0px;
+    margin-right: 12px;
+}
+
+.header .bottoms .login svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.header .bottoms .dropdown {
+    margin-left: 0px;
+    margin-right: 12px;
+}
+
+.header .bottoms .bottom,
+.header .bottoms .login {
+    font-size: 14px;
+    min-width: 128px;
+    max-width: 128px;
+}
+
+.header .bottoms .dropdown .dropdown-toggle .photo {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+@media only screen and (max-width: 550px) {
+    .header .bottoms .dropdown .dropdown-toggle .photo {
+        margin: 0px;
+    }
+}
+
+.header .bottoms .dropdown .dropdown-menu.show {
+    left: auto !important;
+    right: 0px !important;
+}
+
+.slider .item .bottoms .login svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.slider .item .bottoms .bottom {
+    margin-right: 0px;
+    margin-left: 12px;
+}
+
+.slider .photo::after {
+    left: auto;
+    right: 30px;
+}
+
+@media (max-width: 999px) {
+    .slider .photo::after {
+        left: auto;
+        right: 20px;
+    }
+}
+
+.brandlogos {
+    margin-left: 0px;
+    margin-right: 200px;
+}
+
+.towslider .item .banner-imgs {
+    margin-left: 0px;
+    margin-right: 170px;
+}
+
+@media (max-width: 1199px) {
+    .towslider .item .banner-imgs {
+        margin-left: 0px;
+        margin-right: 94px;
+    }
+}
+
+.towslider .item .banner-imgs .banner-sm1,
+.towslider .item .banner-imgs .banner-sm2,
+.towslider .item .banner-imgs .banner-sm3 {
+    left: auto;
+    right: -86px;
+}
+
+.towslider .item .banner-imgs .banner-sm2 {
+    left: auto;
+    right: -136px;
+}
+
+.towslider .item .banner-imgs .banner-sm3 {
+    left: auto;
+    right: -90px;
+}
+
+.discoverteam .slick-slide .info .photo {
+    margin-right: 0px;
+    margin-left: 12px;
+}
+
+@media (max-width: 999px) {
+    .discoverteam .slick-slide .info .photo {
+        margin-right: 0px;
+        margin-left: 8px;
+    }
+}
+
+.discoverteam .slick-slide .info .check {
+    right: auto;
+    left: 0px;
+}
+
+.discoverteam .slick-slide .text {
+    text-align: right;
+}
+
+.recentlyjob .allemployees .slick-slide .view li svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.recentlyjob .allemployees .slick-slide .view li a svg {
+    margin: 0px;
+    margin-right: 4px;
+}
+
+.tasklink .item .inner .icon {
+    margin-right: 0;
+    margin-left: 12px;
+}
+
+@media (max-width: 767px) {
+    .tasklink .item .inner .icon {
+        margin: 0px auto;
+        margin-bottom: 12px;
+    }
+}
+
+.proficiency .item .inner .icon {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+@media (max-width: 767px) {
+    .proficiency .item .inner .icon {
+        margin: 0px auto;
+        margin-bottom: 12px;
+    }
+}
+
+.proficiency .item .inner .bottom {
+    right: auto;
+    left: 16px;
+}
+
+@media (max-width: 767px) {
+    .proficiency .item .inner .bottom {
+        left: auto;
+    }
+}
+
+.proficiency .item .inner .list li svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.screened:before {
+    left: auto;
+    right: 0;
+}
+
+.stories ol.carousel-indicators li .photo {
+    margin-right: 0px;
+    margin-left: 12px;
+}
+
+#video-popup-overlay #video-popup-close {
+    right: auto;
+    left: 24px;
+}
+
+.packages .priceitem .subitem .inneritem .listtext ul li .check {
+    margin: 4px 0px 0px 6px;
+}
+
+.packages .priceitem .subitem:nth-child(2) .inneritem {
+    left: auto;
+    right: 0px;
+}
+
+@media (max-width: 999px) {
+    .packages .priceitem .subitem:nth-child(2) .inneritem {
+        right: auto;
+    }
+}
+
+.easysteps .item .box-loader span::before {
+    border-right: 0px;
+    border-left: 2px solid #000;
+    right: auto;
+    left: calc(85% + 5px);
+}
+
+.easysteps .item .box-loader span::after {
+    right: auto;
+    left: 85%;
+}
+
+.modal .close {
+    right: auto;
+    left: 24px;
+}
+
+.modal .time svg,
+.modal .conferencing svg {
+    margin: 5px 0px 0px 4px;
+}
+
+.modal .select svg {
+    left: auto;
+    right: 12px;
+}
+
+.modal .select .form-control {
+    padding-left: 0.75rem;
+    padding-right: 30px;
+}
+
+.modal .nao-month .month-head .arowleft,
+.modal .nao-month .month-head .arowright {
+    left: auto;
+    right: 0px;
+}
+
+.modal .nao-month .month-head .arowright {
+    right: auto;
+    left: 0px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.blogs .sliderblogs .slick-slide .date svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.blogsinner .item .date svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.blogdetails .item .info li {
+    margin: 12px 0px 0px 48px;
+}
+
+.blogdetails .item .info li:last-child {
+    margin-left: 0px;
+}
+
+.blogdetails .item .info li svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.blogdetails .item .itemshear .social a {
+    margin-left: 0px;
+    margin-right: 12px;
+}
+
+.blogdetails .item .min-search .form-control {
+    padding-right: 0.75rem;
+    padding-left: 56px;
+}
+
+.blogdetails .item .min-search .bot-search {
+    right: auto;
+    left: 28px;
+}
+
+.blogdetails .item .subitem .title::after {
+    left: auto;
+    right: 0px;
+}
+
+.blogdetails .item .subitem .subblog .photo {
+    margin-right: 0px;
+    margin-left: 12px;
+}
+
+.blogdetails .item .subitem .subblog .date:last-child {
+    margin-left: 0px;
+}
+
+.blogdetails .item .subitem .subblog .date svg,
+.blogdetails .item .subitem .listtags a svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.blogdetails .item .subitem .listtags a {
+    margin: 8px 0px 0px 8px;
+}
+
+.started .container .bottom {
+    margin-left: 0px;
+    margin-right: 24px;
+}
+
+@media (max-width: 999px) {
+    .started .container .bottom {
+        margin: 0px;
+    }
+}
+
+.faqs .collapsible-link::before {
+    right: auto;
+    left: 20px;
+}
+
+.guide-documentation .item .inner .listmenu a::after {
+    left: auto;
+    right: 0px;
+}
+
+.guide-documentation .item .inner .listmenu a span svg,
+.guide-documentation .item .inner .listmenu a span img {
+    margin-right: 0;
+    margin-left: 4px;
+}
+
+.guide-documentation .itemmenu svg {
+    margin-right: 0;
+    margin-left: 8px;
+}
+
+.guide-documentation .hideitem .cancel {
+    right: auto;
+    left: 18px;
+}
+
+@media (max-width: 1199px) {
+    .guide-documentation .hideitem {
+        left: auto;
+        right: -100%;
+    }
+    .guide-documentation .hideitem.active {
+        left: auto;
+        right: 0px;
+    }
+}
+
+.guide-documentation .inneritem .minhead .filter svg {
+    left: auto;
+    right: 12px;
+}
+
+.guide-documentation .inneritem .minhead .filter .form-control {
+    padding-left: 0.75rem;
+    padding-right: 30px;
+}
+
+.guide-documentation .inneritem .subinner .meeting a .manth,
+.guide-documentation .inneritem .subinner .action a .photo {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.guide-documentation .inneritem .subinner .action a .time svg,
+.guide-documentation .inneritem .subinner .action a .map svg {
+    margin: 0px;
+    margin-left: 4px;
+}
+
+.guide-documentation .inneritem .subinner .action a .map {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+.guide-documentation .inneritem .subinner .application a .imgitle .photo {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.guide-documentation .inneritem .subinner .application a .time svg,
+.guide-documentation .inneritem .subinner .application a .map svg {
+    margin: 0px;
+    margin-left: 4px;
+}
+
+.guide-documentation .inneritem .subinner .application a .map {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+.guide-documentation .innerholders .more:hover svg {
+    margin-left: 0px;
+    margin-right: 12px;
+}
+
+.guide-documentation .innerholders .more:after {
+    left: auto;
+    right: 0;
+}
+
+.chatall .chat-text {
+    padding-right: 0px;
+    padding-left: 12px;
+}
+
+.chatall .chat-text .userchat .photo {
+    left: auto;
+    right: 0px;
+}
+
+.chatall .chat-text .userchat .padcht {
+    padding-left: 0px;
+    padding-right: 66px;
+}
+
+.chatall .chat-text .userchat .padcht .text {
+    margin-right: 0px;
+    margin-left: 66px;
+}
+
+@media (max-width: 999px) {
+    .chatall .chat-text .userchat .padcht .text {
+        margin-left: 0px;
+    }
+}
+
+.chatall .chat-text .userchat .padcht .attach {
+    margin: 8px 0px 0px 66px;
+}
+
+@media (max-width: 999px) {
+    .chatall .chat-text .userchat .padcht .attach {
+        margin-left: 0px;
+    }
+}
+
+.chatall .chat-text .userchat .padcht .attach p svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.chatall .chat-text .userchat.tow .photo {
+    right: auto;
+    left: 0px;
+}
+
+.chatall .chat-text .userchat.tow .padcht {
+    padding-right: 0px;
+    padding-left: 66px;
+}
+
+.chatall .chat-text .userchat.tow .padcht .text {
+    margin-left: 0px;
+    margin-right: 66px;
+}
+
+.chatall .chat-text .userchat.tow .padcht .attach {
+    margin: 8px 66px 0px 0px;
+}
+
+@media (max-width: 991px) {
+    .chatall .chat-text .userchat.tow .padcht .attach {
+        margin-right: 0px;
+    }
+}
+
+.chatall .formchat textarea {
+    left: auto;
+    right: 0px;
+}
+
+.chatall .formchat .icon-at {
+    right: auto;
+    left: 16px;
+}
+
+.chatall .formchat .icon-at .send {
+    margin-left: 0px;
+    margin-right: 16px;
+}
+
+.privatepolicy .hideitem .cancel {
+    right: auto;
+    left: 18px;
+}
+
+@media (max-width: 1199px) {
+    .privatepolicy .hideitem {
+        left: auto;
+        right: -100%;
+    }
+    .privatepolicy .hideitem.active {
+        left: auto;
+        right: 0px;
+    }
+}
+
+.privatepolicy .itemmenu svg {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.loginpage .inner .forgetlink svg,
+.loginpage .inner .back svg,
+.forgot .inner .forgetlink svg,
+.forgot .inner .back svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.field .flexbox .che-box {
+    margin-right: 0px;
+    margin-left: 48px;
+}
+
+.field .flexbox .che-box:last-child {
+    margin: 0px;
+}
+
+.field input[type="file"] {
+    padding-left: .75rem;
+    padding-right: 6px;
+}
+
+.field input[type="file"]::before {
+    left: auto;
+    right: 10px;
+}
+
+.field input[type="file"]::after {
+    left: auto;
+    right: 34px;
+    content: "تحميل";
+}
+
+.icon-pass {
+    right: auto;
+    left: 24px;
+}
+
+.signup .photo {
+    right: auto;
+    left: 0px;
+}
+
+.signup .item {
+    padding-right: auto;
+    padding-left: 48px;
+}
+
+.profile .item .inner .listmenu a::after {
+    left: auto;
+    right: 0px;
+}
+
+.profile .item .inner .listmenu a span svg,
+.profile .item .inner .listmenu a span img {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.profile .itemmenu svg {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.profile .hideitem .cancel {
+    right: auto;
+    left: 18px;
+}
+
+@media (max-width: 1199px) {
+    .profile .hideitem {
+        left: auto;
+        right: -100%;
+    }
+    .profile .hideitem.active {
+        left: auto;
+        right: 0px;
+    }
+}
+
+.profile .subitem .inneritem .minhead .flex .bottom {
+    margin-left: 0px;
+    margin-right: 16px;
+}
+
+.profile .subitem .inneritem .minhead .filter svg {
+    left: auto;
+    right: 12px;
+}
+
+.profile .subitem .inneritem .minhead .filter .form-control {
+    padding-left: 0.75rem;
+    padding-right: 30px;
+}
+
+.profile .subitem .inneritem .subinner .action a .photo,
+.profile .subitem .inneritem .subinner .meeting a .manth {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.profile .subitem .inneritem .subinner .action a .time svg,
+.profile .subitem .inneritem .subinner .action a .map svg {
+    margin: 0px;
+    margin-left: 4px;
+}
+
+.profile .subitem .inneritem .subinner .action a .map {
+    margin-right: 16px;
+}
+
+.profile .subitem .inneritem .subinner .application a .imgitle .photo {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.profile .subitem .inneritem .subinner .application a .time svg,
+.profile .subitem .inneritem .subinner .application a .map svg {
+    margin: 0px;
+    margin-left: 4px;
+}
+
+.profile .subitem .inneritem .subinner .application a .map {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+.profile .listjob .iteminner .info .time svg,
+.profile .listjob .iteminner .info .map svg {
+    margin: 0px;
+    margin-left: 4px;
+}
+
+.profile .listjob .iteminner .info .map {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+.profile .nav-tabs li a {
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+@media (max-width: 999px) {
+    .profile .nav-tabs li a {
+        padding-right: 0px;
+        padding-left: 12px;
+    }
+}
+
+.profile .inneritem .minhead .filter svg {
+    left: auto;
+    right: 12px;
+}
+
+.profile .inneritem .minhead .filter .form-control {
+    padding-left: 0.75rem;
+    padding-right: 30px;
+}
+
+.profile .col .che-box .label-text .title svg {
+    margin-right: auto;
+    margin-left: 8px;
+}
+
+.profile .col .che-box input[type="checkbox"],
+.profile .col .che-box input[type="radio"] {
+    left: auto;
+    right: 9000px;
+}
+
+.imgcent .file-bro,
+.profile .col .che-box input[type="checkbox"]+.label-text:before,
+.profile .col .che-box input[type="radio"]+.label-text:before {
+    left: auto;
+    right: 0px;
+}
+
+.jobs-slider .iteminner a .info .time svg,
+.jobs-slider .iteminner a .info .map svg {
+    margin: 0px;
+    margin-left: 4px;
+}
+
+.jobs-slider .iteminner a .info .map {
+    margin-right: auto;
+    margin-left: 16px;
+}
+
+.sidebar {
+    left: auto;
+    right: 0px;
+}
+
+@media (max-width: 999px) {
+    .sidebar {
+        left: auto;
+        right: -280px;
+    }
+}
+
+.sidebar .cancel {
+    right: auto;
+    left: 16px;
+}
+
+@media (max-width: 999px) {
+    .sidebar.active {
+        left: auto;
+        right: 0px;
+    }
+}
+
+.sidebar .imgcent .check {
+    right: auto;
+    left: 0px;
+}
+
+.sidebar .listmenu a .icon {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.page-content {
+    padding-left: 0px;
+    padding-right: 280px;
+}
+
+@media (max-width: 999px) {
+    .page-content {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.page-content.active {
+    padding-left: 0px;
+    padding-right: 70px;
+}
+
+@media (max-width: 999px) {
+    .page-content.active {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media (max-width: 999px) {
+    .page-content.active .header {
+        width: 100%;
+    }
+}
+
+.page-content .header {
+    right: auto !important;
+    left: 0px !important;
+}
+
+.page-content .header .burger-line {
+    left: auto;
+    right: 0;
+}
+
+.page-content .innerpage .subitem .inneritem .minhead .filter svg {
+    left: auto;
+    right: 12px;
+}
+
+.page-content .innerpage .subitem .inneritem .minhead .filter .form-control {
+    padding-left: 0px;
+    padding-right: 30px;
+}
+
+.page-content .innerpage .subitem .inneritem .subinner .meeting a .manth {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.page-content .innerpage .subitem .inneritem .subinner .action a .photo {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.page-content .innerpage .subitem .inneritem .subinner .action a .time svg,
+.page-content .innerpage .subitem .inneritem .subinner .action a .map svg {
+    margin: 0px;
+    margin-left: 4px;
+}
+
+.page-content .innerpage .subitem .inneritem .subinner .action a .map {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+.page-content .innerpage .subitem .inneritem .subinner .application a .imgitle .photo {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.page-content .innerpage .subitem .inneritem .subinner .application a .time svg,
+.page-content .innerpage .subitem .inneritem .subinner .application a .map svg {
+    margin: 0px;
+    margin-left: 4px;
+}
+
+.page-content .innerpage .subitem .inneritem .subinner .application a .map {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+.bg-details .inner .photo {
+    margin-right: 0px;
+    margin-left: 12px;
+}
+
+.bg-details .inner .time,
+.bg-details .inner .job,
+.bg-details .inner .email {
+    margin: 8px 0px 0px 16px;
+}
+
+.bg-details .inner .time:last-child,
+.bg-details .inner .job:last-child,
+.bg-details .inner .email:last-child {
+    margin-left: 0px;
+}
+
+.bg-details .inner .time svg,
+.bg-details .inner .job svg,
+.bg-details .inner .email svg {
+    margin: 0px;
+    margin-left: 4px;
+}
+
+.bg-details .inner .pr-skill-bar .progress-value,
+.bg-details .inner .pr-skill-bar {
+    margin-left: 0px;
+    margin-right: 16px;
+}
+
+@media (max-width: 767px) {
+    .bg-details .inner .pr-skill-bar .progress-value {
+        right: auto;
+        left: 0;
+    }
+}
+
+.bg-details .action .waiting,
+.bg-details .action .approval {
+    margin-left: 0px;
+    margin-right: 16px;
+}
+
+.bg-details .action .dropdown .dropdown-menu.show {
+    right: 0 !important;
+    left: auto !important;
+}
+
+.bg-details.a-center .nav-tabs li {
+    border-right: 0px;
+    border-left: 1px solid #e8e9ee;
+}
+
+.bg-details.a-center .minhead .flex .bottom {
+    margin-left: 0px;
+    margin-right: 16px;
+}
+
+.bg-details.a-center .minhead .filter svg {
+    left: auto;
+    right: 12px;
+}
+
+.bg-details.a-center .minhead .filter .form-control {
+    padding-left: 0.75rem;
+    padding-right: 30px;
+}
+
+.bg-details.a-center .application li .imgitle .photo {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.bg-details.a-center .application li .map {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+.bg-details.a-center .app-amount li .time svg,
+.bg-details.a-center .application li .time svg,
+.bg-details.a-center .application li .map svg {
+    margin: 0px;
+    margin-left: 4px;
+}
+
+.bg-details.a-center .app-amount li .condition {
+    border-left: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    border-right: 1px solid #e8e9ee;
+    margin-right: 16px;
+    padding-right: 16px;
+}
+
+.bg-details.a-center .item-meet .inner .flex .manth {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.itemdetails .innerdetails .infodetails .listpersonal {
+    padding-left: 0px;
+    padding-right: 20px;
+}
+
+.itemdetails .innerdetails .infodetails .allskills li {
+    margin: 8px 0px 0px 8px;
+}
+
+.itemdetails .innerdetails .infodetails .workexperience li .time,
+.itemdetails .innerdetails .infodetails .workexperience li .company,
+.itemdetails .innerdetails .infodetails .workexperience li .map {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+.itemdetails .innerdetails .infodetails .workexperience li .time:last-child,
+.itemdetails .innerdetails .infodetails .workexperience li .company:last-child,
+.itemdetails .innerdetails .infodetails .workexperience li .map:last-child {
+    margin: 0px;
+}
+
+.itemdetails .innerdetails .infodetails .workexperience li .time svg,
+.itemdetails .innerdetails .infodetails .workexperience li .company svg,
+.itemdetails .innerdetails .infodetails .workexperience li .map svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.itemmeet .inner .manth,
+.itemdetails .innerdetails .infodetails .information li span,
+.itemdetails .innerdetails .infodetails .information li .icon {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.scrollToTop {
+    left: auto;
+    right: 12px;
+    text-align: center !important;
+}
+
+.bottom svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+select.form-control {
+    background: #fff url(../images/arrow.svg) center right 12px no-repeat !important;
+}
+
+textarea.form-control {
+    height: 160px;
+    resize: none;
+}
+
+.che-box {
+    padding-left: 0px;
+    padding-right: 28px;
+}
+
+.che-box input[type="checkbox"],
+.che-box input[type="radio"] {
+    right: auto;
+    left: 9000px;
+}
+
+.che-box input[type="checkbox"]+.label-text:before,
+.che-box input[type="radio"]+.label-text:before {
+    left: auto;
+    right: 0;
+}
+
+.alert strong {
+    margin-left: 0px;
+    margin-right: 8px;
+}
+
+.alert .text-mass {
+    margin: 0px !important;
+    margin-right: 12px !important;
+}
+
+.maplink li:last-child {
+    margin-right: 0px;
+}
+
+.maplink li:last-child a {
+    padding-left: 0px;
+}
+
+.maplink li a {
+    padding-right: 0px;
+    padding-left: 16px;
+}
+
+.maplink li a:before {
+    right: auto;
+    left: 0px;
+}
+
+.table-responsive table .alluser .img {
+    margin-left: 0px;
+    margin-right: -10px;
+}
+
+.table-responsive table .alluser .img:first-child {
+    margin: 0px;
+}
+
+.table-responsive table .boticon {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+.pagination li:last-child svg {
+    transform: rotate(90deg);
+}
+
+.pagination li:first-child svg {
+    transform: rotate(-90deg);
+}
+
+
+/**********************************************************************/
+
+
+/****************************************************************************/
+
+.header .itemlogomenu .burger-line {
+    right: auto;
+    left: 0;
+}
+
+.header .navbar .logo {
+    left: auto;
+    right: 12px;
+}
+
+.header .navbar .logo img {
+    display: block;
+    max-width: 164px;
+}
+
+.header .navbar .cancel {
+    right: auto;
+    left: 18px;
+}
+
+@media screen and (max-width: 999px) {
+    .header .navbar {
+        left: auto;
+        right: -100%;
+    }
+    .header .navbar.active {
+        left: auto;
+        right: 0rem;
+    }
+}
+
+@media (max-width: 1220px) {
+    .header .menu {
+        margin-left: 0px;
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 999px) {
+    .header .menu {
+        margin: 0px;
+    }
+}
+
+.header .menu-item {
+    margin-right: 0px;
+    margin-left: 32px;
+}
+
+@media (max-width: 1220px) {
+    .header .menu-item {
+        margin-right: 0px;
+        margin-left: 2px;
+    }
+}
+
+.header .menu-item:last-child {
+    margin: 0px;
+}
+
+.header .submenu {
+    left: auto;
+    right: 0px;
+}
+
+.header .bottoms .login {
+    margin-right: 0px;
+    margin-left: 12px;
+}
+
+.header .bottoms .login svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.map-back .bottoms .login,
+.map-back .bottoms a {
+    min-width: 140px;
+    max-width: 140px;
+}
+
+.header .bottoms .dropdown {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.header .bottoms .dropdown .dropdown-toggle .photo {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+@media only screen and (max-width: 550px) {
+    .header .bottoms .dropdown .dropdown-toggle .photo {
+        margin: 0px;
+    }
+}
+
+@media (max-width: 999px) {
+    .header .bottoms .dropdown .dropdown-toggle p {
+        margin-left: 0px;
+        margin-right: 8px;
+    }
+}
+
+.header .bottoms .dropdown .dropdown-toggle svg {
+    margin-left: 0px;
+    margin-right: 4px;
+}
+
+.header .bottoms .dropdown .dropdown-menu.show {
+    right: auto !important;
+    left: 0px !important;
+}
+
+.towstyle .bottoms .dropdown {
+    margin-left: 0px;
+    margin-right: 12px;
+}
+
+.slider .item .cursor {
+    margin-left: 0px;
+    margin-right: 4px;
+}
+
+.slider .item .field .form-control {
+    padding-right: 0.75rem;
+    padding-left: 48px;
+}
+
+.slider .item .field button {
+    right: auto;
+    left: 22px;
+}
+
+.userssay::before {
+    left: auto;
+    right: 0px;
+}
+
+.userssay .counters {
+    margin-right: 0px;
+    margin-left: 32px;
+    border-radius: 30px 0px 0px 30px;
+}
+
+@media (max-width: 999px) {
+    .userssay .counters {
+        margin: 0px;
+        margin-top: 24px;
+    }
+}
+
+.userssay .text .photos img {
+    margin-right: 0px;
+    margin-left: -25px;
+}
+
+.towslider .item .banner-imgs {
+    margin-left: 0px;
+    margin-right: 170px;
+}
+
+@media (max-width: 1199px) {
+    .towslider .item .banner-imgs {
+        margin-left: 0px;
+        margin-right: 94px;
+    }
+}
+
+.towslider .item .banner-imgs .banner-sm1,
+.towslider .item .banner-imgs .banner-sm2,
+.towslider .item .banner-imgs .banner-sm3 {
+    left: auto;
+    right: -86px;
+}
+
+.towslider .item .banner-imgs .banner-sm2 {
+    left: auto;
+    right: -136px;
+}
+
+.towslider .item .banner-imgs .banner-sm3 {
+    left: auto;
+    right: -90px;
+}
+
+.aboutus::before {
+    right: auto;
+    left: 0px;
+}
+
+.aboutus .item .photo {
+    border-radius: 0px 30px 30px 0px;
+}
+
+.howwork .nav-tabs li {
+    margin-right: 0px;
+    margin-left: 2px;
+}
+
+.howwork .nav-tabs li:last-child {
+    margin: 0px;
+}
+
+.subsignup .item .contant {
+    left: auto;
+    right: 0px;
+}
+
+.packages .priceitem .subitem .inneritem .listtext ul li .check {
+    margin: 4px 0px 0px 6px;
+}
+
+.packages .priceitem .subitem:nth-child(2) .inneritem {
+    left: auto;
+    right: 0px;
+}
+
+@media (max-width: 999px) {
+    .packages .priceitem .subitem:nth-child(2) .inneritem {
+        right: auto;
+    }
+}
+
+.easysteps:before {
+    left: auto;
+    right: -50px;
+}
+
+.easysteps:after {
+    right: auto;
+    left: 0px;
+}
+
+.easysteps .item .box-loader {
+    right: auto;
+    left: -22px;
+}
+
+.easysteps .item .box-loader span::before {
+    right: auto;
+    left: calc(85% + 5px);
+}
+
+.easysteps .item .box-loader span::after {
+    right: auto;
+    left: 85%;
+}
+
+.modal .close {
+    right: auto;
+    left: 24px;
+}
+
+.modal .col {
+    border-right: 0px;
+    border-left: 1px solid #c8ced5;
+}
+
+.modal .col:last-child {
+    border: 0px;
+}
+
+@media (max-width: 767px) {
+    .modal .col {
+        border: 0px;
+    }
+}
+
+.modal .time svg,
+.modal .conferencing svg {
+    margin: 5px 0px 0px 4px;
+}
+
+.modal .select svg {
+    left: auto;
+    right: 12px;
+}
+
+.modal .select .form-control {
+    padding-left: 0.75rem;
+    padding-right: 30px;
+}
+
+.blogs .listbtn a {
+    margin-right: 0px;
+    margin-left: 12px;
+}
+
+.blogs .listbtn a:last-child {
+    margin-left: 0px;
+}
+
+.blogs .item .inner .flex .more svg {
+    margin-left: 0px;
+    margin-right: 4px;
+}
+
+.blogsdetails .item .subscribe .formsubscribe .form-control {
+    text-align: right;
+    padding: 0px 34px 0px 130px;
+}
+
+.blogsdetails .item .subscribe .formsubscribe .bottom {
+    right: auto;
+    left: 8px;
+}
+
+.blogsdetails .item .subscribe .formsubscribe .subicon {
+    left: auto;
+    right: 12px;
+}
+
+.blogsdetails .item .most-read .listnews li .photo {
+    margin-left: 12px;
+}
+
+.blogsdetails .item .listtext {
+    padding-right: 0px;
+    padding-left: 20px;
+}
+
+.blogsdetails .related-news .relateditem .inner .flex .more svg,
+.blogs .item .inner .flex .more svg {
+    rotate: 0deg;
+    margin-left: 0px;
+    margin-right: 4px;
+}
+
+.blogsdetails .related-news .relateditem .inner .flex ul .subdes {
+    margin-right: 0px;
+    margin-left: 12px;
+}
+
+.faqs .accordion .option .click-title a {
+    padding-right: 20px;
+    padding-left: 60px;
+}
+
+.faqs .collapsible-link::before {
+    right: auto;
+    left: 20px;
+}
+
+.privatepolicy .hideitem .cancel,
+.terms .hideitem .cancel {
+    right: auto;
+    left: 18px;
+}
+
+@media (max-width: 1199px) {
+    .privatepolicy .hideitem,
+    .terms .hideitem {
+        left: auto;
+        right: -100%;
+    }
+    .privatepolicy .hideitem.active,
+    .terms .hideitem.active {
+        left: auto;
+        right: 0px;
+    }
+}
+
+.privatepolicy .itemmenu svg,
+.terms .itemmenu svg {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.started:before {
+    left: auto;
+    right: 0;
+}
+
+.started .container .bottom {
+    margin-left: 0px;
+    margin-right: 24px;
+}
+
+@media (max-width: 999px) {
+    .started .container .bottom {
+        margin: 0px;
+    }
+}
+
+.profilejob:before {
+    left: auto;
+    right: -50px;
+}
+
+.profilejob:after {
+    right: auto;
+    left: 0px;
+}
+
+.profilejob .discoverteam .slick-slide .info .check {
+    left: auto;
+    right: 70px;
+}
+
+.profilejob .discoverteam .slick-slide .exp {
+    right: auto;
+    left: 24px;
+}
+
+.profilejob .discoverteam .slick-slide .listskills li,
+.itemprogress .listskills li {
+    margin: 8px 0px 0px 8px;
+}
+
+.profilejob .discoverteam .slick-slide .listevaluation li span svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.guide-documentation .item .inner:before {
+    left: auto;
+    right: -20px;
+}
+
+.guide-documentation .item .inner .listmenu a::after {
+    left: auto;
+    right: 0px;
+}
+
+.guide-documentation .item .inner .listmenu a span svg,
+.guide-documentation .item .inner .listmenu a span img {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.guide-documentation .itemmenu svg {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.guide-documentation .hideitem .cancel {
+    right: auto;
+    left: 18px;
+}
+
+@media (max-width: 1199px) {
+    .guide-documentation .hideitem {
+        left: auto;
+        right: -100%;
+    }
+    .guide-documentation .hideitem.active {
+        left: auto;
+        right: 0px;
+    }
+}
+
+.guide-documentation .inneritem .minhead .filter svg {
+    left: auto;
+    right: 12px;
+}
+
+.guide-documentation .inneritem .minhead .filter .form-control {
+    padding-left: 0.75rem;
+    padding-right: 30px;
+}
+
+.guide-documentation .inneritem .subinner .meeting a .manth {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.guide-documentation .inneritem .subinner .action a .photo {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.guide-documentation .inneritem .subinner .action a .time svg,
+.guide-documentation .inneritem .subinner .action a .map svg {
+    margin: 0px;
+    margin-left: 4px;
+}
+
+.guide-documentation .inneritem .subinner .action a .map {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+.guide-documentation .inneritem .subinner .application a .imgitle .photo {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.guide-documentation .inneritem .subinner .application a .time svg,
+.guide-documentation .inneritem .subinner .application a .map svg {
+    margin: 0px;
+    margin-left: 4px;
+}
+
+.guide-documentation .inneritem .subinner .application a .map {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+.guide-documentation .innerholders .more svg {
+    margin-left: 0px;
+    margin-right: 8px;
+    transform: rotate(0deg);
+}
+
+.guide-documentation .innerholders .more:hover svg {
+    margin-left: 0px;
+    margin-right: 12px;
+}
+
+.guide-documentation .innerholders .more:after {
+    left: auto;
+    right: 0;
+}
+
+.contact-item .inner .item .field select.form-control {
+    background: #151528 url(../images/arrow2.svg) left 12px center no-repeat !important;
+}
+
+.field .flexbox .che-box,
+.flexchebox .che-box {
+    margin-right: 0px;
+    margin-left: 48px;
+}
+
+.field .flexbox .che-box:last-child,
+.flexchebox .che-box:last-child {
+    margin: 0px;
+}
+
+.field input[type="file"] {
+    padding-left: 0px;
+    padding-right: 6px;
+}
+
+.field input[type="file"]::before {
+    left: auto;
+    right: 10px;
+}
+
+.field input[type="file"]::after {
+    left: auto;
+    right: 34px;
+    content: "تحميل";
+}
+
+.icon-pass {
+    right: auto;
+    left: 24px;
+}
+
+.signup .photo,
+.loginpage .photo,
+.forgot .photo {
+    right: auto;
+    left: 0px;
+}
+
+.signup .photo .text p,
+.loginpage .photo .text p,
+.forgot .photo .text p {
+    text-align: right;
+}
+
+.signup .item,
+.loginpage .item,
+.forgot .item {
+    padding-right: 0px;
+    padding-left: 48px;
+}
+
+@media (max-width: 999px) {
+    .signup .item,
+    .loginpage .item,
+    .forgot .item {
+        padding: 0px 12px;
+    }
+}
+
+.signup p,
+.loginpage p,
+.forgot p {
+    text-align: right;
+}
+
+.profile .itemprofile:first-child {
+    border-right: 0px;
+    border-left: 1px solid #DDDDE0;
+}
+
+@media (max-width: 999px) {
+    .profile .itemprofile:first-child {
+        border: 0px;
+        border-bottom: 1px solid #DDDDE0;
+    }
+}
+
+.subform .field .select2-container--bootstrap .select2-selection--multiple {
+    background: #F0F0FE url(../images/arrow.svg) no-repeat left 12px center !important;
+    padding-right: 0.75rem;
+    padding-left: 20px;
+}
+
+.imgcent .file-bro svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.sidebar {
+    left: auto;
+    right: 0px;
+    border-right: 0px;
+    border-left: 1px solid #F2EDED;
+}
+
+@media (max-width: 999px) {
+    .sidebar {
+        left: auto;
+        right: -280px;
+    }
+}
+
+.sidebar .cancel {
+    right: auto;
+    left: 16px;
+}
+
+.sidebar.active {
+    left: auto;
+    right: -100%;
+}
+
+@media (max-width: 999px) {
+    .sidebar.active {
+        left: auto;
+        right: 0px;
+    }
+}
+
+.sidebar .listmenu a .icon {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+@media (max-width: 999px) {
+    .page-content {
+        padding-right: 0px;
+    }
+}
+
+.page-content.active {
+    padding-right: 0px;
+}
+
+.page-content .header .homeitem .iconhome {
+    margin-left: 0px;
+    margin-right: 16px;
+}
+
+.page-content .header .burger-line {
+    left: auto;
+    right: 0;
+}
+
+.bg-details .inner .photo {
+    margin-right: 0px;
+    margin-left: 12px;
+}
+
+@media (max-width: 767px) {
+    .bg-details .inner .photo {
+        margin: 0px auto;
+    }
+}
+
+.bg-details .inner .time,
+.bg-details .inner .job,
+.bg-details .inner .email {
+    margin: 8px 0px 0px 16px;
+}
+
+.bg-details .inner .time:last-child,
+.bg-details .inner .job:last-child,
+.bg-details .inner .email:last-child {
+    margin-left: 0px;
+}
+
+.bg-details .inner .time svg,
+.bg-details .inner .job svg,
+.bg-details .inner .email svg {
+    margin: 0px;
+    margin-left: 4px;
+}
+
+.bg-details .inner .pr-skill-bar,
+.bg-details .inner .pr-skill-bar .progress-value {
+    margin-left: 0px;
+    margin-right: 16px;
+}
+
+@media (max-width: 767px) {
+    .bg-details .inner .pr-skill-bar {
+        margin: 0px;
+    }
+}
+
+@media (max-width: 767px) {
+    .bg-details .inner .pr-skill-bar .progress-value {
+        right: auto;
+        left: 0;
+    }
+}
+
+.bg-details .action .waiting,
+.bg-details .action .approval {
+    margin-left: 0px;
+    margin-right: 16px;
+}
+
+.bg-details .action .dropdown .dropdown-menu.show {
+    left: auto !important;
+    right: 0px !important;
+}
+
+.itemdetails .innerdetails .infodetails .listpersonal {
+    padding-left: 0px;
+    padding-right: 20px;
+}
+
+.itemdetails .innerdetails .infodetails .allskills li {
+    margin: 8px 0px 0px 8px;
+}
+
+.itemdetails .innerdetails .infodetails .workexperience li .time,
+.itemdetails .innerdetails .infodetails .workexperience li .company,
+.itemdetails .innerdetails .infodetails .workexperience li .map {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+.itemdetails .innerdetails .infodetails .workexperience li .time:last-child,
+.itemdetails .innerdetails .infodetails .workexperience li .company:last-child,
+.itemdetails .innerdetails .infodetails .workexperience li .map:last-child {
+    margin: 0px;
+}
+
+.itemdetails .innerdetails .infodetails .workexperience li .time svg,
+.itemdetails .innerdetails .infodetails .workexperience li .company svg,
+.itemdetails .innerdetails .infodetails .workexperience li .map svg {
+    margin: 0px;
+    margin-left: 4px;
+}
+
+.itemdetails .innerdetails .infodetails .information li .icon,
+.itemmeet .inner .manth,
+.itemdetails .innerdetails .infodetails .information li span {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.project-propsal-client .minhead .title svg,
+.boxapplynow .minhead .title svg {
+    margin-right: 0px;
+    margin-left: 12px;
+}
+
+.project-propsal-client .subproject-client .inner .listpdf a svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.project-propsal-client .subproject-client .project-card {
+    border-left: 0px;
+    padding-left: 0px;
+    border-right: 1px solid #B8BAFA;
+    padding-right: 16px;
+}
+
+@media (max-width: 999px) {
+    .project-propsal-client .subproject-client .project-card {
+        border: 0px;
+        padding: 0px;
+    }
+}
+
+.myproject .submyitem .active {
+    left: auto;
+    right: 20px;
+}
+
+.project-propsal-client .subproject-client .project-card .subcard .listcard li .active::before,
+.myproject .submyitem .active::before {
+    left: auto;
+    right: 12px;
+}
+
+.project-propsal-client .subproject-client .project-card .subcard .listcard li .listskills span {
+    margin: 4px 0px 0px 8px;
+}
+
+.itemoffers .minhead .title svg {
+    margin-right: 0px;
+    margin-left: 12px;
+}
+
+.itemoffers .minhead .selectfilter svg {
+    left: auto;
+    right: 8px;
+}
+
+.itemoffers .minhead .select2-container--bootstrap .select2-selection--single,
+.itemoffers .minhead .select2-container--bootstrap .select2-selection--multiple {
+    padding-left: 0.75rem;
+    padding-right: 32px;
+}
+
+.itemoffers .user .photo,
+.cuspopup .user .photo,
+.detailsproject .user .photo,
+.subtalent .flex .user .photo,
+.rockstar .flex .user .photo,
+.talent-inner .item .user .photo,
+.innercand .user .photo,
+.about-candidate .user .photo,
+.innercomment .user .photo {
+    margin-right: 0px;
+    margin-left: 12px;
+}
+
+.itemoffers .user .flex .innerflex,
+.cuspopup .user .flex .innerflex,
+.detailsproject .user .flex .innerflex,
+.subtalent .flex .user .innerflex,
+.rockstar .flex .user .innerflex,
+.itemprogress .flex .innerflex,
+.talent-inner .item .user .innerflex,
+.innercand .user .innerflex,
+.about-candidate .user .innerflex {
+    margin: 8px 0px 0px 12px;
+}
+
+.itemoffers .user .flex .innerflex:last-child,
+.cuspopup .user .flex .innerflex:last-child,
+.detailsproject .user .flex .innerflex:last-child,
+.subtalent .flex .user .innerflex:last-child,
+.rockstar .flex .user .innerflex:last-child,
+.itemprogress .flex .innerflex:last-child,
+.talent-inner .item .user .innerflex:last-child,
+.innercand .user .innerflex:last-child,
+.about-candidate .user .innerflex:last-child {
+    margin-left: 0px;
+}
+
+.itemoffers .user .flex .innerflex svg,
+.cuspopup .user .flex .innerflex svg,
+.detailsproject .user .flex .innerflex svg,
+.subtalent .flex .user .innerflex svg,
+.rockstar .flex .user .innerflex svg,
+.itemprogress .flex .innerflex svg,
+.talent-inner .item .user .innerflex svg,
+.innercand .user .innerflex svg,
+.about-candidate .user .innerflex svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.itemoffers .listoffers li .details .flex {
+    border-right: 0px;
+    border-left: 1px solid #E3E3E3;
+}
+
+@media (max-width: 850px) {
+    .itemoffers .listoffers li .details .flex:nth-child(2) {
+        border: 0px;
+    }
+}
+
+.itemoffers .listoffers li .details .flex:last-child {
+    border: 0px;
+}
+
+.itemoffers .listoffers li .details .flex .icon {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.itemoffers .listoffers li .details .flex .icon svg {
+    width: 35px;
+    height: 35px;
+}
+
+.itemoffers .box .box-header span {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.itemoffers .box .box-header .arrow.rotate,
+.boxproject .boxproject-header .arrow.rotate {
+    transform: rotate(0deg);
+}
+
+.itemoffers .listaction a {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.itemoffers .listaction a:last-child {
+    margin-left: 0px;
+}
+
+.itemoffers .listaction a svg,
+.itemoffers .listoffers li .box .box-content .listpdf a svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.popup-backdrop .popup .proceed .icon {
+    margin-right: 0px;
+    margin-left: 20px;
+}
+
+.footer .getthings {
+    left: auto;
+    right: 12px;
+}
+
+@media (max-width: 999px) {
+    .footer .getthings {
+        right: auto;
+    }
+}
+
+.footer .getthings .flex .barcode {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+@media (max-width: 767px) {
+    .footer .getthings .flex .barcode {
+        margin: 0px auto;
+    }
+}
+
+.footer .getthings .flex .icons a {
+    margin: 8px 0px 0px 8px;
+}
+
+.footer .getthings .flex .icons a:last-child {
+    margin-left: 0px;
+}
+
+.footer .getthings .social a {
+    margin-left: 0px;
+    margin-right: 16px;
+}
+
+@media (max-width: 999px) {
+    .footer .getthings .social a {
+        margin: 0px 8px;
+    }
+}
+
+.footer .boxfot p {
+    padding-right: 0px;
+    padding-left: 20%;
+}
+
+@media (max-width: 999px) {
+    .footer .boxfot p {
+        padding: 0px;
+    }
+}
+
+.bottom svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+select.form-control {
+    background: #fff url(../images/arrow.svg) left 12px center no-repeat !important;
+}
+
+.che-box input[type="checkbox"],
+.che-box input[type="radio"] {
+    right: auto;
+    left: 9000px;
+}
+
+.che-box input[type="checkbox"]+.label-text:before,
+.che-box input[type="radio"]+.label-text:before {
+    left: auto;
+    right: 0;
+}
+
+.cuspageitem .innerpage .minhead .title {
+    padding-left: 0px;
+    padding-right: 16px;
+}
+
+.cuspageitem .innerpage .minhead .title::before {
+    left: auto;
+    right: 0px;
+}
+
+.step-wizard .step:before {
+    left: auto;
+    right: 0px;
+}
+
+.tabwizard .field .itemselect {
+    right: auto;
+    left: 0;
+}
+
+.tabwizard .field .itemselect select {
+    border-radius: .25rem 0px 0px .25rem;
+}
+
+.innersubcolum .edit {
+    right: auto;
+    left: 16px;
+}
+
+.subchek .che-box input[type="checkbox"]+.label-text:before,
+.subchek .che-box input[type="radio"]+.label-text:before {
+    left: auto;
+    right: 20px;
+}
+
+.subchek .label-text::after {
+    left: auto;
+    right: 0;
+}
+
+.tabwizard .flexbox .che-box,
+.flexchebox .che-box {
+    padding-left: 0px;
+    padding-right: 24px;
+}
+
+.tabwizard .select2-container--bootstrap .select2-selection--multiple,
+.jobinformation .select2-container--bootstrap .select2-selection--multiple {
+    background: #fbfcf0 url(../images/arrow.svg) no-repeat left 12px center !important;
+    padding-right: 0.75rem;
+    padding-left: 20px;
+}
+
+.categoryfilters.p-0.border-0 .flexinput .form-control:last-child {
+    margin-left: 0;
+}
+
+.addmoney svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.filterinput,
+.flexinput .form-control,
+.export-payroll {
+    margin: 16px 0px 0px 12px;
+}
+
+.filterinput .form-control {
+    padding-right: 0.75rem;
+    padding-left: 44px;
+    margin: 0;
+}
+
+.filterinput svg {
+    right: auto;
+    left: 12px;
+}
+
+.table-container .subflex i.icon,
+.table-container .subflex i.img {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////*/
+
+.sidebarchat {
+    border-right: 0px;
+    border-left: 1px solid #E5E6E6;
+}
+
+.search-box input {
+    padding: 8px 38px 8px 8px;
+}
+
+.search-icon {
+    left: auto;
+    right: 18px;
+}
+
+.chat-item img {
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+.chat-item .red {
+    right: auto;
+    left: 0;
+}
+
+.nameuser .photo {
+    margin-right: 0px;
+    margin-left: 12px;
+}
+
+.nameuser .map svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.chat-header .dropdown .dropdown-menu,
+.subcardpayment .dropdown .dropdown-menu,
+.inneritemjobs .dropdown .dropdown-menu,
+.titlejobs .flex .dropdown .dropdown-menu,
+.payrollList .dropdown .dropdown-menu {
+    right: auto !important;
+    left: 0 !important;
+}
+
+.received .text {
+    border-radius: 15px;
+    border-bottom-right-radius: 0;
+}
+
+.sent .text {
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+}
+
+.sent .text svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.emoji-btn,
+.attach-btn {
+    right: auto;
+    left: 12px;
+}
+
+.attach-btn {
+    right: auto;
+    left: 32px;
+}
+
+.emoji-picker {
+    right: auto;
+    left: 10px;
+}
+
+.chat-input input {
+    padding: 10px;
+    padding-left: 75px;
+}
+
+.toggle-sidebar {
+    right: auto;
+    left: 40px;
+    cursor: pointer;
+}
+
+@media (max-width:767px) {
+    .sidebarchat {
+        left: auto;
+        right: -100%;
+    }
+    .sidebarchat.active {
+        left: auto;
+        right: 0;
+    }
+}
+
+
+/*//////////////////////////////////////////////////////////////////////*/
+
+.withdebit svg {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.taskmeeting .flex .date {
+    margin-right: 0px;
+    margin-left: 24px;
+}
+
+.taskmeeting .subtext .listtime li {
+    margin-right: 0px;
+    margin-left: 24px;
+}
+
+.taskmeeting .subtext .listtime li:last-child {
+    margin-left: 0px;
+}
+
+.taskmeeting .listaction .chat-icon {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////*/
+
+.tablelistjob .minhead .title svg,
+.subminhead .title svg,
+.titlehead .title svg {
+    margin-right: 0px;
+    margin-left: 12px;
+}
+
+.subcolum .status svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.tablelistjob .status::before,
+.subcolum .status::before,
+.inneritemjobs .status::before,
+.titlejobs .flexrow .flex .status::before {
+    left: auto;
+    right: 12px;
+}
+
+.innersubcolum .title {
+    padding-right: 0px;
+    padding-left: 32px;
+}
+
+.innersubcolum .status {
+    padding-left: 0px;
+    padding-right: 18px;
+}
+
+.innersubcolum .status::before {
+    left: auto;
+    right: 0;
+}
+
+.innersubcolum .list li svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.innersubcolum .approaching p svg {
+    margin: 3px 0px 0px 4px;
+}
+
+.innersubcolum .nameuser .flex .photo {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.offeraccepted svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.projecttabs li a::after,
+.tabsjobs li a::after,
+.tabsupport a:after {
+    left: auto;
+    right: 0px;
+}
+
+.tabsupport a {
+    margin-right: 0px;
+    margin-left: 24px;
+}
+
+.tabsupport a:last-child {
+    margin-left: 0;
+}
+
+.detailsproject .listskills li,
+.subtalent .listskills li,
+.subfilter .listskills li,
+.rockstar .listskills li,
+.talent-inner .item .user .listskills li {
+    margin: 8px 0px 0px 8px;
+}
+
+.subfilter .listskills a {
+    margin-left: 0px;
+    margin-right: 4px;
+}
+
+.detailsproject .listpdf a svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.numbermilestones li:last-child {
+    border-left: 0px;
+    padding-left: 0px;
+    border-right: 1px solid #496E5233;
+    padding-right: 20px;
+}
+
+.editform .field .text .icon,
+.innerpayment.red .field .textnots .icon {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.editform .field .che-box input[type="radio"]+.label-text:before,
+.editform .field .che-box input[type="checkbox"]+.label-text:before {
+    right: auto;
+    left: .75rem;
+}
+
+.listmilestone {
+    border-left: 0px;
+    margin-left: 0px;
+    border-right: 1px solid #E3E3E3;
+    margin-right: 16px;
+}
+
+.listmilestone li {
+    padding-left: 0px;
+    padding-right: 22px;
+}
+
+.listmilestone li .flex span {
+    margin-left: 0px;
+    margin-right: 12px;
+}
+
+.innerpayment .listmilestone {
+    border-left: 0px;
+    border-right: 1px solid #D2D6DB;
+}
+
+.innerpayment .bottoms .paynow {
+    margin-left: 0px;
+    margin-right: 20px;
+}
+
+.listrating li .flex span {
+    margin-left: 0px;
+    margin-right: 20px;
+}
+
+.boxapplynow .formapply .field input.form-control,
+.itemform .field.pricefield .form-control {
+    padding-right: 0.75rem;
+    padding-left: 60px;
+}
+
+.boxapplynow .formapply .field span,
+.itemform .field.pricefield span {
+    right: auto;
+    left: 12px;
+    border-radius: .25rem 0px 0px .25rem;
+}
+
+.boxapplynow .formapply .field ul {
+    padding-left: 0px;
+    padding-right: 20px;
+}
+
+.portfolio-passive-user .item .status::before {
+    left: auto;
+    right: 12px;
+}
+
+.portfolio-passive-user .item .list li svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.portfolio-passive-user .item .hirejob .listhire a .icon {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.portfolio-passive-user .item .hirejob .listhire a .arrow {
+    right: auto;
+    left: 0px;
+    rotate: 180deg;
+}
+
+.portfolio-passive-user .subitem .projecttabs li,
+.tabsjobs li {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+.portfolio-passive-user .subitem .projecttabs li:last-child,
+.tabsjobs li:last-child {
+    margin: 0;
+}
+
+.itemjobs .create-new .icon {
+    margin: 0;
+    margin-left: 24px;
+}
+
+.client-reviews .done {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+.client-reviews .done svg {
+    left: auto;
+    right: 8px
+}
+
+.client-reviews .innerflex svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.servisitem span.price small {
+    margin-left: 0px;
+    margin-right: 12px;
+}
+
+.servisitem span.price b {
+    margin-left: 0px;
+    margin-right: 2px;
+}
+
+.itemup {
+    border-right: 0px;
+    border-left: 1px solid #E8E8EB;
+}
+
+.innerselectimg h4.title p {
+    margin: 0px 16px 0px 2px;
+}
+
+.innerselectimg h5.title svg {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.remove-btn {
+    right: auto;
+    left: 12px;
+}
+
+.pricingsidebar {
+    border: 1px solid #E0E1E2;
+    border-left: 0;
+    border-radius: 0px 8px 8px 0px;
+}
+
+.pricing-table .tab-content {
+    border-radius: 8px 0px 0px 8px;
+}
+
+.select2-container--bootstrap .select2-selection--multiple .select2-selection__choice {
+    float: right;
+}
+
+.select2-container--bootstrap .select2-selection--multiple .select2-selection__choice__remove {
+    float: left;
+    margin-left: 0px;
+    margin-right: 10px;
+}
+
+.plan-col {
+    border-right: 0px;
+    border-left: 1px solid #E0E1E2;
+}
+
+.plan-col .title .most {
+    margin-left: 0px;
+    margin-right: 4px;
+}
+
+.plan-col .title .most svg {
+    margin-right: 0px;
+    margin-left: 2px;
+}
+
+.talent__item .minhead .filterinput .form-control {
+    padding: .75rem 35px .75rem .75rem;
+}
+
+.talent__item .minhead .filterinput svg {
+    right: 10px;
+    left: auto;
+}
+
+.talent__item .minhead .nav li,
+.talent-inner .item .nav a {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+.talent__item .minhead .nav li:last-child,
+.talent-inner .item .nav a:last-child {
+    margin: 0;
+}
+
+.talent__item .minhead .nav li a::after,
+.talent-inner .item .nav a:after {
+    left: auto;
+    right: 0px;
+}
+
+.rockstar .flex .user h5.title svg,
+.talent-inner .item .user h5.title svg {
+    margin-left: 0px;
+    margin-right: 8px;
+}
+
+.rowtext p svg,
+.talent-inner .item .numberprice svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.talent-inner .item .text ul {
+    padding-left: 0px;
+    padding-right: 18px;
+}
+
+.reportjob a svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.talent-inner .item .flexapplay .share,
+.talent-inner .item .flexapplay .favorite {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+.talent-inner .item .ratings .iconsrating {
+    margin-left: 0px;
+    margin-right: 12px;
+}
+
+.field.m-0.mt-3 .che-box {
+    padding-left: 0px;
+    padding-right: 26px;
+}
+
+.editform .field.m-0.mt-3 .che-box input[type="checkbox"]+.label-text:before {
+    left: auto;
+    right: 0;
+}
+
+.inneritemjobs .dropdown {
+    right: auto;
+    left: 16px;
+}
+
+.inneritemjobs .list li,
+.titlejobs .list li,
+.innertext .grid .iconflex {
+    margin: 16px 0px 0px 16px;
+}
+
+.innertext .grid .iconflex {
+    margin: 0;
+}
+
+.inneritemjobs .list svg,
+.titlejobs .list svg,
+.innertext .grid .iconflex svg,
+.inneritemjobs .resume svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.inneritemjobs .resume {
+    margin-left: 0px;
+    margin-right: 24px;
+}
+
+.inneritemjobs .users .img,
+.inneritemjobs .users .num {
+    margin: 8px 0px 0px 4px;
+}
+
+.inneritemjobs .flexusers .flex a {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+.inneritemjobs .flexusers .flex a:last-child {
+    margin-left: 0;
+}
+
+.titlejobs .flexrow .flex .back,
+.titlejobs .flexrow .flex .process svg,
+.titlejobs .flexrow .flex .title {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.titlejobs .flexrow .flex .process {
+    margin-right: 0px;
+    margin-left: 16px;
+}
+
+.flexend .bottom {
+    margin-right: 0px;
+    margin-left: 20px;
+}
+
+.flexend .bottom:last-child {
+    margin: 0;
+}
+
+.about-candidate .user .innerflex .info {
+    margin-left: 0px;
+    margin-right: 12px;
+}
+
+.about-candidate .toolbar {
+    direction: ltr;
+}
+
+.about-candidate .action {
+    right: auto;
+    left: 16px;
+}
+
+.about-candidate .action .red {
+    margin-left: 0px;
+    margin-right: 16px;
+}
+
+.about-candidate .action .green svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.active-jobs .message .innermessage svg {
+    margin-right: 0px;
+    margin-left: 12px;
+}
+
+.active-jobs .contact-info li {
+    margin: 12px 0px 0px 32px;
+}
+
+.active-jobs .contact-info li:last-child {
+    margin-left: 0;
+}
+
+.active-jobs .contact-info li .icon {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.innerhelp .bottoms a {
+    margin: 16px 0px 0px 12px;
+}
+
+.innerhelp .bottoms a svg {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.innerhelp .bottoms a:last-child {
+    margin-left: 0;
+}
+
+.headflex .back {
+    margin: 8px 0px 0px 12px;
+}
+
+.headflex .back svg,
+.titlejobs .flexrow .flex .back svg {
+    rotate: 180deg;
+}
+
+.sidebar .title,
+.sidebar .text {
+    text-align: center !important;
+}
+
+.subhelp .rowtext .user img {
+    margin-right: 0px;
+    margin-left: 8px;
+    object-fit: cover;
+}
+
+.comments .title .num {
+    margin-left: 0px;
+    margin-right: 12px;
+}
+
+.innercomment .user .title {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.itemreply {
+    padding-left: 0px;
+    padding-right: 80px;
+}
+
+.itemreply .flex .logo {
+    padding-right: 0px;
+    margin-right: 0px;
+    border-right: 0px;
+    padding-left: 12px;
+    margin-left: 12px;
+    border-left: 1px solid #000;
+}
+
+@media (max-width:999px) {
+    .tabsupport a {
+        margin-right: 0px;
+        margin-left: 12px;
+    }
+    .itemreply {
+        padding-left: 0px;
+        padding-right: 20px;
+    }
+}
+
+
+/*//////////////////////////////////////////////////*/
+
+.timeline-meta {
+    margin-left: 0px;
+    margin-right: 10px;
+}
+
+.timeline-header .tabs a {
+    margin-right: 0px;
+    margin-left: 20px;
+}
+
+.timeline-header .tabs a:after {
+    left: auto;
+    right: 0px;
+}
+
+.chips li {
+    padding: 2px 10px 2px 40px;
+}
+
+.chips li i {
+    right: auto;
+    left: 0;
+}
+
+.hour-labels {
+    left: auto;
+    right: 0;
+}
+
+.hour-labels li::after {
+    left: auto;
+    right: 50%;
+}
+
+.time-canvas .flexrow .timejob {
+    border-left: 0px;
+    border-right: 8px solid #734CC9;
+}
+
+.time-canvas .flexrow .timejob.green {
+    border-left: 0px;
+    border-right: 8px solid #90D272;
+}
+
+.time-canvas .flexrow .timejob.blue {
+    border-left: 0px;
+    border-right: 8px solid #78AAF4;
+}
+
+.time-canvas .flexrow .timejob.lightgreen {
+    border-left: 0px;
+    border-right: 8px solid #ACE9E1;
+}
+
+.time-canvas .flexrow .timejob.lightorange {
+    border-left: 0px;
+    border-right: 8px solid #D6B664;
+}
+
+.time-canvas .flexrow .timejob.lightblack {
+    border-left: 0px;
+    border-right: 8px solid #6F7F95;
+}
+
+.time-canvas .flexrow .timejob .photos li {
+    margin-left: 0px;
+    margin-right: -12px;
+}
+
+.categoryfilters .selectfilter {
+    margin: 16px 0px 0px 12px;
+}
+
+.categoryfilters .selectfilter svg {
+    left: auto;
+    right: 8px;
+}
+
+.categoryfilters .select2-container--bootstrap .select2-selection--single,
+.categoryfilters .select2-container--bootstrap .select2-selection--multiple {
+    padding-left: 0.75rem;
+    padding-right: 25px;
+}
+
+.export-payroll svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.mes-about {
+    padding: 12px 12px 12px 30px;
+}
+
+.mes-about svg {
+    min-width: 17px;
+    margin: 6px 0px 0px 8px;
+}
+
+.closing {
+    right: auto;
+    left: 12px;
+}
+
+.numberstext li::after {
+    left: auto;
+    right: -88%;
+}
+
+.numberstext li .flex span,
+.numberstext li .icon svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+.chart-header .form-control {
+    background: #F9F9F9 url(../images/arrow.svg) left 12px center no-repeat !important;
+}
+
+.chart-header .title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cardchart .subtext span {
+    margin-left: 0px;
+    margin-right: 4px;
+}
+
+.payrollList .categoryfilters .flexinput .form-control:last-child {
+    margin-left: 0;
+}
+
+.title {
+    font-weight: 500;
+}
+
+.blogs .item .inner .flex ul .subdes {
+    margin-right: 0px;
+    margin-left: 12px;
+}
+
+.listdeposit a,
+.dataTables_wrapper .dataTables_paginate .paginate_button,
+.thank-message p,
+.userssay .counters .counter-box .number,
+.userssay .counters .counter-box p,
+.project-page-passive .applynow .bottom,
+.map-back p {
+    text-align: center !important;
+}
+
+table.dataTable thead th,
+table.dataTable thead td,
+table.dataTable tfoot th,
+table.dataTable tfoot td,
+.ql-editor {
+    text-align: right !important;
+}
+
+.howwork .item .flex .arrow,
+.aboutus .item .more svg,
+.subsignup .item .contant .more svg {
+    rotate: 180deg;
+}
+
+.taskmeeting .subtext .listtime li svg {
+    margin-right: 0px;
+    margin-left: 4px;
+}
+
+table.dataTable thead>tr>th.sorting:before,
+table.dataTable thead>tr>th.sorting:after,
+table.dataTable thead>tr>th.sorting_asc:before,
+table.dataTable thead>tr>th.sorting_asc:after,
+table.dataTable thead>tr>th.sorting_desc:before,
+table.dataTable thead>tr>th.sorting_desc:after,
+table.dataTable thead>tr>th.sorting_asc_disabled:before,
+table.dataTable thead>tr>th.sorting_asc_disabled:after,
+table.dataTable thead>tr>th.sorting_desc_disabled:before,
+table.dataTable thead>tr>th.sorting_desc_disabled:after,
+table.dataTable thead>tr>td.sorting:before,
+table.dataTable thead>tr>td.sorting:after,
+table.dataTable thead>tr>td.sorting_asc:before,
+table.dataTable thead>tr>td.sorting_asc:after,
+table.dataTable thead>tr>td.sorting_desc:before,
+table.dataTable thead>tr>td.sorting_desc:after,
+table.dataTable thead>tr>td.sorting_asc_disabled:before,
+table.dataTable thead>tr>td.sorting_asc_disabled:after,
+table.dataTable thead>tr>td.sorting_desc_disabled:before,
+table.dataTable thead>tr>td.sorting_desc_disabled:after,
+.select2-container--bootstrap .select2-selection--single .select2-selection__arrow {
+    right: auto !important;
+    left: 10px;
+}
+
+.ql-snow .ql-picker:not(.ql-color-picker):not(.ql-icon-picker) svg {
+    right: auto !important;
+    left: 0;
+}
+
+.select2-container {
+    direction: rtl;
+}

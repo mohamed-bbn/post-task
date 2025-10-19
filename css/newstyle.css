@@ -7507,7 +7507,7 @@ textarea.form-control {
 }
 
 .map-back .bottoms a {
-    margin: 12px 4px 0px 4px;
+    margin: 12px 4px 0px 4px !important;
 }
 
 .map-back .bottoms .login {
@@ -12590,9 +12590,14 @@ span.statuscompleted {
 }
 
 .tabsupport {
+    display: flex;
     border-bottom: 1px solid #EFF0F0;
-    padding-bottom: 7px;
     margin-top: 24px;
+}
+
+.subhelp .minhead .circle {
+    margin-right: 0px !important;
+    margin-left: 8px;
 }
 
 .subhelp {
@@ -13581,4 +13586,9 @@ span.statuscompleted {
     .dashchart {
         grid-template-columns: 1fr;
     }
+}
+
+.editform .subchek i.icon {
+    right: auto;
+    left: 20px;
 }
