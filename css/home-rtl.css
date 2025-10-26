@@ -1996,7 +1996,8 @@ textarea.form-control {
 .itemprogress .flex .innerflex,
 .talent-inner .item .user .innerflex,
 .innercand .user .innerflex,
-.about-candidate .user .innerflex {
+.about-candidate .user .innerflex,
+.usercompan .innerflex {
     margin: 8px 0px 0px 12px;
 }
 
@@ -2008,7 +2009,8 @@ textarea.form-control {
 .itemprogress .flex .innerflex:last-child,
 .talent-inner .item .user .innerflex:last-child,
 .innercand .user .innerflex:last-child,
-.about-candidate .user .innerflex:last-child {
+.about-candidate .user .innerflex:last-child,
+.usercompan .innerflex:last-child {
     margin-left: 0px;
 }
 
@@ -2020,7 +2022,8 @@ textarea.form-control {
 .itemprogress .flex .innerflex svg,
 .talent-inner .item .user .innerflex svg,
 .innercand .user .innerflex svg,
-.about-candidate .user .innerflex svg {
+.about-candidate .user .innerflex svg,
+.usercompan .innerflex svg {
     margin-right: 0px;
     margin-left: 4px;
 }

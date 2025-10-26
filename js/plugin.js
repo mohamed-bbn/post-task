@@ -82,11 +82,13 @@ $(document).ready(function() {
 
     $(function() {
         let $t = $("#typing"),
-            txt = $t.data("text"),
+            txt = $t.data("text") || "", // ✅ حماية إذا الـ data-text مش موجودة
             i = 0,
             typingSpeed = 120,
             deletingSpeed = 80,
             pauseTime = 1000;
+
+        if (!txt.length) return; // ✅ إيقاف السكربت لو مفيش نص
 
         function type() {
             if (i < txt.length) {
@@ -109,7 +111,6 @@ $(document).ready(function() {
         type();
     });
 
-    ///////////////////// End text slider
 
 
     $('.number').each(function() {
@@ -402,6 +403,37 @@ $(document).ready(function() {
     $(".closing").click(function() {
         $(".mes-about").remove();
     });
+
+
+
+    function makeTimer() {
+        $(".counter").each(function() {
+            let endTime = $(this).data("end");
+            if (!endTime) return;
+
+            let end = Date.parse(endTime) / 1000;
+            let now = Date.parse(new Date()) / 1000;
+            let timeLeft = end - now;
+
+            if (timeLeft < 0) timeLeft = 0;
+
+            let days = Math.floor(timeLeft / 86400);
+            let hours = Math.floor((timeLeft % 86400) / 3600);
+            let minutes = Math.floor((timeLeft % 3600) / 60);
+            let seconds = Math.floor(timeLeft % 60);
+
+            if (hours < 10) hours = "0" + hours;
+            if (minutes < 10) minutes = "0" + minutes;
+            if (seconds < 10) seconds = "0" + seconds;
+
+            $(this).find(".days").text(days);
+            $(this).find(".hours").text(hours);
+            $(this).find(".minutes").text(minutes);
+            $(this).find(".seconds").text(seconds);
+        });
+    }
+
+    setInterval(makeTimer, 1000);
 
 
 });
