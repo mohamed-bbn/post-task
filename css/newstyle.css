@@ -13691,13 +13691,13 @@ span.statuscompleted {
 }
 
 .herolanding .item:last-child .title {
-    text-align: center;
+    text-align: center !important;
 }
 
 .herolanding .item p.launchdate {
     font-weight: 600;
     margin-bottom: 0;
-    text-align: center;
+    text-align: center !important;
 }
 
 .herolanding .item p.launchdate span {
@@ -13753,7 +13753,7 @@ span.statuscompleted {
     display: block;
     font-size: 20px;
     color: #fff;
-    text-align: center;
+    text-align: center !important;
     line-height: 22px;
     font-weight: 500;
     margin: 0;
@@ -14460,19 +14460,13 @@ img.map-img {
     position: absolute;
     bottom: 110%;
     left: 50%;
+    min-width: 330px;
     transform: translateX(-50%);
-    background: #fff;
-    color: #000;
-    padding: 8px 12px;
-    font-size: 13px;
-    border-radius: 8px;
-    white-space: nowrap;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
     opacity: 0;
     pointer-events: none;
     transition: opacity .2s ease, transform .2s ease;
     transform-origin: bottom;
-    text-align: center;
 }
 
 .innertabs .tooltip::after {
@@ -14533,6 +14527,7 @@ img.map-img {
 
 .howplatform .subitem {
     padding: 32px;
+    overflow: hidden;
 }
 
 .howapply .item .photo {
@@ -14684,6 +14679,18 @@ img.map-img {
     margin: 32px auto 0px auto;
 }
 
+.gridbox .rowbox {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.carditems {
+    margin: 24px 0px -32px 0px;
+}
+
+.carditems img {
+    max-width: 100%;
+}
+
 @media (max-width:999px) {
     .advantages .item {
         max-width: 100%;
@@ -14729,7 +14736,7 @@ img.map-img {
     }
     .em-link {
         display: block;
-        text-align: center;
+        text-align: center !important;
         margin-top: 12px;
     }
     .footerlanding .social {
@@ -14740,7 +14747,8 @@ img.map-img {
         width: 76px;
         height: 76px;
     }
-    .howapply .rowbox {
+    .howapply .rowbox,
+    .gridbox .rowbox {
         grid-template-columns: repeat(2, 1fr);
     }
     .howplatform .subitem {
@@ -14753,13 +14761,17 @@ img.map-img {
 
 @media (max-width:767px) {
     .advantages .item .rowbox,
-    .howapply .rowbox {
+    .howapply .rowbox,
+    .gridbox .rowbox {
         grid-template-columns: repeat(1, 1fr);
     }
     .advantages .item .rowbox .subitem .icon {
         min-width: 100px;
         max-width: 100px;
         height: 120px;
+    }
+    .innertabs .tooltip {
+        min-width: 232px;
     }
 }
 

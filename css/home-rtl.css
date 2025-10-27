@@ -131,8 +131,8 @@ body {
 .header .bottoms .bottom,
 .header .bottoms .login {
     font-size: 14px;
-    min-width: 128px;
-    max-width: 128px;
+    /* min-width: 128px;
+    max-width: 128px; */
 }
 
 .header .bottoms .dropdown .dropdown-toggle .photo {
@@ -3090,4 +3090,34 @@ table.dataTable thead>tr>td.sorting_desc_disabled:after,
 
 .select2-container {
     direction: rtl;
+}
+
+.advantages .bottoms .bottom {
+    margin: 16px 0px 0px 16px;
+}
+
+.advantages .bottoms .bottom:last-child {
+    margin-left: 0;
+}
+
+.advantages .item .minhead .bottom svg {
+    rotate: 0deg;
+    margin-left: 0px;
+    margin-right: 8px;
+}
+
+.advantages .item .rowbox .subitem .icon {
+    margin-right: 0px;
+    margin-left: 12px;
+}
+
+.advantages .item .independents .nav-tabs li a .icon {
+    rotate: 0deg;
+    margin-left: 0px;
+    margin-right: 12px;
+}
+
+.advantages .item .independents .tab-pane .companies .photo {
+    left: auto;
+    right: 0;
 }
