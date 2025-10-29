@@ -102,16 +102,16 @@ body {
     right: 0px;
 }
 
-
-/* .header .bottoms .language {
+.header .bottoms .language {
     margin-left: 0px;
     margin-right: 8px;
-} */
+}
 
-.header .bottoms .language svg {
+
+/* .header .bottoms .language svg {
     margin-right: 0px;
     margin-left: 4px;
-}
+} */
 
 .header .bottoms .login {
     margin-left: 0px;
@@ -1983,7 +1983,8 @@ textarea.form-control {
 .talent-inner .item .user .photo,
 .innercand .user .photo,
 .about-candidate .user .photo,
-.innercomment .user .photo {
+.innercomment .user .photo,
+.thumb-overlay .photo {
     margin-right: 0px;
     margin-left: 12px;
 }
@@ -1997,7 +1998,8 @@ textarea.form-control {
 .talent-inner .item .user .innerflex,
 .innercand .user .innerflex,
 .about-candidate .user .innerflex,
-.usercompan .innerflex {
+.usercompan .innerflex,
+.thumb-overlay .flex .innerflex {
     margin: 8px 0px 0px 12px;
 }
 
@@ -2010,7 +2012,8 @@ textarea.form-control {
 .talent-inner .item .user .innerflex:last-child,
 .innercand .user .innerflex:last-child,
 .about-candidate .user .innerflex:last-child,
-.usercompan .innerflex:last-child {
+.usercompan .innerflex:last-child,
+.thumb-overlay .flex .innerflex:last-child {
     margin-left: 0px;
 }
 
@@ -2023,7 +2026,8 @@ textarea.form-control {
 .talent-inner .item .user .innerflex svg,
 .innercand .user .innerflex svg,
 .about-candidate .user .innerflex svg,
-.usercompan .innerflex svg {
+.usercompan .innerflex svg,
+.thumb-overlay .flex .innerflex svg {
     margin-right: 0px;
     margin-left: 4px;
 }
@@ -3120,4 +3124,64 @@ table.dataTable thead>tr>td.sorting_desc_disabled:after,
 .advantages .item .independents .tab-pane .companies .photo {
     left: auto;
     right: 0;
+}
+
+.popup-backdrop .popup.w-minmax .copylink .bottom {
+    right: auto;
+    left: 7px;
+}
+
+.reply-input .form-control,
+.add-comment .form-control {
+    padding: 8px;
+    padding-left: 46px;
+}
+
+.reply-input .send-reply,
+.add-comment .bottom {
+    right: auto;
+    left: 6px;
+}
+
+.add-comment .bottom {
+    right: auto;
+    left: 18px;
+}
+
+.reply-item {
+    border-left: 0px;
+    padding-left: 0px;
+    border-right: 1px solid #E5E5E5;
+    padding-right: 8px;
+}
+
+.media-controls {
+    left: auto;
+    right: 12px;
+}
+
+.nav-fixed {
+    right: auto;
+    left: 12px;
+}
+
+.close-popup {
+    right: auto;
+    left: 30px;
+}
+
+.listoption li .tooltip-text {
+    left: auto;
+    right: 60px;
+}
+
+@media (max-width:550px) {
+    .listoption {
+        right: auto;
+        left: 12px;
+    }
+    .listoption li .tooltip-text {
+        right: auto;
+        left: 60px;
+    }
 }
