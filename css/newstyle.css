@@ -15364,3 +15364,54 @@ img.map-img {
         width: 100%;
     }
 }
+
+.popup-backdrop .popup.addwidth {
+    min-width: 900px;
+    max-width: 900px;
+    overflow: hidden;
+}
+
+.popup-backdrop .popup.addwidth .minhead,
+.slidform .editform,
+.slidform .editform .form-control {
+    background: #FAFAFF;
+}
+
+.slidform {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 12px;
+    align-items: center;
+}
+
+.slidform .title {
+    font-size: 24px;
+}
+
+.slidform p {
+    font-weight: 400;
+    color: #2E2C3A;
+    margin-top: 8px;
+}
+
+@media (max-width:999px) {
+    .popup-backdrop .popup.addwidth {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .slidform {
+        grid-template-columns: 1fr;
+    }
+    .slick-slider {
+        margin: 0 auto;
+    }
+    .everyone {
+        padding: 12px;
+    }
+    .everyone .title {
+        justify-content: center;
+    }
+    .everyone p {
+        text-align: center !important;
+    }
+}

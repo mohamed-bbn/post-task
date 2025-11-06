@@ -640,7 +640,7 @@
 
 
     <div id="popup-backdrop" class="popup-backdrop">
-        <div class="popup">
+        <div class="popup addwidth">
             <div class="minhead">
                 <h4 class="title">تسجيل</h4>
                 <a href="javascript:void(0)" class="closePopup">
@@ -658,7 +658,7 @@
             </div>
             <!-- End minhead -->
 
-            <div class="innermass">
+            <!-- <div class="innermass">
                 <div class="different readypart">
                     <div>
                         <div class="photo">
@@ -679,41 +679,77 @@
                             بعد تعبئة النموذج، سيتواصل معك فريق تاسك لينك للتحقق من معلومات شركتك ومساعدتك في عملية التصفية والتحقق. ستنضم الشركات المعتمدة فقط إلى برنامج "الشركات الراسخة". </p>
                     </div>
                 </div>
+            </div> -->
+            <div class="slidform">
+                <form action="">
+                    <div class="editform">
+                        <div class="row">
+                            <div class="col-sm-12 field">
+                                <label for="">الاسم الكامل <em>*</em></label>
+                                <input class="form-control" type="text" name="" placeholder="" required="">
+                            </div>
+                            <!-- End field -->
+                            <div class="col-sm-12 field">
+                                <label for="">عنوان البريد الإلكتروني<em>*</em></label>
+                                <input class="form-control" type="text" name="" placeholder="" required="">
+                            </div>
+                            <!-- End field -->
+
+                            <div class="col-sm-12 field">
+                                <label for="">رقم التليفون<em>*</em></label>
+                                <input class="form-control" type="number" name="" placeholder="" required="">
+                            </div>
+                            <!-- End field -->
+                            <div class="col-sm-12 field">
+                                <label>الرسالة<em>*</em></label>
+                                <textarea class="form-control " name=" " placeholder=""></textarea>
+                            </div>
+                            <!-- End field -->
+                            <div class="col-sm-4 field">
+                                <button class="bottom" type="submit">أرسل </button>
+                            </div>
+                            <!-- End field -->
+                        </div>
+                        <!-- End row -->
+                    </div>
+
+                </form>
+                <div class="everyone">
+                    <h2 class="title">انطلق قبل الجميع!</h2>
+                    <p>انضم إلى الشركات الأولى في تاسك لينك واستفد من مزايا التأسيس المجانية ودعم مخصص لبناء ملف شركتك باحترافية.</p>
+                    <div class="position-relative">
+                        <div class="slider-loader">
+                            <div class="spinner"></div>
+                        </div>
+
+                        <div class="slidercard slick-loading">
+                            <div class="item">
+                                <div class="photo"><img loading="lazy" src="../images/ap-1.png" alt="TaskLink"></div>
+                                <h4 class="title">Strong discounts</h4>
+                                <p>Save thousands of riyals and benefit from “Preferred Customer” status.</p>
+                            </div>
+                            <div class="item">
+                                <div class="photo"><img loading="lazy" src="../images/ap-2.png" alt="TaskLink"></div>
+                                <h4 class="title">Distinctive appearance and prestige:</h4>
+                                <p>Always have the “Established Company” badge next to your company name.</p>
+                            </div>
+                            <div class="item">
+                                <div class="photo"><img loading="lazy" src="../images/ap-3.png" alt="TaskLink"></div>
+                                <h4 class="title">Employment guarantees:</h4>
+                                <p>Rest assured – results are guaranteed.</p>
+                            </div>
+                            <div class="item">
+                                <div class="photo"><img loading="lazy" src="../images/ap-4.png" alt="TaskLink"></div>
+                                <h4 class="title">Free consultations:</h4>
+                                <p>Free consultation sessions</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- end slidercard -->
+                </div>
             </div>
 
-            <form action="">
-                <div class="editform">
-                    <div class="row">
-                        <div class="col-sm-12 field">
-                            <label for="">الاسم الكامل <em>*</em></label>
-                            <input class="form-control" type="text" name="" placeholder="" required="">
-                        </div>
-                        <!-- End field -->
-                        <div class="col-sm-12 field">
-                            <label for="">عنوان البريد الإلكتروني<em>*</em></label>
-                            <textarea class="form-control " name=" " placeholder=""></textarea>
-                        </div>
-                        <!-- End field -->
-
-                        <div class="col-sm-12 field">
-                            <label for="">رقم التليفون<em>*</em></label>
-                            <input class="form-control" type="number" name="" placeholder="" required="">
-                        </div>
-                        <!-- End field -->
-                        <div class="col-sm-12 field">
-                            <label>الرسالة<em>*</em></label>
-                            <textarea class="form-control " name=" " placeholder=""></textarea>
-                        </div>
-                        <!-- End field -->
-
-                    </div>
-                    <!-- End row -->
-                </div>
-                <div class="minfooter">
-                    <button class="btnproceed" type="submit">أرسل الرسالة</button>
-                    <a class="closePopup">رجوع</a>
-                </div>
-            </form>
         </div>
     </div>
     <!-- End popup-backdrop2 -->
@@ -765,6 +801,8 @@
     <!--End Footer-->
 
 
+    <link rel="stylesheet" type="text/css" href="../css/slick.css" />
+    <script src="../js/slick.min.js"></script>
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
     <script>
@@ -805,6 +843,37 @@
                     currentStep--;
                     showStep(currentStep);
                 }
+            });
+
+            function initializeSlider(selector, options) {
+                $(selector)
+                    .on('init', function() {
+                        $(this)
+                            .removeClass('slick-loading')
+                            .addClass('slick-loaded');
+                        $(".slider-loader").fadeOut(5000); //      
+                    })
+                    .slick(options);
+            }
+
+            $(function() {
+                initializeSlider(".slidercard", {
+                    dots: true,
+                    infinite: true,
+                    speed: 1000,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    centerMode: true,
+                    centerPadding: "40px",
+                    responsive: [{
+                        breakpoint: 999, // الشاشات الكبيرة
+                        settings: {
+                            centerMode: false,
+                        }
+                    }, ]
+                });
             });
         });
     </script>
