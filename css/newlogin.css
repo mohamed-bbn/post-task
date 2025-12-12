@@ -1,0 +1,201 @@
+.loginpage,
+.loginpage::before,
+.signup,
+.signup::before,
+.forgot,
+.forgot::before {
+    background: none;
+    padding-bottom: 150px;
+    min-height: inherit;
+}
+
+@media (max-width:999px) {
+    .loginpage,
+    .loginpage::before,
+    .signup,
+    .signup::before,
+    .forgot,
+    .forgot::before {
+        padding-bottom: 24px;
+    }
+}
+
+.loginpage .item,
+.signup .item,
+.forgot .item {
+    margin: 0 auto;
+    max-width: 440px;
+    padding: 0;
+}
+
+.signup .field p,
+.loginpage .field p,
+.forgot .field p {
+    text-align: center !important;
+    color: #15152899;
+}
+
+.loginpage .item .bottom,
+.signup .item .bottom,
+.forgot .item .bottom {
+    background: #6568F4;
+    border: 1px solid #6568F4;
+}
+
+.loginpage .item .bottom:hover,
+.signup .item .bottom:hover,
+.forgot .item .bottom:hover {
+    background: #494cd5;
+    border: 1px solid #494cd5;
+}
+
+.loginpage .item .flex,
+.signup .item .flex {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.loginpage .item a,
+.signup .item a {
+    font-weight: 400;
+    font-size: 14px;
+    color: #494cd5;
+}
+
+.loginpage .item p a:hover,
+.signup .item p a:hover {
+    text-decoration: underline;
+}
+
+.signup .title,
+.loginpage .title,
+.forgot .title {
+    color: #000;
+    justify-content: center;
+}
+
+.signup .des,
+.loginpage .des,
+.forgot .des {
+    color: #15152899;
+    text-align: center !important;
+    margin-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #1515281A;
+}
+
+.signup p a,
+.loginpage p a,
+.forgot p a {
+    color: #C5D92D;
+    font-weight: 400;
+}
+
+.signup p a:hover,
+.loginpage p a:hover,
+.forgot p a:hover {
+    text-decoration: underline;
+}
+
+.signup .field label,
+.loginpage .field label,
+.forgot .field label {
+    color: #151528;
+    font-size: 14px;
+}
+
+.signup .field .form-control,
+.loginpage .field .form-control,
+.forgot .field .form-control {
+    background: #fff;
+    border: 1px solid #1515281A;
+    color: #000;
+    font-size: 14px;
+}
+
+.signup .field .form-control:focus,
+.loginpage .field .form-control:focus,
+.forgot .field .form-control:focus {
+    border: 1px solid #6568F4;
+}
+
+.signup .field ::placeholder,
+.loginpage .field ::placeholder,
+.forgot .field ::placeholder {
+    color: #15152880;
+    opacity: 1;
+    /* Firefox */
+}
+
+.signup .field ::-ms-input-placeholder,
+.loginpage .field ::-ms-input-placeholder,
+.forgot .field ::-ms-input-placeholder {
+    /* Edge 12 -18 */
+    color: #15152880;
+}
+
+.signup .field em,
+.loginpage .field em,
+.forgot .field em {
+    color: red;
+}
+
+.signuplist {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.signuplist a {
+    border: 2px solid #1515281A;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.signuplist a:hover {
+    border-color: #494cd5;
+}
+
+.signuplist a .icon,
+.itemicon {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+    background: #6568F41A;
+}
+
+.itemicon {
+    margin-bottom: 16px;
+}
+
+.signuplist a .title {
+    justify-content: center;
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.signuplist a p {
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.return {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    color: #151528 !important;
+}
+
+.icon-pass svg {
+    fill: #000;
+}
