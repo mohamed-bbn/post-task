@@ -89,7 +89,7 @@ body.active {
 }
 
 .header .itemlogomenu .logo img {
-    max-width: 158px;
+    max-width: 176px;
 }
 
 @media (max-width: 999px) {
@@ -5204,9 +5204,9 @@ body.active {
     -webkit-transition: all 0.5s ease-in-out 0s;
     transition: all 0.5s ease-in-out 0s;
     overflow-y: scroll;
-    background: #fff;
+    background: #151528;
     padding-bottom: 24px;
-    border-right: 1px solid #F2EDED;
+    /* border-right: 1px solid #F2EDED; */
 }
 
 @media (max-width: 999px) {
@@ -5262,6 +5262,7 @@ body.active {
 .sidebar .logo {
     margin-top: 24px;
     padding: 0;
+    background: none;
     height: auto;
 }
 
@@ -5312,7 +5313,7 @@ body.active {
 }
 
 .sidebar .title {
-    color: #000;
+    color: #A1A1A9;
     white-space: normal;
     font-size: 16px;
     font-weight: 600;
@@ -5321,7 +5322,7 @@ body.active {
 }
 
 .sidebar .text {
-    color: #000;
+    color: #A1A1A9;
     text-align: center;
     margin-top: 12px;
     font-weight: 400;
@@ -5329,13 +5330,13 @@ body.active {
 
 .sidebar .text b {
     font-weight: bold;
-    color: #000;
+    color: #A1A1A9;
 }
 
 .sidebar .listmenu {
     padding: 0;
     margin-top: 12px;
-    border-top: 1px solid #F2EDED;
+    border-top: 1px solid #FFFFFF1A;
     padding-top: 12px;
 }
 
@@ -5379,7 +5380,7 @@ body.active {
 
 .sidebar .listmenu a span {
     overflow: hidden;
-    color: #121212;
+    color: #A1A1A9;
     font-weight: 700;
     text-transform: capitalize;
     font-weight: 500;
@@ -7207,7 +7208,7 @@ body.active {
 }
 
 .footer .boxfot .logo img {
-    max-width: 232px;
+    max-width: 176px;
 }
 
 .footer .boxfot p {
@@ -7510,6 +7511,7 @@ textarea.form-control {
 .map-back {
     background: #151528;
     min-height: 248px;
+    padding: 0;
     overflow: hidden;
 }
 

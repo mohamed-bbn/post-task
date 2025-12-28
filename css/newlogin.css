@@ -185,7 +185,9 @@
 
 .signuplist a p {
     font-size: 14px;
-    margin-top: 12px;
+    margin-top: 8px;
+    text-align: center !important;
+    color: #464646 !important;
 }
 
 .return {
