@@ -89,7 +89,7 @@ body.active {
 }
 
 .header .itemlogomenu .logo img {
-    max-width: 176px;
+    max-width: 158px;
 }
 
 @media (max-width: 999px) {
@@ -4958,8 +4958,7 @@ body.active {
 .loginpage p,
 .forgot p {
     font-weight: 400;
-    text-align: left;
-    color: #fff;
+    text-align: center !important;
 }
 
 .signup p a,
@@ -5111,7 +5110,7 @@ body.active {
 }
 
 .imgcent .file-bro {
-    font-weight: 400;
+    /* font-weight: 400;
     z-index: 3;
     position: relative;
     background: none;
@@ -5119,21 +5118,13 @@ body.active {
     bottom: auto;
     width: auto;
     height: auto;
-    margin-top: 8px;
+    margin-top: 8px; */
 }
 
 .imgcent .file-bro svg {
-    z-index: 10;
+    /* z-index: 10;
     max-width: 16px;
-    margin-right: 4px;
-}
-
-.imgcent .file-bro svg path {
-    fill: #000;
-    -moz-transition: all 0.5s ease-in-out 0s;
-    -o-transition: all 0.5s ease-in-out 0s;
-    -webkit-transition: all 0.5s ease-in-out 0s;
-    transition: all 0.5s ease-in-out 0s;
+    margin-right: 4px; */
 }
 
 .imgcent .file-bro:hover {
@@ -5206,7 +5197,6 @@ body.active {
     overflow-y: scroll;
     background: #151528;
     padding-bottom: 24px;
-    /* border-right: 1px solid #F2EDED; */
 }
 
 @media (max-width: 999px) {
@@ -5259,23 +5249,6 @@ body.active {
     width: 0px;
 }
 
-.sidebar .logo {
-    margin-top: 24px;
-    padding: 0;
-    background: none;
-    height: auto;
-}
-
-@media (max-width: 999px) {
-    .sidebar .logo {
-        justify-content: flex-start;
-    }
-}
-
-.sidebar .logo img {
-    max-width: 100% !important;
-}
-
 .sidebar .favicon {
     display: none;
 }
@@ -5284,32 +5257,12 @@ body.active {
 .sidebar:hover .imgcent {
     width: 140px;
     height: 140px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .sidebar .imgcent .file-bro svg,
 .portfolio-passive-user .item .imgcent .file-bro svg {
     margin: 0 !important;
-}
-
-.sidebar .imgcent .file-bro,
-.portfolio-passive-user .item .imgcent .file-bro {
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    background: #00000082;
-    opacity: 0;
-    margin: 0px;
-}
-
-.sidebar .imgcent .file-bro svg path,
-.portfolio-passive-user .item .imgcent .file-bro svg path {
-    fill: #fff;
-}
-
-.portfolio-passive-user .item .imgcent:hover .file-bro {
-    opacity: 1;
 }
 
 .sidebar .title {
@@ -5318,7 +5271,7 @@ body.active {
     font-size: 16px;
     font-weight: 600;
     justify-content: center;
-    margin-top: 16px;
+    margin-top: 32px;
 }
 
 .sidebar .text {
@@ -5379,9 +5332,10 @@ body.active {
 }
 
 .sidebar .listmenu a span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
     overflow: hidden;
     color: #A1A1A9;
-    font-weight: 700;
     text-transform: capitalize;
     font-weight: 500;
     -moz-transition: all 0.5s ease-in-out 0s;
@@ -7208,7 +7162,7 @@ body.active {
 }
 
 .footer .boxfot .logo img {
-    max-width: 176px;
+    max-width: 232px;
 }
 
 .footer .boxfot p {
@@ -7507,13 +7461,6 @@ textarea.form-control {
      font-style: normal;
      text-transform: capitalize;
  } */
-
-.map-back {
-    background: #151528;
-    min-height: 248px;
-    padding: 0;
-    overflow: hidden;
-}
 
 .map-back img {
     width: 100%;
@@ -8082,6 +8029,7 @@ textarea.form-control {
     padding: 20px;
     cursor: pointer;
     white-space: normal;
+    padding-left: 68px;
 }
 
 .subchek .che-box {
@@ -10433,7 +10381,7 @@ span.statuscompleted {
 }
 
 .inneraddappear .bottom {
-    margin-top: 16px;
+    margin-top: 32px;
 }
 
 .portfolio-passive-user .item {
@@ -10442,7 +10390,7 @@ span.statuscompleted {
 
 .portfolio-passive-user .item .title {
     font-size: 20px;
-    margin-top: 16px;
+    margin-top: 30px;
 }
 
 .portfolio-passive-user .item .imgcent {
@@ -11129,6 +11077,7 @@ span.statuscompleted {
 .inneraddappear .imgcent .img_prev {
     width: 140px;
     background: #DEE8FF;
+    margin-bottom: 40px;
 }
 
 @media (max-width:1199px) {
@@ -12642,10 +12591,11 @@ span.statuscompleted {
     margin-top: 24px;
 }
 
-.subhelp .minhead .circle {
+
+/* .subhelp .minhead .circle {
     margin-right: 0px !important;
     margin-left: 8px;
-}
+} */
 
 .subhelp {
     margin-top: 24px;

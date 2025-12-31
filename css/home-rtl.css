@@ -792,7 +792,6 @@ body {
     right: 9000px;
 }
 
-.imgcent .file-bro,
 .profile .col .che-box input[type="checkbox"]+.label-text:before,
 .profile .col .che-box input[type="radio"]+.label-text:before {
     left: auto;
@@ -1738,12 +1737,6 @@ textarea.form-control {
     }
 }
 
-.signup p,
-.loginpage p,
-.forgot p {
-    text-align: right;
-}
-
 .profile .itemprofile:first-child {
     border-right: 0px;
     border-left: 1px solid #DDDDE0;
@@ -1770,8 +1763,6 @@ textarea.form-control {
 .sidebar {
     left: auto;
     right: 0px;
-    border-right: 0px;
-    border-left: 1px solid #F2EDED;
 }
 
 @media (max-width: 999px) {
@@ -3192,4 +3183,23 @@ table.dataTable thead>tr>td.sorting_desc_disabled:after,
 
 .slidercard .item {
     direction: rtl;
+}
+
+.editform .subchek .che-box .text-chek {
+    padding-left: 20px;
+    padding-right: 68px;
+}
+
+.editform .subchek i.icon {
+    left: auto;
+    right: 20px;
+}
+
+.subhelp .minhead .circle {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.talent-inner .item .applynow .bottom {
+    text-align: center !important;
 }

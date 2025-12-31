@@ -7694,7 +7694,7 @@ p.text-center {
     margin: 0px auto;
     width: 40px;
     height: 40px;
-    background: #d9000d;
+    background: #c7e200;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7725,14 +7725,14 @@ p.text-center {
 
 .imgcent .file-bro svg path {
     fill: #fff;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
 }
 
 .imgcent .file-bro:hover {
     background: #fff;
-}
-
-.imgcent .file-bro:hover svg path {
-    fill: #d9000d;
 }
 
 .overlaybox {
@@ -8078,7 +8078,8 @@ p.text-center {
     }
 }
 
-.sidebar.active .title,
+
+/* .sidebar.active .title,
 .sidebar.active .email,
 .sidebar.active .listmenu a span,
 .sidebar.active .imglogo,
@@ -8086,10 +8087,10 @@ p.text-center {
 .sidebar.active .progressbar,
 .sidebar.active .notdocumented {
     display: none;
-}
+} */
 
 @media (max-width: 999px) {
-    .sidebar.active .title,
+    /* .sidebar.active .title,
     .sidebar.active .email,
     .sidebar.active .listmenu a span,
     .sidebar.active .imglogo,
@@ -8097,7 +8098,7 @@ p.text-center {
     .sidebar.active .progressbar,
     .sidebar.active .notdocumented {
         display: block;
-    }
+    } */
 }
 
 .sidebar.active .imgcent .check {
@@ -8120,10 +8121,11 @@ p.text-center {
     }
 }
 
-.sidebar.active .imgcent {
+
+/* .sidebar.active .imgcent {
     width: 50px;
     height: 50px;
-}
+} */
 
 @media (max-width: 999px) {
     .sidebar.active .imgcent {
@@ -8140,20 +8142,6 @@ p.text-center {
     .sidebar.active .imgcent .img_prev {
         height: 100px;
     }
-}
-
-.sidebar:hover {
-    width: 280px;
-}
-
-.sidebar:hover .title,
-.sidebar:hover .email,
-.sidebar:hover .listmenu a span,
-.sidebar:hover .imglogo,
-.sidebar:hover .job,
-.sidebar:hover .progressbar,
-.sidebar:hover .notdocumented {
-    display: block;
 }
 
 .sidebar:hover .favicon {
@@ -8177,14 +8165,15 @@ p.text-center {
     width: 0px;
 }
 
+.sidebar .logo {}
+
 .sidebar .logo {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 82px;
-    background: #ffffff0d;
-    padding: 0px 16px;
+    margin-top: 24px;
+    height: auto;
 }
 
 @media (max-width: 999px) {
@@ -8194,7 +8183,7 @@ p.text-center {
 }
 
 .sidebar .logo img {
-    max-width: 158px !important;
+    max-width: 100% !important;
 }
 
 .sidebar .favicon {
@@ -8236,30 +8225,6 @@ p.text-center {
     height: 100px;
 }
 
-.sidebar .imgcent .file-bro {
-    bottom: 0px;
-    width: 100%;
-    height: 100%;
-    background: #00000082;
-    opacity: 0;
-}
-
-.sidebar .imgcent .file-bro svg path {
-    fill: #fff;
-}
-
-.sidebar .title {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    justify-content: center;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 600;
-    color: #fff;
-    margin-top: 16px;
-}
-
 .sidebar .email,
 .sidebar .job {
     white-space: nowrap;
@@ -8294,11 +8259,6 @@ p.text-center {
     margin: 0px;
 }
 
-.sidebar .listmenu a:hover span,
-.sidebar .listmenu a.active span {
-    color: #d9000d;
-}
-
 .sidebar .listmenu a:hover .icon,
 .sidebar .listmenu a.active .icon {
     background: #fff;
@@ -8331,19 +8291,6 @@ p.text-center {
     fill: #fff;
     width: 17px !important;
     height: 17px !important;
-    -moz-transition: all 0.5s ease-in-out 0s;
-    -o-transition: all 0.5s ease-in-out 0s;
-    -webkit-transition: all 0.5s ease-in-out 0s;
-    transition: all 0.5s ease-in-out 0s;
-}
-
-.sidebar .listmenu a span {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    color: #fff;
-    text-transform: capitalize;
-    font-weight: 500;
     -moz-transition: all 0.5s ease-in-out 0s;
     -o-transition: all 0.5s ease-in-out 0s;
     -webkit-transition: all 0.5s ease-in-out 0s;
@@ -10556,28 +10503,15 @@ textarea.form-control {
 .map-back {
     position: relative;
     width: 100%;
-    padding: 48px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #000;
+    background: #151528;
+    min-height: 248px;
+    overflow: hidden;
 }
 
-@media (max-width: 999px) {
-    .map-back {
-        padding: 24px 0px;
-    }
-}
-
-.map-back::after {
-    content: "";
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    background: url(../images/baner.png) no-repeat center center/cover;
-}
+@media (max-width: 999px) {}
 
 .map-back .title {
     color: #fff;
