@@ -3203,3 +3203,19 @@ table.dataTable thead>tr>td.sorting_desc_disabled:after,
 .talent-inner .item .applynow .bottom {
     text-align: center !important;
 }
+
+.itemsearch .boxsearch svg {
+    left: auto;
+    right: 12px;
+}
+
+.boxprofile .back svg,
+.tophead .back svg {
+    rotate: 180deg;
+}
+
+.itemresume .toolbar #btn-prev,
+.itemresume .toolbar #btn-next,
+.tophead .flex .icon {
+    rotate: 180deg;
+}
