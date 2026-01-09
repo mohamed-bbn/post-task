@@ -10268,7 +10268,6 @@ body.active {
 }
 
 .bottom svg {
-    margin-right: 4px;
     max-width: 16px;
     max-height: 16px;
     -moz-transition: all 0.5s ease-in-out 0s;

@@ -2204,6 +2204,13 @@ select.form-control {
     padding-left: 20px;
 }
 
+.itemstepform .select2-container--bootstrap .select2-selection--multiple,
+.itemstepform .select2-container--bootstrap .select2-selection--multiple {
+    background: #fff url(../images/arrow.svg) no-repeat left 12px center !important;
+    padding-right: 0.75rem;
+    padding-left: 20px;
+}
+
 .categoryfilters.p-0.border-0 .flexinput .form-control:last-child {
     margin-left: 0;
 }
@@ -3218,4 +3225,19 @@ table.dataTable thead>tr>td.sorting_desc_disabled:after,
 .itemresume .toolbar #btn-next,
 .tophead .flex .icon {
     rotate: 180deg;
+}
+
+.st-steps .step:before {
+    left: auto;
+    margin-left: 0px;
+    right: 88%;
+    margin-right: -5px;
+}
+
+.cuspageitem .buttons .bottom svg {
+    rotate: 180deg;
+}
+
+.cuspageitem .buttons .bottom.save-btn svg {
+    rotate: 0deg;
 }
