@@ -387,7 +387,7 @@ body.active {
 }
 
 .header .submenu a:hover {
-    color: #C5D92D;
+    color: #6568F4;
 }
 
 .header .overlay {
@@ -7268,11 +7268,6 @@ select.form-control {
 textarea.form-control {
     height: 160px;
     resize: none;
-}
-
-.social {
-    display: flex;
-    align-items: center;
 }
 
 .social a {
@@ -16634,14 +16629,14 @@ img.map-img {
     display: grid;
     grid-template-columns: 2fr 2fr 1fr;
     /* grid-template-rows: 200px 140px; */
-    gap: 12px;
+    gap: 10px;
     margin-top: 24px;
 }
 
 .itemcards .hero {
     display: flex;
     justify-content: space-between;
-    gap: 12px;
+    gap: 10px;
     grid-column: 1 / 3;
     grid-row: 1;
     background: linear-gradient(107deg, #6568F4 0%, #C5CEFF 100%);
@@ -17062,6 +17057,11 @@ img.map-img {
     font-weight: 400;
 }
 
+.itemtext .bottoms {
+    display: flex;
+    gap: 8px;
+}
+
 .choosepath .nav-tabs,
 .howdoes .nav-tabs {
     margin: 0px;
@@ -17220,6 +17220,11 @@ img.map-img {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     margin-top: 24px;
+}
+
+.business-models .rowbox {
+    grid-template-columns: repeat(3, 348px);
+    justify-content: center;
 }
 
 .item-contact .rowbox,
@@ -17957,11 +17962,14 @@ img.map-img {
     box-shadow: none;
     border: 0;
     padding: 0;
+    width: 100%;
 }
 
 .newfooter .getthings .social {
     margin: 0;
     flex-wrap: wrap;
+    gap: 8px;
+    justify-content: space-between
 }
 
 .cus-header .bottoms .language svg {
@@ -17975,7 +17983,6 @@ img.map-img {
     height: 46px;
     border-radius: 10px;
     margin: 0;
-    margin-inline-end: 8px;
 }
 
 .newfooter .getthings .flex {
@@ -18049,13 +18056,16 @@ img.map-img {
         overflow-x: scroll;
         gap: 12px;
     }
+    .business-models .rowbox {
+        grid-template-columns: repeat(3, 280px);
+        justify-content: flex-start;
+    }
     .business-models .rowbox::-webkit-scrollbar,
     .howdoes .rowbox::-webkit-scrollbar,
     .item-features .rowbox::-webkit-scrollbar {
         width: 0px;
         height: 0px;
     }
-    .business-models .rowbox .item,
     .howdoes .rowbox .item,
     .item-features .rowbox .item {
         min-width: 280px;

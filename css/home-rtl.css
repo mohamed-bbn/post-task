@@ -2083,6 +2083,11 @@ textarea.form-control {
     right: 12px;
 }
 
+.newfooter .getthings {
+    left: auto;
+    right: auto;
+}
+
 @media (max-width: 999px) {
     .footer .getthings {
         right: auto;
@@ -3308,5 +3313,4 @@ table.dataTable thead>tr>td.sorting_desc_disabled:after,
 
 .newfooter .getthings .social a {
     margin: 0;
-    margin-inline-end: 8px;
 }
