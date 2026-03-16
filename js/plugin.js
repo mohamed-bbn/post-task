@@ -435,6 +435,39 @@ $(document).ready(function() {
 
     setInterval(makeTimer, 1000);
 
+    $("#toggle").change(function() {
+        // Toggle tabs
+        $(".featutab1, .featutab2").toggle();
+
+        // Toggle text
+        $(".text1, .text2").toggleClass("active-text");
+    });
+
+
+    function initializeSlider(selector, options) {
+        $(selector)
+            .on('init', function() {
+                $(this).removeClass('slick-loading').addClass('slick-loaded');
+                $(".slider-loader").hide();
+            })
+            .slick(options);
+    }
+
+    initializeSlider(".sliderguide", {
+        dots: true,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+            { breakpoint: 1199, settings: { slidesToShow: 3, slidesToScroll: 1 } },
+            { breakpoint: 999, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+
+            { breakpoint: 767, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+        ]
+    });
 
 
 });

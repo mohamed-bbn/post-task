@@ -3241,3 +3241,72 @@ table.dataTable thead>tr>td.sorting_desc_disabled:after,
 .cuspageitem .buttons .bottom.save-btn svg {
     rotate: 0deg;
 }
+
+.cus-header .cusmenu {
+    right: 0;
+    left: 0;
+}
+
+.cus-header .cusmenu .item a .comin {
+    right: auto;
+    left: 0;
+}
+
+.cus-header .menu-link {
+    padding: 4px 12px;
+}
+
+.cus-header .bottoms .login,
+.cus-header .bottoms .language,
+.cus-header .bottoms .language svg {
+    margin: 0;
+}
+
+.texthero .field button {
+    right: auto;
+    left: 16px;
+}
+
+
+/* Responsive */
+
+@media (max-width:1600px) {
+    .cus-header .menu {
+        margin: 0;
+        margin-right: 12px;
+    }
+}
+
+@media (max-width:999px) {
+    .cus-header .menu {
+        margin: 0;
+        margin-top: 92px
+    }
+    .cus-header .menu {
+        margin-left: 0;
+        padding-bottom: 24px;
+    }
+}
+
+.item-guide .minhead .bottom svg {
+    rotate: 0deg;
+}
+
+.item-guide .inner::before {
+    left: auto;
+    right: 0px;
+    rotate: 180deg;
+}
+
+.item-guide .sliderguide {
+    direction: ltr;
+}
+
+.item-guide .sliderguide .item {
+    direction: rtl;
+}
+
+.newfooter .getthings .social a {
+    margin: 0;
+    margin-inline-end: 8px;
+}
