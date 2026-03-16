@@ -82,13 +82,13 @@ $(document).ready(function() {
 
     $(function() {
         let $t = $("#typing"),
-            txt = $t.data("text") || "", // ✅ حماية إذا الـ data-text مش موجودة
+            txt = $t.data("text") || "",
             i = 0,
             typingSpeed = 120,
             deletingSpeed = 80,
             pauseTime = 1000;
 
-        if (!txt.length) return; // ✅ إيقاف السكربت لو مفيش نص
+        if (!txt.length) return;
 
         function type() {
             if (i < txt.length) {
@@ -468,6 +468,28 @@ $(document).ready(function() {
             { breakpoint: 767, settings: { slidesToShow: 1, slidesToScroll: 1 } },
         ]
     });
+
+
+    $(".open-menu").click(function() {
+        let menu = $(this).data("menu");
+        $(".menu-page").addClass("hide");
+        $("#" + menu).removeClass("hide");
+    });
+
+    $(".back").click(function() {
+        $(".menu-page").addClass("hide");
+        $(".main-menu").removeClass("hide");
+    });
+
+
+    $('.iconmeu').click(function() {
+        $('.mobile-menu').addClass("active");
+    });
+    $('.menu-header .cancel').click(function() {
+        $('.mobile-menu').removeClass("active");
+    });
+
+
 
 
 });

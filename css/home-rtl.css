@@ -2088,6 +2088,16 @@ textarea.form-control {
     right: auto;
 }
 
+.menuitem .arrow,
+.menu-page .menu-header svg {
+    rotate: 0deg;
+}
+
+.mar-menus .comin {
+    right: auto;
+    left: 0;
+}
+
 @media (max-width: 999px) {
     .footer .getthings {
         right: auto;
