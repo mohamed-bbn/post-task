@@ -1,7 +1,17 @@
  .itemhowdoes,
  .choosestarted,
- .trusted-technical {
-     margin-top: 120px;
+ .trusted-technical,
+ .business-models,
+ .choosepath,
+ .exclusively,
+ .item-contact,
+ .whetheryou,
+ .howdoes,
+ .itemsexpand,
+ .sophisticated,
+ .categories-projects,
+ .num-businesses {
+     margin-top: 96px;
  }
  
  .itemhowdoes .title {
@@ -362,9 +372,79 @@
      height: 44px;
  }
  
- .btnrspons:hover {
+ .item-project .inner .item .bottoms a:nth-child(1) {
      background: #4d4be2;
      border-color: #4d4be2;
+     color: #fff;
+ }
+ 
+ .item-project .inner .item .bottoms a:nth-child(1) {
+     background: #6568F4;
+     border-color: #6568F4;
+ }
+ 
+ .btnrspons:hover,
+ .item-project .inner .item .bottoms a:nth-child(1):hover {
+     background: #4d4be2;
+     border-color: #4d4be2;
+ }
+ 
+ .item-project .inner .item .bottoms a:nth-child(2) {
+     background: #fff;
+     color: #000;
+ }
+ 
+ .item-slider {
+     margin-top: 74px;
+ }
+ 
+ .itemsexpand .bottoms .bottom:nth-child(2):hover {
+     background: #6568f4;
+     border-color: #6568f4;
+     color: #fff;
+ }
+ 
+ .whetheryou .item .bottoms a:hover,
+ .item-project .inner .item .bottoms a:hover {
+     transform: none;
+ }
+ 
+ .whetheryou .item .bottoms a:nth-child(1) {
+     color: #000;
+ }
+ 
+ .whetheryou .item .bottoms a:nth-child(1) svg path {
+     stroke: #000;
+ }
+ 
+ .whetheryou .item .bottoms a:nth-child(1):hover {
+     background: #afc129;
+ }
+ 
+ .whetheryou .item .bottoms a:nth-child(2):hover {
+     background: #4d4be2;
+     border-color: #4d4be2;
+     color: #fff;
+ }
+ 
+ .whetheryou .item .bottoms a:nth-child(3):hover {
+     background: #efefef;
+ }
+ 
+ .itemsmarter .item .bottoms a:nth-child(1) {
+     color: #fff;
+ }
+ 
+ .itemsmarter .item .bottoms a:nth-child(1) svg path {
+     stroke: #fff;
+ }
+ 
+ .itemsmarter .item .bottoms a:nth-child(1):hover {
+     background: #4d4be2;
+ }
+ 
+ .itemsmarter .photo {
+     height: 434px;
  }
  
  @media (max-width:1199px) {
@@ -378,7 +458,19 @@
      .itemhowdoes,
      .choosestarted,
      .trusted-technical,
-     .itemtraditional {
+     .itemtraditional,
+     .item-slider,
+     .business-models,
+     .choosepath,
+     .exclusively,
+     .item-contact,
+     .whetheryou,
+     .itemsfocuses,
+     .itemsexpand,
+     .howdoes,
+     .sophisticated,
+     .categories-projects,
+     .num-businesses {
          margin-top: 40px;
      }
      .itemhowdoes .photo {
@@ -543,5 +635,8 @@
      }
      .itemtraditional .rowbox .item .title {
          font-size: 20px;
+     }
+     .itemsmarter .item .bottoms a {
+         width: 100%;
      }
  }
