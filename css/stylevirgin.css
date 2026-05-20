@@ -532,7 +532,7 @@
 .navlinkmoblie a {
     display: block;
     position: relative;
-    min-width: 140px;
+    min-width: 50%;
     padding: 0.4rem 1rem !important;
     background: none;
     text-align: center !important;
@@ -578,6 +578,29 @@
     min-width: 280px;
 }
 
+.hidenots {
+    display: none;
+    margin-top: 12px;
+    font-weight: 500;
+    background: #fff;
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #0000001F;
+    max-width: 100%;
+    margin-top: 12px;
+    text-align: center !important;
+}
+
+.business-models.surprises .rowbox .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hidepool {
+    display: none;
+}
+
 @media (max-width:1199px) {
     .choosestarted .rowbox .item .flex .photo {
         min-width: 202px;
@@ -586,26 +609,51 @@
     .business-models.addstyleitems .rowbox {
         grid-template-columns: repeat(3, 1fr);
     }
+    .surprises .rowbox {
+        grid-template-columns: repeat(2, 348px);
+    }
 }
 
 @media (max-width: 999px) {
-    .itemhowdoes,
+    .hidenots {
+        display: block;
+    }
+    .surprises .rowbox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .hidesubitem {
+        display: none !important;
+    }
     .choosestarted,
-    .trusted-technical,
-    .itemtraditional,
     .item-slider,
-    .business-models,
+    .itemsexpand,
+    .howdoes {
+        margin-top: 40px;
+    }
+    .item-project {
+        margin-top: 54px;
+    }
+    .howdoes,
+    .itemtraditional {
+        margin-top: 110px;
+    }
     .choosepath,
     .exclusively,
-    .item-contact,
-    .whetheryou,
-    .itemsfocuses,
-    .itemsexpand,
-    .howdoes,
     .sophisticated,
+    .business-models,
+    .trusted-technical,
     .categories-projects,
-    .num-businesses {
-        margin-top: 40px;
+    .num-businesses,
+    .itemsfocuses,
+    .item-contact,
+    .whetheryou {
+        margin-top: 100px;
+    }
+    .newfooter {
+        margin-top: 140px;
+    }
+    .itemhowdoes {
+        margin-top: 59px;
     }
     .itemhowdoes .photo {
         margin-top: 24px;
@@ -667,9 +715,15 @@
     .trusted-technical {
         display: block;
     }
-    .itemtraditional .rowbox .item {
+    /* .itemtraditional .rowbox .item {
         min-width: 50%;
         max-width: 50%;
+    } */
+    .hidepool {
+        display: flex;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
     }
     .itemsfocuses .flexitems .item {
         border: 0;
@@ -685,7 +739,16 @@
     .trusted-technical .item .rowbox {
         margin-top: 24px;
     }
-    .exclusively .minhead .bottom {
+    .trusted-technical {
+        border-radius: 0px;
+        border: 0px;
+        padding: 0;
+    }
+    .trusted-technical .item p {
+        margin-top: 8px;
+    }
+    .exclusively .minhead .bottom,
+    .hidebtn {
         display: none;
     }
     /* .exclusively .title {
@@ -719,6 +782,9 @@
     .itemsfocuses .itemtow .bottom {
         font-weight: 700;
         padding: 12px;
+    }
+    .bottom {
+        font-weight: 700;
     }
     .lastcall .item .bottoms a {
         font-weight: 700;
@@ -956,9 +1022,71 @@
     .itemsfocuses .itemtow .bottom {
         width: 100% !important;
     }
+    .item-project .inner .item .title {
+        font-size: 24px;
+    }
+    .hidemoblie {
+        display: none;
+    }
+    .howdoes .rowbox .item .photo {
+        height: 270px;
+    }
+    .itemtext .list li .icon {
+        min-width: 20px;
+        max-width: 20px;
+        height: 20px;
+    }
+    .itemtext .list li .icon svg {
+        width: 11px;
+    }
+    .itemgrowing .title,
+    .itemgrowing p.text-center {
+        text-align: start !important;
+        justify-content: flex-start !important;
+    }
+    /* .itemtraditional .rowbox {
+        grid-template-rows: repeat(2, 310px);
+    } */
+    .itemtraditional .rowbox .item {
+        min-width: 280px;
+        max-width: 280px;
+    }
+    .whetheryou .item .des {
+        justify-content: center;
+        text-align: center;
+    }
+    .categories-projects .title {
+        justify-content: start !important;
+        text-align: start !important;
+    }
+    .categories-projects .rowbox {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .categories-projects .rowbox .item {
+        display: block;
+    }
+    .categories-projects .rowbox .item .title {
+        margin-top: 12px;
+    }
 }
 
 @media (max-width: 767px) {
+    .howdoes .minhead {
+        display: block;
+    }
+    .howdoes .minhead .title {
+        text-align: center !important;
+        justify-content: center;
+    }
+    .howdoes .nav-tabs {
+        margin-top: 12px;
+    }
+    .howdoes .nav-tabs li {
+        min-width: 49%;
+        max-width: 49%;
+    }
     .itemsexpand .bottoms {
         display: block;
         margin-top: 12px;
@@ -981,10 +1109,6 @@
     .itemtraditional .rowbox::-webkit-scrollbar {
         width: 0px;
         height: 0px;
-    }
-    .itemtraditional .rowbox .item {
-        min-width: 310px;
-        max-width: 310px;
     }
     .itemsmarter .item .bottoms a {
         width: 100%;
@@ -1021,13 +1145,10 @@
     .item-project .inner .item .bottoms a {
         width: 100%;
     }
-    .itemtraditional .rowbox .item {
+    /* .itemtraditional .rowbox .item {
         min-width: 256px;
         max-width: 256px;
-    }
-    .itemtraditional .rowbox .item .itemnumber {
-        font-size: 34px;
-    }
+    } */
     .itemtraditional .rowbox .item .title {
         font-size: 20px;
     }
@@ -1056,5 +1177,8 @@
     .itemcards .cardbox .title,
     .itemcards .cardbox .bottom {
         font-size: 12px;
+    }
+    .navlinkmoblie {
+        width: 100%;
     }
 }
