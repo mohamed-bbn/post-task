@@ -3038,7 +3038,15 @@ select.form-control {
 }
 
 .title {
+    font-weight: 600;
+}
+
+.texthero .title span {
     font-weight: 500;
+}
+
+.texthero .title {
+    line-height: 148%;
 }
 
 .blogs .item .inner .flex ul .subdes {
@@ -3367,4 +3375,63 @@ table.dataTable thead>tr>td.sorting_desc_disabled:after,
 .professionals .rowbox .item ul li:nth-child(4) {
     right: auto;
     left: 0;
+}
+
+.bottom {
+    text-align: center !important;
+}
+
+@media (max-width: 999px) {
+    .mobile-menu {
+        left: auto;
+        right: -100%;
+    }
+    .mobile-menu.active {
+        left: auto;
+        right: 0;
+    }
+    .boxbot2 .photo,
+    .boxbot1 .photo {
+        margin-inline-end: -60px;
+        position: absolute;
+        left: 30px;
+        bottom: 17px;
+    }
+    .itemcards .cardbox {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .boxbottom .photo,
+    .boxtop .photo {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        /* left: -13px;
+        bottom: -35px; */
+    }
+    .business-models.addstyleitems .rowbox {
+        grid-template-columns: repeat(3, 330px);
+    }
+}
+
+@media (max-width: 550px) {
+    .boxbot1 .photo,
+    .boxbot2 .photo {
+        right: auto;
+        left: -28px;
+        margin: 0;
+        bottom: -31px;
+    }
+    .boxtop .photo,
+    .boxbottom .photo {
+        left: -11px;
+        bottom: -36px;
+    }
+}
+
+@media (max-width: 450px) {
+    .mobileitems .img {
+        margin-left: 0;
+        margin-right: -56px;
+    }
 }

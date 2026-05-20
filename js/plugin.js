@@ -490,6 +490,18 @@ $(document).ready(function() {
     });
 
 
+    $('.navlinkmoblie a').click(function() {
+        $('.navlinkmoblie a').removeClass("active");
+        $(this).addClass("active");
+    });
+
+
+
+
+    $('.talentactive, .companiesactive').click(function() {
+        $('.itemtalent').toggleClass("active");
+        $('.itemactive').toggleClass("hide");
+    });
 
 
 });

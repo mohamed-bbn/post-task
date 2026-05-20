@@ -19,6 +19,7 @@
 }
 
 .itemhowdoes .photo {
+    position: relative;
     margin: 48px auto 0 auto;
     max-width: 1290px;
     height: 676px;
@@ -30,6 +31,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.itemhowdoes .photo .title {
+    position: absolute;
+    width: 100%;
+    top: 62px;
+    color: #fff;
 }
 
 .choosestarted .rowbox {
@@ -459,7 +467,7 @@
 .boxbot2:hover .photo img,
 .boxbottom:hover .photo,
 .boxtop:hover .photo {
-    transform: none;
+    transform: none !important;
 }
 
 .boxbot1 {
@@ -502,10 +510,81 @@
     max-width: 182px;
 }
 
+.itemcards .cardbox,
+.boxbot1 .photo {
+    position: relative;
+}
+
+.tabsmobile {
+    display: none;
+}
+
+.navlinkmoblie {
+    display: inline-flex;
+    justify-content: center;
+    border: 0;
+    background: #6568f4;
+    gap: 4px;
+    padding: 4px;
+    border-radius: 60px;
+}
+
+.navlinkmoblie a {
+    display: block;
+    position: relative;
+    min-width: 140px;
+    padding: 0.4rem 1rem !important;
+    background: none;
+    text-align: center !important;
+    font-size: 18px;
+    font-weight: 500;
+    border: 0px;
+    border: 1px solid transparent;
+    border-radius: 60px !important;
+    color: #fff;
+    cursor: pointer;
+    text-transform: capitalize;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.navlinkmoblie a.active {
+    background: #fff;
+    color: #5E597A;
+}
+
+.choosestarted .title {
+    gap: 10px;
+}
+
+.choosestarted .title span {
+    color: #000;
+}
+
+.business-models.addstyleitems .rowbox .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.business-models .rowbox .item .list {
+    min-height: inherit;
+}
+
+.itemsfocuses .itemtow .bottom {
+    white-space: nowrap;
+    min-width: 280px;
+}
+
 @media (max-width:1199px) {
     .choosestarted .rowbox .item .flex .photo {
         min-width: 202px;
         max-width: 202px;
+    }
+    .business-models.addstyleitems .rowbox {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -530,16 +609,24 @@
     }
     .itemhowdoes .photo {
         margin-top: 24px;
-        height: 373px;
+        height: 658px;
     }
     .choosestarted .rowbox {
-        grid-template-columns: repeat(2, 280px);
-        justify-content: flex-start;
+        grid-template-columns: repeat(1, 1fr);
     }
     .choosestarted .rowbox .item .flex,
     .lastcall {
         display: inline-grid;
         width: 100%;
+    }
+    .choosestarted p.text-center,
+    .choosestarted .title span,
+    .choosestarted .rowbox .item.itemtalent {
+        display: none;
+    }
+    .tabsmobile {
+        display: block;
+        margin-top: 24px;
     }
     .choosestarted .rowbox .item .flex .photo {
         order: -1;
@@ -557,9 +644,20 @@
     .itemsexpand .rowbox .photo {
         order: -1;
     }
-    .itemsexpand .rowbox,
-    .itemsfocuses {
+    .itemsexpand .rowbox {
         padding: 20px;
+    }
+    .itemsfocuses {
+        border-radius: 0;
+        border: 0;
+        padding: 0;
+    }
+    .item-support .item p {
+        font-size: 14px;
+        line-height: 163%;
+    }
+    .item-support .platforms .title {
+        font-size: 15px;
     }
     .itemsexpand .bottoms {
         zoom: 100%;
@@ -613,22 +711,55 @@
     .item-support .itemtow .bottom {
         zoom: 100%;
     }
+    .business-models.addstyleitems .rowbox {
+        grid-template-columns: repeat(3, 330px);
+    }
+    .itemsexpand .bottoms .bottom,
+    .btnrspons,
+    .itemsfocuses .itemtow .bottom {
+        font-weight: 700;
+        padding: 12px;
+    }
+    .lastcall .item .bottoms a {
+        font-weight: 700;
+    }
+    .itemsexpand .title,
+    .choosestarted .title,
+    .exclusively .minhead .title {
+        font-size: 24px;
+    }
+    .exclusively .rowbox .item .title {
+        font-size: 15px;
+        line-height: 24px;
+    }
     .item-contact .rowbox .item .bottoms a {
         min-width: inherit;
     }
     .item-support .platforms .logos {
         gap: 12px;
     }
-    .item-support .itemtow .title {
-        font-size: 18px;
+    .item-support .itemtow .title,
+    .item-support .itemtow .list li {
+        font-size: 15px;
     }
-    .item-support .platforms .title,
+    .item-support .itemtow .title svg {
+        width: 24px;
+        height: 24px;
+    }
     .itemsfocuses .itemtow {
         margin-top: 12px;
+    }
+    .item-support .platforms .title {
+        margin-top: 26px;
     }
     .btnrspons {
         display: flex;
     }
+    /* .item-support .itemtow .list li .icon {
+        min-width: 20px;
+        max-width: 20px;
+        height: 20px;
+    } */
     /* .item-project .inner .item .textfees {
          display: block;
      } */
@@ -686,7 +817,8 @@
         display: none;
     }
     .itemcards .cardbox {
-        width: 210px;
+        width: 260px;
+        background: #E3E8FF;
     }
     .itemcards .hero {
         background: linear-gradient(107deg, #6568F4 0%, #C5CEFF 100%);
@@ -785,6 +917,45 @@
     .boxtop:hover .photo {
         transform: none;
     }
+    .item-slider .headtitle .title {
+        font-size: 19px;
+    }
+    .boxtop .photo {
+        /* position: absolute;
+        right: -1px;
+        bottom: -42px; */
+    }
+    .itemhowdoes .title {
+        font-size: 24px;
+        padding: 0 12px;
+    }
+    .itemhowdoes p.text-center {
+        font-size: 14px;
+        padding: 0 12px;
+    }
+    .itemhowdoes .container {
+        padding: 0;
+    }
+    .mobile-menu {
+        top: 0 !important;
+        left: -100%;
+    }
+    .mobile-menu.active {
+        left: 0;
+    }
+    .choosestarted .rowbox .item.itemtalent.active {
+        display: flex;
+    }
+    .choosestarted .rowbox .item.itemactive.hide {
+        display: none;
+    }
+    .navlinkmoblie a {
+        font-size: 16px;
+    }
+    .itemsfocuses .w-75,
+    .itemsfocuses .itemtow .bottom {
+        width: 100% !important;
+    }
 }
 
 @media (max-width: 767px) {
@@ -800,7 +971,7 @@
         font-size: 22px;
     }
     .item-support .platforms .logos a img {
-        max-width: 54px;
+        max-width: 70px;
     }
     .itemtraditional .rowbox {
         overflow: hidden;
@@ -818,6 +989,12 @@
     .itemsmarter .item .bottoms a {
         width: 100%;
     }
+    .itemcards .cardbox {
+        width: 240px;
+    }
+    .navlinkmoblie a {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 550px) {
@@ -829,6 +1006,9 @@
         grid-column: 2;
         grid-row: 2;
     } */
+    .itemcards .cardbox {
+        width: 210px;
+    }
 }
 
 @media (max-width: 450px) {
@@ -851,10 +1031,30 @@
     .itemtraditional .rowbox .item .title {
         font-size: 20px;
     }
-    .itemcards {
-        zoom: 70%;
-    }
     .mobileitems .img {
-        width: 281px;
+        width: 308px;
+        margin-left: -56px;
+    }
+    .itemcards {
+        zoom: 80%;
+    }
+    .itemcards .cardbox {
+        display: block;
+        width: 200px;
+    }
+    .boxtop .photo,
+    .boxbottom .photo {
+        margin: -11px -147px 4px 0px !important;
+    }
+    .boxbot1 .photo,
+    .boxbot2 .photo {
+        margin: 0 !important;
+        position: absolute;
+        right: -28px;
+        bottom: -30px
+    }
+    .itemcards .cardbox .title,
+    .itemcards .cardbox .bottom {
+        font-size: 12px;
     }
 }
