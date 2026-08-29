@@ -3435,3 +3435,7 @@ table.dataTable thead>tr>td.sorting_desc_disabled:after,
         margin-right: -56px;
     }
 }
+
+.structure-section .bottoms a svg {
+    rotate: 180deg;
+}
