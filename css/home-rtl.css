@@ -3439,3 +3439,21 @@ table.dataTable thead>tr>td.sorting_desc_disabled:after,
 .structure-section .bottoms a svg {
     rotate: 180deg;
 }
+
+.itemscope p {
+    text-align: center !important;
+}
+
+.itemquestions .accordion .option .click-title a {
+    padding-right: 60px;
+    padding-left: 20px;
+}
+
+.itemquestions .collapsible-link::before {
+    left: auto !important;
+    right: 20px !important;
+}
+
+.itemquestions .collapsible-link::before {
+    padding-bottom: 2px;
+}
