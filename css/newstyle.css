@@ -19987,21 +19987,6 @@ img.map-img {
     text-align: center;
 }
 
-.tech-consulting .btn-primary {
-    background: #32177E;
-    color: #ffffff;
-    padding: 12px 32px;
-    border-radius: 12px;
-    font-weight: 600;
-    display: inline-block;
-    transition: background-color 0.2s;
-    margin-top: 20px;
-}
-
-.tech-consulting .btn-primary:hover {
-    background-color: #1e1b4b;
-}
-
 .backed-section {
     padding: 100px 0;
 }
@@ -20041,14 +20026,29 @@ img.map-img {
     margin-top: 24px;
 }
 
-.backed-section .textabout,
-.backed-section .textabout a {
+.backed-section .textabout {
     font-size: 14px;
     font-weight: 400;
 }
 
-.backed-section .textabout a {
-    color: #6568F4;
+.tech-consulting .btn-primary,
+.backed-section .bottom {
+    background: #32177E;
+    color: #ffffff;
+    padding: 12px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    display: inline-block;
+    transition: background-color 0.2s;
+    margin-top: 20px;
+    border-color: #32177E;
+    height: auto;
+}
+
+.tech-consulting .btn-primary:hover,
+.backed-section .bottom:hover {
+    background-color: #1e1b4b;
+    border-color: #1e1b4b;
 }
 
 .backed-logos-column {
