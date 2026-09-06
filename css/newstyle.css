@@ -19110,6 +19110,11 @@ img.map-img {
     margin-top: 12px;
 }
 
+.item-different .rowbox .item .bottom:hover {
+    background: #a7b923;
+    border-color: #a7b923;
+}
+
 .item-different .rowbox .item .bottom.btnwight {
     border: 1px solid #e5e7eb;
     background: #fff;
@@ -20547,7 +20552,8 @@ img.map-img {
 }
 
 .item-different.organized-remote .rowbox .item:nth-child(1) .bottom:hover {
-    color: #fff;
+    background: #a7b923;
+    border-color: #a7b923;
 }
 
 .item-different.organized-remote .rowbox .item:nth-child(2) {
